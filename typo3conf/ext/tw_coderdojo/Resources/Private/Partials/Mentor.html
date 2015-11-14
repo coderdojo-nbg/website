@@ -1,0 +1,85 @@
+<!-- Short mentor profile -->
+<f:section name="Short">
+    <figure>
+        <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/>
+        <figcaption>
+            <h3>{mentor.firstName} {mentor.lastName}</h3>
+
+            <p class="mentor-bio">
+                <f:if condition="{mentor.statement}">
+                    <f:then>{mentor.statement}</f:then>
+                    <f:else>
+                        <f:format.stripTags>{mentor.biography}</f:format.stripTags>
+                    </f:else>
+                </f:if>
+            </p>
+            <f:if condition="{mentor.skills}">
+                <ul class="mentor-skills">
+                    <f:for each="{mentor.skills}" as="skill" iteration="i">
+                        <li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
+                            {skill.name}
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+        </figcaption>
+    </figure>
+</f:section>
+
+<!-- Full mentor profile -->
+<f:section name="Full">
+    <article>
+        <figure>
+            <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/>
+            <figcaption>
+                <h2>{mentor.firstName} {mentor.lastName}</h2>
+                <p class="mentor-age">
+                    <f:translate key="header.mentor.age" arguments="{0: mentor.age}"/>
+                </p>
+                <p class="mentor-contacts">
+                    KONTAKTDATEN
+                </p>
+            </figcaption>
+        </figure>
+
+        <f:if condition="{mentor.biography}">
+            <section id="mentor-bio">
+                <h3><f:translate key="header.mentor.bio" arguments="{0: mentor.firstName}"/></h3>
+                <f:format.html>{mentor.biography}</f:format.html>
+            </section>
+        </f:if>
+
+        <f:if condition="{mentor.statement}">
+            <section id="mentor-statement">
+                <h3><f:translate key="header.mentor.statement" arguments="{0: mentor.firstName}"/></h3>
+                <p>{mentor.statement}</p>
+            </section>
+        </f:if>
+
+        <f:if condition="{mentor.skills}">
+            <section id="mentor-skills">
+                <h3><f:translate key="header.mentor.skills" arguments="{0: mentor.firstName}"/></h3>
+                <ul class="mentor-skills">
+                    <f:for each="{mentor.skills}" as="skill" iteration="i">
+                        <li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
+                            {skill.name}
+                        </li>
+                    </f:for>
+                </ul>
+            </section>
+        </f:if>
+
+        <section id="mentor-dates">
+            <h3><f:translate key="header.mentor.dates" arguments="{0: mentor.firstName, 1: '{f:count(subject: mentor.dates)}'}"/></h3>
+            <ul class="mentor-dates">
+                <f:for each="{mentor.dates}" as="date" iteration="i">
+                    <li class="mentor-date{f:if(condition: '{i.index}', else: ' first')}">
+                        DATE
+                    </li>
+                </f:for>
+            </ul>
+        </section>
+    </article>
+
+    <f:link.page pageUid="{back}"><f:translate key="label.back.mentors"/></f:link.page>
+</f:section>

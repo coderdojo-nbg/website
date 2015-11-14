@@ -1,0 +1,40 @@
+<f:section name="Schedule">
+    <time class="dt-start" itemprop="dtstart" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.datetime\')}')}</time><f:comment>
+    </f:comment>–<f:comment>
+    </f:comment><time class="dt-end" itemprop="dtend" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
+</f:section>
+
+<f:section name="Location">
+    <address class="p-location h-card icon-location" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization">
+        <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
+        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+            <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
+            <div>
+                <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
+                <span class="p-locality" itemprop="locality">{date.location.locality}</span>
+                <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
+                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
+                                <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
+                                <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
+                            </span>
+            </div>
+        </div>
+    </address>
+</f:section>
+
+<f:section name="LinkedLocation">
+    <a class="address" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
+        <f:render section="Location" arguments="{date: date}"/>
+    </a>
+</f:section>
+
+<f:section name="MappedLocation">
+    <figure>
+        <a class="address" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center={date.location.latitude},{date.location.longitude}&amp;size=200x200&amp;zoom=14&amp;markers=color:red|{date.location.latitude},{date.location.longitude}" alt="{date.location.name}, {date.location.streetAddress}, {date.location.postalCode} {date.location.locality}, {date.location.country.shortNameDe}"/>
+        </a>
+        <figcaption>
+            <f:render section="Location" arguments="{date: date}"/>
+        </figcaption>
+    </figure>
+</f:section>

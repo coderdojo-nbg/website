@@ -1,0 +1,9 @@
+<ul class="mentors">
+    <f:for each="{mentors}" as="mentor">
+        <li class="mentor">
+            <f:link.action action="show" pluginName="Mentor" controller="Mentor" pageUid="{settings.pages.mentorPid}" arguments="{mentor: mentor}">
+                <f:render partial="Mentor" section="Short" arguments="{mentor: mentor}"/>
+            </f:link.action>
+        </li>
+    </f:for>
+</ul>

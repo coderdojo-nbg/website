@@ -1,0 +1,63 @@
+header[role=banner] {
+	padding: 2em 1em;
+	color: $colorHeader;
+	background-color: $bgcolorHeader;
+	text-align: center;
+
+	img {
+		display: none;
+	}
+
+	a {
+		color: $colorHeader;
+		text-decoration: none;
+	}
+
+	h1 {
+		@include hide-visible;
+	}
+
+	.home {
+		display: block;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	.p-summary {
+		@include shift-off-screen;
+		background-size: contain;
+		padding-bottom: 28%;
+		height: 0;
+		margin: 0;
+	}
+
+	.schedule {
+		display: block;
+		margin: 1em 0 2em 0;
+
+		&:hover .schedule-datetime {
+			text-decoration: underline;
+		}
+	}
+
+	.schedule-label,
+	.schedule-datetime {
+		display: block;
+	}
+
+	.schedule-datetime {
+		font-weight: bold;
+	}
+
+	.address {
+		display: inline-block;
+		margin: 0 auto;
+		text-align: left;
+		background-size: contain;
+		padding-left: 3em;
+
+		&:hover {
+			color: $colorHeader;
+		}
+	}
+}

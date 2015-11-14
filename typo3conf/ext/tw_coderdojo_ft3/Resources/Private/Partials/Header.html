@@ -1,0 +1,55 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <!-- Header with next event date -->
+    <f:section name="WithDate">
+        <header role="banner" class="h-event {f:if(condition: '{header}', then: 'expanded', else: 'collapsed')}" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+            <img src="/fileadmin/coderdojo/icons/coderdojo-dark.png" itemprop="photo" alt="{f:translate(key: 'date.alt', arguments: '{0: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.datetime\\\\\\\')}\\\')}\'}')}"/>
+            <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home">
+                <h1 class="p-name" itemprop="name">CoderDojo Nürnberg</h1>
+                <p class="p-summary icon icon-coderdojo-dark" itemprop="summary"><f:translate key="summary"/></p>
+            </f:link.page>
+            <f:link.action action="show" extensionName="TwCoderdojo" pluginName="Date" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}" class="schedule u-url" additionalAttributes="{itemprop: 'url'}" absolute="1">
+                <span class="schedule-label">
+                    <f:if condition="{nextLabel}">
+                        <f:then>
+                            <f:translate key="nextdate"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="nextdate.at"/>
+                        </f:else>
+                    </f:if>
+                </span>
+                <span class="schedule-datetime">
+                    <time class="dt-start" itemprop="dtstart" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <f:translate key="format.from"/> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
+                    <f:translate key="format.to"/>
+                    <time class="dt-end" itemprop="dtend" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
+                    <f:translate key="format.oclock"/>
+                </span>
+            </f:link.action>
+            <a class="address p-location h-card icon icon-location" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
+                <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
+                <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+                    <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
+                    <div>
+                        <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
+                        <span class="p-locality" itemprop="locality">{date.location.locality}</span>
+                        <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
+                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
+                                <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
+                                <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
+                            </span>
+                    </div>
+                </div>
+            </a>
+        </header>
+    </f:section>
+
+    <!-- Header without event date -->
+    <f:section name="WithoutDate">
+        Without
+    </f:section>
+
+</div>
