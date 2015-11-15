@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
+		<header/>
+		<body>
+			<trans-unit id="start.description">
+				<source>Startzeitpunkt</source>
+			</trans-unit>
+			<trans-unit id="end.description">
+				<source>Endzeitpunkt</source>
+			</trans-unit>
+			<trans-unit id="location.description">
+				<source>Veranstaltungsort</source>
+			</trans-unit>
+			<trans-unit id="mentors.description">
+				<source>Mentoren</source>
+			</trans-unit>
+			<trans-unit id="attendees.description">
+				<source>Teilnehmer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

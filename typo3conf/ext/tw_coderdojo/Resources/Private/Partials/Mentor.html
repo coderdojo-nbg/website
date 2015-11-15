@@ -1,7 +1,9 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
 <!-- Short mentor profile -->
 <f:section name="Short">
     <figure>
-        <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/>
+        <div><f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/></div>
         <figcaption>
             <h3>{mentor.firstName} {mentor.lastName}</h3>
 
@@ -15,11 +17,9 @@
             </p>
             <f:if condition="{mentor.skills}">
                 <ul class="mentor-skills">
-                    <f:for each="{mentor.skills}" as="skill" iteration="i">
-                        <li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
-                            {skill.name}
-                        </li>
-                    </f:for>
+                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
+                        {skill.name}
+                    </li></f:for>
                 </ul>
             </f:if>
         </figcaption>
@@ -28,17 +28,51 @@
 
 <!-- Full mentor profile -->
 <f:section name="Full">
-    <article>
+    <article class="mentor">
         <figure>
-            <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/>
+            <div><f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/></div>
             <figcaption>
                 <h2>{mentor.firstName} {mentor.lastName}</h2>
-                <p class="mentor-age">
-                    <f:translate key="header.mentor.age" arguments="{0: mentor.age}"/>
-                </p>
-                <p class="mentor-contacts">
-                    KONTAKTDATEN
-                </p>
+                <ul class="mentor-social">
+                    <f:for each="{mentor.contacts}" as="contact">
+                        <!-- Twitter Facebook Google+ GitHub -->
+                        <v:switch value="{contact.type}">
+                            <v:case case="2" break="TRUE">
+                                <li><f:link.external uri="https://twitter.com/{contact.value}" class="icon icon-twitter icon-twitter-dims" target="_blank" title="{f:translate(key: 'mentor.contact.twitter', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.twitter" arguments="{0: mentor.firstName}"/></f:link.external></li>
+                            </v:case>
+                            <v:case case="3" break="TRUE">
+                                <li><f:link.external uri="https://facebook.com/{contact.value}" class="icon icon-facebook icon-facebook-dims" target="_blank" title="{f:translate(key: 'mentor.contact.facebook', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.facebook" arguments="{0: mentor.firstName}"/></f:link.external></li>
+                            </v:case>
+                            <v:case case="4" break="TRUE">
+                                <li><f:link.external uri="https://plus.google.com/{contact.value}" class="icon icon-googleplus icon-googleplus-dims" target="_blank" title="{f:translate(key: 'mentor.contact.googleplus', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.googleplus" arguments="{0: mentor.firstName}"/></f:link.external></li>
+                            </v:case>
+                            <v:case case="5" break="TRUE">
+                                <li><f:link.external uri="https://github.com/{contact.value}" class="icon icon-github icon-github-dims" target="_blank" title="{f:translate(key: 'mentor.contact.github', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.github" arguments="{0: mentor.firstName}"/></f:link.external></li>
+                            </v:case>
+                        </v:switch>
+                    </f:for>
+                </ul>
+                <dl>
+                    <dt><f:translate key="mentor.age.label"/></dt>
+                    <dd><f:translate key="mentor.age" arguments="{0: mentor.age}"/></dd>
+
+                    <f:for each="{mentor.contacts}" as="contact">
+                        <f:if condition="{contact.type} == 0">
+                            <f:then>
+                                <dt><f:translate key="mentor.contact.website"/></dt>
+                                <dd><f:link.external uri="{contact.value}">{contact.value}</f:link.external></dd>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{contact.type} == 1">
+                                    <f:then>
+                                        <dt><f:translate key="mentor.contact.email"/></dt>
+                                        <dd><f:link.email email="{contact.value}">{contact.value}</f:link.email></dd>
+                                    </f:then>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </dl>
             </figcaption>
         </figure>
 
@@ -60,11 +94,9 @@
             <section id="mentor-skills">
                 <h3><f:translate key="header.mentor.skills" arguments="{0: mentor.firstName}"/></h3>
                 <ul class="mentor-skills">
-                    <f:for each="{mentor.skills}" as="skill" iteration="i">
-                        <li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
-                            {skill.name}
-                        </li>
-                    </f:for>
+                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
+                        {skill.name}
+                    </li></f:for>
                 </ul>
             </section>
         </f:if>
@@ -74,7 +106,11 @@
             <ul class="mentor-dates">
                 <f:for each="{mentor.dates}" as="date" iteration="i">
                     <li class="mentor-date{f:if(condition: '{i.index}', else: ' first')}">
-                        DATE
+                        <f:link.action action="show" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}">
+                            <span class="schedule">
+                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                            </span>
+                        </f:link.action>
                     </li>
                 </f:for>
             </ul>

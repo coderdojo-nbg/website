@@ -1,0 +1,14 @@
+{
+  "icons": {
+    "16": "/fileadmin/coderdojo/favicons/firefox-icon-16x16.png",
+    "30": "/fileadmin/coderdojo/favicons/firefox-icon-30x30.png",
+    "32": "/fileadmin/coderdojo/favicons/firefox-icon-32x32.png",
+    "48": "/fileadmin/coderdojo/favicons/firefox-icon-48x48.png",
+    "60": "/fileadmin/coderdojo/favicons/firefox-icon-60x60.png",
+    "64": "/fileadmin/coderdojo/favicons/firefox-icon-64x64.png",
+    "90": "/fileadmin/coderdojo/favicons/firefox-icon-90x90.png",
+    "120": "/fileadmin/coderdojo/favicons/firefox-icon-120x120.png",
+    "128": "/fileadmin/coderdojo/favicons/firefox-icon-128x128.png",
+    "256": "/fileadmin/coderdojo/favicons/firefox-icon-256x256.png"
+  }
+}

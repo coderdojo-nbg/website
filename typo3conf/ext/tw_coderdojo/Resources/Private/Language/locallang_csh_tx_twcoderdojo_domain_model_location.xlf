@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="street_address.description">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="postal_code.description">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="locality.description">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>Land</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

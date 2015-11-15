@@ -1,0 +1,8 @@
+@media all and (min-width: $breakpoint001) and (max-width: $breakpoint002) {
+	@import "001_wider/300_mentors";
+}
+
+@media all and (min-width: $breakpoint002) {
+	@import "002_2columns/020_content";
+	@import "002_2columns/300_mentors";
+}

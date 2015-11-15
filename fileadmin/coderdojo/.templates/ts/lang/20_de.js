@@ -1,0 +1,22 @@
+GERMAN[globalVar = GP];
+L = 1;
+config;
+{
+    htmlTag_langKey = de;
+    sys_language_uid = 1;
+    INSERT;
+    YOUR;
+    LANGUAGE;
+    ID;
+    HERE;
+    language = de;
+    locale_all = de_DE;
+}
+page.meta;
+{
+    description.field = description;
+    description.ifEmpty =
+    ;
+}
+[global];
+//# sourceMappingURL=20_de.js.map

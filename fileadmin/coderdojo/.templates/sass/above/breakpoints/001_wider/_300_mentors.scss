@@ -1,0 +1,30 @@
+.mentor {
+	figure {
+		text-align: left;
+		display: table;
+		width: 100%;
+		table-layout: auto;
+
+		& > * {
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		& > div {
+			width: 200px;
+		}
+
+		h2, h3 {
+			margin-top: 0;
+			text-align: left;
+		}
+	}
+
+	figcaption {
+		padding: 1em 0 0 2em;
+	}
+}
+
+.mentor-social {
+	text-align: left;
+}

@@ -1,0 +1,15 @@
+<section id="date-when">
+    <h2><f:translate key="header.date.when"/></h2>
+    <p><f:translate key="description.date.when" arguments="{0: '{date.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}', 1: '{date.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.time\\\')}\')}', 2: '{date.end -> f:format.date(format: \'{f:translate(key: \\\'format.end.time\\\')}\')}'}"/></p>
+</section>
+
+<section id="date-where">
+    <h2><f:translate key="header.date.where"/></h2>
+    <f:render partial="Date" section="MappedLocation" arguments="{date: date}"/>
+</section>
+
+<section id="date-mentors">
+    <h2><f:translate key="header.date.mentors"/></h2>
+    <p><f:translate key="description.date.mentors"/></p>
+    <f:render partial="Mentors" arguments="{mentors: date.mentors}"/>
+</section>

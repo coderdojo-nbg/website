@@ -1,0 +1,99 @@
+.ce-twcoderdojo_mentor {
+	background-color: $bgcolorInverseContent;
+
+	&, & a {
+		color: $colorInverseContent;
+	}
+}
+
+.mentors {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.mentor {
+	padding: 1em 1em 3em 1em;
+	box-sizing: border-box;
+
+	figure {
+		text-align: center;
+
+		h2, h3 {
+			text-align: center;
+		}
+	}
+
+	img {
+		border-radius: 50%;
+		margin: 1em 0;
+		transition: transform 200ms;
+	}
+
+	> a {
+		display: block;
+		text-decoration: none;
+
+		&:hover img {
+			transform: scale(1.05);
+		}
+	}
+
+	figcaption {
+		text-align: left;
+	}
+
+	dl {
+		margin: 1em 0 0 0;
+	}
+
+	dt, dd {
+		margin: 0;
+		padding: 0;
+	}
+
+	dt {
+		float: left;
+		clear: left;
+		font-weight: bold;
+	}
+
+	dd {
+		margin-left: 6em;
+	}
+
+	section {
+		margin-top: 3em;
+	}
+}
+
+.mentor-skills {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.mentor-skill {
+	display: inline-block;
+	margin: 0 .2em .2em 0;
+	padding: .2em .5em;
+	background-color: $bgcolorBodyLightest;
+	color: $colorBody;
+	border-radius: .3em;
+}
+
+.mentor-social {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		@include shift-off-screen;
+		display: inline-block;
+	}
+}

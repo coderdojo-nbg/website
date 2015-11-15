@@ -1,0 +1,116 @@
+.icon {
+  background: url(icons/icons.png) no-repeat; }
+
+.icon-coderdojo-button {
+  background-position: 0 0; }
+
+.icon-coderdojo-button-dims {
+  width: 255px;
+  height: 255px; }
+
+.icon-coderdojo-dark {
+  background-position: 0 28.26972644882348%; }
+
+.icon-coderdojo-dark-dims {
+  width: 400px;
+  height: 112.975px; }
+
+.icon-coderdojo-light {
+  background-position: 0 40.79709542418448%; }
+
+.icon-coderdojo-light-dims {
+  width: 400px;
+  height: 112.975px; }
+
+.icon-facebook,
+.icon-facebook\:regular {
+  background-position: 0 48.93184130213632%; }
+
+.icon-facebook-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-facebook:hover,
+.icon-facebook\:hover {
+  background-position: 0 52.18718209562564%; }
+
+.icon-facebook-dims:hover,
+.icon-facebook\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-github,
+.icon-github\:regular {
+  background-position: 0 55.442522889114954%; }
+
+.icon-github-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-github:hover,
+.icon-github\:hover {
+  background-position: 0 58.69786368260427%; }
+
+.icon-github-dims:hover,
+.icon-github\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-googleplus,
+.icon-googleplus\:regular {
+  background-position: 0 61.95320447609359%; }
+
+.icon-googleplus-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-googleplus:hover,
+.icon-googleplus\:hover {
+  background-position: 0 65.20854526958291%; }
+
+.icon-googleplus-dims:hover,
+.icon-googleplus\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-location,
+.icon-location\:regular {
+  background-position: 0 73.23177366702939%; }
+
+.icon-location-dims {
+  width: 54px;
+  height: 96px; }
+
+.icon-location:hover,
+.icon-location\:hover {
+  background-position: 0 83.67791077257888%; }
+
+.icon-location-dims:hover,
+.icon-location\:hover-dims {
+  width: 54px;
+  height: 96px; }
+
+.icon-tollwerk {
+  background-position: 0 93.1108719052745%; }
+
+.icon-tollwerk-dims {
+  width: 324px;
+  height: 86px; }
+
+.icon-twitter,
+.icon-twitter\:regular {
+  background-position: 0 96.74465920651068%; }
+
+.icon-twitter-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-twitter:hover,
+.icon-twitter\:hover {
+  background-position: 0 100%; }
+
+.icon-twitter-dims:hover,
+.icon-twitter\:hover-dims {
+  width: 32px;
+  height: 32px; }
+/*# sourceMappingURL=icon.fallback-sprite.css.map */

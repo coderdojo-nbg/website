@@ -8,12 +8,60 @@ body {
     margin: 0;
     background-color: $bgcolorBody;
     color: $colorBody;
+    line-height: 1.6;
+}
 
-    > * {
-        padding: 1em;
-    }
+a {
+    color: $colorBody;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+.wrap {
+    max-width: 64em;
+    margin: 0 auto;
 }
 
 .hide {
     display: none;
+}
+
+.green {
+    background-color: $bgcolorGreen;
+    color: $colorGreen;
+}
+
+.blue {
+    background-color: $bgcolorBlue;
+    color: $colorBlue;
+}
+
+.yellow {
+    background-color: $bgcolorYellow;
+    color: $colorYellow;
+}
+
+.red {
+    background-color: $bgcolorRed;
+    color: $colorRed;
+}
+
+h2 {
+    @include font-size(2, xx-large);
+    font-weight: lighter;
+    line-height: 1.2;
+}
+
+h3 {
+    @include font-size(1.2, larger);
+    line-height: 1.2;
 }

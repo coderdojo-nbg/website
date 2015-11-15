@@ -1,0 +1,117 @@
+.icon {
+  background-repeat: no-repeat; }
+
+.icon-coderdojo-button {
+  background-image: url(../icons/coderdojo-button.svg); }
+
+.icon-coderdojo-button-dims {
+  width: 255px;
+  height: 255px; }
+
+.icon-coderdojo-dark {
+  background-image: url(../icons/coderdojo-dark.svg); }
+
+.icon-coderdojo-dark-dims {
+  width: 400px;
+  height: 112.975px; }
+
+.icon-coderdojo-light {
+  background-image: url(../icons/coderdojo-light.svg); }
+
+.icon-coderdojo-light-dims {
+  width: 400px;
+  height: 112.975px; }
+
+.icon-facebook,
+.icon-facebook\:regular {
+  background-image: url(../icons/facebook.svg); }
+
+.icon-facebook-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-facebook:hover,
+.icon-facebook\:hover {
+  background-image: url(../icons/facebook~hover.svg); }
+
+.icon-facebook-dims:hover,
+.icon-facebook\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-github,
+.icon-github\:regular {
+  background-image: url(../icons/github.svg); }
+
+.icon-github-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-github:hover,
+.icon-github\:hover {
+  background-image: url(../icons/github~hover.svg); }
+
+.icon-github-dims:hover,
+.icon-github\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-googleplus,
+.icon-googleplus\:regular {
+  background-image: url(../icons/googleplus.svg); }
+
+.icon-googleplus-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-googleplus:hover,
+.icon-googleplus\:hover {
+  background-image: url(../icons/googleplus~hover.svg); }
+
+.icon-googleplus-dims:hover,
+.icon-googleplus\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-location,
+.icon-location\:regular {
+  background-image: url(../icons/location.svg); }
+
+.icon-location-dims {
+  width: 54px;
+  height: 96px; }
+
+.icon-location:hover,
+.icon-location\:hover {
+  background-image: url(../icons/location~hover.svg); }
+
+.icon-location-dims:hover,
+.icon-location\:hover-dims {
+  width: 54px;
+  height: 96px; }
+
+.icon-tollwerk {
+  background-image: url(../icons/tollwerk.svg); }
+
+.icon-tollwerk-dims {
+  width: 324px;
+  height: 86px; }
+
+.icon-twitter,
+.icon-twitter\:regular {
+  background-image: url(../icons/twitter.svg); }
+
+.icon-twitter-dims {
+  width: 32px;
+  height: 32px; }
+
+.icon-twitter:hover,
+.icon-twitter\:hover {
+  background-image: url(../icons/twitter~hover.svg); }
+
+.icon-twitter-dims:hover,
+.icon-twitter\:hover-dims {
+  width: 32px;
+  height: 32px; }
+
+/*# sourceMappingURL=icon.svg-image.css.map */

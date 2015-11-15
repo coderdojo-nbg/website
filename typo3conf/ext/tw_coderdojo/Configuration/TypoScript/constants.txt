@@ -1,0 +1,32 @@
+# customsubcategory=dummy=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.dummy
+
+plugin.tx_twcoderdojo {
+	view {
+		# cat=plugin.tx_twcoderdojo/file; type=string; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.file.templateRootPath
+		templateRootPath = EXT:tw_coderdojo/Resources/Private/Templates/
+		# cat=plugin.tx_twcoderdojo/file; type=string; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.file.partialRootPath
+		partialRootPath = EXT:tw_coderdojo/Resources/Private/Partials/
+		# cat=plugin.tx_twcoderdojo/file; type=string; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.file.layoutRootPath
+		layoutRootPath = EXT:tw_coderdojo/Resources/Private/Layouts/
+	}
+	
+	persistence {
+		# cat=plugin.tx_twcoderdojo//a; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.storagePid
+		storagePid =
+	}
+	
+	features {
+		
+	}
+	
+	settings {
+		# cat=plugin.tx_twcoderdojo//b; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.datePid
+		datePid =
+		# cat=plugin.tx_twcoderdojo//c; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.dateListPid
+		dateListPid =
+		# cat=plugin.tx_twcoderdojo//d; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.mentorPid
+		mentorPid =
+		# cat=plugin.tx_twcoderdojo//e; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.mentorListPid
+		mentorListPid =
+	}
+}

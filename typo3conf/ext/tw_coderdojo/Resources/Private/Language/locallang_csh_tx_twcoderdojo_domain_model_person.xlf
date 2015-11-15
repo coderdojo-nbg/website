@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
+		<header/>
+		<body>
+			<trans-unit id="type.description">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="gender.description">
+				<source>Geschlecht</source>
+			</trans-unit>
+			<trans-unit id="first_name.description">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="last_name.description">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="birthday.description">
+				<source>Geburtstag</source>
+			</trans-unit>
+			<trans-unit id="portrait.description">
+				<source>Portrait</source>
+			</trans-unit>
+			<trans-unit id="biography.description">
+				<source>Biography</source>
+			</trans-unit>
+			<trans-unit id="statement.description">
+				<source>Mission Statement</source>
+			</trans-unit>
+			<trans-unit id="anonymous.description">
+				<source>Anonym</source>
+			</trans-unit>
+			<trans-unit id="contacts.description">
+				<source>Kontaktmöglichkeit</source>
+			</trans-unit>
+			<trans-unit id="skills.description">
+				<source>Disziplinen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

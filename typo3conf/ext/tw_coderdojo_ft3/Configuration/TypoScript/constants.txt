@@ -1,0 +1,5 @@
+plugin.tx_twcoderdojoft3.view {
+	templateRootPaths.default = EXT:tw_coderdojo_ft3/Resources/Private/Templates/
+	partialRootPaths.default = EXT:tw_coderdojo_ft3/Resources/Private/Partials/
+	layoutRootPaths.default = EXT:tw_coderdojo_ft3/Resources/Private/Layouts/
+}

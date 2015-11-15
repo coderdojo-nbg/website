@@ -1,0 +1,13 @@
+{
+  "name": "tollwerk/tw_coderdojo",
+  "description": "Plugins for the CoderDojo Nürnberg website",
+  "authors": [
+    {
+      "name": "Joschi Kuphal",
+      "email": "joschi@kuphal.net"
+    }
+  ],
+  "minimum-stability": "RC",
+  "require": {},
+  "version": "0.1.0"
+}

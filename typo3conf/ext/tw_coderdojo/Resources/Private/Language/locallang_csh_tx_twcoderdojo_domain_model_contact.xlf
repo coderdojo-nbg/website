@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
+		<header/>
+		<body>
+			<trans-unit id="type.description">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="value.description">
+				<source>Adresse / Nummer / etc.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

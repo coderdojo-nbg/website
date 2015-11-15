@@ -1,0 +1,33 @@
+# Facsimile extension setup
+plugin.tx_twcoderdojo {
+	view {
+		templateRootPaths {
+			10	= EXT:tw_coderdojo/Resources/Private/Templates/
+			20	= {$plugin.tx_twcoderdojo.view.templateRootPath}
+		}
+		partialRootPaths {
+			10	= EXT:tw_coderdojo/Resources/Private/Partials/
+			20	= {$plugin.tx_twcoderdojo.view.partialRootPath}
+		}
+		layoutRootPaths {
+			10	= EXT:tw_coderdojo/Resources/Private/Layouts/
+			20	= {$plugin.tx_twcoderdojo.view.layoutRootPath}
+		}
+	}
+	persistence {
+		storagePid	= {$plugin.tx_twcoderdojo.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper	= 1
+	}
+	settings {
+		pages {
+			storagePid	= {$plugin.tx_twcoderdojo.persistence.storagePid}
+			datePid	= {$plugin.tx_twcoderdojo.settings.datePid}
+			dateListPid	= {$plugin.tx_twcoderdojo.settings.dateListPid}
+			mentorPid	= {$plugin.tx_twcoderdojo.settings.mentorPid}
+			mentorListPid	= {$plugin.tx_twcoderdojo.settings.mentorListPid}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="tw_coderdojo_ft3" date="2015-11-08T10:35:24+01:00">
+		<header/>
+		<body>
+			<trans-unit id="flux.home">
+				<source>Homepage</source>
+			</trans-unit>
+			<trans-unit id="flux.home.description">
+				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
+			</trans-unit>
+			<trans-unit id="flux.home.fields.header">
+				<source>Expanded header</source>
+			</trans-unit>
+			<trans-unit id="flux.example">
+				<source>Example element</source>
+			</trans-unit>
+			<trans-unit id="flux.example.description">
+				<source>Small example element</source>
+			</trans-unit>
+			<trans-unit id="flux.example.fields.settings.helloWorld">
+				<source>Example input</source>
+			</trans-unit>
+
+			<trans-unit id="home">
+				<source>Startseite</source>
+			</trans-unit>
+			<trans-unit id="nextdate">
+				<source>Nächster Termin am</source>
+			</trans-unit>
+			<trans-unit id="nextdate.at">
+				<source>Am</source>
+			</trans-unit>
+			<trans-unit id="nextdate.alt">
+				<source>Das nächste CoderDojo Nürnberg am %s</source>
+			</trans-unit>
+			<trans-unit id="summary">
+				<source>Das CoderDojo Nürnberg ist ein Club für Kinder und Jugendliche im Alter von 5 bis 17 Jahren, die Programmieren lernen und Spaß haben wollen. Erfahrene Mentoren stehen bereit, um gemeinsam an Ideen zu arbeiten oder selbst vorgeschlagene Projekte Wirklichkeit werden zu lassen.</source>
+			</trans-unit>
+			<trans-unit id="format.datetime">
+				<source>j.n.Y G:i</source>
+			</trans-unit>
+			<trans-unit id="format.start.datetime">
+				<source>j.n.Y G:i</source>
+			</trans-unit>
+			<trans-unit id="format.start.date">
+				<source>j.n.Y</source>
+			</trans-unit>
+			<trans-unit id="format.start.time">
+				<source>G:i</source>
+			</trans-unit>
+			<trans-unit id="format.end.time">
+				<source>G:i</source>
+			</trans-unit>
+			<trans-unit id="format.from">
+				<source>von</source>
+			</trans-unit>
+			<trans-unit id="format.to">
+				<source>bis</source>
+			</trans-unit>
+			<trans-unit id="format.oclock">
+				<source>Uhr</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

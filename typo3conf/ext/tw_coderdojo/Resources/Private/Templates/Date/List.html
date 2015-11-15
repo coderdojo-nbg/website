@@ -1,0 +1,56 @@
+<!-- Next CoderDojos -->
+<section id="next-dates">
+    <h2>
+        <f:translate key="header.dates.next"/>
+    </h2>
+    <f:if condition="{nextDates}">
+        <f:then>
+            <p>
+                <f:translate key="description.dates.next"/>
+            </p>
+            <ol>
+                <f:for each="{nextDates}" as="date">
+                    <li class="h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+                        <f:link.action action="show" arguments="{date: date}">
+                            <span class="schedule">
+                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                            </span>
+                            <f:translate key="description.dates.next.at"/>
+                            <f:render partial="Date" section="Location" arguments="{date: date}"/>
+                        </f:link.action>
+                    </li>
+                </f:for>
+            </ol>
+        </f:then>
+        <f:else>
+            <p>
+                <f:translate key="description.dates.next.none"/>
+            </p>
+        </f:else>
+    </f:if>
+</section>
+
+<!-- Past CoderDojos -->
+<f:if condition="{pastDates}">
+    <section id="past-dates">
+        <h2>
+            <f:translate key="header.dates.past"/>
+        </h2>
+        <p>
+            <f:translate key="description.dates.past"/>
+        </p>
+        <ol>
+            <f:for each="{pastDates}" as="date">
+                <li class="h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+                    <f:link.action action="show" arguments="{date: date}">
+                            <span class="schedule">
+                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                            </span>
+                        <f:translate key="description.dates.next.at"/>
+                        <f:render partial="Date" section="Location" arguments="{date: date}"/>
+                    </f:link.action>
+                </li>
+            </f:for>
+        </ol>
+    </section>
+</f:if>

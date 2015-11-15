@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
+		<header/>
+		<body>
+			<!-- Constants -->
+			<trans-unit id="constants.file.templateRootPath" xml:space="preserve">
+				<source>Path to template root (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.partialRootPath" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.layoutRootPath" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.storagePid" xml:space="preserve">
+				<source>Default storage page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.datePid" xml:space="preserve">
+				<source>Date details page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.dateListPid" xml:space="preserve">
+				<source>Date list page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.mentorPid" xml:space="preserve">
+				<source>Mentor profile page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.mentorListPid" xml:space="preserve">
+				<source>Mentor list view page (ID)</source>
+			</trans-unit>
+
+			<trans-unit id="tx_twcoderdojo_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.type.mentor">
+				<source>Mentor</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.type.attendee">
+				<source>Attendee</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.gender.unspecified">
+				<source>Unspecified</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.gender.male">
+				<source>Male</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.gender.female">
+				<source>Female</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.birthday">
+				<source>Birthday</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.portrait">
+				<source>Portrait</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.biography">
+				<source>Biography</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.statement">
+				<source>Statement</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.anonymous">
+				<source>Anonymous</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.contacts">
+				<source>Contacts</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.skills">
+				<source>Skills</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.website">
+				<source>Website</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.email">
+				<source>Email address</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.twitter">
+				<source>Twitter username</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.facebook">
+				<source>Facebook ID</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.googleplus">
+				<source>Google+ ID</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.type.github">
+				<source>GitHub username</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_contact.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_skill">
+				<source>Skill</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_skill.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.end">
+				<source>End</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.mentors">
+				<source>Mentors</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.attendees">
+				<source>Attendees</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.street_address">
+				<source>Street address</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.postal_code">
+				<source>Postal code</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.locality">
+				<source>Locality</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.googlemaps">
+				<source>Google </source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.country">
+				<source>Country</source>
+			</trans-unit>
+
+			<!-- Plugins -->
+			<trans-unit id="tt_content.list_type.date">
+				<source>Date display</source>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type.mentor">
+				<source>Mentor display</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

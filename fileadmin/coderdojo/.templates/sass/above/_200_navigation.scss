@@ -1,0 +1,22 @@
+nav {
+	margin-top: -2em;
+
+	a {
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		text-align: center;
+		text-decoration: none;
+		padding: 1em 0;
+		margin: 1em 0 0 0;
+
+		&:hover {
+			color: $colorNavigationHover;
+		}
+
+		&.active {
+			padding: 1.5em 0;
+			margin: 0;
+		}
+	}
+}

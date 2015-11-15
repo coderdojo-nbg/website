@@ -1,0 +1,14 @@
+.ce-textpic {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	> * {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+
+.ce-body {
+	padding: 1em 2em;
+}
