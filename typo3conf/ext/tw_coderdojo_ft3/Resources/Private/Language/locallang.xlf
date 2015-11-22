@@ -37,6 +37,8 @@
 			<trans-unit id="summary">
 				<source>Das CoderDojo Nürnberg ist ein Club für Kinder und Jugendliche im Alter von 5 bis 17 Jahren, die Programmieren lernen und Spaß haben wollen. Erfahrene Mentoren stehen bereit, um gemeinsam an Ideen zu arbeiten oder selbst vorgeschlagene Projekte Wirklichkeit werden zu lassen.</source>
 			</trans-unit>
+
+			<!-- Date formatting -->
 			<trans-unit id="format.datetime">
 				<source>j.n.Y G:i</source>
 			</trans-unit>
@@ -60,6 +62,23 @@
 			</trans-unit>
 			<trans-unit id="format.oclock">
 				<source>Uhr</source>
+			</trans-unit>
+
+			<!-- Social Media -->
+			<trans-unit id="follow.twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="follow.twitter.title">
+				<source>Das @CoderDojoNBG auf Twitter</source>
+			</trans-unit>
+			<trans-unit id="follow.facebook">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="follow.facebook.title">
+				<source>Das CoderDojo Nürnberg auf Facebook</source>
+			</trans-unit>
+			<trans-unit id="footer">
+				<source>Das CoderDojo Nürnberg ist eine ehrenamtlich organisierte Initiative von &lt;a href="https://jkphl.is" target="_blank"&gt;Joschi Kuphal&lt;/a&gt; und dem &lt;a href="https://tollwerk.de" target="_blank"&gt;Tollwerk&lt;/a&gt;. Die Teilnahme an einem CoderDojo ist kostenlos. Unterstützung jeglicher Art ist jederzeit herzlich willkommen!</source>
 			</trans-unit>
 		</body>
 	</file>

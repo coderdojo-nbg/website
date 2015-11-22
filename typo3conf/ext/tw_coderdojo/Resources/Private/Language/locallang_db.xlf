@@ -116,11 +116,17 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_date">
 				<source>Date</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.dojo_number">
+				<source>Dojo number</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.start">
 				<source>Start</source>
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.end">
 				<source>End</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.intro">
+				<source>Intro description</source>
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.location">
 				<source>Location</source>

@@ -105,9 +105,6 @@
 			<trans-unit id="description.dates.next">
 				<source>Die folgenden CoderDojo-Termine stehen bereits fest. Klicke einen der Termine an, um zu sehen, welche Mentoren Dir an dem Tag bei Deinem Projekt helfen können.</source>
 			</trans-unit>
-			<trans-unit id="description.dates.next.at">
-				<source>bei</source>
-			</trans-unit>
 			<trans-unit id="description.dates.next.none">
 				<source>Im Moment steht leider noch kein neuer Termin fest. Besuche diese Seite regelmäßig oder melde Dich zu unserem Newsletter an, um es sofort zu erfahren, wenn ein neuer Termin feststeht.</source>
 			</trans-unit>
@@ -117,16 +114,25 @@
 			<trans-unit id="description.dates.past">
 				<source>Die folgenden Dojos sind bereits vorbei. Um herauszufinden, was dabei alles entstanden ist, klicke einen der Termine an.</source>
 			</trans-unit>
+			<trans-unit id="dojo.name">
+				<source>CoderDojo #%s</source>
+			</trans-unit>
+			<trans-unit id="dojo.at">
+				<source>Am</source>
+			</trans-unit>
+			<trans-unit id="dojo.details">
+				<source>Details zum CoderDojo #%s anzeigen</source>
+			</trans-unit>
+			<trans-unit id="dojo.map">
+				<source>Das CoderDojo #%s auf Google Maps</source>
+			</trans-unit>
+			<trans-unit id="dojo.register">
+				<source>Direkt zur Anmeldung</source>
+			</trans-unit>
 
 			<!-- Date -->
-			<trans-unit id="header.date.when">
-				<source>Wann?</source>
-			</trans-unit>
-			<trans-unit id="description.date.when">
-				<source>Am %s von %s bis %s Uhr</source>
-			</trans-unit>
-			<trans-unit id="header.date.where">
-				<source>Wo?</source>
+			<trans-unit id="header.date.whenwhere">
+				<source>Wann und wo?</source>
 			</trans-unit>
 			<trans-unit id="header.date.mentors">
 				<source>Mentoren</source>
@@ -173,21 +179,30 @@
 				<source>%ss %s CoderDojo(s)</source>
 			</trans-unit>
 
-			<!-- Formats -->
+			<!-- Date formatting -->
 			<trans-unit id="format.datetime">
+				<source>j.n.Y G:i</source>
+			</trans-unit>
+			<trans-unit id="format.start.datetime">
 				<source>j.n.Y G:i</source>
 			</trans-unit>
 			<trans-unit id="format.start.date">
 				<source>j.n.Y</source>
-			</trans-unit>
-			<trans-unit id="format.start.datetime">
-				<source>j.n.Y G:i</source>
 			</trans-unit>
 			<trans-unit id="format.start.time">
 				<source>G:i</source>
 			</trans-unit>
 			<trans-unit id="format.end.time">
 				<source>G:i</source>
+			</trans-unit>
+			<trans-unit id="format.from">
+				<source>von</source>
+			</trans-unit>
+			<trans-unit id="format.to">
+				<source>bis</source>
+			</trans-unit>
+			<trans-unit id="format.oclock">
+				<source>Uhr</source>
 			</trans-unit>
 
 			<!-- General -->

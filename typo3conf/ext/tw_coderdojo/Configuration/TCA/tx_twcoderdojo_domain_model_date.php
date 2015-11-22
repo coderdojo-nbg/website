@@ -2,8 +2,8 @@
 return array(
 	'ctrl' => array(
 		'title' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date',
-		'label' => 'start',
-		'label_alt' => 'location',
+		'label' => 'dojo_number',
+		'label_alt' => 'start,location',
 		'label_alt_force' => true,
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -22,10 +22,10 @@ return array(
 		'showRecordFieldList' => 'hidden, start, end, location, mentors, attendees',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--palette--;;event, location, mentors, attendees, '),
+		'1' => array('showitem' => '--palette--;;event, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, attendees, '),
 	),
 	'palettes' => array(
-		'event' => array('showitem' => 'start, end, hidden', 'canNotCollapse' => true),
+		'event' => array('showitem' => 'dojo_number, start, end, hidden', 'canNotCollapse' => true),
 	),
 	'columns' => array(
 
@@ -36,7 +36,15 @@ return array(
 				'type' => 'check',
 			),
 		),
-
+		'dojo_number' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.dojo_number',
+			'config' => array(
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'trim,int'
+			),
+		),
 		'start' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.start',
@@ -71,6 +79,32 @@ return array(
 				'minitems' => 0,
 				'maxitems' => 1,
 				'suppress_icons' => 1,
+			),
+		),
+		'intro' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.intro',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'module' => array(
+							'name' => 'wizard_rich_text_editor',
+							'urlParameters' => array(
+								'mode' => 'wizard',
+								'act' => 'wizard_rte.php'
+							)
+						),
+						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
 			),
 		),
 		'mentors' => array(

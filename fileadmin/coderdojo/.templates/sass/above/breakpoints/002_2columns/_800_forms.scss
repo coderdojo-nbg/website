@@ -1,0 +1,20 @@
+label {
+	span {
+		display: block;
+		float: left;
+		width: 20%;
+		line-height: 2.8;
+	}
+
+	input, textarea {
+		width: 80%;
+	}
+
+	& + .error {
+		margin-left: 20%;
+	}
+}
+
+form .controls {
+	margin-left: 20%;
+}

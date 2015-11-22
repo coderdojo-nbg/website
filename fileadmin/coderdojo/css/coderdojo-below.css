@@ -1,3 +1,42 @@
+/*
+$font-size-smaller: .9;
+$font-size-medium: 1.1;
+$font-size-larger: 1.32;
+$font-size-x-large: 1.5;
+$font-size-xx-large: 2.2;
+$font-size-xxx-large: 3.04;
+*/
+footer {
+  padding: 1em;
+  color: #fff; }
+  footer a {
+    display: inline-block; }
+  footer .row {
+    display: table;
+    width: 100%;
+    min-height: 32px; }
+  footer .cell {
+    display: table-cell;
+    vertical-align: middle; }
+  footer .left {
+    text-align: left; }
+    footer .left a {
+      margin-right: 1em; }
+      footer .left a:hover {
+        text-decoration: underline; }
+  footer .right {
+    text-align: right;
+    white-space: nowrap; }
+    footer .right a {
+      text-decoration: none;
+      vertical-align: middle;
+      text-indent: 200%;
+      overflow: hidden;
+      white-space: nowrap; }
+  footer .disclaimer, footer .disclaimer a {
+    font-size: smaller;
+    font-size: 0.83rem;
+    color: #bbb; }
 
 /* */
 /*# sourceMappingURL=coderdojo-below.css.map */

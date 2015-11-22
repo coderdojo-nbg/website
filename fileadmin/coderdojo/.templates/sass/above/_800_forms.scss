@@ -1,0 +1,89 @@
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	@include hide-visible;
+}
+
+fieldset > label {
+	margin: 1em 0 0 0;
+
+	span {
+		display: block;
+	}
+}
+
+input[type=text], input[type=email], input[type=submit], textarea {
+	width: 100%;
+	padding: .5em;
+	box-sizing: border-box;
+	border: 1px solid $bgcolorBodyLightest;
+	vertical-align: middle;
+
+	&.error {
+		border-bottom-width: 0;
+	}
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+textarea {
+	min-height: 10em;
+}
+
+form {
+	.controls, .label {
+		margin: 1em 0 0 0;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		border: 1px solid $bgcolorBodyLightest;
+	}
+
+	li {
+		display: table-cell;
+
+		label {
+			padding: .5em;
+
+			span {
+				margin-left: .5em;
+			}
+		}
+	}
+}
+
+label, fieldset ul {
+	& + .error {
+		padding: .5em;
+		margin: 0 0 2em 0;
+		background-color: $bgcolorRed;
+		color: $colorRed;
+		text-align: center;
+		position: relative;
+
+		&:after {
+			border: .4em solid transparent;
+			border-bottom-color: $bgcolorRed;
+			box-sizing: border-box;
+			margin-left: -.4em;
+			content: '';
+			display: block;
+			width: .8em;
+			height: .8em;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+		}
+	}
+}

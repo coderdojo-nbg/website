@@ -78,6 +78,8 @@
 	margin: 0 .2em .2em 0;
 	padding: .2em .5em;
 	background-color: $bgcolorBodyLightest;
+	background-color: darken($bgcolorYellow, 10%);
+	background-color: $bgcolorContent;
 	color: $colorBody;
 	border-radius: .3em;
 }

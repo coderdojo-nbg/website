@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div id="c{data.uid}" class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+<div id="c{data.uid}" class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')} ce-layout-{data.layout}">
 	<f:if condition="{gallery.position.vertical} != 'below'">
 		<f:render partial="MediaGallery" arguments="{_all}" />
 	</f:if>

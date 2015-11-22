@@ -443,6 +443,24 @@ return array (
       array (
       ),
     ),
+    'formhandler' => 
+    array (
+      'composerName' => 'formhandler',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/formhandler/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'tw_antibot' => 
+    array (
+      'composerName' => 'tw_antibot',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/tw_antibot/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'adodb' => 
     array (
       'composerName' => 'typo3/cms-adodb',

@@ -1,14 +1,18 @@
-* {
-    font-family: $fontFamily;
-    font-size: medium;
-}
-
 body {
     padding: 0;
     margin: 0;
     background-color: $bgcolorBody;
     color: $colorBody;
+}
+
+body, a, input, textarea {
     line-height: 1.6;
+    font-family: $fontFamily;
+    font-size: medium;
+}
+
+address {
+    font-style: normal;
 }
 
 a {
@@ -24,6 +28,11 @@ img {
 
 figure {
     margin: 0;
+}
+
+label {
+    display: block;
+    cursor: pointer;
 }
 
 .wrap {
@@ -64,4 +73,5 @@ h2 {
 h3 {
     @include font-size(1.2, larger);
     line-height: 1.2;
+    margin: 1em 0;
 }

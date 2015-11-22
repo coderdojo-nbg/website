@@ -1,53 +1,63 @@
 <!-- Next CoderDojos -->
 <section id="next-dates">
-    <h2>
-        <f:translate key="header.dates.next"/>
-    </h2>
+    <header>
+        <h2>
+            <f:translate key="header.dates.next"/>
+        </h2>
+        <p>
+            <f:if condition="{nextDates}">
+                <f:then>
+                    <f:translate key="description.dates.next"/>
+                </f:then>
+                <f:else>
+                    <f:translate key="description.dates.next.none"/>
+                </f:else>
+            </f:if>
+        </p>
+    </header>
     <f:if condition="{nextDates}">
-        <f:then>
-            <p>
-                <f:translate key="description.dates.next"/>
-            </p>
-            <ol>
-                <f:for each="{nextDates}" as="date">
-                    <li class="h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
-                        <f:link.action action="show" arguments="{date: date}">
-                            <span class="schedule">
-                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
-                            </span>
-                            <f:translate key="description.dates.next.at"/>
-                            <f:render partial="Date" section="Location" arguments="{date: date}"/>
-                        </f:link.action>
-                    </li>
-                </f:for>
-            </ol>
-        </f:then>
-        <f:else>
-            <p>
-                <f:translate key="description.dates.next.none"/>
-            </p>
-        </f:else>
+        <ol class="dates-list">
+            <f:for each="{nextDates}" as="date">
+                <li class="date h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+                    <f:link.action action="show" arguments="{date: date}" pageUid="{settings.pages.datePid}" class="u-url" additionalAttributes="{itemprop: 'url'}" title="{f:translate(key: 'dojo.details', arguments: '{0: date.dojoNumber}')}">
+                        <h3 class="p-name" itemprop="name">
+                            <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
+                        </h3>
+                        <div class="schedule">
+                            <f:translate key="dojo.at"/>
+                            <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                        </div>
+                        <f:render partial="Date" section="Location" arguments="{date: date, icon: 1}"/>
+                    </f:link.action>
+                </li>
+            </f:for>
+        </ol>
     </f:if>
 </section>
 
 <!-- Past CoderDojos -->
 <f:if condition="{pastDates}">
     <section id="past-dates">
-        <h2>
-            <f:translate key="header.dates.past"/>
-        </h2>
-        <p>
-            <f:translate key="description.dates.past"/>
-        </p>
-        <ol>
+        <header>
+            <h2>
+                <f:translate key="header.dates.past"/>
+            </h2>
+            <p>
+                <f:translate key="description.dates.past"/>
+            </p>
+        </header>
+        <ol class="dates-list">
             <f:for each="{pastDates}" as="date">
-                <li class="h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
-                    <f:link.action action="show" arguments="{date: date}">
-                            <span class="schedule">
-                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
-                            </span>
-                        <f:translate key="description.dates.next.at"/>
-                        <f:render partial="Date" section="Location" arguments="{date: date}"/>
+                <li class="date h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+                    <f:link.action action="show" arguments="{date: date}" pageUid="{settings.pages.datePid}" class="u-url" additionalAttributes="{itemprop: 'url'}" title="{f:translate(key: 'dojo.details', arguments: '{0: date.dojoNumber}')}">
+                        <h3 class="p-name" itemprop="name">
+                            <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
+                        </h3>
+                        <div class="schedule">
+                            <f:translate key="dojo.at"/>
+                            <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                        </div>
+                        <f:render partial="Date" section="Location" arguments="{date: date, icon: 1}"/>
                     </f:link.action>
                 </li>
             </f:for>

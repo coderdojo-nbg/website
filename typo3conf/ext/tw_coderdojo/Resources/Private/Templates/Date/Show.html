@@ -1,15 +1,29 @@
-<section id="date-when">
-    <h2><f:translate key="header.date.when"/></h2>
-    <p><f:translate key="description.date.when" arguments="{0: '{date.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}', 1: '{date.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.time\\\')}\')}', 2: '{date.end -> f:format.date(format: \'{f:translate(key: \\\'format.end.time\\\')}\')}'}"/></p>
-</section>
+<div class="date-details h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
 
-<section id="date-where">
-    <h2><f:translate key="header.date.where"/></h2>
-    <f:render partial="Date" section="MappedLocation" arguments="{date: date}"/>
-</section>
+    <section class="date-intro">
+        <h2 class="p-name" itemprop="name">
+            <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
+        </h2>
+        <f:if condition="{date.intro}">
+            <p class="p-description" itemprop="description">
+                <f:format.html>{date.intro}</f:format.html>
+            </p>
+        </f:if>
+        <a href="#c19"><f:translate key="dojo.register"/></a>
+    </section>
 
-<section id="date-mentors">
-    <h2><f:translate key="header.date.mentors"/></h2>
-    <p><f:translate key="description.date.mentors"/></p>
-    <f:render partial="Mentors" arguments="{mentors: date.mentors}"/>
-</section>
+    <f:render partial="Date" section="Map" arguments="{date: date}"/>
+
+    <section class="date-mentors">
+        <div class="mentor-intro">
+            <h2>
+                <f:translate key="header.date.mentors"/>
+            </h2>
+            <p>
+                <f:translate key="description.date.mentors"/>
+            </p>
+        </div>
+        <f:render partial="Mentors" arguments="{mentors: date.mentors}"/>
+    </section>
+</div>
+

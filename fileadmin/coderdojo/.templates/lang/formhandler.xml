@@ -1,0 +1,44 @@
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description></description>
+	</meta>
+	<data type="array">
+		<!-- Deutsch -->
+		<languageKey index="default" type="array">
+			<label index="fieldset.personal">Persönliche Angaben</label>
+			<label index="fieldset.registration">Anmeldung</label>
+			<label index="fieldset.message">Deine Nachricht</label>
+			<label index="fieldset.project">Dein Projekt</label>
+
+			<label index="field.firstname">Vorname</label>
+			<label index="field.lastname">Nachname</label>
+			<label index="field.email">E-Mail</label>
+			<label index="field.type">Teilnahme als</label>
+			<label index="field.type.ninja">Code Ninja</label>
+			<label index="field.type.mentor">Mentor</label>
+			<label index="field.type.helper">Helfer</label>
+			<label index="field.message">Nachricht</label>
+			<label index="field.project">Projekt</label>
+			<label index="field.contact">Nachricht absenden</label>
+			<label index="field.register">Anmelden</label>
+
+			<label index="field.placeholder.firstname">Peter</label>
+			<label index="field.placeholder.lastname">Lustig</label>
+			<label index="field.placeholder.email">peter@löwenzahn.de</label>
+			<label index="field.placeholder.message">Ich möchte Euch sagen, dass ...</label>
+			<label index="field.placeholder.project">Ich möchte bei diesem CoderDojo ...</label>
+
+			<label index="error_firstname">Bitte gib Deinen Vornamen ein</label>
+			<label index="error_lastname">Bitte gib Deinen Nachnamen ein</label>
+			<label index="error_type">Bitte gib an, als was Du teilnehmen möchtest</label>
+			<label index="error_email_required">Bitte gib Deine E-Mail-Adresse ein</label>
+			<label index="error_email_email">Bitte gib eine gültige E-Mail-Adresse ein</label>
+			<label index="error_email_emailExists">Bitte gib eine existierende E-Mail-Adresse ein</label>
+			<label index="error_message">Bitte gib eine Nachricht ein</label>
+			<label index="error_project">Bitte beschreibe, was Du tun möchtest</label>
+
+			<label index="antibot"><![CDATA[Unser Kontaktformular ist für Dich aus Spamschutzgründen leider gesperrt. Wenn Du der Ansicht bist, es handelt sich dabei um einen Irrtum, dann <a href="mailto:ping@coderdojo-nbg.org">sende uns bitte eine E-Mail</a>. Wir bitten um Entschuldigung für die Unannehmlichkeiten!]]></label>
+		</languageKey>
+	</data>
+</T3locallang>

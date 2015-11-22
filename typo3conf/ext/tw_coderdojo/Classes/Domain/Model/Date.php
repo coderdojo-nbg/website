@@ -2,35 +2,44 @@
 namespace Tollwerk\TwCoderdojo\Domain\Model;
 
 
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2015 Joschi Kuphal <joschi@tollwerk.de>, tollwerk GmbH
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+	/***************************************************************
+	 *
+	 *  Copyright notice
+	 *
+	 *  (c) 2015 Joschi Kuphal <joschi@tollwerk.de>, tollwerk GmbH
+	 *
+	 *  All rights reserved
+	 *
+	 *  This script is part of the TYPO3 project. The TYPO3 project is
+	 *  free software; you can redistribute it and/or modify
+	 *  it under the terms of the GNU General Public License as published by
+	 *  the Free Software Foundation; either version 3 of the License, or
+	 *  (at your option) any later version.
+	 *
+	 *  The GNU General Public License can be found at
+	 *  http://www.gnu.org/copyleft/gpl.html.
+	 *
+	 *  This script is distributed in the hope that it will be useful,
+	 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+	 *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	 *  GNU General Public License for more details.
+	 *
+	 *  This copyright notice MUST APPEAR in all copies of the script!
+	 ***************************************************************/
 
 /**
  * Veranstaltungstermin
  */
-class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
+
+	/**
+	 * Dojo-Nummer
+	 *
+	 * @var int
+	 * @validate NotEmpty
+	 */
+	protected $dojoNumber = 0;
 
 	/**
 	 * Startzeitpunkt
@@ -38,7 +47,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \DateTime
 	 * @validate NotEmpty
 	 */
-	protected $start = NULL;
+	protected $start = null;
 
 	/**
 	 * Endzeitpunkt
@@ -46,14 +55,21 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \DateTime
 	 * @validate NotEmpty
 	 */
-	protected $end = NULL;
+	protected $end = null;
 
 	/**
 	 * Veranstaltungsort
 	 *
 	 * @var \Tollwerk\TwCoderdojo\Domain\Model\Location
 	 */
-	protected $location = NULL;
+	protected $location = null;
+
+	/**
+	 * Intro description
+	 *
+	 * @var string
+	 */
+	protected $intro = '';
 
 	/**
 	 * Mentoren
@@ -61,7 +77,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person>
 	 * @lazy
 	 */
-	protected $mentors = NULL;
+	protected $mentors = null;
 
 	/**
 	 * Teilnehmer
@@ -69,12 +85,13 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person>
 	 * @lazy
 	 */
-	protected $attendees = NULL;
+	protected $attendees = null;
 
 	/**
 	 * __construct
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		//Do not remove the next line: It would break the functionality
 		$this->initStorageObjects();
 	}
@@ -87,9 +104,30 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return void
 	 */
-	protected function initStorageObjects() {
+	protected function initStorageObjects()
+	{
 		$this->mentors = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->attendees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
+	 * Return the dojo number
+	 *
+	 * @return int
+	 */
+	public function getDojoNumber()
+	{
+		return $this->dojoNumber;
+	}
+
+	/**
+	 * Set the dojo number
+	 *
+	 * @param int $dojoNumber Dojo number
+	 */
+	public function setDojoNumber($dojoNumber)
+	{
+		$this->dojoNumber = $dojoNumber;
 	}
 
 	/**
@@ -97,7 +135,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return \DateTime $start
 	 */
-	public function getStart() {
+	public function getStart()
+	{
 		$this->start->setTimezone(new \DateTimeZone('UTC'));
 		return $this->start;
 	}
@@ -108,7 +147,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \DateTime $start
 	 * @return void
 	 */
-	public function setStart(\DateTime $start) {
+	public function setStart(\DateTime $start)
+	{
 		$this->start = $start;
 	}
 
@@ -117,7 +157,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return \DateTime $end
 	 */
-	public function getEnd() {
+	public function getEnd()
+	{
 		$this->end->setTimezone(new \DateTimeZone('UTC'));
 		return $this->end;
 	}
@@ -128,8 +169,29 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \DateTime $end
 	 * @return void
 	 */
-	public function setEnd(\DateTime $end) {
+	public function setEnd(\DateTime $end)
+	{
 		$this->end = $end;
+	}
+
+	/**
+	 * Return the intro description
+	 *
+	 * @return string
+	 */
+	public function getIntro()
+	{
+		return $this->intro;
+	}
+
+	/**
+	 * Set the intro description
+	 *
+	 * @param string $intro
+	 */
+	public function setIntro($intro)
+	{
+		$this->intro = $intro;
 	}
 
 	/**
@@ -137,7 +199,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return \Tollwerk\TwCoderdojo\Domain\Model\Location $location
 	 */
-	public function getLocation() {
+	public function getLocation()
+	{
 		return $this->location;
 	}
 
@@ -147,7 +210,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Location $location
 	 * @return void
 	 */
-	public function setLocation(\Tollwerk\TwCoderdojo\Domain\Model\Location $location) {
+	public function setLocation(\Tollwerk\TwCoderdojo\Domain\Model\Location $location)
+	{
 		$this->location = $location;
 	}
 
@@ -157,7 +221,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentor
 	 * @return void
 	 */
-	public function addMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentor) {
+	public function addMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentor)
+	{
 		$this->mentors->attach($mentor);
 	}
 
@@ -167,7 +232,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentorToRemove The Person to be removed
 	 * @return void
 	 */
-	public function removeMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentorToRemove) {
+	public function removeMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentorToRemove)
+	{
 		$this->mentors->detach($mentorToRemove);
 	}
 
@@ -176,7 +242,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $mentors
 	 */
-	public function getMentors() {
+	public function getMentors()
+	{
 		return $this->mentors;
 	}
 
@@ -186,7 +253,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $mentors
 	 * @return void
 	 */
-	public function setMentors(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $mentors) {
+	public function setMentors(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $mentors)
+	{
 		$this->mentors = $mentors;
 	}
 
@@ -196,7 +264,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
 	 * @return void
 	 */
-	public function addAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee) {
+	public function addAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
+	{
 		$this->attendees->attach($attendee);
 	}
 
@@ -206,7 +275,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove The Person to be removed
 	 * @return void
 	 */
-	public function removeAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove) {
+	public function removeAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
+	{
 		$this->attendees->detach($attendeeToRemove);
 	}
 
@@ -215,7 +285,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $attendees
 	 */
-	public function getAttendees() {
+	public function getAttendees()
+	{
 		return $this->attendees;
 	}
 
@@ -225,7 +296,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $attendees
 	 * @return void
 	 */
-	public function setAttendees(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $attendees) {
+	public function setAttendees(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $attendees)
+	{
 		$this->attendees = $attendees;
 	}
 

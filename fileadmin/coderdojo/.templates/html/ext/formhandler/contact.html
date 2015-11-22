@@ -1,0 +1,24 @@
+{namespace tw=Tollwerk\TwFacsimile\ViewHelpers}
+
+<!-- ###TEMPLATE_FORM1### begin -->
+<form method="post" id="###formID###" enctype="multipart/form-data">
+    <fieldset>
+        <legend>###LLL:fieldset.personal###</legend>
+        ###field_input_firstname###
+        ###field_input_lastname###
+        ###field_email_email###
+    </fieldset>
+    <fieldset>
+        <legend>###LLL:fieldset.message###</legend>
+        ###field_textarea_message###
+    </fieldset>
+    <div class="controls">
+        ###field_submit_contact###
+        ###antibotArmor###
+    </div>
+</form>
+<!-- ###TEMPLATE_FORM1### end -->
+
+<!-- ###TEMPLATE_ANTIBOT### begin -->
+<p>###LLL:antibot###</p>
+<!-- ###TEMPLATE_ANTIBOT### end -->

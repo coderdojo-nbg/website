@@ -1,0 +1,49 @@
+footer {
+	padding: 1em;
+	color: $colorFooter;
+
+	a {
+		display: inline-block;
+	}
+
+	.row {
+		display: table;
+		width: 100%;
+		min-height: 32px;
+	}
+
+	.cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.left {
+		text-align: left;
+
+		a {
+			margin-right: 1em;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.right {
+		text-align: right;
+		white-space: nowrap;
+
+		a {
+			text-decoration: none;
+			vertical-align: middle;
+			@include shift-off-screen();
+		}
+	}
+
+	.disclaimer {
+		&, a {
+			@include font-size(.83, smaller);
+			color: $bgcolorBodyLightest;
+		}
+	}
+}

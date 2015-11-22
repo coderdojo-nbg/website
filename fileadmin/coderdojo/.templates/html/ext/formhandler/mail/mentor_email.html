@@ -1,0 +1,15 @@
+{namespace v = FluidTYPO3\Vhs\ViewHelpers}
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Vorname:   ###value_firstname###
+Nachname:  ###value_lastname###
+E-Mail:    ###value_email###
+Teilnahme: ###value_type###
+
+Projekt
+============================================================================
+###value_project###
+</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
