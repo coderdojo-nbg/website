@@ -470,6 +470,15 @@ return array (
       array (
       ),
     ),
+    'tw_upsync' => 
+    array (
+      'composerName' => 'tw_upsync',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/tw_upsync/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'adodb' => 
     array (
       'composerName' => 'typo3/cms-adodb',

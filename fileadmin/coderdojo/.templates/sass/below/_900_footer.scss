@@ -43,7 +43,6 @@ footer {
 	.disclaimer {
 		&, a {
 			@include font-size(.83, smaller);
-			color: $bgcolorBodyLightest;
 		}
 	}
 }

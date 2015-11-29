@@ -1,11 +1,26 @@
-.ce-textpic {
-	width: 100%;
-	display: table;
-	table-layout: fixed;
+.ce-textpic.ce-layout-2,
+.ce-textpic.ce-layout-3 {
+	display: flex;
 
-	> * {
-		display: table-cell;
-		vertical-align: top;
+	> div {
+		box-sizing: border-box;
+		width: 50%;
+	}
+
+	.ce-flex-image {
+		padding: auto !important;
+	}
+
+	img {
+		display: none;
+	}
+
+	&:nth-last-of-type(odd) {
+		flex-direction: row-reverse;
+
+		 .ce-flex-image {
+			 background-position: left center;
+		 }
 	}
 }
 

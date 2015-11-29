@@ -1,9 +1,31 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div id="c{data.uid}" class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')} ce-layout-{data.layout}">
-	<f:if condition="{gallery.position.vertical} != 'below'">
-		<f:render partial="MediaGallery" arguments="{_all}" />
-	</f:if>
+	<f:if condition="{data.layout} > 1">
+		<f:then>
+			<f:render section="flex" arguments="{_all}"/>
+		</f:then>
+		<f:else>
+			<f:if condition="{gallery.position.vertical} != 'below'">
+				<f:render partial="MediaGallery" arguments="{_all}" />
+			</f:if>
 
+			<f:render section="body" arguments="{_all}"/>
+
+			<f:if condition="{gallery.position.vertical} == 'below'">
+				<f:render partial="MediaGallery" arguments="{_all}" />
+			</f:if>
+		</f:else>
+	</f:if>
+</div>
+
+<f:section name="flex">
+	<f:render section="body" arguments="{_all}"/>
+	<f:render section="image" arguments="{_all}"/>
+</f:section>
+
+<f:section name="body">
 	<div class="ce-body">
 		<f:if condition="{gallery.position.noWrap} != 1">
 			<f:render partial="Header" arguments="{_all}" />
@@ -18,9 +40,22 @@
 
 		<f:render partial="Footer" arguments="{_all}" />
 	</div>
+</f:section>
 
-	<f:if condition="{gallery.position.vertical} == 'below'">
-		<f:render partial="MediaGallery" arguments="{_all}" />
-	</f:if>
-</div>
+<f:section name="image">
+	<f:for each="{gallery.rows}" as="row" iteration="rowIter">
+		<f:if condition="{rowIter.index} == 0">
+			<f:for each="{row.columns}" as="column" iteration="columnIter">
+				<f:if condition="{column.media}">
+					<f:if condition="{column.media.type} == 2">
+						<div class="ce-flex-image" style="background-image:url({f:uri.image(image: column.media, maxWidth: 800)});padding-top:{v:math.product(a:'{v:math.division(a:\'{column.media.properties.height}\',b:\'{column.media.properties.width}\')}',b:50)}%">
+							<f:image image="{column.media}" alt="{column.media.properties.title}" maxWidth="800"/>
+						</div>
+					</f:if>
+				</f:if>
+			</f:for>
+		</f:if>
+	</f:for>
+</f:section>
+
 </html>

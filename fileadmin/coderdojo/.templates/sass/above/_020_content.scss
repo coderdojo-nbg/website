@@ -10,12 +10,32 @@
 	padding: 2em 1em;
 }
 
-.ce-layout-1, .ce-formhandler_pi1 {
+.ce-layout-1, .ce-layout-3, .ce-formhandler_pi1 {
 	background-color: $bgcolorHeader;
 
 	&, a {
 		color: $colorHeader;
 	}
+}
+
+.ce-textpic.ce-layout-1 > div {
+	box-sizing: border-box;
+	position: relative;
+}
+
+.ce-flex-image {
+	background-size: cover;
+	background-position: right center;
+
+	span {
+		@include hide-visible;
+	}
+}
+
+.ce-bodytext .icon {
+	padding-left: 2em;
+	background-size: contain;
+	background-position: .25em center;
 }
 
 dl.contact {
@@ -37,10 +57,22 @@ dl.contact {
 }
 
 .ce-textpic li {
-	margin: 1em 0;
+	margin: .5em 0;
 }
 
 .back {
 	display: block;
 	padding: 1em;
+}
+
+.home .ce-textpic {
+	&:nth-of-type(2) {
+		@extend .red;
+	}
+	&:nth-of-type(3) {
+		@extend .green;
+	}
+	&:nth-of-type(4) {
+		@extend .blue;
+	}
 }

@@ -20,3 +20,7 @@
 @media all and (min-width: $breakpoint004) {
 	@import "004_map/400_dates";
 }
+
+@media all and (max-width: $breakpoint003) {
+	@import "005_flex/020_content";
+}

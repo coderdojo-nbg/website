@@ -35,8 +35,7 @@ footer {
       white-space: nowrap; }
   footer .disclaimer, footer .disclaimer a {
     font-size: smaller;
-    font-size: 0.83rem;
-    color: #bbb; }
+    font-size: 0.83rem; }
 
 @media all and (min-width: 32em) {
   footer {

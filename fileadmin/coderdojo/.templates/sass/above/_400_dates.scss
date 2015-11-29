@@ -49,6 +49,14 @@
 
 	.date-details {
 
+		> div {
+			background-color: $bgcolorHeader;
+
+			&, & a {
+				color: $colorHeader;
+			}
+		}
+
 		.map {
 			display: block;
 			width: 100%;
@@ -60,10 +68,6 @@
 
 		.date-intro, .mentor-intro {
 			padding: 1em;
-		}
-
-		.date-intro {
-			background-color: $bgcolorBlue;
 		}
 
 		.mentors {

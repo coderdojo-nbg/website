@@ -7,7 +7,6 @@
 }
 
 .mentor {
-	padding: 1em;
 	box-sizing: border-box;
 
 	figure {
@@ -58,7 +57,13 @@
 	}
 
 	section {
-		margin-top: 3em;
+		padding: 1em;
+	}
+
+	.mentor-header {
+		margin-top: 0;
+		padding-bottom: 2em;
+		background-color: lighten($bgcolorBodyLightest, 23%);
 	}
 }
 
@@ -90,8 +95,6 @@
 	display: inline-block;
 	margin: 0 .2em .2em 0;
 	padding: .2em .5em;
-	background-color: $bgcolorBodyLightest;
-	background-color: darken($bgcolorYellow, 10%);
 	background-color: $bgcolorContent;
 	color: $colorBody;
 	border-radius: .3em;

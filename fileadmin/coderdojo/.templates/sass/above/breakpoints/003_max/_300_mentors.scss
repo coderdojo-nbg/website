@@ -27,15 +27,16 @@
 	}
 }
 
-.mentor-profile > section {
+.mentor-profile > section.card {
 	box-sizing: border-box;
 	display: inline-block;
 	width: 50%;
+	vertical-align: top;
 
-	&:nth-of-type(odd) {
+	&:nth-of-type(even) {
 		padding-right: 1em;
 	}
-	&:nth-of-type(even) {
+	&:nth-of-type(odd) {
 		padding-left: 1em;
 	}
 }
