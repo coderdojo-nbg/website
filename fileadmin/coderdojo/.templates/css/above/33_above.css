@@ -98,62 +98,12 @@ dl.contact dt {
 dl.contact dd {
   margin-left: 6em; }
 
-.ce-twcoderdojo_date header {
-  padding: 1em; }
-
-.ce-twcoderdojo_date address {
-  background-size: contain;
-  padding-left: 3.5em; }
-
-.ce-twcoderdojo_date .dates-list {
-  padding: 0;
-  margin: 0;
-  background-color: #ffffff;
-  list-style-type: none; }
-  .ce-twcoderdojo_date .dates-list, .ce-twcoderdojo_date .dates-list a {
-    color: #000; }
-
-.ce-twcoderdojo_date .date h3 {
-  margin: 0 0 .5em 0; }
-
-.ce-twcoderdojo_date .date a {
-  padding: 2em 1em;
-  text-decoration: none;
-  display: block; }
-
-.ce-twcoderdojo_date .date .schedule {
-  margin: 1em 0; }
-
-.ce-twcoderdojo_date .date:nth-child(even) {
-  background-color: #eff5fb; }
-
-.ce-twcoderdojo_date .date:hover {
-  background-color: #2e7ac7; }
-  .ce-twcoderdojo_date .date:hover, .ce-twcoderdojo_date .date:hover a {
-    color: #fff; }
-
-.ce-twcoderdojo_date .date-details .map {
-  display: block;
-  width: 100%;
-  height: 320px;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-indent: 200%;
-  overflow: hidden;
-  white-space: nowrap; }
-
-.ce-twcoderdojo_date .date-details .date-intro, .ce-twcoderdojo_date .date-details .mentor-intro {
-  padding: 1em; }
-
-.ce-twcoderdojo_date .date-details .mentors {
-  background-color: #ffffff; }
-  .ce-twcoderdojo_date .date-details .mentors, .ce-twcoderdojo_date .date-details .mentors a {
-    color: #000; }
-  .ce-twcoderdojo_date .date-details .mentors .mentor:nth-child(even) {
-    background-color: #fbcc33; }
-
 .ce-textpic li {
   margin: 1em 0; }
+
+.back {
+  display: block;
+  padding: 1em; }
 
 header[role=banner] {
   padding: 2em 1em 4em 1em;
@@ -202,6 +152,29 @@ header[role=banner] {
     padding-left: 3.5em; }
     header[role=banner] .address:hover {
       color: #000; }
+  header[role=banner] .collapsed {
+    display: none; }
+  header[role=banner].collapsed {
+    padding: 1em 0 3em 0; }
+    header[role=banner].collapsed .banner {
+      display: table;
+      width: 100%;
+      max-width: 64em;
+      margin: 0 auto;
+      table-layout: fixed; }
+      header[role=banner].collapsed .banner > a {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 1em;
+        font-size: smaller;
+        font-size: 0.83rem;
+        line-height: 1.4; }
+      header[role=banner].collapsed .banner .address {
+        display: none; }
+      header[role=banner].collapsed .banner .collapsed {
+        display: inline; }
+      header[role=banner].collapsed .banner .expanded {
+        display: none; }
 
 nav {
   margin-top: -2em; }
@@ -224,13 +197,8 @@ nav {
   .ce-twcoderdojo_mentor, .ce-twcoderdojo_mentor a {
     color: #000; }
 
-.mentors {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
 .mentor {
-  padding: 1em 1em 3em 1em;
+  padding: 1em;
   box-sizing: border-box; }
   .mentor figure {
     text-align: center; }
@@ -242,6 +210,7 @@ nav {
     transition: transform 200ms; }
   .mentor > a {
     display: block;
+    padding: 1em 1em 3em 1em;
     text-decoration: none; }
     .mentor > a:hover img {
       transform: scale(1.05); }
@@ -260,6 +229,17 @@ nav {
     margin-left: 6em; }
   .mentor section {
     margin-top: 3em; }
+
+.mentors {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .mentors .mentor {
+    padding: 0; }
+  .mentors .mentor:nth-child(even) {
+    background-color: #fef4d3; }
+  .mentors .mentor:hover {
+    background-color: #fbcc33; }
 
 .mentor-skills {
   margin: 0;
@@ -289,6 +269,61 @@ nav {
     white-space: nowrap;
     display: inline-block; }
 
+.ce-twcoderdojo_date header {
+  padding: 1em; }
+
+.ce-twcoderdojo_date address {
+  background-size: contain;
+  padding-left: 3.5em; }
+
+.ce-twcoderdojo_date .dates-list {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  list-style-type: none; }
+  .ce-twcoderdojo_date .dates-list, .ce-twcoderdojo_date .dates-list a {
+    color: #000; }
+
+.ce-twcoderdojo_date .date h3 {
+  margin: 0 0 .5em 0; }
+
+.ce-twcoderdojo_date .date a {
+  padding: 2em 1em;
+  text-decoration: none;
+  display: block; }
+
+.ce-twcoderdojo_date .date .schedule {
+  margin: 1em 0; }
+
+.ce-twcoderdojo_date .date:nth-child(even) {
+  background-color: #eff5fb; }
+
+.ce-twcoderdojo_date .date:hover {
+  background-color: #2e7ac7; }
+  .ce-twcoderdojo_date .date:hover, .ce-twcoderdojo_date .date:hover a {
+    color: #fff; }
+
+.ce-twcoderdojo_date .date-details .map {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.ce-twcoderdojo_date .date-details .date-intro, .ce-twcoderdojo_date .date-details .mentor-intro {
+  padding: 1em; }
+
+.ce-twcoderdojo_date .date-details .date-intro {
+  background-color: #2e7ac7; }
+
+.ce-twcoderdojo_date .date-details .mentors {
+  background-color: #ffffff; }
+  .ce-twcoderdojo_date .date-details .mentors, .ce-twcoderdojo_date .date-details .mentors a {
+    color: #000; }
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -307,13 +342,13 @@ fieldset > label {
   fieldset > label span {
     display: block; }
 
-input[type=text], input[type=email], input[type=submit], textarea {
+input[type=text], input[type=email], input[type=submit], input[type=date], input[type=file], textarea {
   width: 100%;
   padding: .5em;
   box-sizing: border-box;
   border: 1px solid #bbb;
   vertical-align: middle; }
-  input[type=text].error, input[type=email].error, input[type=submit].error, textarea.error {
+  input[type=text].error, input[type=email].error, input[type=submit].error, input[type=date].error, input[type=file].error, textarea.error {
     border-bottom-width: 0; }
 
 input[type=submit] {
@@ -341,6 +376,11 @@ form li {
     form li label span {
       margin-left: .5em; }
 
+form .mentor-skill {
+  padding: 0; }
+  form .mentor-skill label {
+    padding: .2em .5em; }
+
 label + .error, fieldset ul + .error {
   padding: .5em;
   margin: 0 0 2em 0;
@@ -361,24 +401,56 @@ label + .error, fieldset ul + .error {
     bottom: 100%;
     left: 50%; }
 
-@media all and (min-width: 32em) and (max-width: 48em) {
-  .mentor figure {
-    text-align: left;
-    display: table;
+#Tx_Formhandler_UploadedFiles_portrait {
+  display: list-item;
+  list-style-type: disc;
+  margin: 0 0 0 2em; }
+  #Tx_Formhandler_UploadedFiles_portrait a {
+    display: inline-block;
+    padding: .5em; }
+  #Tx_Formhandler_UploadedFiles_portrait:empty {
+    display: none; }
+
+@media all and (min-width: 32em) {
+  .ce-body, .ce-html {
+    padding: 1em 2em; }
+  .ce-formhandler_pi1 {
+    padding: 2em; }
+  .back {
+    padding: 1em 2em; }
+  header[role=banner].collapsed .banner > a {
+    font-size: medium;
+    font-size: 1rem; }
+  .mentor {
+    padding: 1em 2em; }
+    .mentor > a {
+      padding: 2em; }
+    .mentor figure {
+      text-align: left;
+      display: table;
+      table-layout: auto;
+      margin: 0 auto; }
+      .mentor figure > * {
+        display: table-cell;
+        vertical-align: top; }
+      .mentor figure > div {
+        width: 150px; }
+      .mentor figure h2, .mentor figure h3 {
+        margin-top: 0;
+        text-align: left; }
+    .mentor figcaption {
+      padding: 1em 0 0 2em; }
+  .mentors .mentor figure {
     width: 100%;
-    table-layout: auto; }
-    .mentor figure > * {
-      display: table-cell;
-      vertical-align: top; }
-    .mentor figure > div {
-      width: 200px; }
-    .mentor figure h2, .mentor figure h3 {
-      margin-top: 0;
-      text-align: left; }
-  .mentor figcaption {
-    padding: 1em 0 0 2em; }
+    margin: 0; }
   .mentor-social {
-    text-align: left; } }
+    text-align: left; }
+  .ce-twcoderdojo_date header {
+    padding: 1em 2em; }
+  .ce-twcoderdojo_date .date a {
+    padding: 2em; }
+  .ce-twcoderdojo_date .date-details .date-intro, .ce-twcoderdojo_date .date-details .mentor-intro {
+    padding: 1em 2em; } }
 
 @media all and (min-width: 48em) {
   .ce-textpic {
@@ -392,21 +464,85 @@ label + .error, fieldset ul + .error {
     padding: 1em 2em; }
   .ce-formhandler_pi1 {
     padding: 2em; }
-  .mentor {
-    padding: 1em 2em 3em 2em;
+  header[role=banner].collapsed .banner .address {
+    display: table-cell;
+    padding-left: 3.5em; }
+  .mentor figure > div {
+    width: 200px; }
+  .ce-twcoderdojo_date .date {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%; }
+    .ce-twcoderdojo_date .date:nth-child(even) {
+      background-color: transparent; }
+    .ce-twcoderdojo_date .date:nth-child(3n+2), .ce-twcoderdojo_date .date:nth-child(3n+3) {
+      background-color: #eff5fb; }
+    .ce-twcoderdojo_date .date:hover {
+      background-color: #2e7ac7; }
+      .ce-twcoderdojo_date .date:hover, .ce-twcoderdojo_date .date:hover a {
+        color: #fff; }
+  fieldset > label span, .label {
+    display: block;
+    clear: left;
+    float: left;
+    width: 25%;
+    line-height: 2.8; }
+  fieldset > label input[type=text], fieldset > label input[type=email], fieldset > label input[type=submit], fieldset > label input[type=date], fieldset > label input[type=file], fieldset > label textarea {
+    width: 75%; }
+  fieldset > label + .error {
+    margin-left: 25%; }
+  .label + ul, .label + ol {
+    box-sizing: border-box;
+    width: 75%;
+    margin-top: 1em; }
+    .label + ul + .error, .label + ol + .error {
+      margin-left: 25%; }
+  form .controls {
+    margin-left: 25%; } }
+
+@media all and (min-width: 64em) {
+  .mentors .mentor {
     display: inline-block;
     vertical-align: top;
     width: 50%; }
-  label span {
-    display: block;
-    float: left;
-    width: 20%;
-    line-height: 2.8; }
-  label input, label textarea {
-    width: 80%; }
-  label + .error {
-    margin-left: 20%; }
-  form .controls {
-    margin-left: 20%; } }
+    .mentors .mentor > a {
+      padding: 1em 2em 3em 2em; }
+    .mentors .mentor figure > div {
+      width: 150px; }
+  .mentors .mentor:nth-child(even) {
+    background-color: transparent; }
+  .mentors .mentor:nth-child(3n+2),
+  .mentors .mentor:nth-child(3n+3) {
+    background-color: #fef4d3; }
+  .mentors .mentor:hover {
+    background-color: #fbcc33; }
+  .mentor-profile > section {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%; }
+    .mentor-profile > section:nth-of-type(odd) {
+      padding-right: 1em; }
+    .mentor-profile > section:nth-of-type(even) {
+      padding-left: 1em; } }
+
+@media all and (min-width: 640px) {
+  .ce-twcoderdojo_date .date-details > div {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    min-height: 320px; }
+    .ce-twcoderdojo_date .date-details > div > * {
+      position: relative;
+      display: table-cell;
+      vertical-align: top;
+      height: auto; }
+    .ce-twcoderdojo_date .date-details > div .map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+      background-size: cover; } }
 
 /*# sourceMappingURL=33_above.css.map */

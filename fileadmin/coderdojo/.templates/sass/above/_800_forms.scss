@@ -16,7 +16,7 @@ fieldset > label {
 	}
 }
 
-input[type=text], input[type=email], input[type=submit], textarea {
+input[type=text], input[type=email], input[type=submit], input[type=date], input[type=file], textarea {
 	width: 100%;
 	padding: .5em;
 	box-sizing: border-box;
@@ -61,6 +61,14 @@ form {
 			}
 		}
 	}
+
+	.mentor-skill {
+		padding: 0;
+
+		label {
+			padding: .2em .5em;
+		}
+	}
 }
 
 label, fieldset ul {
@@ -85,5 +93,20 @@ label, fieldset ul {
 			bottom: 100%;
 			left: 50%;
 		}
+	}
+}
+
+#Tx_Formhandler_UploadedFiles_portrait {
+	display: list-item;
+	list-style-type: disc;
+	margin: 0 0 0 2em;
+
+	a {
+		display: inline-block;
+		padding: .5em;
+	}
+
+	&:empty {
+		display: none;
 	}
 }

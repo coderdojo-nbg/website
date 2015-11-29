@@ -18,9 +18,19 @@
 <!-- ###field_email### -->
 
 <!-- ###field_date### -->
-<input type="date" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="YYYY-MM-DD"/>
+<label>
+  <span>###LLL:field.###fieldname######</span><input type="date" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="YYYY-MM-DD" min="1920-01-01"/>
+</label>
   ###error_###fieldname######
 <!-- ###field_date### -->
+
+<!-- ###field_file### -->
+<label>
+  <span>###LLL:field.###fieldname######</span><input type="file" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" />
+</label>
+  ###error_###fieldname######
+  ######fieldname###_uploadedFiles###
+<!-- ###field_file### -->
 
 <!-- ###field_textarea### -->
 <label>
@@ -30,7 +40,7 @@
 <!-- ###field_textarea### -->
 
 <!-- ###field_hidden### -->
-<input type="hidden" id="field_###fieldname###" name="formhandler[###fieldname###]" value="###value_###fieldname######" />
+<input type="hidden" id="field_###fieldname###" name="formhandler[###fieldname###]" value="###value_###fieldname######" min="1920-01-01"/>
 <!-- ###field_hidden### -->
 
 <!-- ###field_langId### -->

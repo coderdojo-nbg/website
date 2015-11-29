@@ -55,9 +55,11 @@ class DateController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * action show
 	 *
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Date $date
+	 * @param int $back Back PID
 	 * @return void
 	 */
-	public function showAction(\Tollwerk\TwCoderdojo\Domain\Model\Date $date) {
+	public function showAction(\Tollwerk\TwCoderdojo\Domain\Model\Date $date, $back = null) {
 		$this->view->assign('date', $date);
+		$this->view->assign('back', $back ?: $this->settings['pages']['dateListPid']);
 	}
 }

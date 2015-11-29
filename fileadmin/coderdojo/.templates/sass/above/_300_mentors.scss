@@ -6,14 +6,8 @@
 	}
 }
 
-.mentors {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
 .mentor {
-	padding: 1em 1em 3em 1em;
+	padding: 1em;
 	box-sizing: border-box;
 
 	figure {
@@ -32,6 +26,7 @@
 
 	> a {
 		display: block;
+		padding: 1em 1em 3em 1em;
 		text-decoration: none;
 
 		&:hover img {
@@ -64,6 +59,24 @@
 
 	section {
 		margin-top: 3em;
+	}
+}
+
+.mentors {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	.mentor {
+		padding: 0;
+	}
+
+	.mentor:nth-child(even) {
+		background-color: lighten($bgcolorYellow, 32%);
+	}
+
+	.mentor:hover {
+		background-color: $bgcolorYellow;
 	}
 }
 

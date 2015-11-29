@@ -3,13 +3,90 @@
 <!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
 <v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
 
-">Vorname:   ###value_firstname###
-Nachname:  ###value_lastname###
-E-Mail:    ###value_email###
-Teilnahme: ###value_type###
+">Vorname:     ###value_firstname###
+Nachname:    ###value_lastname###
+Geschlecht:  ###value_gender###
+Geburtstag:  ###value_birthday###
+E-Mail:      ###value_email###
+Portrait:    Siehe Anhang
 
-Projekt
+Kurzbiografie
 ============================================================================
-###value_project###
-</v:format.regularExpression>
+###value_biography###
+
+Leitmotiv
+============================================================================
+###value_statement###
+
+Kontakt
+============================================================================
+Website:     ###value_website###
+Twitter:     ###value_twitter###
+Facebook:    ###value_facebook###
+Google+:     ###value_googleplus###
+GitHub:      ###value_github###
+
+Schwerpunkte
+============================================================================
+{skills}
+
+Vorschläge:  ###value_newskills###</v:format.regularExpression>
 <!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Hallo ###value_firstname###,
+
+danke für Deine Registrierung als CoderDojo-Mentor!
+
+Du hast die untenstehenden Angaben an das CoderDojo Nürnberg geschickt.
+Solltest Du daran etwas korrigieren wollen, dann antworte einfach auf diese
+Nachricht oder benutze unser Kontaktformular im Internet unter
+{contactform}.
+
+Wir werden Deine Angaben nun prüfen und für dich ein Mentorenprofil unter
+{mentorlist} einrichten.
+Dort aufgeführt zu sein verpflichtet Dich nicht, bei jedem CoderDojo dabei
+zu sein. Du musst dich vielmehr wie andere Teilnehmer auch für einzelne
+Termine anmelden, aber wähle dann bitte im Anmeldeformular „Mentor“ als
+Teilnahmeform.
+
+Wir freuen uns auf Dich!
+Dein CoderDojo Nürnberg
+
+--- 8< ---
+
+Persönliche Angaben
+============================================================================
+Vorname:     ###value_firstname###
+Nachname:    ###value_lastname###
+Geschlecht:  ###value_gender###
+Geburtstag:  ###value_birthday###
+E-Mail:      ###value_email###
+Portrait:    Siehe Anhang
+
+Kurzbiografie
+============================================================================
+###value_biography###
+
+Leitmotiv
+============================================================================
+###value_statement###
+
+Kontakt
+============================================================================
+Website:     ###value_website###
+Twitter:     ###value_twitter###
+Facebook:    ###value_facebook###
+Google+:     ###value_googleplus###
+GitHub:      ###value_github###
+
+Schwerpunkte
+============================================================================
+{skills}
+
+Vorschläge:  ###value_newskills###
+
+###LLL:signature###</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->

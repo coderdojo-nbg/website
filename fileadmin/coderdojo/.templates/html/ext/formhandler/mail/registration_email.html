@@ -3,13 +3,49 @@
 <!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
 <v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
 
-">Vorname:   ###value_firstname###
-Nachname:  ###value_lastname###
-E-Mail:    ###value_email###
-Teilnahme: ###value_type###
+">Anmeldung zum CoderDojo: {dojo}
+
+Vorname:     ###value_firstname###
+Nachname:    ###value_lastname###
+Geschlecht:  ###value_gender###
+Geburtstag:  ###value_birthday###
+E-Mail:      ###value_email###
+Teilnahme:   ###value_type###
 
 Projekt
 ============================================================================
 ###value_project###
 </v:format.regularExpression>
 <!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Hallo ###value_firstname###,
+
+danke für Deine Anmeldung zum CoderDojo {dojo}!
+
+Du hast die untenstehenden Angaben an das CoderDojo Nürnberg geschickt.
+Sollte Dir etwas dazwischenkommen, oder solltest Du uns noch etwas mitteilen
+wollen, dann antworte einfach auf diese Nachricht oder benutze unser Kontakt-
+formular im Internet unter {contactform}.
+
+Wir freuen uns auf Dich!
+Dein CoderDojo Nürnberg
+
+--- 8< ---
+
+Persönliche Angaben
+============================================================================
+Vorname:     ###value_firstname###
+Nachname:    ###value_lastname###
+Geburtstag:  ###value_birthday###
+E-Mail:      ###value_email###
+Teilnahme:   ###value_type###
+
+Projekt
+============================================================================
+###value_project###
+
+###LLL:signature###</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->

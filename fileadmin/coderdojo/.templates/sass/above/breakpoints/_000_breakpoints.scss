@@ -1,9 +1,22 @@
-@media all and (min-width: $breakpoint001) and (max-width: $breakpoint002) {
+@media all and (min-width: $breakpoint001) {
+	@import "001_wider/020_content";
+	@import "001_wider/100_header";
 	@import "001_wider/300_mentors";
+	@import "001_wider/400_dates";
 }
 
 @media all and (min-width: $breakpoint002) {
 	@import "002_2columns/020_content";
+	@import "002_2columns/100_header";
 	@import "002_2columns/300_mentors";
+	@import "002_2columns/400_dates";
 	@import "002_2columns/800_forms";
+}
+
+@media all and (min-width: $breakpoint003) {
+	@import "003_max/300_mentors";
+}
+
+@media all and (min-width: $breakpoint004) {
+	@import "004_map/400_dates";
 }

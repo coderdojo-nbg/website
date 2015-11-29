@@ -36,84 +36,11 @@ dl.contact {
 	}
 }
 
-.ce-twcoderdojo_date {
-	header {
-		padding: 1em;
-	}
-
-	address {
-		background-size: contain;
-		padding-left: 3.5em;
-	}
-
-	.dates-list {
-		padding: 0;
-		margin: 0;
-		background-color: $bgcolorHeader;
-		list-style-type: none;
-
-		&, a {
-			color: $colorHeader;
-		}
-	}
-
-	.date {
-		h3 {
-			margin: 0 0 .5em 0;
-		}
-
-		a {
-			padding: 2em 1em;
-			text-decoration: none;
-			display: block;
-		}
-
-		.schedule {
-			margin: 1em 0;
-		}
-
-		&:nth-child(even) {
-			background-color: lighten($bgcolorBlue, 48%);
-		}
-
-		&:hover {
-			background-color: $bgcolorBlue;
-
-			&, a {
-				color: $colorBlue;
-			}
-		}
-	}
-
-	.date-details {
-
-		.map {
-			display: block;
-			width: 100%;
-			height: 320px;
-			background-repeat: no-repeat;
-			background-position: center;
-			@include shift-off-screen;
-		}
-
-		.date-intro, .mentor-intro {
-			padding: 1em;
-		}
-
-		.mentors {
-			background-color: $bgcolorHeader;
-
-			&, a {
-				color: $colorHeader;
-			}
-
-			.mentor:nth-child(even) {
-				background-color: $bgcolorYellow;
-			}
-		}
-	}
-}
-
 .ce-textpic li {
 	margin: 1em 0;
+}
+
+.back {
+	display: block;
+	padding: 1em;
 }

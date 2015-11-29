@@ -1,0 +1,25 @@
+.ce-twcoderdojo_date {
+	.date {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 50%;
+
+		&:nth-child(even) {
+			background-color: transparent;
+		}
+
+		&:nth-child(3n+2),
+		&:nth-child(3n+3)
+		{
+			background-color: lighten($bgcolorBlue, 48%);
+		}
+
+		&:hover {
+			background-color: $bgcolorBlue;
+
+			&, a {
+				color: $colorBlue;
+			}
+		}
+	}
+}

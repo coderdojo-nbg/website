@@ -1,0 +1,41 @@
+.mentors {
+	.mentor {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+
+		> a {
+			padding: 1em 2em 3em 2em;
+		}
+
+		figure > div {
+			width: 150px;
+		}
+	}
+
+	.mentor:nth-child(even) {
+		background-color: transparent;
+	}
+	.mentor:nth-child(3n+2),
+	.mentor:nth-child(3n+3)
+	{
+		background-color: lighten($bgcolorYellow, 32%);
+	}
+
+	.mentor:hover {
+		background-color: $bgcolorYellow;
+	}
+}
+
+.mentor-profile > section {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 50%;
+
+	&:nth-of-type(odd) {
+		padding-right: 1em;
+	}
+	&:nth-of-type(even) {
+		padding-left: 1em;
+	}
+}

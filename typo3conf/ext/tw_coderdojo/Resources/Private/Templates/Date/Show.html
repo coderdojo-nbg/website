@@ -1,18 +1,19 @@
 <div class="date-details h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+    <div>
+        <section class="date-intro">
+            <h2 class="p-name" itemprop="name">
+                <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
+            </h2>
+            <f:if condition="{date.intro}">
+                <p class="p-description" itemprop="description">
+                    <f:format.html>{date.intro}</f:format.html>
+                </p>
+            </f:if>
+            <p><a href="#c19" class="date-register"><f:translate key="dojo.register"/></a></p>
+        </section>
 
-    <section class="date-intro">
-        <h2 class="p-name" itemprop="name">
-            <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
-        </h2>
-        <f:if condition="{date.intro}">
-            <p class="p-description" itemprop="description">
-                <f:format.html>{date.intro}</f:format.html>
-            </p>
-        </f:if>
-        <a href="#c19"><f:translate key="dojo.register"/></a>
-    </section>
-
-    <f:render partial="Date" section="Map" arguments="{date: date}"/>
+        <div><f:render partial="Date" section="Map" arguments="{date: date}"/></div>
+    </div>
 
     <section class="date-mentors">
         <div class="mentor-intro">
@@ -25,5 +26,9 @@
         </div>
         <f:render partial="Mentors" arguments="{mentors: date.mentors}"/>
     </section>
+
+    <f:link.page pageUid="{back}" class="back">
+        <f:translate key="label.back.dates"/>
+    </f:link.page>
 </div>
 

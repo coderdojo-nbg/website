@@ -60,6 +60,7 @@ plugin.Tx_Formhandler.settings.predef.contact {
 			class									= Tx_Formhandler_Finisher_Mail
 			config{
 				admin {
+					to_name							= CoderDojo Nürnberg
 					to_email						= ping@coderdojo-nbg.org
 					subject							= Kontaktformular CoderDojo Nürnberg
 					sender_email					= email
@@ -69,24 +70,19 @@ plugin.Tx_Formhandler.settings.predef.contact {
 					templateFile					= FLUIDTEMPLATE
 					templateFile{
 						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/contact_email.html
-						variables{
-							firstname				= TEXT
-							firstname{
-								value.data			= GP:formhandler|firstname
-							}
-							lastname				= TEXT
-							lastname{
-								value.data			= GP:formhandler|lastname
-							}
-							email					= TEXT
-							email{
-								value.data			= GP:formhandler|email
-							}
-							message					= TEXT
-							message{
-								value.data			= GP:formhandler|message
-							}
-						}
+					}
+				}
+				user {
+					to_name							= fullname
+					to_email						= email
+					subject							= Nachricht an das CoderDojo Nürnberg
+					sender_email					= ping@coderdojo-nbg.org
+					sender_name						= CoderDojo Nürnberg
+					replyto_email					= ping@coderdojo-nbg.org
+					replyto_name					= CoderDojo Nürnberg
+					templateFile					= FLUIDTEMPLATE
+					templateFile{
+						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/contact_email.html
 					}
 				}
 			}

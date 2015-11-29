@@ -1,0 +1,25 @@
+.ce-twcoderdojo_date {
+	.date-details > div {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		min-height: 320px;
+
+		& > * {
+			position: relative;
+			display: table-cell;
+			vertical-align: top;
+			height: auto;
+		}
+
+		.map {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: auto;
+			background-size: cover;
+		}
+	}
+}

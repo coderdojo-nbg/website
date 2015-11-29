@@ -1,7 +1,7 @@
 <f:section name="Schedule">
-    <time class="dt-start" itemprop="dtstart" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <f:translate key="format.from"/> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
+    <time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <f:translate key="format.from"/> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
     <f:translate key="format.to"/>
-    <time class="dt-end" itemprop="dtend" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
+    <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
     <f:translate key="format.oclock"/>
 </f:section>
 
@@ -14,7 +14,7 @@
                 <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
                 <span class="p-locality" itemprop="locality">{date.location.locality}</span>
                 <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
-                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
+                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/GeoCoordinates">
                                 <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
                                 <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
                             </span>

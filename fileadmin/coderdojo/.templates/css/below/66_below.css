@@ -38,4 +38,8 @@ footer {
     font-size: 0.83rem;
     color: #bbb; }
 
+@media all and (min-width: 32em) {
+  footer {
+    padding: 1em 2em; } }
+
 /*# sourceMappingURL=66_below.css.map */

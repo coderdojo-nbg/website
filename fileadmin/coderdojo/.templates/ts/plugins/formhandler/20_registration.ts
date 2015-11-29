@@ -18,6 +18,16 @@ plugin.Tx_Formhandler.settings.predef.registration {
 		}
 	}
 
+	preProcessors {
+		1.class = Tx_Formhandler_PreProcessor_LoadDefaultValues
+		1.config {
+			1 {
+				dojo.defaultValue				= TEXT
+				dojo.defaultValue.data			= GP:tx_twcoderdojo_date|date
+			}
+		}
+	}
+
 	validators{
 		10{
 			class					= Tx_Formhandler_Validator_Default
@@ -25,12 +35,23 @@ plugin.Tx_Formhandler.settings.predef.registration {
 				fieldConf {
 					firstname.errorCheck.1		= required
 					lastname.errorCheck.1		= required
+					gender.errorCheck.1			= required
 					email.errorCheck {
 						1						= required
 						2 						= email
 						3 						= emailExists
 					}
 					type.errorCheck.1			= required
+					birthday.errorCheck {
+						1						= required
+						2						= date
+						2.pattern				= Y-m-d
+						3						= isOlderThan
+						3						{
+							dateFormat			= Y-m-d
+							years				= 5
+						}
+					}
 				}
 			}
 		}
@@ -61,17 +82,16 @@ plugin.Tx_Formhandler.settings.predef.registration {
 			class									= Tx_Formhandler_Finisher_Mail
 			config{
 				admin {
+					to_name							= CoderDojo Nürnberg
 					to_email						= ping@coderdojo-nbg.org
-					subject							= Anmeldeformular CoderDojo Nürnberg
-					type							= CASE
-					type {
-						key.data					= GP:formhandler|type
-						ninja						= TEXT
-						ninja.data					= LLL:fileadmin/facsimile/.templates/lang/formhandler.xml:registration.type.ninja
-						mentor						= TEXT
-						mentor.data					= LLL:fileadmin/facsimile/.templates/lang/formhandler.xml:registration.type.mentor
-						helper						= TEXT
-						helper.data					= LLL:fileadmin/facsimile/.templates/lang/formhandler.xml:registration.type.helper
+					subject							= RECORDS
+					subject {
+						source.data					= GP:formhandler|dojo
+						tables						= tx_twcoderdojo_domain_model_date
+						conf.tx_twcoderdojo_domain_model_date = TEXT
+						conf.tx_twcoderdojo_domain_model_date {
+							dataWrap				= Anmeldung zum CoderDojo {field:dojo_number} (am {field:start})
+						}
 					}
 					sender_email					= email
 					sender_name						= fullname
@@ -81,21 +101,55 @@ plugin.Tx_Formhandler.settings.predef.registration {
 					templateFile{
 						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/registration_email.html
 						variables{
-							firstname				= TEXT
-							firstname{
-								value.data			= GP:formhandler|firstname
+							dojo					= RECORDS
+							dojo {
+								source.data			= GP:formhandler|dojo
+								tables				= tx_twcoderdojo_domain_model_date
+								conf.tx_twcoderdojo_domain_model_date = TEXT
+								conf.tx_twcoderdojo_domain_model_date {
+									dataWrap		= {field:dojo_number} am {field:start}
+								}
 							}
-							lastname				= TEXT
-							lastname{
-								value.data			= GP:formhandler|lastname
+						}
+					}
+				}
+				user {
+					to_name							= fullname
+					to_email						= email
+					subject							= RECORDS
+					subject {
+						source.data					= GP:formhandler|dojo
+						tables						= tx_twcoderdojo_domain_model_date
+						conf.tx_twcoderdojo_domain_model_date = TEXT
+						conf.tx_twcoderdojo_domain_model_date {
+							dataWrap				= Anmeldung zum CoderDojo {field:dojo_number} (am {field:start})
+						}
+					}
+					sender_email					= ping@coderdojo-nbg.org
+					sender_name						= CoderDojo Nürnberg
+					replyto_email					= ping@coderdojo-nbg.org
+					replyto_name					= CoderDojo Nürnberg
+					templateFile					= FLUIDTEMPLATE
+					templateFile{
+						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/registration_email.html
+						variables{
+							dojo					= RECORDS
+							dojo {
+								source.data = GP:formhandler|dojo
+								tables = tx_twcoderdojo_domain_model_date
+								conf.tx_twcoderdojo_domain_model_date = TEXT
+								conf.tx_twcoderdojo_domain_model_date {
+									dataWrap = {field:dojo_number} am {field:start}
+								}
 							}
-							email					= TEXT
-							email{
-								value.data			= GP:formhandler|email
-							}
-							project					= TEXT
-							project{
-								value.data			= GP:formhandler|project
+							contactform				 = TEXT
+							contactform {
+								value				= Kontaktformular
+								typolink {
+									parameter		= 11
+									forceAbsoluteUrl		= 1
+									returnLast		= url
+								}
 							}
 						}
 					}

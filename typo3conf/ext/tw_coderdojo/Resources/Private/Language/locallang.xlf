@@ -170,7 +170,7 @@
 				<source>%ss Hintergrund</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.statement">
-				<source>%ss Leitspruch</source>
+				<source>%ss Leitmotiv</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.skills">
 				<source>%ss Spezialgebiete</source>
@@ -207,7 +207,10 @@
 
 			<!-- General -->
 			<trans-unit id="label.back.mentors">
-				<source>Alle Mentoren</source>
+				<source>Zur Mentorenliste</source>
+			</trans-unit>
+			<trans-unit id="label.back.dates">
+				<source>Zur Terminliste</source>
 			</trans-unit>
 		</body>
 	</file>

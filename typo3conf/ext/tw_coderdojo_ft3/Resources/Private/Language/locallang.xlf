@@ -54,8 +54,11 @@
 			<trans-unit id="format.end.time">
 				<source>G:i</source>
 			</trans-unit>
-			<trans-unit id="format.from">
+			<trans-unit id="format.from.expanded">
 				<source>von</source>
+			</trans-unit>
+			<trans-unit id="format.from.collapsed">
+				<source>ab</source>
 			</trans-unit>
 			<trans-unit id="format.to">
 				<source>bis</source>

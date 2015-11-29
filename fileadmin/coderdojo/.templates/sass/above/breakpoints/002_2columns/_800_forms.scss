@@ -1,20 +1,31 @@
-label {
-	span {
-		display: block;
-		float: left;
-		width: 20%;
-		line-height: 2.8;
-	}
+fieldset > label span, .label {
+	display: block;
+	clear: left;
+	float: left;
+	width: 25%;
+	line-height: 2.8;
+}
 
-	input, textarea {
-		width: 80%;
+fieldset > label {
+	input[type=text], input[type=email], input[type=submit], input[type=date], input[type=file], textarea {
+		width: 75%;
 	}
 
 	& + .error {
-		margin-left: 20%;
+		margin-left: 25%;
+	}
+}
+
+.label + ul, .label + ol {
+	box-sizing: border-box;
+	width: 75%;
+	margin-top: 1em;
+
+	& + .error {
+		margin-left: 25%;
 	}
 }
 
 form .controls {
-	margin-left: 20%;
+	margin-left: 25%;
 }

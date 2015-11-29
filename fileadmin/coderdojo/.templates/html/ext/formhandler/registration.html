@@ -1,20 +1,29 @@
 {namespace tw=Tollwerk\TwFacsimile\ViewHelpers}
 
 <!-- ###TEMPLATE_FORM1### begin -->
-<form method="post" id="###formID###" enctype="multipart/form-data" action="#formhandler-registration">
+<form method="post" id="###formID###" action="#formhandler-registration">
     <fieldset>
         <legend>###LLL:fieldset.personal###</legend>
         ###field_input_firstname###
         ###field_input_lastname###
+
+        <div class="label">###LLL:field.gender###</div>
+        <ul>
+            <li><label><input type="radio" class="###is_error_gender###" name="formhandler[gender]" value="männlich" ###checked_gender_männlich###/><span>###LLL:field.gender.male###</span></label></li>
+            <li><label><input type="radio" class="###is_error_gender###" name="formhandler[gender]" value="weiblich" ###checked_gender_weiblich###/><span>###LLL:field.gender.female###</span></label></li>
+        </ul>
+        ###error_gender###
+
+        ###field_date_birthday###
         ###field_email_email###
     </fieldset>
     <fieldset>
         <legend>###LLL:fieldset.registration###</legend>
         <div class="label">###LLL:field.type###</div>
         <ul>
-            <li><label><input type="radio" class="###is_error_subject###" name="formhandler[type]" value="ninja" ###checked_type_ninja###/><span>###LLL:field.type.ninja###</span></label></li>
-            <li><label><input type="radio" class="###is_error_subject###" name="formhandler[type]" value="mentor" ###checked_type_mentor###/><span>###LLL:field.type.mentor###</span></label></li>
-            <li><label><input type="radio" class="###is_error_subject###" name="formhandler[type]" value="helper" ###checked_type_helper###/><span>###LLL:field.type.helper###</span></label></li>
+            <li><label><input type="radio" class="###is_error_type###" name="formhandler[type]" value="ninja" ###checked_type_ninja###/><span>###LLL:field.type.ninja###</span></label></li>
+            <li><label><input type="radio" class="###is_error_type###" name="formhandler[type]" value="mentor" ###checked_type_mentor###/><span>###LLL:field.type.mentor###</span></label></li>
+            <li><label><input type="radio" class="###is_error_type###" name="formhandler[type]" value="helper" ###checked_type_helper###/><span>###LLL:field.type.helper###</span></label></li>
         </ul>
         ###error_type###
     </fieldset>
@@ -23,6 +32,7 @@
         ###field_textarea_project###
     </fieldset>
     <div class="controls">
+        ###field_hidden_dojo###
         ###field_submit_register###
         ###antibotArmor###
     </div>

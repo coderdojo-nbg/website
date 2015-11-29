@@ -10,35 +10,79 @@
 			<label index="fieldset.registration">Anmeldung</label>
 			<label index="fieldset.message">Deine Nachricht</label>
 			<label index="fieldset.project">Dein Projekt</label>
+			<label index="fieldset.profile">Dein Profil</label>
 
+			<label index="field.gender">Geschlecht</label>
+			<label index="field.gender.male">Männlich</label>
+			<label index="field.gender.female">Weiblich</label>
 			<label index="field.firstname">Vorname</label>
 			<label index="field.lastname">Nachname</label>
 			<label index="field.email">E-Mail</label>
+			<label index="field.birthday">Geburtstag</label>
 			<label index="field.type">Teilnahme als</label>
 			<label index="field.type.ninja">Code Ninja</label>
 			<label index="field.type.mentor">Mentor</label>
 			<label index="field.type.helper">Helfer</label>
 			<label index="field.message">Nachricht</label>
+			<label index="field.portrait">Portraitbild &lt;sup&gt;1&lt;/sup&gt;</label>
+			<label index="field.biography">Kurzbiografie &lt;sup&gt;2,3&lt;/sup&gt;</label>
+			<label index="field.statement">Leitmotiv &lt;sup&gt;2,4&lt;/sup&gt;</label>
 			<label index="field.project">Projekt</label>
 			<label index="field.contact">Nachricht absenden</label>
 			<label index="field.register">Anmelden</label>
+			<label index="field.website">Website</label>
+			<label index="field.twitter">Twitter-Benutzername</label>
+			<label index="field.facebook">Facebook-ID</label>
+			<label index="field.googleplus">Google+ ID</label>
+			<label index="field.github">GitHub-Benutzername</label>
+			<label index="field.skills">Schwerpunkte</label>
+			<label index="field.newskills">Schwerpunktevorschläge</label>
+
+			<label index="field.legend.image">JPG oder PNG, max. 1MB groß, min. 250 x 250 Pixel, farbig, Nahaufnahme Deines Gesichts</label>
+			<label index="field.legend.length">Maximal 300 Zeichen</label>
+			<label index="field.legend.links">Internet-Links sind möglich (bitte URLs in Klammern setzen)</label>
+			<label index="field.legend.statement">Beschreiben in kurzen Worten, weshalb du Mentorin oder Mentor sein möchtest und was Dir besonders daran gefällt, anderen beim Lernen zu helfen</label>
 
 			<label index="field.placeholder.firstname">Peter</label>
 			<label index="field.placeholder.lastname">Lustig</label>
 			<label index="field.placeholder.email">peter@löwenzahn.de</label>
 			<label index="field.placeholder.message">Ich möchte Euch sagen, dass ...</label>
 			<label index="field.placeholder.project">Ich möchte bei diesem CoderDojo ...</label>
+			<label index="field.placeholder.biography">Angestellter Webentwickler, Vater von zwei Kindern, großes Spielkind mit Leidenschaft für ...</label>
+			<label index="field.placeholder.statement">Ich habe große Freude daran, Kinder beim Entdecken zu begleiten, und ...</label>
 
+			<label index="error_gender">Bitte wähle Dein Geschlecht aus</label>
 			<label index="error_firstname">Bitte gib Deinen Vornamen ein</label>
 			<label index="error_lastname">Bitte gib Deinen Nachnamen ein</label>
 			<label index="error_type">Bitte gib an, als was Du teilnehmen möchtest</label>
+			<label index="error_birthday_required">Bitte gib Deinen Geburtstag an</label>
+			<label index="error_birthday_date">Bitte gib ein gültiges Datum ein</label>
+			<label index="error_birthday_isOlderThan">Du musst mindestens 5 Jahre alt sein</label>
 			<label index="error_email_required">Bitte gib Deine E-Mail-Adresse ein</label>
 			<label index="error_email_email">Bitte gib eine gültige E-Mail-Adresse ein</label>
 			<label index="error_email_emailExists">Bitte gib eine existierende E-Mail-Adresse ein</label>
 			<label index="error_message">Bitte gib eine Nachricht ein</label>
+			<label index="error_portrait_fileRequired">Bitte lade ein Portraitbild von Dir hoch</label>
+			<label index="error_portrait_fileAllowedTypes">Bitte lade eine JPG- oder PNG-Datei hoch</label>
+			<label index="error_portrait_fileMaxCount">Bitte lade nur eine Datei hoch</label>
+			<label index="error_portrait_fileMaxSize">Bitte reduziere die Größe Deines Portraits auf &lt; 1MB</label>
+			<label index="error_portrait_fileMinDimensions">Bitte lade ein Bild mit größeren Dimensionen hoch</label>
+			<label index="error_biography_required">Bitte gib eine Kurzbiografie ein</label>
+			<label index="error_statement_required">Bitte gib ein Leitmotiv ein</label>
 			<label index="error_project">Bitte beschreibe, was Du tun möchtest</label>
 
 			<label index="antibot"><![CDATA[Unser Kontaktformular ist für Dich aus Spamschutzgründen leider gesperrt. Wenn Du der Ansicht bist, es handelt sich dabei um einen Irrtum, dann <a href="mailto:ping@coderdojo-nbg.org">sende uns bitte eine E-Mail</a>. Wir bitten um Entschuldigung für die Unannehmlichkeiten!]]></label>
+			<label index="signature"><![CDATA[
+--- 8< ---
+
+CoderDojo Nürnberg
+c/o tollwerk GmbH
+Klingenhofstraße 5
+90411 Nürnberg
+
+Tel. 0911/959394-5
+Web http://coderdojo-nbg.de
+E-Mail ping@coderdojo-nbg.de]]></label>
 		</languageKey>
 	</data>
 </T3locallang>

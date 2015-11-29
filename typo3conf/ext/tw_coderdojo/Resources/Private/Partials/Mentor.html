@@ -3,22 +3,24 @@
 <!-- Short mentor profile -->
 <f:section name="Short">
     <figure>
-        <div><f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/></div>
+        <div>
+            <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}" class="u-photo"
+                     additionalAttributes="{itemprop: 'photo'}"/>
+        </div>
         <figcaption>
-            <h3>{mentor.firstName} {mentor.lastName}</h3>
-
-            <p class="mentor-bio">
-                <f:if condition="{mentor.statement}">
-                    <f:then>{mentor.statement}</f:then>
-                    <f:else>
+            <h3 class="p-name" itemprop="name"><span class="p-given-name" itemprop="givenName">{mentor.firstName}</span> <span class="p-faily-name" itemprop="familyName">{mentor.lastName}</span></h3>
+            <f:if condition="{mentor.statement}">
+                <f:then><p class="mentor-bio">{mentor.statement}</p></f:then>
+                <f:else>
+                    <p class="mentor-bio p-role" itemprop="role">
                         <f:format.stripTags>{mentor.biography}</f:format.stripTags>
-                    </f:else>
-                </f:if>
-            </p>
+                    </p>
+                </f:else>
+            </f:if>
             <f:if condition="{mentor.skills}">
                 <ul class="mentor-skills">
-                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
-                        {skill.name}
+                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')} p-category">
+                            {skill.name}
                     </li></f:for>
                 </ul>
             </f:if>
@@ -29,93 +31,140 @@
 <!-- Full mentor profile -->
 <f:section name="Full">
     <article class="mentor">
-        <figure>
-            <div><f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"/></div>
-            <figcaption>
-                <h2>{mentor.firstName} {mentor.lastName}</h2>
-                <ul class="mentor-social">
-                    <f:for each="{mentor.contacts}" as="contact">
-                        <!-- Twitter Facebook Google+ GitHub -->
-                        <v:switch value="{contact.type}">
-                            <v:case case="2" break="TRUE">
-                                <li><f:link.external uri="https://twitter.com/{contact.value}" class="icon icon-twitter icon-twitter-dims" target="_blank" title="{f:translate(key: 'mentor.contact.twitter', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.twitter" arguments="{0: mentor.firstName}"/></f:link.external></li>
-                            </v:case>
-                            <v:case case="3" break="TRUE">
-                                <li><f:link.external uri="https://facebook.com/{contact.value}" class="icon icon-facebook icon-facebook-dims" target="_blank" title="{f:translate(key: 'mentor.contact.facebook', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.facebook" arguments="{0: mentor.firstName}"/></f:link.external></li>
-                            </v:case>
-                            <v:case case="4" break="TRUE">
-                                <li><f:link.external uri="https://plus.google.com/{contact.value}" class="icon icon-googleplus icon-googleplus-dims" target="_blank" title="{f:translate(key: 'mentor.contact.googleplus', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.googleplus" arguments="{0: mentor.firstName}"/></f:link.external></li>
-                            </v:case>
-                            <v:case case="5" break="TRUE">
-                                <li><f:link.external uri="https://github.com/{contact.value}" class="icon icon-github icon-github-dims" target="_blank" title="{f:translate(key: 'mentor.contact.github', arguments: '{0: mentor.firstName}')}"><f:translate key="mentor.contact.github" arguments="{0: mentor.firstName}"/></f:link.external></li>
-                            </v:case>
-                        </v:switch>
-                    </f:for>
-                </ul>
-                <dl>
-                    <dt><f:translate key="mentor.age.label"/></dt>
-                    <dd><f:translate key="mentor.age" arguments="{0: mentor.age}"/></dd>
+        <div class="mentor-profile h-card" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+            <figure>
+                <div>
+                    <f:image image="{mentor.portrait}" width="200" alt="{mentor.firstName} {mentor.lastName}"
+                             class="u-photo" additionalAttributes="{itemprop: 'photo'}"/>
+                </div>
+                <figcaption>
+                    <h2 class="p-name" itemprop="name"><span class="p-given-name" itemprop="givenName">{mentor.firstName}</span> <span class="p-faily-name" itemprop="familyName">{mentor.lastName}</span></h2>
+                    <ul class="mentor-social">
+                        <f:for each="{mentor.contacts}" as="contact">
+                            <!-- Twitter Facebook Google+ GitHub -->
+                            <v:switch value="{contact.type}">
+                                <v:case case="2" break="TRUE">
+                                    <li>
+                                        <f:link.external uri="https://twitter.com/{contact.value}"
+                                                         class="icon icon-twitter icon-twitter-dims" target="_blank"
+                                                         title="{f:translate(key: 'mentor.contact.twitter', arguments: '{0: mentor.firstName}')}">
+                                            <f:translate key="mentor.contact.twitter" arguments="{0: mentor.firstName}"/>
+                                        </f:link.external>
+                                    </li>
+                                </v:case>
+                                <v:case case="3" break="TRUE">
+                                    <li>
+                                        <f:link.external uri="https://facebook.com/{contact.value}"
+                                                         class="icon icon-facebook icon-facebook-dims" target="_blank"
+                                                         title="{f:translate(key: 'mentor.contact.facebook', arguments: '{0: mentor.firstName}')}">
+                                            <f:translate key="mentor.contact.facebook" arguments="{0: mentor.firstName}"/>
+                                        </f:link.external>
+                                    </li>
+                                </v:case>
+                                <v:case case="4" break="TRUE">
+                                    <li>
+                                        <f:link.external uri="https://plus.google.com/{contact.value}"
+                                                         class="icon icon-googleplus icon-googleplus-dims" target="_blank"
+                                                         title="{f:translate(key: 'mentor.contact.googleplus', arguments: '{0: mentor.firstName}')}">
+                                            <f:translate key="mentor.contact.googleplus" arguments="{0: mentor.firstName}"/>
+                                        </f:link.external>
+                                    </li>
+                                </v:case>
+                                <v:case case="5" break="TRUE">
+                                    <li>
+                                        <f:link.external uri="https://github.com/{contact.value}"
+                                                         class="icon icon-github icon-github-dims" target="_blank"
+                                                         title="{f:translate(key: 'mentor.contact.github', arguments: '{0: mentor.firstName}')}">
+                                            <f:translate key="mentor.contact.github" arguments="{0: mentor.firstName}"/>
+                                        </f:link.external>
+                                    </li>
+                                </v:case>
+                            </v:switch>
+                        </f:for>
+                    </ul>
+                    <dl>
+                        <dt>
+                            <f:translate key="mentor.age.label"/>
+                        </dt>
+                        <dd>
+                            <f:translate key="mentor.age" arguments="{0: mentor.age}"/>
+                        </dd>
 
-                    <f:for each="{mentor.contacts}" as="contact">
-                        <f:if condition="{contact.type} == 0">
-                            <f:then>
-                                <dt><f:translate key="mentor.contact.website"/></dt>
-                                <dd><f:link.external uri="{contact.value}">{contact.value}</f:link.external></dd>
-                            </f:then>
-                            <f:else>
-                                <f:if condition="{contact.type} == 1">
-                                    <f:then>
-                                        <dt><f:translate key="mentor.contact.email"/></dt>
-                                        <dd><f:link.email email="{contact.value}">{contact.value}</f:link.email></dd>
-                                    </f:then>
-                                </f:if>
-                            </f:else>
-                        </f:if>
-                    </f:for>
-                </dl>
-            </figcaption>
-        </figure>
+                        <f:for each="{mentor.contacts}" as="contact">
+                            <f:if condition="{contact.type} == 0">
+                                <f:then>
+                                    <dt>
+                                        <f:translate key="mentor.contact.website"/>
+                                    </dt>
+                                    <dd>
+                                        <f:link.external uri="{contact.value}" class="u-url" additionalAttributes="{itemprop: 'url'}">{contact.value}</f:link.external>
+                                    </dd>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{contact.type} == 1">
+                                        <f:then>
+                                            <dt>
+                                                <f:translate key="mentor.contact.email"/>
+                                            </dt>
+                                            <dd>
+                                                <f:link.email email="{contact.value}"><span class="u-email" itemprop="email">{contact.value}</span></f:link.email>
+                                            </dd>
+                                        </f:then>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:for>
+                    </dl>
+                </figcaption>
+            </figure>
 
-        <f:if condition="{mentor.biography}">
-            <section id="mentor-bio">
-                <h3><f:translate key="header.mentor.bio" arguments="{0: mentor.firstName}"/></h3>
-                <f:format.html>{mentor.biography}</f:format.html>
-            </section>
-        </f:if>
-
-        <f:if condition="{mentor.statement}">
-            <section id="mentor-statement">
-                <h3><f:translate key="header.mentor.statement" arguments="{0: mentor.firstName}"/></h3>
-                <p>{mentor.statement}</p>
-            </section>
-        </f:if>
-
-        <f:if condition="{mentor.skills}">
-            <section id="mentor-skills">
-                <h3><f:translate key="header.mentor.skills" arguments="{0: mentor.firstName}"/></h3>
+            <f:if condition="{mentor.biography}"><section id="mentor-bio">
+                <h3>
+                    <f:translate key="header.mentor.bio" arguments="{0: mentor.firstName}"/>
+                </h3>
+                <div class="p-role" itemprop="role">
+                    <f:format.html>{mentor.biography}</f:format.html>
+                </div>
+            </section></f:if><f:if condition="{mentor.statement}"><section id="mentor-statement">
+                <h3>
+                    <f:translate key="header.mentor.statement" arguments="{0: mentor.firstName}"/>
+                </h3>
+                <p class="p-note" itemprop="description">{mentor.statement}</p>
+            </section></f:if><f:if condition="{mentor.skills}"><section id="mentor-skills">
+                <h3>
+                    <f:translate key="header.mentor.skills" arguments="{0: mentor.firstName}"/>
+                </h3>
                 <ul class="mentor-skills">
-                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')}">
-                        {skill.name}
+                    <f:for each="{mentor.skills}" as="skill" iteration="i"><li class="mentor-skill{f:if(condition: '{i.index}', else: ' first')} p-category">
+                            {skill.name}
                     </li></f:for>
                 </ul>
+            </section></f:if>
+        </div>
+
+        <f:if condition="{mentor.dates}">
+            <section id="mentor-dates">
+                <h3>
+                    <f:translate key="header.mentor.dates"
+                                 arguments="{0: mentor.firstName, 1: '{f:count(subject: mentor.dates)}'}"/>
+                </h3>
+                <ul class="mentor-dates">
+                    <f:for each="{mentor.dates}" as="date" iteration="i">
+                        <li class="mentor-date{f:if(condition: '{i.index}', else: ' first')}">
+                            <f:link.action action="show" controller="Date" pageUid="{settings.pages.datePid}"
+                                           arguments="{date: date}">
+                                <span class="schedule">
+                                    <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                                </span>
+                            </f:link.action>
+                        </li>
+                    </f:for>
+                </ul>
             </section>
         </f:if>
-
-        <section id="mentor-dates">
-            <h3><f:translate key="header.mentor.dates" arguments="{0: mentor.firstName, 1: '{f:count(subject: mentor.dates)}'}"/></h3>
-            <ul class="mentor-dates">
-                <f:for each="{mentor.dates}" as="date" iteration="i">
-                    <li class="mentor-date{f:if(condition: '{i.index}', else: ' first')}">
-                        <f:link.action action="show" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}">
-                            <span class="schedule">
-                                <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
-                            </span>
-                        </f:link.action>
-                    </li>
-                </f:for>
-            </ul>
-        </section>
     </article>
 
-    <f:link.page pageUid="{back}"><f:translate key="label.back.mentors"/></f:link.page>
+    <f:link.page pageUid="{back}" class="back">
+        <f:translate key="label.back.mentors"/>
+    </f:link.page>
 </f:section>

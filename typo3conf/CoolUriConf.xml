@@ -92,6 +92,13 @@
             </lookindb>
         </part>
         <part>
+            <parameter>tx_twcoderdojo_mentor[mentor]</parameter>
+            <lookindb>
+                <to>SELECT CONCAT(`first_name`, "-", `last_name`, "-", `uid`) FROM `tx_twcoderdojo_domain_model_person` WHERE uid=$1</to>
+                <t3conv>1</t3conv>
+            </lookindb>
+        </part>
+        <part>
             <parameter>cHash</parameter>
         </part>
     </uriparts>
@@ -107,6 +114,9 @@
         <part>
             <parameter>tx_twcoderdojo_date[controller]</parameter>
         </part>
+        <part>
+            <parameter>tx_twcoderdojo_mentor[controller]</parameter>
+        </part>
         <!-- this will prefix a value with "prefix-". Cannot be localized.
         -->
         <part key="prefix-(.*)" regexp="1">
@@ -117,6 +127,10 @@
         -->
         <part key="details">
             <parameter>tx_twcoderdojo_date[action]</parameter>
+            <value>show</value>
+        </part>
+        <part key="details">
+            <parameter>tx_twcoderdojo_mentor[action]</parameter>
             <value>show</value>
         </part>
     </predefinedparts>

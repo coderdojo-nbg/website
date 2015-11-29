@@ -452,6 +452,15 @@ return array (
       array (
       ),
     ),
+    'sourceopt' => 
+    array (
+      'composerName' => 'lochmueller/sourceopt',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/sourceopt/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'tw_antibot' => 
     array (
       'composerName' => 'tw_antibot',

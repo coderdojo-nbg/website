@@ -12,3 +12,29 @@ Nachricht
 ###value_message###
 </v:format.regularExpression>
 <!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Hallo ###value_firstname###,
+
+danke für Deine Nachricht! Du hast die untenstehenden Angaben an das
+CoderDojo Nürnberg geschickt. Wir melden uns so bald wie möglich bei Dir.
+
+Viele Grüße,
+Dein CoderDojo Nürnberg
+
+--- 8< ---
+
+Persönliche Angaben
+============================================================================
+Vorname:   ###value_firstname###
+Nachname:  ###value_lastname###
+E-Mail:    ###value_email###
+
+Nachricht
+============================================================================
+###value_message###
+
+###LLL:signature###</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->
