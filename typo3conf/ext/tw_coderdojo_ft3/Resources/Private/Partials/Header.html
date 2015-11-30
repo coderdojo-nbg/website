@@ -7,11 +7,12 @@
     <f:section name="WithDate">
         <header role="banner" class="{f:if(condition: '{header}', then: 'expanded', else: 'collapsed')}">
             <div class="banner h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
-                <img src="/fileadmin/coderdojo/icons/coderdojo-dark.png" itemprop="photo" alt="{f:translate(key: 'date.alt', arguments: '{0: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.datetime\\\\\\\')}\\\')}\'}')}"/>
+                <img src="/fileadmin/coderdojo/icons/coderdojo-dark-horizontal.svg" itemprop="photo" alt="{f:translate(key: 'date.alt', arguments: '{0: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.datetime\\\\\\\')}\\\')}\'}')}"/>
                 <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home">
                     <h1 class="p-name" itemprop="name">CoderDojo Nürnberg</h1>
-                    <p class="p-summary icon icon-coderdojo-dark" itemprop="summary"><f:translate key="summary"/></p>
+                    <p class="p-summary icon icon-coderdojo-dark-{f:if(condition: '{header}', then: 'vertical', else: 'horizontal')}" itemprop="summary"><span><f:translate key="summary"/></span></p>
                 </f:link.page>
+                <f:if condition="{header}"><div></f:if>
                 <f:link.action action="show" extensionName="TwCoderdojo" pluginName="Date" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}" class="schedule u-url" additionalAttributes="{itemprop: 'url'}" absolute="1">
                     <span class="schedule-label">
                         <f:if condition="{nextLabel}">
@@ -32,21 +33,24 @@
                         <f:translate key="format.oclock"/>
                     </span>
                 </f:link.action>
-                <a class="address p-location h-card icon icon-location" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
-                    <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
-                    <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
-                        <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
-                        <div>
-                            <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
-                            <span class="p-locality" itemprop="locality">{date.location.locality}</span>
-                            <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
-                                <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
-                                    <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
-                                    <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
-                                </span>
+                <a class="address p-location h-card" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
+                    <div class="icon icon-location">
+                        <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
+                        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+                            <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
+                            <div>
+                                <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
+                                <span class="p-locality" itemprop="locality">{date.location.locality}</span>
+                                <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
+                                    <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
+                                        <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
+                                        <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
+                                    </span>
+                            </div>
                         </div>
                     </div>
                 </a>
+                <f:if condition="{header}"></div></f:if>
             </div>
         </header>
     </f:section>

@@ -1,6 +1,20 @@
 header[role=banner].collapsed .banner {
+	.home {
+		width: 33%;
+	}
+
 	.address {
 		display: table-cell;
 		padding-left: 3.5em;
+	}
+}
+
+header[role=banner].expanded {
+	.banner > div {
+		text-align: left;
+	}
+
+	.schedule-datetime {
+		@include font-size(1.25, large);
 	}
 }

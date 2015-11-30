@@ -11,10 +11,10 @@ config.noPageTitle = 1
 page.headerData.102						= TEXT
 page.headerData.102 {
 	field = title
-	noTrimWrap = |<title>| 💻 CoderDojo Nürnberg</title>|
+	noTrimWrap = |<title>| ☯ CoderDojo Nürnberg</title>|
 }
 [globalVar = TSFE:id = 1]
-	page.headerData.102.noTrimWrap		= |<title>CoderDojo Nürnberg 💻 |</title>|
+	page.headerData.102.noTrimWrap		= |<title>CoderDojo Nürnberg ☯ |</title>|
 [global]
 
 #FAVICON / TOUCH ICONS

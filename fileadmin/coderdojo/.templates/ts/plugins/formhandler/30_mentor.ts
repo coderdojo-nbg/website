@@ -121,6 +121,15 @@ plugin.Tx_Formhandler.settings.predef.mentor {
 				}
 			}
 		}
+		2.class		                = Interceptor_ImplodeFields
+		2.config {
+			implodeFields {
+				fullskills {
+					field           = skills
+					separator       = ,
+				}
+			}
+		}
 	}
 
 	finishers {
@@ -142,7 +151,7 @@ plugin.Tx_Formhandler.settings.predef.mentor {
 							skills					= CONTENT
 							skills {
 								select {
-									uidInList.field	= skills
+									uidInList.data	= GP:fullskills
 									pidInList		= {$plugin.tx_twcoderdojo.persistence.storagePid}
 									orderBy			= name
 								}
@@ -172,7 +181,7 @@ plugin.Tx_Formhandler.settings.predef.mentor {
 							skills					= CONTENT
 							skills {
 								select {
-									uidInList.field	= skills
+									uidInList.data	= GP:fullskills
 									pidInList		= {$plugin.tx_twcoderdojo.persistence.storagePid}
 									orderBy			= name
 								}

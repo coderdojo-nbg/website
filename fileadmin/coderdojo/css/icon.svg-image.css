@@ -8,19 +8,26 @@
   width: 255px;
   height: 255px; }
 
-.icon-coderdojo-dark {
-  background-image: url(../icons/coderdojo-dark.svg); }
+.icon-coderdojo-dark-horizontal {
+  background-image: url(../icons/coderdojo-dark-horizontal.svg); }
 
-.icon-coderdojo-dark-dims {
+.icon-coderdojo-dark-horizontal-dims {
   width: 400px;
-  height: 112.975px; }
+  height: 119.259px; }
 
-.icon-coderdojo-light {
-  background-image: url(../icons/coderdojo-light.svg); }
+.icon-coderdojo-dark-vertical {
+  background-image: url(../icons/coderdojo-dark-vertical.svg); }
 
-.icon-coderdojo-light-dims {
-  width: 400px;
-  height: 112.975px; }
+.icon-coderdojo-dark-vertical-dims {
+  width: 420.055px;
+  height: 500px; }
+
+.icon-coderdojo-light-horizontal {
+  background-image: url(../icons/coderdojo-light-horizontal.svg); }
+
+.icon-coderdojo-light-horizontal-dims {
+  width: 76.735px;
+  height: 22.878px; }
 
 .icon-facebook,
 .icon-facebook\:regular {

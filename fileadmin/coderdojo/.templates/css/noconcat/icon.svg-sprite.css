@@ -8,23 +8,30 @@
   width: 255px;
   height: 255px; }
 
-.icon-coderdojo-dark {
-  background-position: 0 28.26972644882348%; }
+.icon-coderdojo-dark-horizontal {
+  background-position: 0 19.42500462772169%; }
 
-.icon-coderdojo-dark-dims {
+.icon-coderdojo-dark-horizontal-dims {
   width: 400px;
-  height: 112.975px; }
+  height: 119.259px; }
 
-.icon-coderdojo-light {
-  background-position: 0 40.79709542418448%; }
+.icon-coderdojo-dark-vertical {
+  background-position: 0 40.23605150214592%; }
 
-.icon-coderdojo-light-dims {
-  width: 400px;
-  height: 112.975px; }
+.icon-coderdojo-dark-vertical-dims {
+  width: 420.055px;
+  height: 500px; }
+
+.icon-coderdojo-light-horizontal {
+  background-position: 0 62.09540408850334%; }
+
+.icon-coderdojo-light-horizontal-dims {
+  width: 76.735px;
+  height: 22.878px; }
 
 .icon-facebook,
 .icon-facebook\:regular {
-  background-position: 0 48.93184130213632%; }
+  background-position: 0 64.14285714285714%; }
 
 .icon-facebook-dims {
   width: 32px;
@@ -32,7 +39,7 @@
 
 .icon-facebook:hover,
 .icon-facebook\:hover {
-  background-position: 0 52.18718209562564%; }
+  background-position: 0 66.42857142857143%; }
 
 .icon-facebook-dims:hover,
 .icon-facebook\:hover-dims {
@@ -41,7 +48,7 @@
 
 .icon-github,
 .icon-github\:regular {
-  background-position: 0 55.442522889114954%; }
+  background-position: 0 68.71428571428571%; }
 
 .icon-github-dims {
   width: 32px;
@@ -49,7 +56,7 @@
 
 .icon-github:hover,
 .icon-github\:hover {
-  background-position: 0 58.69786368260427%; }
+  background-position: 0 71%; }
 
 .icon-github-dims:hover,
 .icon-github\:hover-dims {
@@ -58,7 +65,7 @@
 
 .icon-googleplus,
 .icon-googleplus\:regular {
-  background-position: 0 61.95320447609359%; }
+  background-position: 0 73.28571428571429%; }
 
 .icon-googleplus-dims {
   width: 32px;
@@ -66,7 +73,7 @@
 
 .icon-googleplus:hover,
 .icon-googleplus\:hover {
-  background-position: 0 65.20854526958291%; }
+  background-position: 0 75.57142857142857%; }
 
 .icon-googleplus-dims:hover,
 .icon-googleplus\:hover-dims {
@@ -75,7 +82,7 @@
 
 .icon-location,
 .icon-location\:regular {
-  background-position: 0 73.23177366702939%; }
+  background-position: 0 81.58682634730539%; }
 
 .icon-location-dims {
   width: 54px;
@@ -83,7 +90,7 @@
 
 .icon-location:hover,
 .icon-location\:hover {
-  background-position: 0 83.67791077257888%; }
+  background-position: 0 88.77245508982035%; }
 
 .icon-location-dims:hover,
 .icon-location\:hover-dims {
@@ -91,7 +98,7 @@
   height: 96px; }
 
 .icon-tollwerk {
-  background-position: 0 93.1108719052745%; }
+  background-position: 0 95.24517087667162%; }
 
 .icon-tollwerk-dims {
   width: 324px;
@@ -99,7 +106,7 @@
 
 .icon-twitter,
 .icon-twitter\:regular {
-  background-position: 0 96.74465920651068%; }
+  background-position: 0 97.71428571428571%; }
 
 .icon-twitter-dims {
   width: 32px;

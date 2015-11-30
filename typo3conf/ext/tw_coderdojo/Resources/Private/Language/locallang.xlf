@@ -143,7 +143,7 @@
 
 			<!-- Mentor -->
 			<trans-unit id="mentor.profile">
-				<source>Zu %ss Mentorenprofil</source>
+				<source>Zu %s Mentorenprofil</source>
 			</trans-unit>
 			<trans-unit id="mentor.age.label">
 				<source>Alter</source>
@@ -167,16 +167,16 @@
 				<source>%s bei GitHub</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.bio">
-				<source>%ss Hintergrund</source>
+				<source>%s Hintergrund</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.statement">
-				<source>%ss Leitmotiv</source>
+				<source>%s Leitmotiv</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.skills">
-				<source>%ss Spezialgebiete</source>
+				<source>%s Spezialgebiete</source>
 			</trans-unit>
 			<trans-unit id="header.mentor.dates">
-				<source>%ss %s CoderDojo(s)</source>
+				<source>%s %s CoderDojo(s)</source>
 			</trans-unit>
 
 			<!-- Date formatting -->

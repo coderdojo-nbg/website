@@ -126,7 +126,7 @@ dl.contact dd {
   padding: 1em; }
 
 header[role=banner] {
-  padding: 2em 1em 4em 1em;
+  padding: 2em 1em 3em 1em;
   color: #000;
   background-color: #ffffff;
   text-align: center; }
@@ -142,18 +142,35 @@ header[role=banner] {
     width: 1px;
     height: 1px;
     overflow: hidden; }
+  header[role=banner] .banner {
+    width: 100%;
+    max-width: 64em;
+    margin: 0 auto;
+    table-layout: auto; }
   header[role=banner] .home {
     display: block;
-    max-width: 400px;
-    margin: 0 auto; }
+    text-align: center; }
   header[role=banner] .p-summary {
-    text-indent: 200%;
-    overflow: hidden;
-    white-space: nowrap;
+    display: inline-block;
     background-size: contain;
-    padding-bottom: 28%;
-    height: 0;
+    width: 100%;
     margin: 0; }
+    header[role=banner] .p-summary span {
+      position: absolute;
+      left: 100%;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden; }
+    header[role=banner] .p-summary:after {
+      display: block;
+      content: ''; }
+    header[role=banner] .p-summary.icon-coderdojo-dark-horizontal:after {
+      padding-bottom: 30%; }
+    header[role=banner] .p-summary.icon-coderdojo-dark-vertical {
+      max-width: 200px; }
+      header[role=banner] .p-summary.icon-coderdojo-dark-vertical:after {
+        padding-bottom: 118.76484561%; }
   header[role=banner] .schedule {
     display: block;
     margin: 1em 0 2em 0; }
@@ -167,21 +184,18 @@ header[role=banner] {
   header[role=banner] .address {
     display: inline-block;
     margin: 0 auto;
-    text-align: left;
-    background-size: contain;
-    padding-left: 3.5em; }
-    header[role=banner] .address:hover {
-      color: #000; }
+    text-align: left; }
+    header[role=banner] .address .icon-location {
+      background-size: contain;
+      padding-left: 3.5em; }
+      header[role=banner] .address .icon-location:hover {
+        color: #000; }
   header[role=banner] .collapsed {
     display: none; }
   header[role=banner].collapsed {
     padding: 1em 0 3em 0; }
     header[role=banner].collapsed .banner {
-      display: table;
-      width: 100%;
-      max-width: 64em;
-      margin: 0 auto;
-      table-layout: fixed; }
+      display: table; }
       header[role=banner].collapsed .banner > a {
         display: table-cell;
         vertical-align: middle;
@@ -189,6 +203,8 @@ header[role=banner] {
         font-size: smaller;
         font-size: 0.83rem;
         line-height: 1.4; }
+      header[role=banner].collapsed .banner .home {
+        width: 50%; }
       header[role=banner].collapsed .banner .address {
         display: none; }
       header[role=banner].collapsed .banner .collapsed {
@@ -445,6 +461,15 @@ label + .error, fieldset ul + .error {
   header[role=banner].collapsed .banner > a {
     font-size: medium;
     font-size: 1rem; }
+  header[role=banner].expanded .banner {
+    display: table; }
+    header[role=banner].expanded .banner > a,
+    header[role=banner].expanded .banner > div {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 1em;
+      line-height: 1.4;
+      width: 50%; }
   .mentor > a {
     padding: 2em; }
   .mentor figure {
@@ -501,9 +526,16 @@ label + .error, fieldset ul + .error {
     padding: 1em 2em; }
   .ce-formhandler_pi1 {
     padding: 2em; }
+  header[role=banner].collapsed .banner .home {
+    width: 33%; }
   header[role=banner].collapsed .banner .address {
     display: table-cell;
     padding-left: 3.5em; }
+  header[role=banner].expanded .banner > div {
+    text-align: left; }
+  header[role=banner].expanded .schedule-datetime {
+    font-size: large;
+    font-size: 1.25rem; }
   .mentor figure > div {
     width: 200px; }
   .ce-twcoderdojo_date .date {

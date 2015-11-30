@@ -1,3 +1,18 @@
 header[role=banner].collapsed .banner > a {
 	@include font-size(1, medium);
 }
+
+header[role=banner].expanded {
+	.banner {
+		display: table;
+
+		& > a,
+		& > div {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0 1em;
+			line-height: 1.4;
+			width: 50%;
+		}
+	}
+}
