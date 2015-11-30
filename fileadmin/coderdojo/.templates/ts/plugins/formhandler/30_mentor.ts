@@ -87,7 +87,7 @@ plugin.Tx_Formhandler.settings.predef.mentor {
 					portrait.errorCheck {
 						1						= fileRequired
 						2						= fileAllowedTypes
-						2.allowedTypes			= jpg,png
+						2.allowedTypes			= jpg,jpeg,png
 						3						= fileMaxCount
 						3.maxCount				= 1
 						4						= fileMaxSize

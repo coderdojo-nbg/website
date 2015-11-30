@@ -16,8 +16,8 @@
 	.mentor:nth-child(even) {
 		background-color: transparent;
 	}
-	.mentor:nth-child(3n+2),
-	.mentor:nth-child(3n+3)
+	.mentor:nth-child(4n+2),
+	.mentor:nth-child(4n+3)
 	{
 		background-color: lighten($bgcolorYellow, 32%);
 	}

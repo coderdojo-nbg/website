@@ -587,8 +587,8 @@ label + .error, fieldset ul + .error {
       width: 150px; }
   .mentors .mentor:nth-child(even) {
     background-color: transparent; }
-  .mentors .mentor:nth-child(3n+2),
-  .mentors .mentor:nth-child(3n+3) {
+  .mentors .mentor:nth-child(4n+2),
+  .mentors .mentor:nth-child(4n+3) {
     background-color: #fef4d3; }
   .mentors .mentor:hover {
     background-color: #fbcc33; }
