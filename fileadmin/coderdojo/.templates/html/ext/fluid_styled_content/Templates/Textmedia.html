@@ -48,7 +48,7 @@
 			<f:for each="{row.columns}" as="column" iteration="columnIter">
 				<f:if condition="{column.media}">
 					<f:if condition="{column.media.type} == 2">
-						<div class="ce-flex-image" style="background-image:url({f:uri.image(image: column.media, maxWidth: 800)});padding-top:{v:math.product(a:'{v:math.division(a:\'{column.media.properties.height}\',b:\'{column.media.properties.width}\')}',b:50)}%">
+						<div class="ce-flex-image" style="background-image:url({f:uri.image(image: column.media, maxWidth: 800)});padding-top:{v:math.product(a:'{v:math.division(a:\'{column.media.properties.height}\',b:\'{column.media.properties.width}\')}',b:50)}%" title="{column.media.properties.title}">
 							<f:image image="{column.media}" alt="{column.media.properties.title}" maxWidth="800"/>
 						</div>
 					</f:if>

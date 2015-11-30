@@ -114,7 +114,7 @@ return array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_twcoderdojo_domain_model_person',
-				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.type = 0',
+				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.type = 0 ORDER BY tx_twcoderdojo_domain_model_person.last_name ASC, tx_twcoderdojo_domain_model_person.first_name ASC',
 				'MM' => 'tx_twcoderdojo_date_person_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
