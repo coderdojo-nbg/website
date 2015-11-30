@@ -20,7 +20,7 @@ page.headerData.500.value (
 	<meta property="og:locale" content="de_DE">
 	<meta property="og:image" content="http://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-facebook.jpg">
 	<meta property="fb:app_id" content="1648537765413795">
-	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@CoderDojoNBG">
 	<meta name="twitter:creator" content="@CoderDojoNBG">
 	<meta name="twitter:image" content="http://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-twitter.png">
