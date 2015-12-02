@@ -33,7 +33,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\Facets\CompilableInterface;
 
 /**
  * Genitive viewhelper
- * 
+ *
  * @package Tollwerk\TwCoderdojo\ViewHelpers
  */
 class GenitiveViewHelper extends AbstractViewHelper implements CompilableInterface {
@@ -72,6 +72,6 @@ class GenitiveViewHelper extends AbstractViewHelper implements CompilableInterfa
 		if (!is_string($value)) {
 			return $value;
 		}
-		return $value.((strtolower(substr($value, -1)) == 's') ? "'" : 's');
+		return $value.(in_array(strtolower(substr($value, -1)), array('s', 'x')) ? "'" : 's');
 	}
 }
