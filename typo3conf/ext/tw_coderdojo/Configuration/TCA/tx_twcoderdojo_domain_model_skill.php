@@ -7,6 +7,7 @@ return array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
+		'default_sortby' => 'ORDER BY name ASC',
 
 		'delete' => 'deleted',
 		'enablecolumns' => array(

@@ -220,6 +220,7 @@ return array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_twcoderdojo_domain_model_skill',
+				'foreign_table_where' => 'ORDER BY tx_twcoderdojo_domain_model_skill.name ASC',
 				'MM' => 'tx_twcoderdojo_person_skill_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,

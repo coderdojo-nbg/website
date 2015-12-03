@@ -299,6 +299,15 @@ return array (
       array (
       ),
     ),
+    'scheduler' => 
+    array (
+      'composerName' => 'typo3/cms-scheduler',
+      'state' => 'active',
+      'packagePath' => 'typo3/sysext/scheduler/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'sv' => 
     array (
       'composerName' => 'typo3/cms-sv',
@@ -567,15 +576,6 @@ return array (
       'composerName' => 'typo3/cms-recycler',
       'state' => 'inactive',
       'packagePath' => 'typo3/sysext/recycler/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'scheduler' => 
-    array (
-      'composerName' => 'typo3/cms-scheduler',
-      'state' => 'inactive',
-      'packagePath' => 'typo3/sysext/scheduler/',
       'suggestions' => 
       array (
       ),

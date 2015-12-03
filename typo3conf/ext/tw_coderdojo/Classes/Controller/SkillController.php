@@ -33,6 +33,15 @@ namespace Tollwerk\TwCoderdojo\Controller;
 class SkillController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
+	 * Default ordering
+	 *
+	 * @var array
+	 */
+	protected $defaultOrderings = array(
+		'name' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING,
+	);
+
+	/**
 	 * action list
 	 *
 	 * @return void
