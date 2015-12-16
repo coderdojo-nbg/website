@@ -22,9 +22,32 @@ page.headerData.200							= FILE
 page.headerData.200.file				= fileadmin/coderdojo/favicons/favicons.html
 
 #META
-page.meta.author								= Joschi Kuphal
+page.meta.author								= CoderDojo Nürnberg | Joschi Kuphal
 page.meta.robots								= index,follow
 page.meta.viewport								= width=device-width, initial-scale=1
+
+# CANONICAL URL
+lib.canonical							= TEXT
+lib.canonical.typolink {
+	parameter.data						= TSFE : id
+	addQueryString						= 1
+	addQueryString {
+		method							= GET,POST
+		exclude							= cHash
+	}
+	returnLast							= url
+	useCacheHash						= 0
+	forceAbsoluteUrl					= 1
+}
+
+page.headerData.201						= COA_INT
+page.headerData.201 {
+	10										= TEXT
+	10.value								= <link rel="canonical" href="
+	30										< lib.canonical
+	40										= TEXT
+	40.value								= "/>
+}
 
 #CSS
 page.includeCSS {
@@ -72,7 +95,3 @@ config.removeDefaultJS					= external
 [PIDinRootline = 5]
 	page.bodyTag = <body class="red">
 [global]
-
-bodyTag
-
-

@@ -488,6 +488,15 @@ return array (
       array (
       ),
     ),
+    'tw_webperf' => 
+    array (
+      'composerName' => 'tw_webperf',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/tw_webperf/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'adodb' => 
     array (
       'composerName' => 'typo3/cms-adodb',

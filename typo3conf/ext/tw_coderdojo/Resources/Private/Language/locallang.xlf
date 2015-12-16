@@ -142,6 +142,12 @@
 			</trans-unit>
 
 			<!-- Mentor -->
+			<trans-unit id="mentor.title.male">
+				<source>Mentor im CoderDojo Nürnberg</source>
+			</trans-unit>
+			<trans-unit id="mentor.title.female">
+				<source>Mentorin im CoderDojo Nürnberg</source>
+			</trans-unit>
 			<trans-unit id="mentor.profile">
 				<source>Zu %s Mentorenprofil</source>
 			</trans-unit>

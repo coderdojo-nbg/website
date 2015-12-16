@@ -35,6 +35,7 @@ return [
             'tw_content' => 'a:0:{}',
             'tw_mid' => 'a:0:{}',
             'tw_upsync' => 'a:5:{s:7:"profile";s:9:"coderdojo";s:6:"upsync";s:21:"/usr/local/bin/upsync";s:7:"verbose";s:1:"1";s:5:"links";s:1:"1";s:3:"dry";s:1:"0";}',
+            'tw_webperf' => 'a:0:{}',
             'vhs' => 'a:0:{}',
         ],
     ],

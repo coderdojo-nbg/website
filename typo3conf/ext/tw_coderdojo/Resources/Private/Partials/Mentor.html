@@ -1,5 +1,6 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace tw=Tollwerk\TwCoderdojo\ViewHelpers}
+{namespace wp=Tollwerk\TwWebperf\ViewHelpers}
 
 <!-- Short mentor profile -->
 <f:section name="Short">
@@ -31,6 +32,15 @@
 
 <!-- Full mentor profile -->
 <f:section name="Full">
+
+    <!-- Meta elements -->
+    <wp:page.meta name="og:title" value="{mentor.firstName} {mentor.lastName} ☯ {f:translate(key: '{f:if(condition: \'{mentor.gender}==2\', then: \'mentor.title.female\', else: \'mentor.title.male\')}')}" type="property"/>
+    <wp:page.meta name="og:description" value="{mentor.biography -> f:format.striptags() -> f:format.crop(maxCharacters: 156)}" type="property"/>
+    <wp:page.meta name="og:image" value="{f:uri.image(image: mentor.portrait, width: '500c', height: '500c', absolute: 1)}" type="property"/>
+    <wp:page.meta name="twitter:title" value="{mentor.firstName} {mentor.lastName} ☯ {f:translate(key: '{f:if(condition: \'{mentor.gender}==2\', then: \'mentor.title.female\', else: \'mentor.title.male\')}')}" type="name"/>
+    <wp:page.meta name="twitter:description" value="{mentor.biography -> f:format.striptags() -> f:format.crop(maxCharacters: 156)}" type="name"/>
+    <wp:page.meta name="twitter:image" value="{f:uri.image(image: mentor.portrait, width: '500c', height: '500c', absolute: 1)}" type="name"/>
+
     <article class="mentor">
         <div class="mentor-profile h-card" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
             <section id="mentor-header" class="mentor-header">
