@@ -86,6 +86,12 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @lazy
 	 */
 	protected $attendees = null;
+	/**
+	 * Sortierte Mentoren
+	 *
+	 * @var array
+	 */
+	protected $_sortedMentors = null;
 
 	/**
 	 * __construct
@@ -244,7 +250,22 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function getMentors()
 	{
-		return $this->mentors;
+		if ($this->_sortedMentors === null) {
+			$this->_sortedMentors = [];
+			foreach ($this->mentors as $mentor) {
+				$this->_sortedMentors[] = $mentor;
+			}
+
+			usort($this->_sortedMentors, function($mentor1, $mentor2) {
+				/**
+				 * @var Person $mentor1
+				 * @var Person $mentor2
+				 */
+				return strnatcasecmp($mentor1->getLastName().','.$mentor1->getFirstName(), $mentor2->getLastName().','.$mentor2->getFirstName());
+			});
+		}
+
+		return $this->_sortedMentors;
 	}
 
 	/**
