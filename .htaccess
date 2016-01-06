@@ -72,7 +72,14 @@ AddEncoding x-gzip .gz
     # Redirects for XML sitemaps
     ###########################################################################
 #	RewriteRule ^sitemap.xml$ index.php?type=1210 [R,L]
-#	RewriteRule ^sitemap.xml.gz$ index.php?type=1211 [R,L]	
+#	RewriteRule ^sitemap.xml.gz$ index.php?type=1211 [R,L]
+
+	###########################################################################
+	# Rewrite to HTTPS
+	###########################################################################
+	RewriteCond %{HTTPS} !on
+    RewriteCond %{ENV:APP_ENV} !development
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 	
 	###########################################################################
     # Default TYPO3 redirects

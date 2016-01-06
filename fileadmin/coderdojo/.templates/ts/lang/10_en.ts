@@ -28,8 +28,8 @@ page.headerData.503						= TEXT
 page.headerData.503.value (
 	<meta property="og:title" name="twitter:title" content="CoderDojo Nürnberg">
 	<meta property="og:description" name="twitter:description" content="Club für Kinder und Jugendliche von 5-17 Jahren, die begleitet von erfahrenen Mentoren Programmieren lernen & Spaß haben wollen ☯ Teilnahme kostenlos, Hilfe willkommen!">
-	<meta property="og:image" content="http://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-facebook.jpg">
-	<meta name="twitter:image" content="http://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-twitter.png">
+	<meta property="og:image" content="https://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-facebook.jpg">
+	<meta name="twitter:image" content="https://coderdojo-nbg.org/fileadmin/coderdojo/img/coderdojo-nbg-twitter.png">
 )
 
 # Unset some meta tags for mentor single view

@@ -38,6 +38,7 @@ lib.canonical.typolink {
 	returnLast							= url
 	useCacheHash						= 0
 	forceAbsoluteUrl					= 1
+	forceAbsoluteUrl.scheme				= https
 }
 
 page.headerData.201						= COA_INT
@@ -59,7 +60,7 @@ config.inlineStyle2TempFile			= 1
 
 #JAVASCRIPT
 page.includeJS {
-	html5													= http://html5shiv.googlecode.com/svn/trunk/html5.js
+	html5													= //html5shiv.googlecode.com/svn/trunk/html5.js
 	html5.external								= 1
 	html5.allWrap									= <!--[if lt IE 9]>|<![endif]-->
 	html5 {
@@ -69,7 +70,7 @@ page.includeJS {
 	}
 }
 page.includeJSFooter {
-  jquery												= http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+  jquery												= //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
   jquery {
     external										= 1
     forceOnTop									= 1
