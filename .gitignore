@@ -4,6 +4,9 @@
 !/fileadmin
 !/fileadmin/coderdojo/
 !/fileadmin/coderdojo/**
+!/fileadmin/user_upload/
+!/fileadmin/user_upload/download
+!/fileadmin/user_upload/download/**
 
 !/typo3conf/ext
 !/typo3conf/ext/tw_coderdojo/
