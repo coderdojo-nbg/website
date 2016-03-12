@@ -577,21 +577,31 @@ label + .error, fieldset ul + .error {
     margin-left: 25%; } }
 
 @media all and (min-width: 64em) {
-  .mentors .mentor {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%; }
-    .mentors .mentor > a {
-      padding: 1em 2em 3em 2em; }
-    .mentors .mentor figure > div {
-      width: 150px; }
-  .mentors .mentor:nth-child(even) {
-    background-color: transparent; }
-  .mentors .mentor:nth-child(4n+2),
-  .mentors .mentor:nth-child(4n+3) {
-    background-color: #fef4d3; }
-  .mentors .mentor:hover {
-    background-color: #fbcc33; }
+  .mentors {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .mentors .mentor {
+      display: inline-block;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      vertical-align: top;
+      width: 50%; }
+      .mentors .mentor > a {
+        padding: 1em 2em 3em 2em; }
+      .mentors .mentor figure > div {
+        width: 150px; }
+    .mentors .mentor:nth-child(even) {
+      background-color: transparent; }
+    .mentors .mentor:nth-child(4n+2),
+    .mentors .mentor:nth-child(4n+3) {
+      background-color: #fef4d3; }
+    .mentors .mentor:hover {
+      background-color: #fbcc33; }
   .mentor-profile > section.card {
     box-sizing: border-box;
     display: inline-block;

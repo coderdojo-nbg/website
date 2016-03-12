@@ -1,6 +1,10 @@
 .mentors {
+	display: flex;
+	flex-wrap: wrap;
+
 	.mentor {
 		display: inline-block;
+		display: flex;
 		vertical-align: top;
 		width: 50%;
 

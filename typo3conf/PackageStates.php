@@ -362,6 +362,33 @@ return array (
       array (
       ),
     ),
+    'static_info_tables' => 
+    array (
+      'composerName' => 'sjbr/static_info_tables',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/static_info_tables/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'tw_webperf' => 
+    array (
+      'composerName' => 'tw_webperf',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/tw_webperf/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'tw_coderdojo' => 
+    array (
+      'composerName' => 'tollwerk/tw_coderdojo',
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/tw_coderdojo/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'flux' => 
     array (
       'composerName' => 'fluidtypo3/flux',
@@ -385,24 +412,6 @@ return array (
       'composerName' => 'fluidtypo3/fluidpages',
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/fluidpages/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'static_info_tables' => 
-    array (
-      'composerName' => 'sjbr/static_info_tables',
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/static_info_tables/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'tw_coderdojo' => 
-    array (
-      'composerName' => 'tollwerk/tw_coderdojo',
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/tw_coderdojo/',
       'suggestions' => 
       array (
       ),
@@ -484,15 +493,6 @@ return array (
       'composerName' => 'tw_upsync',
       'state' => 'active',
       'packagePath' => 'typo3conf/ext/tw_upsync/',
-      'suggestions' => 
-      array (
-      ),
-    ),
-    'tw_webperf' => 
-    array (
-      'composerName' => 'tw_webperf',
-      'state' => 'active',
-      'packagePath' => 'typo3conf/ext/tw_webperf/',
       'suggestions' => 
       array (
       ),
