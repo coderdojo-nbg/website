@@ -22,7 +22,8 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Backend\Sprite\SpriteManager::addSingleIcons(array(
 	'mentor' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_twcoderdojo_domain_model_mentor.png',
-	'attendee' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_twcoderdojo_domain_model_attendee.png',
+	'ninja' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_twcoderdojo_domain_model_ninja.png',
+	'helper' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_twcoderdojo_domain_model_helper.png',
 ), $_EXTKEY);
 
 // Date plugin

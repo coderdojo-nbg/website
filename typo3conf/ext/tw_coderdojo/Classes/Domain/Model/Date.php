@@ -80,12 +80,21 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $mentors = null;
 
 	/**
-	 * Teilnehmer
+	 * Ninjas
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person>
 	 * @lazy
 	 */
-	protected $attendees = null;
+	protected $ninjas = null;
+
+	/**
+	 * Helpers
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person>
+	 * @lazy
+	 */
+	protected $helpers = null;
+	
 	/**
 	 * Sortierte Mentoren
 	 *
@@ -113,7 +122,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected function initStorageObjects()
 	{
 		$this->mentors = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->attendees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->ninjas = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->helpers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -285,9 +295,9 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
 	 * @return void
 	 */
-	public function addAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
+	public function addNinja(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
 	{
-		$this->attendees->attach($attendee);
+		$this->ninjas->attach($attendee);
 	}
 
 	/**
@@ -296,30 +306,81 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove The Person to be removed
 	 * @return void
 	 */
-	public function removeAttendee(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
+	public function removeNinja(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
 	{
-		$this->attendees->detach($attendeeToRemove);
+		$this->ninjas->detach($attendeeToRemove);
 	}
 
 	/**
-	 * Returns the attendees
+	 * Returns the ninjas
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $attendees
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
 	 */
-	public function getAttendees()
+	public function getNinjas()
 	{
-		return $this->attendees;
+		return $this->ninjas;
 	}
 
 	/**
-	 * Sets the attendees
+	 * Sets the ninjas
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $attendees
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
 	 * @return void
 	 */
-	public function setAttendees(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $attendees)
+	public function setNinjas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ninjas)
 	{
-		$this->attendees = $attendees;
+		$this->ninjas = $ninjas;
 	}
 
+	/**
+	 * Adds a Person
+	 *
+	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
+	 * @return void
+	 */
+	public function addHelper(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
+	{
+		$this->helpers->attach($attendee);
+	}
+
+	/**
+	 * Removes a Person
+	 *
+	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove The Person to be removed
+	 * @return void
+	 */
+	public function removeHelper(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
+	{
+		$this->helpers->detach($attendeeToRemove);
+	}
+
+	/**
+	 * Returns the helpers
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+	 */
+	public function getHelpers()
+	{
+		return $this->helpers;
+	}
+
+	/**
+	 * Sets the helpers
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+	 * @return void
+	 */
+	public function setHelpers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $helpers)
+	{
+		$this->helpers = $helpers;
+	}
+
+	/**
+	 * Return the total number of attendees (mentors + ninjas + helpers)
+	 *
+	 * @return int Total number of attendees
+	 */
+	public function getAttendeesCount() {
+		return count($this->mentors) + count($this->ninjas) + count($this->helpers);
+	}
 }

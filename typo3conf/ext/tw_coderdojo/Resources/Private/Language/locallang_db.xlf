@@ -38,8 +38,11 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_person.type.mentor">
 				<source>Mentor</source>
 			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.type.attendee">
-				<source>Attendee</source>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.type.ninja">
+				<source>Ninja</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.type.helper">
+				<source>Helper</source>
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_person.gender">
 				<source>Gender</source>
@@ -79,6 +82,9 @@
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_person.skills">
 				<source>Skills</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.guardian">
+				<source>Legal guardian</source>
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_contact">
 				<source>Contact</source>
@@ -134,8 +140,11 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_date.mentors">
 				<source>Mentors</source>
 			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.attendees">
-				<source>Attendees</source>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.ninjas">
+				<source>Ninjas</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.helpers">
+				<source>Helpers</source>
 			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_location">
 				<source>Location</source>

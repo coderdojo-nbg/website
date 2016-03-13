@@ -1,0 +1,18 @@
+//ANIMATION
+@keyframes attendees {
+	0%{
+		transform: rotate(0deg) scale(1);
+	}
+	10% {
+		transform: rotate(180deg) scale(1);
+	}
+	12% {
+		transform: rotate(180deg) scale(1.1);
+	}
+	15% {
+		transform: rotate(180deg) scale(1);
+	}
+	100% {
+		transform: rotate(180deg) scale(1);
+	}
+}

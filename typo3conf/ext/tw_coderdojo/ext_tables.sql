@@ -17,6 +17,7 @@ CREATE TABLE tx_twcoderdojo_domain_model_person (
 	anonymous tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	contacts int(11) unsigned DEFAULT '0' NOT NULL,
 	skills int(11) unsigned DEFAULT '0' NOT NULL,
+	guardian int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -88,7 +89,8 @@ CREATE TABLE tx_twcoderdojo_domain_model_date (
 	intro text NOT NULL,
 	location int(11) unsigned DEFAULT '0',
 	mentors int(11) unsigned DEFAULT '0' NOT NULL,
-	attendees int(11) unsigned DEFAULT '0' NOT NULL,
+	ninjas int(11) unsigned DEFAULT '0' NOT NULL,
+	helpers int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -152,9 +154,9 @@ CREATE TABLE tx_twcoderdojo_person_skill_mm (
 );
 
 #
-# Table structure for table 'tx_twcoderdojo_date_person_mm'
+# Table structure for table 'tx_twcoderdojo_date_mentor_mm'
 #
-CREATE TABLE tx_twcoderdojo_date_person_mm (
+CREATE TABLE tx_twcoderdojo_date_mentor_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,
@@ -165,9 +167,22 @@ CREATE TABLE tx_twcoderdojo_date_person_mm (
 );
 
 #
-# Table structure for table 'tx_twcoderdojo_date_attendees_person_mm'
+# Table structure for table 'tx_twcoderdojo_date_ninja_mm'
 #
-CREATE TABLE tx_twcoderdojo_date_attendees_person_mm (
+CREATE TABLE tx_twcoderdojo_date_ninja_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_twcoderdojo_date_helper_mm'
+#
+CREATE TABLE tx_twcoderdojo_date_helper_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

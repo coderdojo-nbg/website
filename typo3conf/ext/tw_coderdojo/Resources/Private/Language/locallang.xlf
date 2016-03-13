@@ -129,6 +129,9 @@
 			<trans-unit id="dojo.register">
 				<source>Direkt zur Anmeldung</source>
 			</trans-unit>
+			<trans-unit id="dojo.count">
+				<source>Schon %s Teilnehmer!</source>
+			</trans-unit>
 
 			<!-- Date -->
 			<trans-unit id="header.date.whenwhere">

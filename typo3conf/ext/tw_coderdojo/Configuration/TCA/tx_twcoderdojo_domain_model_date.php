@@ -22,7 +22,7 @@ return array(
 		'showRecordFieldList' => 'hidden, start, end, location, mentors, attendees',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--palette--;;event, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, attendees, '),
+		'1' => array('showitem' => '--palette--;;event, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
 	),
 	'palettes' => array(
 		'event' => array('showitem' => 'dojo_number, start, end, hidden', 'canNotCollapse' => true),
@@ -115,28 +115,42 @@ return array(
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_twcoderdojo_domain_model_person',
 				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.type = 0 ORDER BY tx_twcoderdojo_domain_model_person.last_name ASC, tx_twcoderdojo_domain_model_person.first_name ASC',
-				'MM' => 'tx_twcoderdojo_date_person_mm',
+				'MM' => 'tx_twcoderdojo_date_mentor_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
 				'multiple' => 0,
 			),
 		),
-		'attendees' => array(
+		'ninjas' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.attendees',
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.ninjas',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_twcoderdojo_domain_model_person',
 				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.type = 1',
-				'MM' => 'tx_twcoderdojo_date_attendees_person_mm',
+				'MM' => 'tx_twcoderdojo_date_ninja_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
 				'multiple' => 0,
 			),
 		),
-
+		'helpers' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.helpers',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
+				'foreign_table' => 'tx_twcoderdojo_domain_model_person',
+				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.type = 2',
+				'MM' => 'tx_twcoderdojo_date_helper_mm',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'maxitems' => 9999,
+				'multiple' => 0,
+			),
+		),
 	),
 );

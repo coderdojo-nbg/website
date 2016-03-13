@@ -70,11 +70,61 @@
 			padding: 1em;
 		}
 
+		.date-intro {
+			position: relative;
+			padding-bottom: 2em;
+		}
+
 		.mentors {
 			background-color: $bgcolorHeader;
 
 			&, a {
 				color: $colorHeader;
+			}
+		}
+	}
+
+	.date-attendees {
+		width: 8em;
+		height: 8em;
+		position: absolute;
+		bottom: -4em;
+		right: 5%;
+		margin: 0;
+		text-align: center;
+		color: $colorBlue;
+
+		.animation-wrapper, > span {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.animation-wrapper {
+			z-index: 1;
+			animation: attendees 12s infinite;
+			fill: currentColor;
+
+			&.foreground {
+				top: 0;
+				right: 0;
+				color: $bgcolorBlue;
+			}
+
+			&.background {
+				top: .25em;
+				right: -.3em;
+				//color: #000000;
+				color: transparentize($bgcolorBlue, .8);
+			}
+		}
+		
+		> span {
+			display: table;
+			z-index: 2;
+
+			span {
+				display: table-cell;
+				vertical-align: middle;
 			}
 		}
 	}

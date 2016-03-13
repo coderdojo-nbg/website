@@ -10,9 +10,14 @@
                 </p>
             </f:if>
             <p><a href="#c19" class="date-register"><f:translate key="dojo.register"/></a></p>
+            <p class="date-attendees">
+                <svg class="animation-wrapper background"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
+                <svg class="animation-wrapper foreground"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
+                <span><span><f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/></span></span>
+            </p>
         </section>
-
-        <div><f:render partial="Date" section="Map" arguments="{date: date}"/></div>
+        <f:render partial="Date" section="Map" arguments="{date: date}"/>
+        <f:comment><div><f:render partial="Date" section="Map" arguments="{date: date}"/></div></f:comment>
     </div>
 
     <section class="date-mentors">

@@ -362,10 +362,47 @@ nav {
 .ce-twcoderdojo_date .date-details .date-intro, .ce-twcoderdojo_date .date-details .mentor-intro {
   padding: 1em; }
 
+.ce-twcoderdojo_date .date-details .date-intro {
+  position: relative;
+  padding-bottom: 2em; }
+
 .ce-twcoderdojo_date .date-details .mentors {
   background-color: #ffffff; }
   .ce-twcoderdojo_date .date-details .mentors, .ce-twcoderdojo_date .date-details .mentors a {
     color: #000; }
+
+.ce-twcoderdojo_date .date-attendees {
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  bottom: -4em;
+  right: 5%;
+  margin: 0;
+  text-align: center;
+  color: #fff; }
+  .ce-twcoderdojo_date .date-attendees .animation-wrapper, .ce-twcoderdojo_date .date-attendees > span {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .ce-twcoderdojo_date .date-attendees .animation-wrapper {
+    z-index: 1;
+    -webkit-animation: attendees 12s infinite;
+            animation: attendees 12s infinite;
+    fill: currentColor; }
+    .ce-twcoderdojo_date .date-attendees .animation-wrapper.foreground {
+      top: 0;
+      right: 0;
+      color: #2e7ac7; }
+    .ce-twcoderdojo_date .date-attendees .animation-wrapper.background {
+      top: .25em;
+      right: -.3em;
+      color: rgba(46, 122, 199, 0.2); }
+  .ce-twcoderdojo_date .date-attendees > span {
+    display: table;
+    z-index: 2; }
+    .ce-twcoderdojo_date .date-attendees > span span {
+      display: table-cell;
+      vertical-align: middle; }
 
 fieldset {
   margin: 0;
@@ -454,6 +491,40 @@ label + .error, fieldset ul + .error {
   #Tx_Formhandler_UploadedFiles_portrait:empty {
     display: none; }
 
+@-webkit-keyframes attendees {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1); }
+  10% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); }
+  12% {
+    -webkit-transform: rotate(180deg) scale(1.1);
+            transform: rotate(180deg) scale(1.1); }
+  15% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); }
+  100% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); } }
+
+@keyframes attendees {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1); }
+  10% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); }
+  12% {
+    -webkit-transform: rotate(180deg) scale(1.1);
+            transform: rotate(180deg) scale(1.1); }
+  15% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); }
+  100% {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1); } }
+
 @media all and (min-width: 32em) {
   .ce-body, .ce-html {
     padding: 1em 2em; }
@@ -503,7 +574,9 @@ label + .error, fieldset ul + .error {
   .ce-twcoderdojo_date .date a {
     padding: 2em; }
   .ce-twcoderdojo_date .date-details .date-intro, .ce-twcoderdojo_date .date-details .mentor-intro {
-    padding: 1em 2em; } }
+    padding: 1em 2em; }
+  .ce-twcoderdojo_date .date-details .date-intro {
+    padding-bottom: 2em; } }
 
 @media all and (min-width: 48em) {
   .ce-textpic.ce-layout-2,
@@ -618,19 +691,15 @@ label + .error, fieldset ul + .error {
     width: 100%;
     table-layout: fixed;
     min-height: 320px; }
-    .ce-twcoderdojo_date .date-details > div > * {
+    .ce-twcoderdojo_date .date-details > div > *, .ce-twcoderdojo_date .date-details > div .map {
       position: relative;
       display: table-cell;
       vertical-align: top;
-      height: auto; }
-    .ce-twcoderdojo_date .date-details > div .map {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      width: auto;
       height: auto;
-      background-size: cover; } }
+      background-size: cover; }
+  .ce-twcoderdojo_date .date-attendees {
+    right: -4em; } }
 
 @media all and (max-width: 64em) {
   .ce-flex-image {

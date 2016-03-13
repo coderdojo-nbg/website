@@ -15,8 +15,11 @@
 			<trans-unit id="mentors.description">
 				<source>Mentoren</source>
 			</trans-unit>
-			<trans-unit id="attendees.description">
-				<source>Teilnehmer</source>
+			<trans-unit id="ninjas.description">
+				<source>Ninjas</source>
+			</trans-unit>
+			<trans-unit id="helpers.description">
+				<source>Helpers</source>
 			</trans-unit>
 		</body>
 	</file>

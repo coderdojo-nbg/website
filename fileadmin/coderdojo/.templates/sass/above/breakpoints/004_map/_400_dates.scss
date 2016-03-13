@@ -5,21 +5,17 @@
 		table-layout: fixed;
 		min-height: 320px;
 
-		& > * {
+		& > *, .map {
 			position: relative;
 			display: table-cell;
 			vertical-align: top;
-			height: auto;
-		}
-
-		.map {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			width: auto;
 			height: auto;
 			background-size: cover;
 		}
+	}
+
+	.date-attendees {
+		right: -4em;
 	}
 }

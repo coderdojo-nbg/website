@@ -3,13 +3,14 @@ return array(
 	'ctrl' => array(
 		'title' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person',
 		'label' => 'last_name',
-		'label_alt' => 'first_name',
+		'label_alt' => 'first_name, birthday, guardian',
 		'label_alt_force' => true,
 		'type' => 'type',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => true,
+		'default_sortby' => 'ORDER BY last_name, first_name',
 
 		'delete' => 'deleted',
 		'enablecolumns' => array(
@@ -21,14 +22,17 @@ return array(
 		'typeicon_column' => 'type',
 		'typeicon_classes' => array(
 			'0' => 'extensions-tw_coderdojo-mentor',
-			'1' => 'extensions-tw_coderdojo-attendee',
+			'1' => 'extensions-tw_coderdojo-ninja',
+			'2' => 'extensions-tw_coderdojo-helper',
 		),
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'hidden, type, gender, first_name, last_name, birthday, portrait, biography, statement, anonymous, contacts, skills',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--palette--;;type,--pallette--;;name, portrait, biography;;;richtext:rte_transform[mode=ts_links], statement, contacts, skills, '),
+		'0' => array('showitem' => '--palette--;;type,--pallette--;;name, portrait, biography;;;richtext:rte_transform[mode=ts_links], statement, contacts, skills, '),
+		'1' => array('showitem' => '--palette--;;type,--pallette--;;name, guardian, contacts, skills, '),
+		'2' => array('showitem' => '--palette--;;type,--pallette--;;name, contacts, skills, '),
 	),
 	'palettes' => array(
 		'type' => array('showitem' => 'type, anonymous, hidden', 'canNotCollapse' => true),
@@ -52,7 +56,8 @@ return array(
 				'renderType' => 'selectSingle',
 				'items' => array(
 					array('LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.type.mentor', 0),
-					array('LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.type.attendee',1),
+					array('LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.type.ninja',1),
+					array('LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.type.helper',2),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -255,6 +260,21 @@ return array(
 				),
 			),
 		),
-
+		'guardian' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.guardian',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectSingle',
+				'foreign_table' => 'tx_twcoderdojo_domain_model_person',
+				'foreign_table_where' => 'AND tx_twcoderdojo_domain_model_person.birthday < "'.date('Y-m-d', mktime(0, 0, 0, date('n'), date('j'), date('Y') - 13)).'" ORDER BY tx_twcoderdojo_domain_model_person.last_name ASC',
+				'items' => array(
+					array('---', 0),
+				),
+				'size' => 1,
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+		),
 	),
 );
