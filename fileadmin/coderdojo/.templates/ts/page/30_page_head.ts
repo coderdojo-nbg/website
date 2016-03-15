@@ -113,3 +113,15 @@ config.removeDefaultJS = external
 	page.bodyTagCObject.file = fileadmin/coderdojo/img/star.svg
 	page.bodyTagCObject.wrap = <body class="blue">|
 [global]
+
+[globalVar = TSFE:id = 8][globalVar = TSFE:id = 16]
+	page.includeJSFooter {
+		datepicker = fileadmin/coderdojo/js/datepicker.min.js
+		datepicker {
+			external = 1
+			forceOnTop = 1
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+	}
+[global]

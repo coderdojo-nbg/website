@@ -44,8 +44,8 @@
 			<label index="field.legend.statement">Beschreiben in kurzen Worten, weshalb du Mentorin oder Mentor sein möchtest und was Dir besonders daran gefällt, anderen beim Lernen zu helfen</label>
 
 			<label index="field.placeholder.firstname">Peter</label>
-			<label index="field.placeholder.lastname">Lustig</label>
-			<label index="field.placeholder.email">peter@löwenzahn.de</label>
+			<label index="field.placeholder.lastname">Pan</label>
+			<label index="field.placeholder.email">peter@nimmerland.de</label>
 			<label index="field.placeholder.message">Ich möchte Euch sagen, dass ...</label>
 			<label index="field.placeholder.project">Ich möchte bei diesem CoderDojo ...</label>
 			<label index="field.placeholder.biography">Angestellter Webentwickler, Vater von zwei Kindern, großes Spielkind mit Leidenschaft für ...</label>
