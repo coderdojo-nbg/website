@@ -129,8 +129,17 @@
 			<trans-unit id="dojo.register">
 				<source>Direkt zur Anmeldung</source>
 			</trans-unit>
+			<trans-unit id="dojo.waitinglist">
+				<source>Anmeldung zur Warteliste</source>
+			</trans-unit>
+			<trans-unit id="dojo.capacity">
+				<source>%s Plätze insgesamt</source>
+			</trans-unit>
 			<trans-unit id="dojo.count">
-				<source>Schon %s Teilnehmer!</source>
+				<source>Schon %s Anmeldungen!</source>
+			</trans-unit>
+			<trans-unit id="dojo.full">
+				<source>Belegt!</source>
 			</trans-unit>
 
 			<!-- Date -->

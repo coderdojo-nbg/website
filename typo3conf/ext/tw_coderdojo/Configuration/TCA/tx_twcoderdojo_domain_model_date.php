@@ -25,7 +25,7 @@ return array(
 		'1' => array('showitem' => '--palette--;;event, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
 	),
 	'palettes' => array(
-		'event' => array('showitem' => 'dojo_number, start, end, hidden', 'canNotCollapse' => true),
+		'event' => array('showitem' => 'dojo_number, capacity, start, end, hidden', 'canNotCollapse' => true),
 	),
 	'columns' => array(
 
@@ -41,8 +41,18 @@ return array(
 			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.dojo_number',
 			'config' => array(
 				'type' => 'input',
-				'size' => 4,
+				'size' => 1,
 				'eval' => 'trim,int'
+			),
+		),
+		'capacity' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.capacity',
+			'config' => array(
+				'type' => 'input',
+				'size' => 1,
+				'eval' => 'trim,int',
+                'default' => 50,
 			),
 		),
 		'start' => array(

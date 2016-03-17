@@ -42,6 +42,14 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $dojoNumber = 0;
 
 	/**
+	 * Kapazität
+	 *
+	 * @var int
+	 * @validate NotEmpty
+	 */
+	protected $capacity = 0;
+
+	/**
 	 * Startzeitpunkt
 	 *
 	 * @var \DateTime
@@ -94,7 +102,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @lazy
 	 */
 	protected $helpers = null;
-	
+
 	/**
 	 * Sortierte Mentoren
 	 *
@@ -144,6 +152,26 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setDojoNumber($dojoNumber)
 	{
 		$this->dojoNumber = $dojoNumber;
+	}
+
+	/**
+	 * Return the capacity
+	 *
+	 * @return int
+	 */
+	public function getCapacity()
+	{
+		return $this->capacity;
+	}
+
+	/**
+	 * Set the capacity
+	 *
+	 * @param int $capacity capacity
+	 */
+	public function setCapacity($capacity)
+	{
+		$this->capacity = $capacity;
 	}
 
 	/**
@@ -383,4 +411,13 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function getAttendeesCount() {
 		return count($this->mentors) + count($this->ninjas) + count($this->helpers);
 	}
+
+    /**
+     * Return if the date is fully booked
+     *
+     * @return bool Fully booked
+     */
+    public function getFull() {
+        return $this->getAttendeesCount() >= $this->capacity;
+    }
 }

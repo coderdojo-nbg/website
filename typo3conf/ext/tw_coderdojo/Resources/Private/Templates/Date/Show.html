@@ -9,11 +9,30 @@
                     <f:format.html>{date.intro}</f:format.html>
                 </p>
             </f:if>
-            <p><a href="#c19" class="date-register"><f:translate key="dojo.register"/></a></p>
-            <a href="#c19" class="date-attendees">
+            <p>
+                <f:translate key="dojo.capacity" arguments="{0: date.capacity}"/> —
+                <a href="#c19" class="date-register">
+                    <f:if condition="{date.full}">
+                        <f:then>
+                            <f:translate key="dojo.waitinglist"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="dojo.register"/>
+                        </f:else>
+                    </f:if>
+                </a>
+            </p>
+            <a href="#c19" class="date-attendees{f:if(condition: '{date.full}', then: ' full')}">
                 <svg class="animation-wrapper background"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
                 <svg class="animation-wrapper foreground"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
-                <span><span><f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/></span></span>
+                <span><span><f:if condition="{date.full}">
+                    <f:then>
+                        <f:translate key="dojo.full"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/>
+                    </f:else>
+                </f:if></span></span>
             </a>
         </section>
         <f:render partial="Date" section="Map" arguments="{date: date}"/>

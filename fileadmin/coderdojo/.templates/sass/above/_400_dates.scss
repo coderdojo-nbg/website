@@ -85,10 +85,10 @@
 	}
 
 	.date-attendees {
-		width: 8em;
-		height: 8em;
+		width: 10em;
+		height: 10em;
 		position: absolute;
-		bottom: -4em;
+		bottom: -5em;
 		right: 5%;
 		margin: 0;
 		text-align: center;
@@ -107,17 +107,27 @@
 			&.foreground {
 				top: 0;
 				right: 0;
-				color: $bgcolorBlue;
+				color: $bgcolorGreen;
 			}
 
 			&.background {
 				top: .25em;
 				right: -.3em;
 				//color: #000000;
-				color: transparentize($bgcolorBlue, .8);
+				color: transparentize($bgcolorGreen, .8);
 			}
 		}
-		
+
+		&.full .animation-wrapper {
+			&.foreground {
+				color: $bgcolorRed;
+			}
+
+			&.background {
+				color: transparentize($bgcolorRed, .8);
+			}
+		 }
+
 		> span {
 			display: table;
 			z-index: 2;

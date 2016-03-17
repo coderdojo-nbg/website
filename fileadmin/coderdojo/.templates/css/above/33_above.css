@@ -369,10 +369,10 @@ nav {
     color: #000; }
 
 .ce-twcoderdojo_date .date-attendees {
-  width: 8em;
-  height: 8em;
+  width: 10em;
+  height: 10em;
   position: absolute;
-  bottom: -4em;
+  bottom: -5em;
   right: 5%;
   margin: 0;
   text-align: center;
@@ -388,11 +388,15 @@ nav {
     .ce-twcoderdojo_date .date-attendees .animation-wrapper.foreground {
       top: 0;
       right: 0;
-      color: #2e7ac7; }
+      color: #61c93f; }
     .ce-twcoderdojo_date .date-attendees .animation-wrapper.background {
       top: .25em;
       right: -.3em;
-      color: rgba(46, 122, 199, 0.2); }
+      color: rgba(97, 201, 63, 0.2); }
+  .ce-twcoderdojo_date .date-attendees.full .animation-wrapper.foreground {
+    color: #ed462f; }
+  .ce-twcoderdojo_date .date-attendees.full .animation-wrapper.background {
+    color: rgba(237, 70, 47, 0.2); }
   .ce-twcoderdojo_date .date-attendees > span {
     display: table;
     z-index: 2; }

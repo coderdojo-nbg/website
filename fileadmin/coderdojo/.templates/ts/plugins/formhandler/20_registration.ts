@@ -162,3 +162,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 		}
 	}
 }
+
+#[userFunc = user_isDojoFull()]
+#	plugin.Tx_Formhandler.settings.predef.registration.fullNotice.value = <p>Hallo!</p>
+#[global]
