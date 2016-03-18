@@ -6,3 +6,5 @@
 TCEMAIN.table.tt_content {
   disablePrependAtCopy = 1
 }
+
+TCEFORM.tt_content.layout.addItems.4 = Rot hinterlegt

@@ -30,6 +30,7 @@
 			<label index="field.project">Projekt</label>
 			<label index="field.contact">Nachricht absenden</label>
 			<label index="field.register">Anmelden</label>
+			<label index="field.waitinglist">Auf die Warteliste</label>
 			<label index="field.website">Website</label>
 			<label index="field.twitter">Twitter-Benutzername</label>
 			<label index="field.facebook">Facebook-ID</label>

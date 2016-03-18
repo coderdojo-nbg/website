@@ -85,6 +85,10 @@ h3 {
   .ce-layout-1, .ce-layout-1 a, .ce-layout-3, .ce-layout-3 a, .ce-formhandler_pi1, .ce-formhandler_pi1 a {
     color: #000; }
 
+.ce-layout-4 {
+  background-color: #ed462f !important;
+  color: #fff; }
+
 .ce-textpic.ce-layout-1 > div {
   box-sizing: border-box;
   position: relative; }
