@@ -90,7 +90,7 @@ plugin.Tx_Formhandler.settings.predef.waitinglist {
                         tables						= tx_twcoderdojo_domain_model_date
                         conf.tx_twcoderdojo_domain_model_date = TEXT
                         conf.tx_twcoderdojo_domain_model_date {
-                            dataWrap				= Anmeldung zum CoderDojo {field:dojo_number} (am {field:start})
+                            dataWrap				= Gästeliste zum CoderDojo {field:dojo_number} (am {field:start})
                         }
                     }
                     sender_email					= email
@@ -122,7 +122,7 @@ plugin.Tx_Formhandler.settings.predef.waitinglist {
                         tables						= tx_twcoderdojo_domain_model_date
                         conf.tx_twcoderdojo_domain_model_date = TEXT
                         conf.tx_twcoderdojo_domain_model_date {
-                            dataWrap				= Anmeldung zum CoderDojo {field:dojo_number} (am {field:start})
+                            dataWrap				= Gästeliste zum CoderDojo {field:dojo_number} (am {field:start})
                         }
                     }
                     sender_email					= ping@coderdojo-nbg.org
