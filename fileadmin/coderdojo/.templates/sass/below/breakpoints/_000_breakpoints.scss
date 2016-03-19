@@ -1,3 +1,8 @@
 @media all and (min-width: $breakpoint001) {
 	@import "001_wider/900_footer";
+	@import "001_wider/910_sponsors";
+}
+
+@media all and (min-width: $breakpoint002) {
+	@import "002_2columns/910_sponsors";
 }

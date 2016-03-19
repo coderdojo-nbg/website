@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
-		
+
 		sass					: {
 			options				: {
 				sourceMap		: true
@@ -81,6 +81,7 @@ module.exports = function(grunt) {
 						sprite			: 'icons/icons.svg',
 						render			: {
 							scss		: {
+								template: 'fileadmin/coderdojo/.templates/icons/icons.scss',
 								dest	: '../.templates/sass/noconcat/icon'
 							}
 						},
@@ -90,11 +91,19 @@ module.exports = function(grunt) {
 							dest		: 'js/icons-loader.html',
 							css			: 'icon.%s.css'
 						}
+					},
+					variables   : {
+						padding     : function() {
+							return function(aspect, render) {
+								aspect = render(aspect).split('/');
+								return (100 * aspect[0] / aspect[1]) + '%';
+							}
+						}
 					}
 				}
 			}
 		},
-		
+
 		favicons				: {
 			options				: {
 				html			: 'fileadmin/coderdojo/favicons/favicons.html',
@@ -109,19 +118,19 @@ module.exports = function(grunt) {
 				dest			: 'fileadmin/coderdojo/favicons'
 		    }
 		},
-		
-		
+
+
 		copy					: {
-			
+
 			favicon: {
 				src				: 'fileadmin/coderdojo/favicons/favicon.ico',
 				dest			: 'favicon.ico'
 			}
-			
+
 		},
-		
+
 		replace					: {
-			
+
 			favicon: {
 				src				: ['fileadmin/coderdojo/favicons/favicons.html'],
 				overwrite		: true,
@@ -133,9 +142,9 @@ module.exports = function(grunt) {
 					to			: '<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="icon" href="/favicon.ico" type="image/x-icon"/>'
 			    }]
 			}
-			
+
 		},
-		
+
 		autoprefixer			: {
 			options				: {
 				browsers		: ['last 3 versions', 'ie 8'],
@@ -157,7 +166,7 @@ module.exports = function(grunt) {
 				dest			: 'fileadmin/coderdojo/css/'
 			}
 		},
-		
+
 		cssmin					: {
 			general				: {
 				files			: {
@@ -233,7 +242,7 @@ module.exports = function(grunt) {
 				extDot			: 'last'
 			}
 		},
-		
+
 		imageminbackup : {
 			images: {
 				options: {
@@ -255,14 +264,14 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
 		clean					: {
 			general				: ['fileadmin/coderdojo/css/coderdojo.css', 'fileadmin/coderdojo/css/coderdojo.min.css'],
 			above				: ['fileadmin/coderdojo/css/coderdojo-above.css', 'fileadmin/coderdojo/css/coderdojo-above.min.css'],
 			below				: ['fileadmin/coderdojo/css/coderdojo-below.css', 'fileadmin/coderdojo/css/coderdojo-below.min.css'],
 			favicon				: ['favicon.ico']
 		},
-		
+
 		validation: {
 			options: {
 				reset					: grunt.option('reset') || false,
@@ -279,7 +288,7 @@ module.exports = function(grunt) {
 				src						: ['*']
 			}
 		},
-		
+
 		watch : {
 			// Watch Sass resource changes
 			sassAbove : {
@@ -294,7 +303,7 @@ module.exports = function(grunt) {
 				files : ['fileadmin/coderdojo/.templates/sass/noconcat/**/*.scss', 'fileadmin/coderdojo/.templates/sass/common/**/*.scss'],
 				tasks : ['sass:noconcat']
 			},
-			
+
 			// Watch changing CSS resources
 			cssGeneral : {
 				files : ['fileadmin/coderdojo/.templates/css/*.css'],
@@ -324,7 +333,7 @@ module.exports = function(grunt) {
 					spawn : true
 				}
 			},
-			
+
 			// Watch SVG icon changes
 			iconizr : {
 				files : ['fileadmin/coderdojo/.templates/icons/**/*.svg'],
@@ -333,7 +342,7 @@ module.exports = function(grunt) {
 					spawn : true
 				}
 			},
-			
+
 			// Watch & uglify changing JavaScript resources
 			javascript : {
 				files : ['fileadmin/coderdojo/.templates/js/**/*.js'],
@@ -342,7 +351,7 @@ module.exports = function(grunt) {
 					spawn : true
 				}
 			},
-			
+
 			grunt: {
 				files: ['Gruntfile.js'],
 			    options: {
@@ -361,5 +370,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('js', ['concat_sourcemap:javascript', 'uglify']);
 	grunt.registerTask('icons', ['iconizr']);
 	grunt.registerTask('favicon', ['clean:favicon', 'favicons', 'copy:favicon', 'replace:favicon']);
-	
+
 };

@@ -11,6 +11,10 @@
 	height: 255px;
 }
 
+.icon-coderdojo-button-dims-ph {
+	padding-top: 100%
+}
+
 .icon-coderdojo-dark-horizontal { 
 	background-image: url(../icons/coderdojo-dark-horizontal.png);
 }
@@ -18,6 +22,10 @@
 .icon-coderdojo-dark-horizontal-dims {
 	width: 400px;
 	height: 119.259px;
+}
+
+.icon-coderdojo-dark-horizontal-dims-ph {
+	padding-top: 29.81475%
 }
 
 .icon-coderdojo-dark-vertical { 
@@ -29,13 +37,21 @@
 	height: 500px;
 }
 
+.icon-coderdojo-dark-vertical-dims-ph {
+	padding-top: 119.03203151968195%
+}
+
 .icon-coderdojo-light-horizontal { 
 	background-image: url(../icons/coderdojo-light-horizontal.png);
 }
 
 .icon-coderdojo-light-horizontal-dims {
-	width: 76.735px;
-	height: 22.878px;
+	width: 400px;
+	height: 119.259px;
+}
+
+.icon-coderdojo-light-horizontal-dims-ph {
+	padding-top: 29.81475%
 }
 
 .icon-facebook,
@@ -46,6 +62,10 @@
 .icon-facebook-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-facebook-dims-ph {
+	padding-top: 100%
 }
 
 .icon-facebook:hover,
@@ -59,6 +79,11 @@
 	height: 32px;
 }
 
+.icon-facebook-dims:hover-ph,
+.icon-facebook\:hover-dims-ph {
+	padding-top: 100%
+}
+
 .icon-github,
 .icon-github\:regular { 
 	background-image: url(../icons/github.png);
@@ -67,6 +92,10 @@
 .icon-github-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-github-dims-ph {
+	padding-top: 100%
 }
 
 .icon-github:hover,
@@ -80,6 +109,11 @@
 	height: 32px;
 }
 
+.icon-github-dims:hover-ph,
+.icon-github\:hover-dims-ph {
+	padding-top: 100%
+}
+
 .icon-googleplus,
 .icon-googleplus\:regular { 
 	background-image: url(../icons/googleplus.png);
@@ -88,6 +122,10 @@
 .icon-googleplus-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-googleplus-dims-ph {
+	padding-top: 100%
 }
 
 .icon-googleplus:hover,
@@ -101,6 +139,24 @@
 	height: 32px;
 }
 
+.icon-googleplus-dims:hover-ph,
+.icon-googleplus\:hover-dims-ph {
+	padding-top: 100%
+}
+
+.icon-immowelt { 
+	background-image: url(../icons/immowelt.png);
+}
+
+.icon-immowelt-dims {
+	width: 100.049px;
+	height: 18.069px;
+}
+
+.icon-immowelt-dims-ph {
+	padding-top: 18.06015052624214%
+}
+
 .icon-location,
 .icon-location\:regular { 
 	background-image: url(../icons/location.png);
@@ -109,6 +165,10 @@
 .icon-location-dims {
 	width: 54px;
 	height: 96px;
+}
+
+.icon-location-dims-ph {
+	padding-top: 177.77777777777777%
 }
 
 .icon-location:hover,
@@ -122,6 +182,24 @@
 	height: 96px;
 }
 
+.icon-location-dims:hover-ph,
+.icon-location\:hover-dims-ph {
+	padding-top: 177.77777777777777%
+}
+
+.icon-silbury { 
+	background-image: url(../icons/silbury.png);
+}
+
+.icon-silbury-dims {
+	width: 100px;
+	height: 20.876px;
+}
+
+.icon-silbury-dims-ph {
+	padding-top: 20.875999999999998%
+}
+
 .icon-tollwerk { 
 	background-image: url(../icons/tollwerk.png);
 }
@@ -129,6 +207,10 @@
 .icon-tollwerk-dims {
 	width: 324px;
 	height: 86px;
+}
+
+.icon-tollwerk-dims-ph {
+	padding-top: 26.54320987654321%
 }
 
 .icon-twitter,
@@ -141,6 +223,10 @@
 	height: 32px;
 }
 
+.icon-twitter-dims-ph {
+	padding-top: 100%
+}
+
 .icon-twitter:hover,
 .icon-twitter\:hover { 
 	background-image: url(../icons/twitter~hover.png);
@@ -150,5 +236,10 @@
 .icon-twitter\:hover-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-twitter-dims:hover-ph,
+.icon-twitter\:hover-dims-ph {
+	padding-top: 100%
 }
 

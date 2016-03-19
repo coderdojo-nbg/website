@@ -33,12 +33,55 @@ footer {
       text-indent: 200%;
       overflow: hidden;
       white-space: nowrap; }
-  footer .disclaimer, footer .disclaimer a {
+  footer .disclaimer, footer .disclaimer a, footer .ce-textpic, footer .ce-textpic a {
     font-size: smaller;
     font-size: 0.83rem; }
+  footer .ce-body, footer .ce-textpic {
+    padding: 0 !important;
+    background-color: transparent; }
+
+.sponsors-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .sponsors-list li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1em 0; }
+  .sponsors-list a {
+    display: block;
+    height: 0;
+    background-size: 100% auto;
+    text-indent: 200%;
+    overflow: hidden;
+    white-space: nowrap; }
+
+.pine li {
+  width: 100%; }
+
+.bamboo li {
+  width: 50%; }
+
+.plum li {
+  width: 33.3333333333%; }
+
+aside.sponsors {
+  padding: 1em;
+  background-color: #fff;
+  color: #000; }
 
 @media all and (min-width: 32em) {
   footer {
+    padding: 1em 2em; }
+  aside.sponsors {
     padding: 1em 2em; } }
+
+@media all and (min-width: 48em) {
+  .pine li {
+    width: 50%; }
+  .bamboo li {
+    width: 25%; }
+  .plum li {
+    width: 12.5%; } }
 
 /*# sourceMappingURL=66_below.css.map */

@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: $bgcolorBody;
+    background-color: $bgcolorBody !important;
     color: $colorBody;
 }
 
@@ -45,23 +45,31 @@ label {
 }
 
 .green {
-    background-color: $bgcolorGreen;
-    color: $colorGreen;
+    &, main, [role=contentinfo] {
+        background-color: $bgcolorGreen;
+        color: $colorGreen;
+    }
 }
 
 .blue {
-    background-color: $bgcolorBlue;
-    color: $colorBlue;
+    &, main, [role=contentinfo] {
+        background-color: $bgcolorBlue;
+        color: $colorBlue;
+    }
 }
 
 .yellow {
-    background-color: $bgcolorYellow;
-    color: $colorYellow;
+    &, main, [role=contentinfo] {
+        background-color: $bgcolorYellow;
+        color: $colorYellow;
+    }
 }
 
 .red {
-    background-color: $bgcolorRed;
-    color: $colorRed;
+    &, main, [role=contentinfo] {
+        background-color: $bgcolorRed;
+        color: $colorRed;
+    }
 }
 
 h2 {

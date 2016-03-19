@@ -45,7 +45,7 @@
         </main>
 
         <!-- Footer -->
-        <footer>
+        <footer role="contentinfo">
             <div class="wrap">
                 <div class="row">
                     <div class="cell left">
@@ -59,6 +59,14 @@
                 <p class="disclaimer">
                     <f:translate key="footer"/>
                 </p>
+            </div>
+        </footer>
+
+        <!-- Sponsoren -->
+        <footer class="sponsors">
+            <div class="wrap">
+                <v:content.render contentUids="{0: 37}"/>
+                <f:render partial="Sponsors" section="AllSponsors"/>
             </div>
         </footer>
     </f:section>

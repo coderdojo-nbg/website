@@ -8,109 +8,175 @@
   width: 255px;
   height: 255px; }
 
+.icon-coderdojo-button-dims-ph {
+  padding-top: 100%; }
+
 .icon-coderdojo-dark-horizontal {
-  background-position: 0 19.42500462772169%; }
+  background-position: 0 17.589348718150347%; }
 
 .icon-coderdojo-dark-horizontal-dims {
   width: 400px;
   height: 119.259px; }
 
+.icon-coderdojo-dark-horizontal-dims-ph {
+  padding-top: 29.81475%; }
+
 .icon-coderdojo-dark-vertical {
-  background-position: 0 40.23605150214592%; }
+  background-position: 0 35.07951356407858%; }
 
 .icon-coderdojo-dark-vertical-dims {
   width: 420.055px;
   height: 500px; }
 
+.icon-coderdojo-dark-vertical-dims-ph {
+  padding-top: 119.03203151968195%; }
+
 .icon-coderdojo-light-horizontal {
-  background-position: 0 62.09540408850334%; }
+  background-position: 0 60.35560834659432%; }
 
 .icon-coderdojo-light-horizontal-dims {
-  width: 76.735px;
-  height: 22.878px; }
+  width: 400px;
+  height: 119.259px; }
+
+.icon-coderdojo-light-horizontal-dims-ph {
+  padding-top: 29.81475%; }
 
 .icon-facebook,
 .icon-facebook\:regular {
-  background-position: 0 64.14285714285714%; }
+  background-position: 0 64.73649967469096%; }
 
 .icon-facebook-dims {
   width: 32px;
   height: 32px; }
 
+.icon-facebook-dims-ph {
+  padding-top: 100%; }
+
 .icon-facebook:hover,
 .icon-facebook\:hover {
-  background-position: 0 66.42857142857143%; }
+  background-position: 0 66.81847755367599%; }
 
 .icon-facebook-dims:hover,
 .icon-facebook\:hover-dims {
   width: 32px;
   height: 32px; }
 
+.icon-facebook-dims:hover-ph,
+.icon-facebook\:hover-dims-ph {
+  padding-top: 100%; }
+
 .icon-github,
 .icon-github\:regular {
-  background-position: 0 68.71428571428571%; }
+  background-position: 0 68.90045543266103%; }
 
 .icon-github-dims {
   width: 32px;
   height: 32px; }
 
+.icon-github-dims-ph {
+  padding-top: 100%; }
+
 .icon-github:hover,
 .icon-github\:hover {
-  background-position: 0 71%; }
+  background-position: 0 70.98243331164606%; }
 
 .icon-github-dims:hover,
 .icon-github\:hover-dims {
   width: 32px;
   height: 32px; }
 
+.icon-github-dims:hover-ph,
+.icon-github\:hover-dims-ph {
+  padding-top: 100%; }
+
 .icon-googleplus,
 .icon-googleplus\:regular {
-  background-position: 0 73.28571428571429%; }
+  background-position: 0 73.0644111906311%; }
 
 .icon-googleplus-dims {
   width: 32px;
   height: 32px; }
 
+.icon-googleplus-dims-ph {
+  padding-top: 100%; }
+
 .icon-googleplus:hover,
 .icon-googleplus\:hover {
-  background-position: 0 75.57142857142857%; }
+  background-position: 0 75.14638906961613%; }
 
 .icon-googleplus-dims:hover,
 .icon-googleplus\:hover-dims {
   width: 32px;
   height: 32px; }
 
+.icon-googleplus-dims:hover-ph,
+.icon-googleplus\:hover-dims-ph {
+  padding-top: 100%; }
+
+.icon-immowelt {
+  background-position: 0 76.5346749790932%; }
+
+.icon-immowelt-dims {
+  width: 100.049px;
+  height: 18.069px; }
+
+.icon-immowelt-dims-ph {
+  padding-top: 18.06015052624214%; }
+
 .icon-location,
 .icon-location\:regular {
-  background-position: 0 81.58682634730539%; }
+  background-position: 0 81.87372708757637%; }
 
 .icon-location-dims {
   width: 54px;
   height: 96px; }
 
+.icon-location-dims-ph {
+  padding-top: 177.77777777777777%; }
+
 .icon-location:hover,
 .icon-location\:hover {
-  background-position: 0 88.77245508982035%; }
+  background-position: 0 88.39103869653768%; }
 
 .icon-location-dims:hover,
 .icon-location\:hover-dims {
   width: 54px;
   height: 96px; }
 
+.icon-location-dims:hover-ph,
+.icon-location\:hover-dims-ph {
+  padding-top: 177.77777777777777%; }
+
+.icon-silbury {
+  background-position: 0 90.3028439582359%; }
+
+.icon-silbury-dims {
+  width: 100px;
+  height: 20.876px; }
+
+.icon-silbury-dims-ph {
+  padding-top: 20.875999999999998%; }
+
 .icon-tollwerk {
-  background-position: 0 95.24517087667162%; }
+  background-position: 0 95.6844234659474%; }
 
 .icon-tollwerk-dims {
   width: 324px;
   height: 86px; }
 
+.icon-tollwerk-dims-ph {
+  padding-top: 26.54320987654321%; }
+
 .icon-twitter,
 .icon-twitter\:regular {
-  background-position: 0 97.71428571428571%; }
+  background-position: 0 97.91802212101497%; }
 
 .icon-twitter-dims {
   width: 32px;
   height: 32px; }
+
+.icon-twitter-dims-ph {
+  padding-top: 100%; }
 
 .icon-twitter:hover,
 .icon-twitter\:hover {
@@ -120,5 +186,9 @@
 .icon-twitter\:hover-dims {
   width: 32px;
   height: 32px; }
+
+.icon-twitter-dims:hover-ph,
+.icon-twitter\:hover-dims-ph {
+  padding-top: 100%; }
 
 /*# sourceMappingURL=icon.fallback-sprite.css.map */

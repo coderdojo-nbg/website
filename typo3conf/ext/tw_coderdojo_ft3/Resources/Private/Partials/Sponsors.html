@@ -1,0 +1,33 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:section name="AllSponsors">
+        <v:content.render contentUids="{0: 38}" as="pine" render="false">
+            <f:render section="Sponsors" arguments="{sponsors: pine.0.bodytext, class: 'pine'}"/>
+        </v:content.render>
+        <v:content.render contentUids="{0: 39}" as="bamboo" render="false">
+            <f:render section="Sponsors" arguments="{sponsors: bamboo.0.bodytext, class: 'bamboo'}"/>
+        </v:content.render>
+        <v:content.render contentUids="{0: 40}" as="plum" render="false">
+            <f:render section="Sponsors" arguments="{sponsors: plum.0.bodytext, class: 'plum'}"/>
+        </v:content.render>
+    </f:section>
+
+    <f:section name="Sponsors">
+        <f:if condition="{sponsors}">
+            <ul class="sponsors-list {class}">
+                <v:iterator.explode content="{sponsors}" glue="constant:LF" as="s">
+                    <f:for each="{s}" as="sponsor">
+                        <f:render section="Sponsor" arguments="{sponsor: sponsor}"/>
+                    </f:for>
+                </v:iterator.explode>
+            </ul>
+        </f:if>
+    </f:section>
+
+    <f:section name="Sponsor">
+        <v:iterator.explode content="{sponsor}" glue=":" as="s"><li><a href="{s.2}" target="_blank" class="icon icon-{s.0} icon-{s.0}-dims-ph" title="{s.1}">{s.1}</a></li></v:iterator.explode>
+    </f:section>
+</div>

@@ -9,7 +9,7 @@ $font-size-xxx-large: 3.04;
 body {
   padding: 0;
   margin: 0;
-  background-color: #222;
+  background-color: #222 !important;
   color: #fff; }
 
 body, a, input, textarea {
@@ -43,19 +43,19 @@ label {
 .hide {
   display: none; }
 
-.green, .home .ce-textpic:nth-of-type(3) {
+.green, .home .ce-textpic:nth-of-type(3), .green main, .home .ce-textpic:nth-of-type(3) main, .green [role=contentinfo], .home .ce-textpic:nth-of-type(3) [role=contentinfo] {
   background-color: #61c93f;
   color: #fff; }
 
-.blue, .home .ce-textpic:nth-of-type(4) {
+.blue, .home .ce-textpic:nth-of-type(4), .blue main, .home .ce-textpic:nth-of-type(4) main, .blue [role=contentinfo], .home .ce-textpic:nth-of-type(4) [role=contentinfo] {
   background-color: #2e7ac7;
   color: #fff; }
 
-.yellow {
+.yellow, .yellow main, .yellow [role=contentinfo] {
   background-color: #fbcc33;
   color: #fff; }
 
-.red, .home .ce-textpic:nth-of-type(2) {
+.red, .home .ce-textpic:nth-of-type(2), .red main, .home .ce-textpic:nth-of-type(2) main, .red [role=contentinfo], .home .ce-textpic:nth-of-type(2) [role=contentinfo] {
   background-color: #ed462f;
   color: #fff; }
 
@@ -81,7 +81,7 @@ h3 {
   padding: 2em 1em; }
 
 .ce-layout-1, .ce-layout-3, .ce-formhandler_pi1 {
-  background-color: #ffffff; }
+  background-color: #fff; }
   .ce-layout-1, .ce-layout-1 a, .ce-layout-3, .ce-layout-3 a, .ce-formhandler_pi1, .ce-formhandler_pi1 a {
     color: #000; }
 
@@ -132,7 +132,7 @@ dl.contact dd {
 header[role=banner] {
   padding: 2em 1em 3em 1em;
   color: #000;
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center; }
   header[role=banner] img {
     display: none; }
@@ -217,7 +217,8 @@ header[role=banner] {
         display: none; }
 
 nav {
-  margin-top: -2em; }
+  margin-top: -2em;
+  background-color: #fff; }
   nav a {
     display: inline-block;
     vertical-align: top;
@@ -321,7 +322,7 @@ nav {
 .ce-twcoderdojo_date .dates-list {
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   list-style-type: none; }
   .ce-twcoderdojo_date .dates-list, .ce-twcoderdojo_date .dates-list a {
     color: #000; }
@@ -346,7 +347,7 @@ nav {
     color: #fff; }
 
 .ce-twcoderdojo_date .date-details > div {
-  background-color: #ffffff; }
+  background-color: #fff; }
   .ce-twcoderdojo_date .date-details > div, .ce-twcoderdojo_date .date-details > div a {
     color: #000; }
 
@@ -368,7 +369,7 @@ nav {
   padding-bottom: 2em; }
 
 .ce-twcoderdojo_date .date-details .mentors {
-  background-color: #ffffff; }
+  background-color: #fff; }
   .ce-twcoderdojo_date .date-details .mentors, .ce-twcoderdojo_date .date-details .mentors a {
     color: #000; }
 

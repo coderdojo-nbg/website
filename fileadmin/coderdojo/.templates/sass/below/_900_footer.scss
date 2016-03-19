@@ -40,9 +40,14 @@ footer {
 		}
 	}
 
-	.disclaimer {
+	.disclaimer, .ce-textpic {
 		&, a {
 			@include font-size(.83, smaller);
 		}
+	}
+
+	.ce-body, .ce-textpic {
+		padding: 0 !important;
+		background-color: transparent;
 	}
 }

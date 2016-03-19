@@ -152,6 +152,12 @@
 			<trans-unit id="description.date.mentors">
 				<source>Diese Mentoren begleiten das Dojo und können dir dabei helfen, dein Projekt Wirklichkeit werden zu lassen:</source>
 			</trans-unit>
+			<trans-unit id="header.date.sponsors">
+                <source>Partner &amp; Sponsoren</source>
+            </trans-unit>
+			<trans-unit id="description.date.sponsors">
+				<source>Wir bedanken uns für die großzügige Unterstützung dieses Dojos bei:</source>
+			</trans-unit>
 
 			<!-- Mentor -->
 			<trans-unit id="mentor.title.male">
