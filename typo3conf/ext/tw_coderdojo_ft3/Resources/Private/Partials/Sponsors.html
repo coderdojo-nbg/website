@@ -17,17 +17,9 @@
 
     <f:section name="Sponsors">
         <f:if condition="{sponsors}">
-            <ul class="sponsors-list {class}">
-                <v:iterator.explode content="{sponsors}" glue="constant:LF" as="s">
-                    <f:for each="{s}" as="sponsor">
-                        <f:render section="Sponsor" arguments="{sponsor: sponsor}"/>
-                    </f:for>
-                </v:iterator.explode>
-            </ul>
+            <ul class="sponsors-list {class}"><v:iterator.explode content="{sponsors}" glue="constant:LF" as="s"><f:for each="{s}" as="sponsor"><f:render section="Sponsor" arguments="{sponsor: sponsor}"/></f:for></v:iterator.explode></ul>
         </f:if>
     </f:section>
 
-    <f:section name="Sponsor">
-        <v:iterator.explode content="{sponsor}" glue=":" as="s"><li><a href="{s.2}" target="_blank" class="icon icon-{s.0} icon-{s.0}-dims-ph" title="{s.1}">{s.1}</a></li></v:iterator.explode>
-    </f:section>
+    <f:section name="Sponsor"><v:iterator.explode content="{sponsor}" glue="#" as="s"><li><a href="{s.2}" target="_blank" class="icon icon-{s.0} icon-{s.0}-dims-ph" title="{s.1}">{s.1}</a></li></v:iterator.explode></f:section>
 </div>

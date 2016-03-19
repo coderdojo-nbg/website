@@ -6,10 +6,10 @@ $font-size-x-large: 1.5;
 $font-size-xx-large: 2.2;
 $font-size-xxx-large: 3.04;
 */
-body {
+html, body {
   padding: 0;
   margin: 0;
-  background-color: #222 !important;
+  background-color: #222;
   color: #fff; }
 
 body, a, input, textarea {
@@ -217,8 +217,7 @@ header[role=banner] {
         display: none; }
 
 nav {
-  margin-top: -2em;
-  background-color: #fff; }
+  margin-top: -2em; }
   nav a {
     display: inline-block;
     vertical-align: top;

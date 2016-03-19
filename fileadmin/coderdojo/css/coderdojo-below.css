@@ -40,6 +40,9 @@ footer {
     padding: 0 !important;
     background-color: transparent; }
 
+footer.sponsors {
+  background-color: #222; }
+
 .sponsors-list {
   list-style-type: none;
   margin: 0;
@@ -78,11 +81,20 @@ aside.sponsors {
 
 @media all and (min-width: 48em) {
   .pine li {
-    width: 50%; }
+    width: 45%;
+    margin-right: 5%; }
+    .pine li:nth-child(even) {
+      margin: 0 0 0 5%; }
   .bamboo li {
-    width: 25%; }
+    width: 28%;
+    margin-right: 8%; }
+    .bamboo li:nth-child(3n+3) {
+      margin-right: 0; }
   .plum li {
-    width: 12.5%; } }
+    width: 10%;
+    margin-right: 8%; }
+    .plum li:nth-child(5n+5) {
+      margin-right: 0; } }
 
 /* */
 /*# sourceMappingURL=coderdojo-below.css.map */
