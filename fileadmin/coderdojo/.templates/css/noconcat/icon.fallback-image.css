@@ -157,6 +157,16 @@
 .icon-silbury-dims-ph {
   padding-top: 20.875999999999998%; }
 
+.icon-silbury-grey {
+  background-image: url(../icons/silbury-grey.png); }
+
+.icon-silbury-grey-dims {
+  width: 100px;
+  height: 20.876px; }
+
+.icon-silbury-grey-dims-ph {
+  padding-top: 20.875999999999998%; }
+
 .icon-tollwerk {
   background-image: url(../icons/tollwerk.png); }
 
@@ -165,6 +175,16 @@
   height: 86px; }
 
 .icon-tollwerk-dims-ph {
+  padding-top: 26.54320987654321%; }
+
+.icon-tollwerk-grey {
+  background-image: url(../icons/tollwerk-grey.png); }
+
+.icon-tollwerk-grey-dims {
+  width: 324px;
+  height: 86px; }
+
+.icon-tollwerk-grey-dims-ph {
   padding-top: 26.54320987654321%; }
 
 .icon-twitter,
