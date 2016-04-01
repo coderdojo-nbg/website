@@ -75,12 +75,19 @@ AddEncoding x-gzip .gz
 #	RewriteRule ^sitemap.xml.gz$ index.php?type=1211 [R,L]
 
 	###########################################################################
+	# Rewrite to non-www
+	###########################################################################
+    RewriteCond %{HTTP_HOST} !^coderdojo-nbg\.org$ [NC]
+    RewriteCond %{ENV:APP_ENV} !development
+    RewriteRule (.*) https://%coderdojo-nbg.org%{REQUEST_URI} [R=301,L]
+
+	###########################################################################
 	# Rewrite to HTTPS
 	###########################################################################
 	RewriteCond %{HTTPS} !on
     RewriteCond %{ENV:APP_ENV} !development
     RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-	
+
 	###########################################################################
     # Default TYPO3 redirects
     ###########################################################################
