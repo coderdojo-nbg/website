@@ -7,6 +7,14 @@
 !/fileadmin/user_upload/
 !/fileadmin/user_upload/download
 !/fileadmin/user_upload/download/**
+!/fileadmin/user_upload/images
+!/fileadmin/user_upload/images/**
+!/fileadmin/user_upload/logos
+!/fileadmin/user_upload/logos/**
+!/fileadmin/user_upload/mentors
+!/fileadmin/user_upload/mentors/**
+!/fileadmin/user_upload/sponsors
+!/fileadmin/user_upload/sponsors/**
 
 !/typo3conf/ext
 !/typo3conf/ext/tw_coderdojo/
