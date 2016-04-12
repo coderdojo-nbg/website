@@ -59,8 +59,9 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 	 */
 	public function findNext()
 	{
+        $today = new \DateTime('@'.(mktime(0, 0, 0)));
 		$query = $this->createQuery();
-		$query->matching($query->greaterThanOrEqual('start', new \DateTime('@'.(mktime(0, 0, 0)))));
+		$query->matching($query->greaterThanOrEqual('start', $today->format('Y-m-d H:i:s')));
 		return $query->execute();
 	}
 
