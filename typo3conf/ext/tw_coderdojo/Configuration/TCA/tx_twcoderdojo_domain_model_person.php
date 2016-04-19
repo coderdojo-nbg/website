@@ -61,7 +61,8 @@ return array(
 				),
 				'size' => 1,
 				'maxitems' => 1,
-				'eval' => 'required'
+				'eval' => 'required',
+				'default' => 1,
 			),
 		),
 		'gender' => array(
