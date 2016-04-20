@@ -158,7 +158,7 @@ plugin.Tx_Formhandler.settings.predef.waitinglist {
         }
         2{
             class 									= Tx_Formhandler_Finisher_Redirect
-            config.redirectPage						= 15
+            config.redirectPage						= 20
         }
     }
 }
