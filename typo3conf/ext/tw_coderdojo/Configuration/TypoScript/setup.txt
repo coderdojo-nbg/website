@@ -31,3 +31,38 @@ plugin.tx_twcoderdojo {
 		}
 	}
 }
+
+lib.coderdojo {
+	facebook = IMG_RESOURCE
+	facebook {
+		file = GIFBUILDER
+		file {
+			XY = 940,492
+			format = jpg
+			quality = 100
+
+			10 = IMAGE
+			10.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_facebook.png
+
+			20 = IMAGE
+			20.offset = 470,0
+			20.file.import.current = 1
+		}
+	}
+	twitter = IMG_RESOURCE
+	twitter {
+		file = GIFBUILDER
+		file {
+			XY = 500,500
+			format = jpg
+			quality = 100
+
+			10 = IMAGE
+			10.file.import.current = 1
+
+			20 = IMAGE
+			20.offset = 0,340
+			20.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_twitter.png
+		}
+	}
+}

@@ -33,6 +33,6 @@ page.headerData.503.value (
 )
 
 # Unset some meta tags for mentor single view
-[globalVar = TSFE:id = 7]
+[globalVar = TSFE:id = 7][globalVar = TSFE:id = 8]
 	page.headerData.503 >
 [global]
