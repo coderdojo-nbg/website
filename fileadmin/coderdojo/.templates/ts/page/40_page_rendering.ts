@@ -1,0 +1,1 @@
+tt_content.formhandler_pi1.stdWrap.wrap = <div class="ce-formhandler">|</div>

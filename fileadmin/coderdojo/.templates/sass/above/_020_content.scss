@@ -1,4 +1,4 @@
-.ce-textpic, .ce-html, .ce-twcoderdojo_date {
+.ce-textpic, .ce-html, .ce-twcoderdojo_date, .ce-formhandler {
 	background-color: $bgcolorContent;
 }
 
@@ -6,11 +6,11 @@
 	padding: 1em;
 }
 
-.Tx-Formhandler {
+.ce-formhandler {
 	padding: 2em 1em;
 }
 
-.ce-layout-1, .ce-layout-3, .Tx-Formhandler {
+.ce-layout-1, .ce-layout-3, .ce-formhandler {
 	background-color: $bgcolorHeader;
 
 	&, a {

@@ -71,18 +71,18 @@ h3 {
   line-height: 1.2;
   margin: 1em 0; }
 
-.ce-textpic, .ce-html, .ce-twcoderdojo_date {
+.ce-textpic, .ce-html, .ce-twcoderdojo_date, .ce-formhandler {
   background-color: #444; }
 
 .ce-body, .ce-html {
   padding: 1em; }
 
-.Tx-Formhandler {
+.ce-formhandler {
   padding: 2em 1em; }
 
-.ce-layout-1, .ce-layout-3, .Tx-Formhandler {
+.ce-layout-1, .ce-layout-3, .ce-formhandler {
   background-color: #fff; }
-  .ce-layout-1, .ce-layout-1 a, .ce-layout-3, .ce-layout-3 a, .Tx-Formhandler, .Tx-Formhandler a {
+  .ce-layout-1, .ce-layout-1 a, .ce-layout-3, .ce-layout-3 a, .ce-formhandler, .ce-formhandler a {
     color: #000; }
 
 .ce-layout-4 {
@@ -536,7 +536,7 @@ label + .error, fieldset ul + .error {
 @media all and (min-width: 32em) {
   .ce-body, .ce-html {
     padding: 1em 2em; }
-  .Tx-Formhandler {
+  .ce-formhandler {
     padding: 2em; }
   .back {
     padding: 1em 2em; }
@@ -612,7 +612,7 @@ label + .error, fieldset ul + .error {
         background-position: left center; }
   .ce-body, .ce-html {
     padding: 1em 2em; }
-  .Tx-Formhandler {
+  .ce-formhandler {
     padding: 2em; }
   header[role=banner].collapsed .banner .home {
     width: 33%; }
