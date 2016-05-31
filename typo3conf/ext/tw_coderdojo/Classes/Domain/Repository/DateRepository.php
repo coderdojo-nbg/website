@@ -72,8 +72,9 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 	 */
 	public function findPast()
 	{
+		$today = new \DateTime('@'.(mktime(0, 0, 0)));
 		$query = $this->createQuery();
-		$query->matching($query->lessThan('end', new \DateTime('@'.(mktime(0, 0, 0)))));
+		$query->matching($query->lessThan('end', $today->format('Y-m-d H:i:s')));
 		$query->setOrderings(array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
 		return $query->execute();
 	}
