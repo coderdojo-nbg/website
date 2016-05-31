@@ -167,6 +167,26 @@
 .icon-location\:hover-dims-ph {
   padding-top: 177.77777777777777%; }
 
+.icon-netatmo {
+  background-image: url(../icons/netatmo.svg); }
+
+.icon-netatmo-dims {
+  width: 100px;
+  height: 24.842px; }
+
+.icon-netatmo-dims-ph {
+  padding-top: 24.842%; }
+
+.icon-netatmo-grey {
+  background-image: url(../icons/netatmo-grey.svg); }
+
+.icon-netatmo-grey-dims {
+  width: 100px;
+  height: 24.842px; }
+
+.icon-netatmo-grey-dims-ph {
+  padding-top: 24.842%; }
+
 .icon-silbury {
   background-image: url(../icons/silbury.svg); }
 
