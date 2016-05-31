@@ -6,7 +6,6 @@ plugin.Tx_Formhandler.settings {
 	disableConfigValidation		= 1
 	langFile					= fileadmin/coderdojo/.templates/lang/formhandler.xml
 	masterTemplateFile			= fileadmin/coderdojo/.templates/html/ext/formhandler/mastertemplate.html
-	additionalIncludePaths.1	= fileadmin/coderdojo/.templates/scripts/ext/formhandler/
 
 	# ERRORS LAYOUT
 	singleErrorTemplate {

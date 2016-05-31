@@ -1,5 +1,5 @@
 plugin.Tx_Formhandler.settings.predef.mentor {
-	debug							= 0
+	debug							= 1
 	name							= Registrierung als Mentor*in
 	formID							= formhandler-registration
 	templateFile 					= FLUIDTEMPLATE
