@@ -19,13 +19,13 @@
     <!-- Ninja panel -->
     <div class="attendee-panel">
       <h3><f:translate key="mod.header.ninjas"/></h3>
-      <f:render partial="Attendees" arguments="{attendees: selectedDate.ninjas}"/>
+      <f:render partial="Attendees" arguments="{attendees: selectedDate.sortedNinjas}"/>
     </div>
 
     <!-- Helper panel -->
     <div class="attendee-panel">
       <h3><f:translate key="mod.header.helpers"/></h3>
-      <f:render partial="Attendees" arguments="{attendees: selectedDate.helpers}"/>
+      <f:render partial="Attendees" arguments="{attendees: selectedDate.sortedHelpers}"/>
     </div>
 
     <!-- Mentor panel -->

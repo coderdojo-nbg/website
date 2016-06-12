@@ -2,30 +2,31 @@
 namespace Tollwerk\TwCoderdojo\Domain\Model;
 
 
-  /***************************************************************
-   *
-   *  Copyright notice
-   *
-   *  (c) 2015 Joschi Kuphal <joschi@tollwerk.de>, tollwerk GmbH
-   *
-   *  All rights reserved
-   *
-   *  This script is part of the TYPO3 project. The TYPO3 project is
-   *  free software; you can redistribute it and/or modify
-   *  it under the terms of the GNU General Public License as published by
-   *  the Free Software Foundation; either version 3 of the License, or
-   *  (at your option) any later version.
-   *
-   *  The GNU General Public License can be found at
-   *  http://www.gnu.org/copyleft/gpl.html.
-   *
-   *  This script is distributed in the hope that it will be useful,
-   *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-   *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   *  GNU General Public License for more details.
-   *
-   *  This copyright notice MUST APPEAR in all copies of the script!
-   ***************************************************************/
+/***************************************************************
+ *
+ *  Copyright notice
+ *
+ *  (c) 2015 Joschi Kuphal <joschi@tollwerk.de>, tollwerk GmbH
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyObjectStorage;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
@@ -350,6 +351,16 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
    */
   public function getNinjas()
   {
+    return $this->ninjas;
+  }
+
+  /**
+   * Returns the ninjas sorted by name
+   *
+   * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
+   */
+  public function getSortedNinjas()
+  {
     if ($this->_sortedNinjas === null) {
       $this->_sortedNinjas = $this->sortPersons($this->ninjas);
     }
@@ -397,6 +408,16 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
    */
   public function getHelpers()
   {
+    return $this->helpers;
+  }
+
+  /**
+   * Returns the helpers sorted by name
+   *
+   * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+   */
+  public function getSortedHelpers()
+  {
     if ($this->_sortedHelpers === null) {
       $this->_sortedHelpers = $this->sortPersons($this->helpers);
     }
@@ -441,7 +462,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
    * @param ObjectStorage $persons Persons
    * @return array Sorted list of persons
    */
-  protected function sortPersons(ObjectStorage $persons) {
+  protected function sortPersons(ObjectStorage $persons)
+  {
     $sortedPersons = [];
     foreach ($persons as $person) {
       $sortedPersons[] = $person;
@@ -455,6 +477,12 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
       return strnatcasecmp($person1->getLastName().','.$person1->getFirstName(),
         $person2->getLastName().','.$person2->getFirstName());
     });
-    return $sortedPersons;
+
+    $sortedPersonsObjStorage = new ObjectStorage();
+    foreach ($sortedPersons as $sortedPerson) {
+      $sortedPersonsObjStorage->attach($sortedPerson);
+    }
+
+    return $sortedPersonsObjStorage;
   }
 }

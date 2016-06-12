@@ -145,8 +145,8 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     $recipients = [];
     /** @var Date $date */
     $date = $this->dateRepository->findByUid($date);
-    $this->createRecipientList($recipients, self::$NINJA, $date->getNinjas());
-    $this->createRecipientList($recipients, self::$HELPER, $date->getHelpers());
+    $this->createRecipientList($recipients, self::$NINJA, $date->getSortedNinjas());
+    $this->createRecipientList($recipients, self::$HELPER, $date->getSortedHelpers());
     $this->createRecipientList($recipients, self::$MENTOR, $date->getMentors());
 
     if (count($recipients)) {
@@ -181,9 +181,9 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
    * @param array $chartSeries Chart series
    * @param array $genderSeries Gender series
    * @param string $label Series label
-   * @param array $persons Persons
+   * @param ObjectStorage $persons Persons
    */
-  protected function createChartSeries(array &$chartSeries, array &$genderSeries, $label, array $persons)
+  protected function createChartSeries(array &$chartSeries, array &$genderSeries, $label, ObjectStorage $persons)
   {
     /** @var Person $person */
     foreach ($persons as $person) {
@@ -212,9 +212,9 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
    *
    * @param array $recipients Recipient list
    * @param array $label Gendered label strings
-   * @param array $persons Persons
+   * @param ObjectStorage $persons Persons
    */
-  protected function createRecipientList(array &$recipients, array $label, array $persons)
+  protected function createRecipientList(array &$recipients, array $label, ObjectStorage $persons)
   {
     /** @var Person $person */
     foreach ($persons as $person) {
