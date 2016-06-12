@@ -1,0 +1,44 @@
+{namespace tw=Tollwerk\TwCoderdojo\ViewHelpers}
+<f:be.container includeCssFiles="{0: '{f:uri.resource(path: \'Css/module.css\')}'}" includeJsFiles="{0: '{f:uri.resource(path: \'Js/Backend/module.js\')}'}">
+  <script type="text/javascript" src="/fileadmin/coderdojo/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/fileadmin/coderdojo/js/highcharts/highcharts.js"></script>
+    <div class="typo3-fullDoc">
+        <div id="typo3-docheader">
+            <div class="typo3-docheader-functions">
+                <div class="left">
+                    <f:be.menus.actionMenu>
+                      <f:for each="{dates}" as="date">
+                        <tw:be.menus.actionMenuItem label="{f:translate(key: 'mod.menu.label', arguments: '{0: date.dojoNumber, 1: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.start.date\\\\\\\')}\\\')}\'}')}" controller="CoderDojo" action="index" arguments="{selectedDate: date}" currentDate="{selectedDate}"/>
+                      </f:for>
+                    </f:be.menus.actionMenu>
+                </div>
+                <div class="right">
+                    <f:be.pagePath />
+                    <f:be.pageInfo />
+                </div>
+            </div>
+            <div class="typo3-docheader-buttons">
+              <script>
+                function printCoderDojo() {
+                  for (var g = 0, pie; g < 3; ++g) {
+                    pie = Highcharts.charts[g];
+                    pie.setSize(260, 200, false);
+                  }
+                  Highcharts.charts[3].setSize(800, 300, false);
+                  window.print();
+                }
+              </script>
+              <a href="javascript:printCoderDojo()"><f:translate key="mod.print"/></a>
+              |
+              <f:link.action action="download" arguments="{date: selectedDate}" target="_blank"><f:translate key="mod.download"/></f:link.action>
+            </div>
+        </div>
+
+        <div id="typo3-docbody">
+            <main id="typo3-inner-docbody">
+                <f:flashMessages renderMode="div" />
+                <f:render section="Main" />
+            </main>
+        </div>
+    </div>
+</f:be.container>

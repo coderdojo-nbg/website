@@ -1,0 +1,130 @@
+@page {
+  size: A4;
+  margin: 15mm;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse !important;
+}
+
+.email {
+  display: none;
+}
+
+.attendee-panel {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2em;
+  page-break-inside: avoid;
+}
+
+.summary-chart {
+  width: 100%;
+}
+.summary-chart th {
+  width: 8em;
+}
+
+.summary-chart,
+.attendees {
+  background-color: #eeeeee;
+}
+
+.attendees th,
+.attendees td {
+  padding: .2em 1em;
+}
+
+.summary th,
+.summary td {
+  padding: .4em 1em;
+}
+
+.summary-chart td {
+  vertical-align: top;
+}
+
+.needs-guardian {
+  background-color: #ffcccc;
+}
+
+.has-guardian {
+  background-color: #ffffcc;
+}
+
+#chart {
+  height: 300px;
+  margin-bottom: 1em;
+}
+
+.genders {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #eeeeee;
+}
+
+.genders td {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.genders div {
+  display: inline-block;
+  width: 100%;
+  height: 18vw;
+}
+
+@media all {
+  .page-break	{ display: none; }
+}
+
+@media print {
+  html, body {
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  #typo3-docbody {
+    position: static !important;
+  }
+
+  #typo3-inner-docbody {
+    padding: 0 !important;
+  }
+
+  #typo3-docheader {
+    display: none !important;
+  }
+
+  .attendee-panel {
+    display: block;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .attendee-panel table {
+    width: 100%;
+  }
+
+  #chart {
+    height: 300px;
+  }
+
+  .attendees th,
+  .attendees td {
+    padding: 0 .2em;
+  }
+
+  .email {
+    display: table-cell;
+  }
+
+  .genders {
+    background-color: transparent;
+  }
+  .genders td {
+    padding: 0;
+  }
+}

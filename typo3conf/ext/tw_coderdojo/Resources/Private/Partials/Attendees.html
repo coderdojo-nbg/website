@@ -1,0 +1,45 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<table class="attendees">
+  <thead>
+    <th><f:translate key="mod.table.no"/></th>
+    <th><f:translate key="mod.table.name"/></th>
+    <th><f:translate key="mod.table.age"/></th>
+    <th class="email"><f:translate key="mod.table.email"/></th>
+    <th><f:translate key="mod.table.guardian"/></th>
+  </thead>
+  <tbody>
+    <f:for each="{attendees}" as="attendee" iteration="number">
+      <tr{f:if(condition: '{attendee.age} < 13', then: '{f:if(condition: \'{attendee.guardian}\', then: \' class="has-guardian"\', else: \' class="needs-guardian"\')}')}>
+        <td>{number.cycle}</td>
+        <td>
+          <f:if condition="{attendee.email}">
+            <f:then><f:link.email email="{attendee.email}">{attendee.firstName} {attendee.lastName}</f:link.email></f:then>
+            <f:else>{attendee.firstName} {attendee.lastName}</f:else>
+          </f:if>
+        </td>
+        <td>{attendee.age}</td>
+      <td class="email">
+        <f:if condition="{attendee.email}">
+          <f:then>{attendee.email}</f:then>
+          <f:else>---</f:else>
+        </f:if>
+      </td>
+        <td><f:if condition="{attendee.age} < 13">
+          <f:then>
+            <f:if condition="{attendee.guardian}">
+              <f:then>
+                <f:if condition="{attendee.guardian.email}">
+                  <f:then><f:link.email email="{attendee.guardian.email}">{attendee.guardian.firstName} {attendee.guardian.lastName}</f:link.email></f:then>
+                  <f:else>{attendee.guardian.firstName} {attendee.guardian.lastName}</f:else>
+                </f:if>
+                </f:then>
+              <f:else>???</f:else>
+            </f:if>
+          </f:then>
+          <f:else>---</f:else>
+        </f:if></td>
+      </tr>
+    </f:for>
+  </tbody>
+</table>

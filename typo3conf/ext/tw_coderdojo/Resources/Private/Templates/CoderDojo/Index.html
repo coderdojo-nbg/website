@@ -1,0 +1,88 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+<f:section name="Main">
+  <f:alias map="{ninjas: '{f:count(subject: selectedDate.ninjas)}', helpers: '{f:count(subject: selectedDate.helpers)}', mentors: '{f:count(subject: selectedDate.mentors)}'}">
+
+    <!-- Age chart -->
+    <div id="chart"></div>
+
+    <!-- Gender pie charts -->
+    <table class="genders">
+      <tr>
+        <td><div id="ninjas-gender"></div></td>
+        <td><div id="helpers-gender"></div></td>
+        <td><div id="mentors-gender"></div></td>
+      </tr>
+    </table>
+
+    <!-- Ninja panel -->
+    <div class="attendee-panel">
+      <h3><f:translate key="mod.header.ninjas"/></h3>
+      <f:render partial="Attendees" arguments="{attendees: selectedDate.ninjas}"/>
+    </div>
+
+    <!-- Helper panel -->
+    <div class="attendee-panel">
+      <h3><f:translate key="mod.header.helpers"/></h3>
+      <f:render partial="Attendees" arguments="{attendees: selectedDate.helpers}"/>
+    </div>
+
+    <!-- Mentor panel -->
+    <div class="attendee-panel">
+      <h3><f:translate key="mod.header.mentors"/></h3>
+      <f:render partial="Attendees" arguments="{attendees: selectedDate.mentors}"/>
+    </div>
+
+    <script type="text/javascript"><![CDATA[
+    $(function () {
+      $('#chart').highcharts({
+        title: {
+          text: ']]><f:translate key="mod.header.chart" arguments="{0: selectedDate.dojoNumber, 1: '{selectedDate.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}', 2: '{v:math.sum(a: ninjas, b: \'{v:math.sum(a: helpers, b: mentors)}\')}', 3: '{now -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}'}"/><![CDATA['
+    },
+      xAxis: {
+        title: {
+          text: ']]><f:translate key="mod.age"/><![CDATA[',
+            style: { "color": "#000" }
+        },
+        allowDecimals: false,
+          categories: ]]>{ages}<![CDATA[,
+        style: { "color": "#000", "fontWeight": "bold" }
+      },
+      yAxis: {
+        title: {
+          text: ']]><f:translate key="mod.attendees"/><![CDATA[',
+            style: { "color": "#000" },
+        },
+        allowDecimals: false,
+          plotLines: [{
+          value: 0,
+          width: 1,
+          color: '#808080'
+        }]
+      },
+      tooltip: {
+        valueSuffix: ']]><f:translate key="mod.years"/><![CDATA['
+      },
+      legend: {
+        borderWidth: 0
+      },
+      series: [{
+        name: ']]><f:translate key="mod.legend.ninjas" arguments="{0: ninjas}"/><![CDATA[',
+        data: ]]>{chartSeries.ninjas}<![CDATA[
+    }, {
+        name: ']]><f:translate key="mod.legend.helpers" arguments="{0: helpers}"/><![CDATA[',
+          data: ]]>{chartSeries.helpers}<![CDATA[
+      }, {
+        name: ']]><f:translate key="mod.legend.mentors" arguments="{0: mentors}"/><![CDATA[',
+          data: ]]>{chartSeries.mentors}<![CDATA[
+      }]
+    });
+    });
+    ]]></script>
+
+    <f:render partial="Gender" arguments="{container: 'ninjas', data: genderSeries.ninjas, count: ninjas}"/>
+    <f:render partial="Gender" arguments="{container: 'helpers', data: genderSeries.helpers, count: helpers}"/>
+    <f:render partial="Gender" arguments="{container: 'mentors', data: genderSeries.mentors, count: mentors}"/>
+  </f:alias>
+</f:section>

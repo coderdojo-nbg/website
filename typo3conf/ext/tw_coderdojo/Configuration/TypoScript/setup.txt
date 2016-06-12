@@ -32,6 +32,8 @@ plugin.tx_twcoderdojo {
 	}
 }
 
+module.tx_twcoderdojo < plugin.tx_twcoderdojo
+
 lib.coderdojo {
 	facebook = IMG_RESOURCE
 	facebook {

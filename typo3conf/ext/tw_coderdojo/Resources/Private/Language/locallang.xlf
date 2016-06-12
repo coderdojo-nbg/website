@@ -1,241 +1,327 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z" product-name="tw_coderdojo">
-		<header/>
-		<body>
-			<trans-unit id="tx_twcoderdojo_domain_model_person">
-				<source>Person</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.type">
-				<source>Type</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.gender">
-				<source>Gender</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.first_name">
-				<source>First Name</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.last_name">
-				<source>Last Name</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.birthday">
-				<source>Birthday</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.portrait">
-				<source>Portrait</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.biography">
-				<source>Biography</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.statement">
-				<source>Statement</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.anonymous">
-				<source>Anonymous</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.contacts">
-				<source>Contacts</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_person.skills">
-				<source>Skills</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_contact">
-				<source>Contact</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_contact.type">
-				<source>Type</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_contact.value">
-				<source>Value</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_skill">
-				<source>Skill</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_skill.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date">
-				<source>Date</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.start">
-				<source>Start</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.end">
-				<source>End</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.location">
-				<source>Location</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.mentors">
-				<source>Mentors</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_date.attendees">
-				<source>Attendees</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location">
-				<source>Location</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.street_address">
-				<source>Street Address</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.postal_code">
-				<source>Postal Code</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.locality">
-				<source>Locality</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.latitude">
-				<source>Latitude</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.longitude">
-				<source>Longitude</source>
-			</trans-unit>
-			<trans-unit id="tx_twcoderdojo_domain_model_location.country">
-				<source>Country</source>
-			</trans-unit>
+  <file source-language="de" datatype="plaintext" original="messages" date="2015-11-08T11:28:28Z"
+        product-name="tw_coderdojo">
+    <header/>
+    <body>
+      <trans-unit id="tx_twcoderdojo_domain_model_person">
+        <source>Person</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.type">
+        <source>Type</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.gender">
+        <source>Gender</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.first_name">
+        <source>First Name</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.last_name">
+        <source>Last Name</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.birthday">
+        <source>Birthday</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.portrait">
+        <source>Portrait</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.biography">
+        <source>Biography</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.statement">
+        <source>Statement</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.anonymous">
+        <source>Anonymous</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.contacts">
+        <source>Contacts</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_person.skills">
+        <source>Skills</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_contact">
+        <source>Contact</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_contact.type">
+        <source>Type</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_contact.value">
+        <source>Value</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_skill">
+        <source>Skill</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_skill.name">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date">
+        <source>Date</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date.start">
+        <source>Start</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date.end">
+        <source>End</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date.location">
+        <source>Location</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date.mentors">
+        <source>Mentors</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_date.attendees">
+        <source>Attendees</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location">
+        <source>Location</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.name">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.street_address">
+        <source>Street Address</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.postal_code">
+        <source>Postal Code</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.locality">
+        <source>Locality</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.latitude">
+        <source>Latitude</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.longitude">
+        <source>Longitude</source>
+      </trans-unit>
+      <trans-unit id="tx_twcoderdojo_domain_model_location.country">
+        <source>Country</source>
+      </trans-unit>
 
 
-			<!-- Date list -->
-			<trans-unit id="header.dates.next">
-				<source>Das nächste Dojo</source>
-			</trans-unit>
-			<trans-unit id="description.dates.next">
-				<source>Die folgenden CoderDojo-Termine stehen bereits fest. Klicke einen der Termine an, um zu sehen, welche Mentoren Dir an dem Tag bei Deinem Projekt helfen können.</source>
-			</trans-unit>
-			<trans-unit id="description.dates.next.none">
-				<source>Im Moment steht leider noch kein neuer Termin fest. Besuche diese Seite regelmäßig oder melde Dich zu unserem Newsletter an, um es sofort zu erfahren, wenn ein neuer Termin feststeht.</source>
-			</trans-unit>
-			<trans-unit id="header.dates.past">
-				<source>Unsere letzten Dojos</source>
-			</trans-unit>
-			<trans-unit id="description.dates.past">
-				<source>Die folgenden Dojos sind bereits vorbei. Um herauszufinden, was dabei alles entstanden ist, klicke einen der Termine an.</source>
-			</trans-unit>
-			<trans-unit id="dojo.name">
-				<source>CoderDojo #%s</source>
-			</trans-unit>
-			<trans-unit id="dojo.at">
-				<source>Am</source>
-			</trans-unit>
-			<trans-unit id="dojo.details">
-				<source>Details zum CoderDojo #%s anzeigen</source>
-			</trans-unit>
-			<trans-unit id="dojo.map">
-				<source>Das CoderDojo #%s auf Google Maps</source>
-			</trans-unit>
-			<trans-unit id="dojo.register">
-				<source>Direkt zur Anmeldung</source>
-			</trans-unit>
-			<trans-unit id="dojo.waitinglist">
-				<source>Anmeldung zur Warteliste</source>
-			</trans-unit>
-			<trans-unit id="dojo.capacity">
-				<source>%s Plätze insgesamt</source>
-			</trans-unit>
-			<trans-unit id="dojo.count">
-				<source>Schon %s Anmeldungen!</source>
-			</trans-unit>
-			<trans-unit id="dojo.full">
-				<source>Belegt!</source>
-			</trans-unit>
+      <!-- Date list -->
+      <trans-unit id="header.dates.next">
+        <source>Das nächste Dojo</source>
+      </trans-unit>
+      <trans-unit id="description.dates.next">
+        <source>Die folgenden CoderDojo-Termine stehen bereits fest. Klicke einen der Termine an, um zu sehen, welche
+          Mentoren Dir an dem Tag bei Deinem Projekt helfen können.
+        </source>
+      </trans-unit>
+      <trans-unit id="description.dates.next.none">
+        <source>Im Moment steht leider noch kein neuer Termin fest. Besuche diese Seite regelmäßig oder melde Dich zu
+          unserem Newsletter an, um es sofort zu erfahren, wenn ein neuer Termin feststeht.
+        </source>
+      </trans-unit>
+      <trans-unit id="header.dates.past">
+        <source>Unsere letzten Dojos</source>
+      </trans-unit>
+      <trans-unit id="description.dates.past">
+        <source>Die folgenden Dojos sind bereits vorbei. Um herauszufinden, was dabei alles entstanden ist, klicke einen
+          der Termine an.
+        </source>
+      </trans-unit>
+      <trans-unit id="dojo.name">
+        <source>CoderDojo #%s</source>
+      </trans-unit>
+      <trans-unit id="dojo.at">
+        <source>Am</source>
+      </trans-unit>
+      <trans-unit id="dojo.details">
+        <source>Details zum CoderDojo #%s anzeigen</source>
+      </trans-unit>
+      <trans-unit id="dojo.map">
+        <source>Das CoderDojo #%s auf Google Maps</source>
+      </trans-unit>
+      <trans-unit id="dojo.register">
+        <source>Direkt zur Anmeldung</source>
+      </trans-unit>
+      <trans-unit id="dojo.waitinglist">
+        <source>Anmeldung zur Warteliste</source>
+      </trans-unit>
+      <trans-unit id="dojo.capacity">
+        <source>%s Plätze insgesamt</source>
+      </trans-unit>
+      <trans-unit id="dojo.count">
+        <source>Schon %s Anmeldungen!</source>
+      </trans-unit>
+      <trans-unit id="dojo.full">
+        <source>Belegt!</source>
+      </trans-unit>
 
-			<!-- Date -->
-			<trans-unit id="header.date.whenwhere">
-				<source>Wann und wo?</source>
-			</trans-unit>
-			<trans-unit id="header.date.mentors">
-				<source>Mentoren</source>
-			</trans-unit>
-			<trans-unit id="description.date.mentors">
-				<source>Diese Mentoren begleiten das Dojo und können dir dabei helfen, dein Projekt Wirklichkeit werden zu lassen:</source>
-			</trans-unit>
-			<trans-unit id="header.date.sponsors">
-                <source>Partner &amp; Sponsoren</source>
-            </trans-unit>
-			<trans-unit id="description.date.sponsors">
-				<source>Wir bedanken uns für die großzügige Unterstützung dieses Dojos bei:</source>
-			</trans-unit>
+      <!-- Date -->
+      <trans-unit id="header.date.whenwhere">
+        <source>Wann und wo?</source>
+      </trans-unit>
+      <trans-unit id="header.date.mentors">
+        <source>Mentoren</source>
+      </trans-unit>
+      <trans-unit id="description.date.mentors">
+        <source>Diese Mentoren begleiten das Dojo und können dir dabei helfen, dein Projekt Wirklichkeit werden zu
+          lassen:
+        </source>
+      </trans-unit>
+      <trans-unit id="header.date.sponsors">
+        <source>Partner &amp; Sponsoren</source>
+      </trans-unit>
+      <trans-unit id="description.date.sponsors">
+        <source>Wir bedanken uns für die großzügige Unterstützung dieses Dojos bei:</source>
+      </trans-unit>
 
-			<!-- Mentor -->
-			<trans-unit id="mentor.title.male">
-				<source>Mentor im CoderDojo Nürnberg</source>
-			</trans-unit>
-			<trans-unit id="mentor.title.female">
-				<source>Mentorin im CoderDojo Nürnberg</source>
-			</trans-unit>
-			<trans-unit id="mentor.profile">
-				<source>Zu %s Mentorenprofil</source>
-			</trans-unit>
-			<trans-unit id="mentor.age.label">
-				<source>Alter</source>
-			</trans-unit>
-			<trans-unit id="mentor.age">
-				<source>%s Jahre</source>
-			</trans-unit>
-			<trans-unit id="mentor.contact.website">
-				<source>Website</source>
-			</trans-unit>
-			<trans-unit id="mentor.contact.email">
-				<source>E-Mail</source>
-			</trans-unit>
-			<trans-unit id="mentor.contact.facebook">
-				<source>%s bei Facebook</source>
-			</trans-unit>
-			<trans-unit id="mentor.contact.twitter">
-				<source>%s bei Twitter</source>
-			</trans-unit>
-			<trans-unit id="mentor.contact.github">
-				<source>%s bei GitHub</source>
-			</trans-unit>
-			<trans-unit id="header.mentor.bio">
-				<source>%s Hintergrund</source>
-			</trans-unit>
-			<trans-unit id="header.mentor.statement">
-				<source>%s Leitmotiv</source>
-			</trans-unit>
-			<trans-unit id="header.mentor.skills">
-				<source>%s Spezialgebiete</source>
-			</trans-unit>
-			<trans-unit id="header.mentor.dates">
-				<source>%s %s CoderDojo(s)</source>
-			</trans-unit>
+      <!-- Mentor -->
+      <trans-unit id="mentor.title.male">
+        <source>Mentor im CoderDojo Nürnberg</source>
+      </trans-unit>
+      <trans-unit id="mentor.title.female">
+        <source>Mentorin im CoderDojo Nürnberg</source>
+      </trans-unit>
+      <trans-unit id="mentor.profile">
+        <source>Zu %s Mentorenprofil</source>
+      </trans-unit>
+      <trans-unit id="mentor.age.label">
+        <source>Alter</source>
+      </trans-unit>
+      <trans-unit id="mentor.age">
+        <source>%s Jahre</source>
+      </trans-unit>
+      <trans-unit id="mentor.contact.website">
+        <source>Website</source>
+      </trans-unit>
+      <trans-unit id="mentor.contact.email">
+        <source>E-Mail</source>
+      </trans-unit>
+      <trans-unit id="mentor.contact.facebook">
+        <source>%s bei Facebook</source>
+      </trans-unit>
+      <trans-unit id="mentor.contact.twitter">
+        <source>%s bei Twitter</source>
+      </trans-unit>
+      <trans-unit id="mentor.contact.github">
+        <source>%s bei GitHub</source>
+      </trans-unit>
+      <trans-unit id="header.mentor.bio">
+        <source>%s Hintergrund</source>
+      </trans-unit>
+      <trans-unit id="header.mentor.statement">
+        <source>%s Leitmotiv</source>
+      </trans-unit>
+      <trans-unit id="header.mentor.skills">
+        <source>%s Spezialgebiete</source>
+      </trans-unit>
+      <trans-unit id="header.mentor.dates">
+        <source>%s %s CoderDojo(s)</source>
+      </trans-unit>
 
-			<!-- Date formatting -->
-			<trans-unit id="format.datetime">
-				<source>j.n.Y G:i</source>
-			</trans-unit>
-			<trans-unit id="format.start.datetime">
-				<source>j.n.Y G:i</source>
-			</trans-unit>
-			<trans-unit id="format.start.date">
-				<source>j.n.Y</source>
-			</trans-unit>
-			<trans-unit id="format.start.time">
-				<source>G:i</source>
-			</trans-unit>
-			<trans-unit id="format.end.time">
-				<source>G:i</source>
-			</trans-unit>
-			<trans-unit id="format.from">
-				<source>von</source>
-			</trans-unit>
-			<trans-unit id="format.to">
-				<source>bis</source>
-			</trans-unit>
-			<trans-unit id="format.oclock">
-				<source>Uhr</source>
-			</trans-unit>
+      <!-- Date formatting -->
+      <trans-unit id="format.datetime">
+        <source>j.n.Y G:i</source>
+      </trans-unit>
+      <trans-unit id="format.start.datetime">
+        <source>j.n.Y G:i</source>
+      </trans-unit>
+      <trans-unit id="format.start.date">
+        <source>j.n.Y</source>
+      </trans-unit>
+      <trans-unit id="format.start.time">
+        <source>G:i</source>
+      </trans-unit>
+      <trans-unit id="format.end.time">
+        <source>G:i</source>
+      </trans-unit>
+      <trans-unit id="format.from">
+        <source>von</source>
+      </trans-unit>
+      <trans-unit id="format.to">
+        <source>bis</source>
+      </trans-unit>
+      <trans-unit id="format.oclock">
+        <source>Uhr</source>
+      </trans-unit>
 
-			<!-- General -->
-			<trans-unit id="label.back.mentors">
-				<source>Zur Mentorenliste</source>
-			</trans-unit>
-			<trans-unit id="label.back.dates">
-				<source>Zur Terminliste</source>
-			</trans-unit>
-		</body>
-	</file>
+      <!-- General -->
+      <trans-unit id="label.back.mentors">
+        <source>Zur Mentorenliste</source>
+      </trans-unit>
+      <trans-unit id="label.back.dates">
+        <source>Zur Terminliste</source>
+      </trans-unit>
+
+      <!-- Backend module -->
+      <trans-unit id="mod.menu.label">
+        <source>CoderDojo #%s (%s)</source>
+      </trans-unit>
+      <trans-unit id="mod.header">
+        <source>CoderDojo #%s am %s</source>
+      </trans-unit>
+      <trans-unit id="mod.header.ninjas">
+        <source>Ninjas</source>
+      </trans-unit>
+      <trans-unit id="mod.header.helpers">
+        <source>Helfer</source>
+      </trans-unit>
+      <trans-unit id="mod.header.mentors">
+        <source>Mentoren</source>
+      </trans-unit>
+      <trans-unit id="mod.header.total">
+        <source>Gesamt</source>
+      </trans-unit>
+      <trans-unit id="mod.table.no">
+        <source>#</source>
+      </trans-unit>
+      <trans-unit id="mod.table.name">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="mod.table.age">
+        <source>Alter</source>
+      </trans-unit>
+      <trans-unit id="mod.table.email">
+        <source>E-Mail</source>
+      </trans-unit>
+      <trans-unit id="mod.table.guardian">
+        <source>Betreuer</source>
+      </trans-unit>
+      <trans-unit id="mod.years">
+        <source>Jahre</source>
+      </trans-unit>
+      <trans-unit id="mod.attendees">
+        <source>Teilnehmer</source>
+      </trans-unit>
+      <trans-unit id="mod.age">
+        <source>Alter in Jahren</source>
+      </trans-unit>
+      <trans-unit id="mod.legend.ninjas">
+        <source>Ninjas (%s)</source>
+      </trans-unit>
+      <trans-unit id="mod.legend.helpers">
+        <source>Helfer (%s)</source>
+      </trans-unit>
+      <trans-unit id="mod.gender">
+        <source>Gender</source>
+      </trans-unit>
+      <trans-unit id="mod.gender.0">
+        <source>Unbekannt</source>
+      </trans-unit>
+      <trans-unit id="mod.gender.1">
+        <source>Männlich</source>
+      </trans-unit>
+      <trans-unit id="mod.gender.2">
+        <source>Weiblich</source>
+      </trans-unit>
+      <trans-unit id="mod.legend.mentors">
+        <source>Mentoren (%s)</source>
+      </trans-unit>
+      <trans-unit id="mod.header.chart">
+        <source>Übersicht: %s Teilnehmer (Stand %s)</source>
+      </trans-unit>
+      <trans-unit id="mod.header.chart">
+        <source>CoderDojo #%s (%s): %s Teilnehmer (Stand %s)</source>
+      </trans-unit>
+      <trans-unit id="mod.print">
+        <source>Übersicht drucken</source>
+      </trans-unit>
+      <trans-unit id="mod.download">
+        <source>CSV-Datei herunterladen</source>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

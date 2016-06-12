@@ -1,0 +1,42 @@
+<script type="text/javascript"><![CDATA[
+  $('#]]>{container}<![CDATA[-gender').highcharts({
+    chart: {
+      backgroundColor: 'transparent',
+      plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+      text: ']]><f:translate key="mod.legend.{container}" arguments="{0: count}"/><![CDATA[',
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+          enabled: true
+        },
+        showInLegend: false
+      }
+    },
+    series: [{
+      name: ']]><f:translate key="mod.gender"/><![CDATA[',
+      colorByPoint: true,
+      data: [{
+        name: ']]><f:translate key="mod.gender.0"/><![CDATA[',
+        y: ]]>{data.0}<![CDATA[
+      }, {
+        name: ']]><f:translate key="mod.gender.1"/><![CDATA[',
+        y: ]]>{data.1}<![CDATA[
+      }, {
+        name: ']]><f:translate key="mod.gender.2"/><![CDATA[',
+        y: ]]>{data.2}<![CDATA[
+      }]
+    }]
+  });
+
+]]></script>
