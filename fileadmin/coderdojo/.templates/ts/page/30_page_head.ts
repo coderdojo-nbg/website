@@ -54,8 +54,8 @@ page.headerData.201 {
 
 #CSS
 page.includeCSS {
-    above = fileadmin/coderdojo/css/coderdojo-above.css
-    below = fileadmin/coderdojo/css/coderdojo-below.css
+    above = fileadmin/coderdojo/css/coderdojo-above.min.css
+    below = fileadmin/coderdojo/css/coderdojo-below.min.css
 }
 
 page.CSS_inlineStyle >
@@ -124,4 +124,11 @@ config.removeDefaultJS = external
             excludeFromConcatenation = 1
         }
     }
+[global]
+
+[PIDinRootline = 21]
+  page.bodyTag = <body class="white h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+  page.includeCSS {
+    takeaseat = fileadmin/coderdojo/css/take-a-seat.min.css
+  }
 [global]

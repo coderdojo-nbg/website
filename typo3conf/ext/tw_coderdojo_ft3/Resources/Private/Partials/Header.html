@@ -57,7 +57,48 @@
 
     <!-- Header without event date -->
     <f:section name="WithoutDate">
-        Without
+
     </f:section>
 
+  <!-- Take A Seat header -->
+  <f:section name="TakeASeat">
+    <header role="banner" class="take-a-seat">
+      <div class="banner-outer">
+        <div class="wrap">
+          <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home ce-body">
+            <img src="/fileadmin/coderdojo/icons/coderdojo-dark-vertical.svg" itemprop="photo" alt="Logo des CoderDojo Nürnberg"/>
+          </f:link.page>
+          <div></div>
+        </div>
+      </div>
+        <!--
+        <img src="/fileadmin/coderdojo/icons/coderdojo-dark-vertical.svg" itemprop="photo" alt="Logo des CoderDojo Nürnberg"/>
+        <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home">
+          <h1 class="p-name" itemprop="name">CoderDojo Nürnberg</h1>
+          <p class="p-summary icon icon-coderdojo-dark-{f:if(condition: '{header}', then: 'vertical', else: 'horizontal')}" itemprop="summary"><span><f:translate key="summary"/></span></p>
+        </f:link.page>
+        <f:if condition="{header}"><div></f:if>
+        <f:link.action action="show" extensionName="TwCoderdojo" pluginName="Date" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}" class="schedule u-url" additionalAttributes="{itemprop: 'url'}" absolute="1">
+                      <span class="schedule-label">
+                          <f:if condition="{nextLabel}">
+                              <f:then>
+                                  <f:translate key="nextdate"/>
+                              </f:then>
+                              <f:else>
+                                  <f:translate key="nextdate.at"/>
+                              </f:else>
+                          </f:if>
+                      </span>
+          <span class="schedule-datetime">
+                          <time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <span class="expanded"><f:translate key="format.from.expanded"/></span><span class="collapsed"><f:translate key="format.from.collapsed"/></span> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
+                          <span class="expanded">
+                              <f:translate key="format.to"/>
+                              <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
+                          </span>
+                          <f:translate key="format.oclock"/>
+                      </span>
+        </f:link.action>
+        <f:if condition="{header}"></div></f:if>-->
+      </header>
+  </f:section>
 </div>

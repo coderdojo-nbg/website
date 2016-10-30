@@ -1,0 +1,63 @@
+/*
+$font-size-smaller: .9;
+$font-size-medium: 1.1;
+$font-size-larger: 1.32;
+$font-size-x-large: 1.5;
+$font-size-xx-large: 2.2;
+$font-size-xxx-large: 3.04;
+*/
+.tas-title {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.white main {
+  background-color: transparent; }
+
+header[role=banner] {
+  padding: 0;
+  text-align: left; }
+  header[role=banner] img {
+    display: inline;
+    width: 40vw;
+    max-width: 180px;
+    margin-top: -5em; }
+  header[role=banner] .wrap {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed; }
+    header[role=banner] .wrap > * {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+
+.banner-outer {
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-header.jpg") center bottom no-repeat;
+  background-size: cover;
+  height: 36.875vw;
+  min-height: 320px;
+  max-height: 492px; }
+
+.tas-header {
+  margin-top: -1em; }
+
+.tas-title {
+  max-width: 300px;
+  width: 35vw;
+  max-height: 300px;
+  height: 35vw;
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-logo.svg") center center no-repeat;
+  background-size: contain;
+  transform: rotate(6deg);
+  float: right;
+  margin-left: .5em; }
+
+.tas-tagline {
+  font-family: "league-gothic", Arial, Helvetica, sans-serif;
+  color: #61c93f;
+  font-size: calc(2em + 2vw);
+  text-transform: uppercase;
+  line-height: 1; }
+
+/*# sourceMappingURL=take-a-seat.css.map */

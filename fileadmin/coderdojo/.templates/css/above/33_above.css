@@ -59,6 +59,10 @@ label {
   background-color: #ed462f;
   color: #fff; }
 
+.white, .white main, .white [role=contentinfo] {
+  background-color: #fff;
+  color: #222; }
+
 h2 {
   font-size: xx-large;
   font-size: 2rem;

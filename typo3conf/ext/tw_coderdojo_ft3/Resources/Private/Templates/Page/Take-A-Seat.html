@@ -1,0 +1,62 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:layout name="Page"/>
+
+    <f:section name="Configuration">
+        <flux:form id="takeaseat">
+            <!-- Insert fields, sheets, grid, form section objects etc. here, in this flux:form tag -->
+        </flux:form>
+        <flux:grid>
+            <!-- Edit this grid to change the "backend layout" structure -->
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="main"/>
+            </flux:grid.row>
+        </flux:grid>
+    </f:section>
+
+    <f:section name="Main">
+
+        <!-- Header -->
+        <f:render partial="Header" section="TakeASeat"></f:render>
+
+        <!-- Main content -->
+        <main role="main">
+            <div class="wrap">
+                <header class="ce-body tas-header">
+                  <h1 class="p-name tas-title" itemprop="name"><f:translate key="tas.title"/></h1>
+                  <p class="p-summary tas-tagline" itemprop="summary"><f:translate key="tas.summary"/></p>
+                </header>
+                <v:content.render column="0"/>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer role="contentinfo">
+            <div class="wrap">
+                <div class="row">
+                    <div class="cell left">
+                        <f:cObject typoscriptObjectPath="lib.footerNavigation"/>
+                    </div>
+                    <div class="cell right">
+                        <f:link.external uri="https://twitter.com/CoderDojoNBG" title="{f:translate(key: 'follow.twitter.title')}" class="icon icon-twitter icon-twitter-dims" target="_blank"><f:translate key="follow.twitter"/></f:link.external>
+                        <f:link.external uri="https://facebook.com/coderdojo.nbg" title="{f:translate(key: 'follow.facebook.title')}" class="icon icon-facebook icon-facebook-dims" target="_blank"><f:translate key="follow.facebook"/></f:link.external>
+                    </div>
+                </div>
+                <p class="disclaimer">
+                    <f:translate key="footer"/>
+                </p>
+            </div>
+        </footer>
+
+        <!-- Sponsoren -->
+        <footer class="sponsors">
+            <div class="wrap">
+                <v:content.render contentUids="{0: 37}"/>
+                <f:render partial="Sponsors" section="AllSponsors"/>
+            </div>
+        </footer>
+    </f:section>
+</div>

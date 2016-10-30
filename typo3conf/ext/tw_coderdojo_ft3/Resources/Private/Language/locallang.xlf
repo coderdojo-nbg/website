@@ -12,14 +12,11 @@
 			<trans-unit id="flux.home.fields.header">
 				<source>Expanded header</source>
 			</trans-unit>
-			<trans-unit id="flux.example">
-				<source>Example element</source>
+			<trans-unit id="flux.takeaseat">
+				<source>Take A Seat</source>
 			</trans-unit>
-			<trans-unit id="flux.example.description">
-				<source>Small example element</source>
-			</trans-unit>
-			<trans-unit id="flux.example.fields.settings.helloWorld">
-				<source>Example input</source>
+			<trans-unit id="flux.takeaseat.description">
+				<source>»Take A Seat« Crowdfunding</source>
 			</trans-unit>
 
 			<trans-unit id="home">
@@ -82,6 +79,14 @@
 			</trans-unit>
 			<trans-unit id="footer">
 				<source>Das CoderDojo Nürnberg ist eine ehrenamtlich organisierte Initiative von &lt;a href="https://jkphl.is" target="_blank"&gt;Joschi Kuphal&lt;/a&gt; und dem &lt;a href="https://tollwerk.de" target="_blank"&gt;Tollwerk&lt;/a&gt;. Die Teilnahme an einem CoderDojo ist kostenlos. Unterstützung jeglicher Art ist jederzeit herzlich willkommen!</source>
+			</trans-unit>
+
+			<!-- Take A Seat -->
+			<trans-unit id="tas.title">
+				<source>Take A Seat</source>
+			</trans-unit>
+			<trans-unit id="tas.summary">
+				<source>Crowdfunding-Ralley vom 1. bis 30. November 2016</source>
 			</trans-unit>
 		</body>
 	</file>

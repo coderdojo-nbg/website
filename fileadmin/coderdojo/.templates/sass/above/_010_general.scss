@@ -72,6 +72,13 @@ label {
     }
 }
 
+.white {
+    &, main, [role=contentinfo] {
+        background-color: $bgcolorWhite;
+        color: $colorWhite;
+    }
+}
+
 h2 {
     @include font-size(2, xx-large);
     font-weight: lighter;

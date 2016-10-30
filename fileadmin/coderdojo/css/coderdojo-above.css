@@ -59,6 +59,10 @@ label {
   background-color: #ed462f;
   color: #fff; }
 
+.white, .white main, .white [role=contentinfo] {
+  background-color: #fff;
+  color: #222; }
+
 h2 {
   font-size: xx-large;
   font-size: 2rem;
@@ -247,16 +251,14 @@ nav {
   .mentor img {
     border-radius: 50%;
     margin: 1em 0;
-    transition: -webkit-transform 200ms;
     transition: transform 200ms; }
   .mentor > a {
     display: block;
     padding: 1em 1em 3em 1em;
     text-decoration: none; }
     .mentor > a:hover img {
-      -webkit-transform: scale(1.05);
-          -ms-transform: scale(1.05);
-              transform: scale(1.05); }
+      -ms-transform: scale(1.05);
+          transform: scale(1.05); }
   .mentor figcaption {
     text-align: left; }
   .mentor dl {
@@ -390,8 +392,7 @@ nav {
     position: absolute; }
   .ce-twcoderdojo_date .date-attendees .animation-wrapper {
     z-index: 1;
-    -webkit-animation: attendees 12s infinite;
-            animation: attendees 12s infinite;
+    animation: attendees 12s infinite;
     fill: currentColor; }
     .ce-twcoderdojo_date .date-attendees .animation-wrapper.foreground {
       top: 0;
@@ -499,39 +500,17 @@ label + .error, fieldset ul + .error {
   #Tx_Formhandler_UploadedFiles_portrait:empty {
     display: none; }
 
-@-webkit-keyframes attendees {
-  0% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1); }
-  10% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); }
-  12% {
-    -webkit-transform: rotate(180deg) scale(1.1);
-            transform: rotate(180deg) scale(1.1); }
-  15% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); }
-  100% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); } }
-
 @keyframes attendees {
   0% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1); }
+    transform: rotate(0deg) scale(1); }
   10% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); }
+    transform: rotate(180deg) scale(1); }
   12% {
-    -webkit-transform: rotate(180deg) scale(1.1);
-            transform: rotate(180deg) scale(1.1); }
+    transform: rotate(180deg) scale(1.1); }
   15% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); }
+    transform: rotate(180deg) scale(1); }
   100% {
-    -webkit-transform: rotate(180deg) scale(1);
-            transform: rotate(180deg) scale(1); } }
+    transform: rotate(180deg) scale(1); } }
 
 @media all and (min-width: 32em) {
   .ce-body, .ce-html {
@@ -589,7 +568,6 @@ label + .error, fieldset ul + .error {
 @media all and (min-width: 48em) {
   .ce-textpic.ce-layout-2,
   .ce-textpic.ce-layout-3 {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     .ce-textpic.ce-layout-2 > div,
@@ -604,9 +582,8 @@ label + .error, fieldset ul + .error {
       display: none; }
     .ce-textpic.ce-layout-2:nth-last-of-type(odd),
     .ce-textpic.ce-layout-3:nth-last-of-type(odd) {
-      -webkit-flex-direction: row-reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse; }
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
       .ce-textpic.ce-layout-2:nth-last-of-type(odd) .ce-flex-image,
       .ce-textpic.ce-layout-3:nth-last-of-type(odd) .ce-flex-image {
         background-position: left center; }
@@ -661,15 +638,12 @@ label + .error, fieldset ul + .error {
 
 @media all and (min-width: 64em) {
   .mentors {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .mentors .mentor {
       display: inline-block;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       vertical-align: top;
