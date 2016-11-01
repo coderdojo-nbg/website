@@ -10,6 +10,14 @@
 ###error_###fieldname######
 <!-- ###field_nocache### -->
 
+<!-- ###field_checkbox### -->
+<label class="checkbox">
+  <input type="checkbox" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="Ja" ###checked_###fieldname###_Ja###/>
+  <span>###LLL:field.###fieldname######</span>
+</label>
+###error_###fieldname######
+<!-- ###field_checkbox### -->
+
 <!-- ###field_email### -->
 <label>
   <span>###LLL:field.###fieldname######</span><input type="email" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="###LLL:field.placeholder.###fieldname######" />
@@ -50,3 +58,9 @@
 <!-- ###field_submit### -->
 <input type="submit" class="button" value="###LLL:field.###fieldname######" ###submit_nextStep###/>
 <!-- ###field_submit### -->
+
+<!-- ###field_number### -->
+<label class="color color-###fieldname###">
+  <span>###LLL:field.###fieldname######</span><span><input type="number" min="0" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" /></span>
+</label>
+<!-- ###field_number### -->

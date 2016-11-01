@@ -1,0 +1,23 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="wrap" options="{group: 'FCE'}">
+		</flux:form>
+    <flux:grid>
+      <flux:grid.row>
+        <flux:grid.column colPos="0" name="content"/>
+      </flux:grid.row>
+    </flux:grid>
+	</f:section>
+
+	<f:section name="Main">
+		<div id="c{record.uid}" class="wrap{f:if(condition: '{record.layout} > 0', then: '-full')}">
+      <flux:content.render area="content" />
+    </div>
+	</f:section>
+</div>

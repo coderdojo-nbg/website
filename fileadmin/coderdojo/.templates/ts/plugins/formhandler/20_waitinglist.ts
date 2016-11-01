@@ -59,7 +59,7 @@ plugin.Tx_Formhandler.settings.predef.waitinglist {
 
     markers {
         antibotArmor				= USER_INT
-        antibotArmor.userFunc		= Tollwerk\TwAntibot\Interceptor\Utility->armor
+        antibotArmor.userFunc		= Tollwerk\TwAntibot\Formhandler\Utility->armor
         antibotArmor.antibot		< plugin.Tx_Formhandler.settings.predef.contact.initInterceptors.1.config.antibot
     }
 

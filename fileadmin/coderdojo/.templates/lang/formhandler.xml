@@ -11,12 +11,19 @@
 			<label index="fieldset.message">Deine Nachricht</label>
 			<label index="fieldset.project">Dein Projekt</label>
 			<label index="fieldset.profile">Dein Profil</label>
+			<label index="fieldset.chairs">Stühle</label>
+			<label index="fieldset.transaction">Transaktion</label>
 
 			<label index="field.gender">Geschlecht</label>
 			<label index="field.gender.male">Männlich</label>
 			<label index="field.gender.female">Weiblich</label>
+			<label index="field.salutation">Anrede</label>
+			<label index="field.salutation.mr">Herr</label>
+			<label index="field.salutation.mrs">Frau</label>
 			<label index="field.firstname">Vorname</label>
 			<label index="field.lastname">Nachname</label>
+			<label index="field.company">Firma</label>
+			<label index="field.address">Rechnungsanschrift</label>
 			<label index="field.email">E-Mail</label>
 			<label index="field.birthday">Geburtstag</label>
 			<label index="field.type">Teilnahme als</label>
@@ -39,6 +46,28 @@
 			<label index="field.skills">Schwerpunkte</label>
 			<label index="field.newskills">Schwerpunktevorschläge</label>
 
+      <label index="field.black">Schwarz</label>
+      <label index="field.basaltgrey">Basaltgrau</label>
+      <label index="field.signalgrey">Signalgrau</label>
+      <label index="field.white">Weiß</label>
+      <label index="field.greenblue">Grünblau</label>
+      <label index="field.avionblue">Avionblau</label>
+      <label index="field.oxidered">Oxidrot</label>
+      <label index="field.coralred">Korallenrot</label>
+      <label index="field.yellowgrey">Gelbgrau</label>
+      <label index="field.ferngreen">Farngrün</label>
+      <label index="field.pastelgreen">Pastellgrün</label>
+      <label index="field.sulfuryellow">Schwefelgelb</label>
+      <label index="field.payment">Zahlungsmethode</label>
+      <label index="field.payment.paypal">PayPal</label>
+      <label index="field.payment.creditcard">Kreditkarte</label>
+      <label index="field.payment.debit">Lastschrift</label>
+      <label index="field.payment.invoice">Rechnung</label>
+      <label index="field.payment.hint">Alle Details zum weiteren Vorgehen erhältst du nach Abschluss der Patenschaft per E-Mail</label>
+      <label index="field.public">Ich möchte nicht öffentlich als Patin / Pate genannt werden (auf dieser Website und auf meinen Patenstühlen)</label>
+      <label index="field.confirm">Ich habe verstanden, dass ich eine &lt;b&gt;kostenpflichtige Patenschaft&lt;/b&gt; eingehe und mich zur Zahlung der oben genannten Summe verpflichte. Ich weiß, dass ich meine Einwilligung 2 Wochen lang ohne Angabe von Gründen, jedoch in Schriftform widerrufen kann.</label>
+      <label index="field.buy">Kostenpflichtige Patenschaft abschließen</label>
+
 			<label index="field.legend.image">JPG oder PNG, max. 1MB groß, min. 250 x 250 Pixel, farbig, Nahaufnahme Deines Gesichts</label>
 			<label index="field.legend.length">Maximal 300 Zeichen</label>
 			<label index="field.legend.links">Internet-Links sind möglich (bitte URLs in Klammern setzen)</label>
@@ -46,6 +75,9 @@
 
 			<label index="field.placeholder.firstname">Peter</label>
 			<label index="field.placeholder.lastname">Pan</label>
+			<label index="field.placeholder.company">Nimmerland AG</label>
+			<label index="field.placeholder.address">Pirateninsel 7
+12345 Nimmerland</label>
 			<label index="field.placeholder.email">peter@nimmerland.de</label>
 			<label index="field.placeholder.message">Ich möchte Euch sagen, dass ...</label>
 			<label index="field.placeholder.project">Ich möchte bei diesem CoderDojo ...</label>
@@ -53,8 +85,10 @@
 			<label index="field.placeholder.statement">Ich habe große Freude daran, Kinder beim Entdecken zu begleiten, und ...</label>
 
 			<label index="error_gender">Bitte wähle Dein Geschlecht aus</label>
+			<label index="error_salutation">Bitte wähle die passende Anrede</label>
 			<label index="error_firstname">Bitte gib Deinen Vornamen ein</label>
 			<label index="error_lastname">Bitte gib Deinen Nachnamen ein</label>
+			<label index="error_address">Bitte gib Deine Rechnungsanschrift ein</label>
 			<label index="error_type">Bitte gib an, als was Du teilnehmen möchtest</label>
 			<label index="error_birthday_required">Bitte gib Deinen Geburtstag an</label>
 			<label index="error_birthday_date">Bitte gib ein gültiges Datum ein</label>
@@ -71,6 +105,13 @@
 			<label index="error_biography_required">Bitte gib eine Kurzbiografie ein</label>
 			<label index="error_statement_required">Bitte gib ein Leitmotiv ein</label>
 			<label index="error_project">Bitte beschreibe, was Du tun möchtest</label>
+			<label index="error_payment">Bitte wähle eine Zahlungsmethode</label>
+			<label index="error_confirm">Bitte bestätige, dass Du die Widerrufsbelehrung zur Kenntnis genommen hast</label>
+			<label index="error_amount">Bitte wähle wenigstens eine Farbe</label>
+
+			<label index="sum.net">Nettosumme</label>
+			<label index="sum.vat">Mehrwertsteuer 19%</label>
+			<label index="sum.gross">Bruttosumme</label>
 
 			<label index="antibot"><![CDATA[Unser Kontaktformular ist für Dich aus Spamschutzgründen leider gesperrt. Wenn Du der Ansicht bist, es handelt sich dabei um einen Irrtum, dann <a href="mailto:ping@coderdojo-nbg.org">sende uns bitte eine E-Mail</a>. Wir bitten um Entschuldigung für die Unannehmlichkeiten!]]></label>
 			<label index="signature"><![CDATA[

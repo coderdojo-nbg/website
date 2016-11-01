@@ -6,31 +6,92 @@ $font-size-x-large: 1.5;
 $font-size-xx-large: 2.2;
 $font-size-xxx-large: 3.04;
 */
-.tas-title {
-  text-indent: 100%;
+header[role=banner] .tas-title {
+  text-indent: 100vw;
   white-space: nowrap;
   overflow: hidden; }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.tooltip {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+  .tooltip:hover::after, .tooltip:focus::after {
+    font-weight: normal;
+    content: " (" attr(aria-label) ")";
+    color: #000; }
+
+a.block {
+  display: inline-block; }
 
 .white main {
   background-color: transparent; }
 
+.ce-textpic {
+  background-color: transparent; }
+
+html {
+  background: #fff; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  z-index: 1;
+  height: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  text-align: center; }
+  nav a {
+    line-height: 2rem;
+    padding: 0 .5em;
+    margin: 0;
+    width: auto;
+    height: 2em;
+    display: inline-block;
+    text-transform: none;
+    font-size: 80%; }
+    nav a:hover {
+      color: #fff;
+      text-decoration: underline; }
+
 header[role=banner] {
+  margin-top: 2em;
   padding: 0;
   text-align: left; }
   header[role=banner] img {
     display: inline;
-    width: 40vw;
-    max-width: 180px;
-    margin-top: -5em; }
-  header[role=banner] .wrap {
+    max-width: 226px;
+    width: calc(80px + 12vw); }
+  header[role=banner] .home {
     width: 100%;
+    text-align: left;
+    margin: 0 0 calc(1em + 1vw) 0; }
+  header[role=banner] .wrap {
     height: 100%;
-    display: table;
-    table-layout: fixed; }
-    header[role=banner] .wrap > * {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center; }
+    padding: 1em; }
+  header[role=banner] .tas-title {
+    position: static;
+    max-width: 340px;
+    width: calc(120px + 12vw);
+    max-height: 340px;
+    height: calc(120px + 12vw);
+    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-logo.svg") center center no-repeat;
+    background-size: contain;
+    -ms-transform: rotate(-6deg);
+        transform: rotate(-6deg);
+    margin: 0; }
 
 .banner-outer {
   background: transparent url("/fileadmin/user_upload/take-a-seat/tas-header.jpg") center bottom no-repeat;
@@ -42,22 +103,277 @@ header[role=banner] {
 .tas-header {
   margin-top: -1em; }
 
-.tas-title {
-  max-width: 300px;
-  width: 35vw;
-  max-height: 300px;
-  height: 35vw;
-  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-logo.svg") center center no-repeat;
-  background-size: contain;
-  -ms-transform: rotate(6deg);
-      transform: rotate(6deg);
-  float: right;
-  margin-left: .5em; }
-
-.tas-tagline {
+.tas-tagline, #c57 h2, #c63 h2 {
   font-family: "league-gothic", Arial, Helvetica, sans-serif;
-  color: #61c93f;
-  font-size: calc(2em + 2vw);
+  font-size: calc(2.2em + 2vw);
   text-transform: uppercase;
-  line-height: 1; }
+  line-height: 1;
+  margin: .5em 0; }
+
+.tas-tagline-sub {
+  color: #61c93f;
+  display: block;
+  margin-top: .2em;
+  font-size: 50%; }
+
+#c48 {
+  margin-top: 0; }
+
+#c49 {
+  background: #e8e7e5 url("/fileadmin/user_upload/take-a-seat/remo-plastic-chair-1.jpg") 15% 0% no-repeat;
+  background-size: auto 100vw;
+  padding-top: 100vw; }
+  #c49 h2 {
+    margin-top: 0; }
+  #c49 .ce-body {
+    padding-top: 0; }
+
+#c62 {
+  margin-top: calc(20px + 12vw); }
+  #c62 .columns-left {
+    background-color: #61c93f;
+    color: #fff; }
+  #c62 .columns-right {
+    background-color: #2e7ac7;
+    color: #fff; }
+
+#c57 .tooltip {
+  border-bottom-color: #fff; }
+
+#c57 h2 {
+  position: relative; }
+  #c57 h2::after {
+    content: '';
+    position: absolute;
+    max-width: 226px;
+    width: calc(120px + 12vw);
+    max-height: 226px;
+    height: calc(120px + 12vw);
+    right: 0;
+    top: calc(-90px - 9vw);
+    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-100-euro.svg") center center no-repeat;
+    background-size: contain;
+    -ms-transform: rotate(6deg);
+        transform: rotate(6deg); }
+
+#c57 ol {
+  counter-reset: li;
+  /* Initiate a counter */
+  margin-left: 0;
+  /* Remove the default left margin */
+  padding-left: 0;
+  /* Remove the default left padding */
+  list-style: none;
+  /* Disable the normal item numbering */ }
+
+#c57 ol > li {
+  position: relative;
+  /* Create a positioning context */
+  margin-left: 2.5em;
+  /* Give each list item a left margin to make room for the numbers */ }
+
+#c57 ol > li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  position: absolute;
+  left: -2.5em;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.7em;
+  color: #61c93f;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold; }
+
+#c63 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+#c63 li {
+  padding: .3em 0 .3em 2.8em;
+  background-size: contain; }
+
+#c63 .person {
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left center no-repeat; }
+
+#c63 .company {
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left center no-repeat; }
+
+#c67, .ce-formhandler {
+  background-color: #fafafa; }
+
+#c69 {
+  padding-bottom: 66.666666vw;
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-footer.jpg") center bottom no-repeat;
+  background-size: contain; }
+
+fieldset.colors {
+  margin-top: 1em; }
+  fieldset.colors legend {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible; }
+  fieldset.colors div > label {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 1em; }
+    fieldset.colors div > label:first-child {
+      margin-top: 0; }
+    fieldset.colors div > label:hover {
+      background-color: #fff; }
+  fieldset.colors span {
+    display: table-cell; }
+    fieldset.colors span:first-child::before {
+      content: '\00a0';
+      display: inline-block;
+      width: 4em;
+      height: 1.8em;
+      margin-right: .5em;
+      border: 1px solid black;
+      vertical-align: middle; }
+    fieldset.colors span:last-child,
+    fieldset.colors span input[type=number] {
+      box-sizing: border-box;
+      width: 6em;
+      vertical-align: middle;
+      text-align: center; }
+
+.color-black span:first-child::before {
+  background-color: #000; }
+
+.color-basaltgrey span:first-child::before {
+  background-color: #485150; }
+
+.color-signalgrey span:first-child::before {
+  background-color: #a8a8a7; }
+
+.color-white span:first-child::before {
+  background-color: #fff; }
+
+.color-greenblue span:first-child::before {
+  background-color: #003149; }
+
+.color-avionblue span:first-child::before {
+  background-color: #48aec3; }
+
+.color-oxidered span:first-child::before {
+  background-color: #4e1200; }
+
+.color-coralred span:first-child::before {
+  background-color: #c32e1b; }
+
+.color-yellowgrey span:first-child::before {
+  background-color: #aba47c; }
+
+.color-ferngreen span:first-child::before {
+  background-color: #397e41; }
+
+.color-pastelgreen span:first-child::before {
+  background-color: #b5d8af; }
+
+.color-sulfuryellow span:first-child::before {
+  background-color: #f2e61a; }
+
+.total {
+  border-top: 1px dashed #000;
+  margin: 1em 0; }
+  .total dt, .total dd {
+    margin-top: 1em;
+    width: 50%; }
+  .total dt {
+    float: left;
+    clear: left; }
+  .total dd {
+    text-align: right;
+    margin-left: 50%; }
+
+.gross {
+  font-weight: bold; }
+
+.payment {
+  display: block;
+  overflow: hidden; }
+  .payment li {
+    display: block;
+    float: left;
+    width: 50%; }
+    .payment li.hint {
+      float: none;
+      clear: both;
+      width: 100%;
+      padding: .5em 1em;
+      box-sizing: border-box; }
+
+.checkbox {
+  border: 1px solid #bbb;
+  padding: .5em; }
+
+input[type=checkbox] {
+  float: left;
+  clear: left;
+  margin-top: .4em; }
+  input[type=checkbox] + span {
+    display: block;
+    margin-left: 2em; }
+
+#c53 h2 {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tollwerkstatt.svg") left center no-repeat;
+  height: 2em;
+  background-size: contain; }
+
+@media all and (min-width: 32em) {
+  nav a {
+    font-size: 1rem;
+    padding: 0 1em; } }
+
+@media all and (min-width: 48em) {
+  .columns {
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    .columns > div {
+      display: table-cell;
+      width: 50%; }
+  #c49 {
+    padding: 0;
+    background-position: top center;
+    background-size: cover;
+    min-height: 46vw;
+    margin-top: 1em; }
+    #c49 .wrap > * {
+      padding-left: 50%; }
+  #c62 {
+    margin-top: 124px; }
+  #c57 h2::after {
+    top: -172px;
+    right: -113px; }
+  #c63 h2 {
+    text-align: right; }
+  fieldset.colors legend {
+    float: left; }
+  fieldset.colors div {
+    margin-left: 25%; }
+  .total, .total + .error {
+    margin-left: 25%; }
+  .checkbox {
+    margin-left: 25%;
+    overflow: hidden; }
+    .checkbox span {
+      float: none;
+      clear: none;
+      width: auto;
+      line-height: 1.6; } }
+
+@media all and (min-width: 960px) {
+  .ce-gallery {
+    padding: 1em 2em; } }
 /*# sourceMappingURL=take-a-seat.css.map */

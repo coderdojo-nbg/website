@@ -1,0 +1,20 @@
+#c81 {
+  position: relative;
+}
+
+a.take-a-seat {
+  position: absolute;
+  max-width: 340px;
+  top: calc(-70px - 12vw);
+  left: calc(60px - 8vw);
+  width: calc(120px + 12vw);
+  max-height: 340px;
+  height: calc(120px + 12vw);
+  text-indent: 100vw;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-logo.svg") center center no-repeat;
+  background-size: contain;
+  transform: rotate(-6deg);
+  margin: 0;
+}

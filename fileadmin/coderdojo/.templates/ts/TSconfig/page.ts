@@ -8,6 +8,7 @@ TCEMAIN.table.tt_content {
 }
 
 TCEFORM.tt_content.layout.addItems.4 = Rot hinterlegt
+TCEFORM.tt_content.layout.addItems.5 = Karussell
 TCEFORM.tt_content.layout.altLabels.0 = Standard
 TCEFORM.tt_content.layout.altLabels.1 = Weiß hinterlegt
 TCEFORM.tt_content.layout.altLabels.2 = Rechts ausgerichtet

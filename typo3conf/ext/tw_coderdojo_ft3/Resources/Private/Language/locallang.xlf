@@ -18,6 +18,27 @@
 			<trans-unit id="flux.takeaseat.description">
 				<source>»Take A Seat« Crowdfunding</source>
 			</trans-unit>
+			<trans-unit id="flux.wrap">
+				<source>Container</source>
+			</trans-unit>
+			<trans-unit id="flux.wrap.description">
+				<source>Container zur Beschränkung der Seitenbreite</source>
+			</trans-unit>
+			<trans-unit id="flux.wrap.columns.content">
+				<source>Inhalt</source>
+			</trans-unit>
+			<trans-unit id="flux.columns">
+				<source>2-spaltiger Container</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.description">
+				<source>Container zur Teilung der Seite in 2 Spalten</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.left">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="flux.columns.columns.right">
+				<source>Rechts</source>
+			</trans-unit>
 
 			<trans-unit id="home">
 				<source>Startseite</source>
@@ -85,7 +106,10 @@
 			<trans-unit id="tas.title">
 				<source>Take A Seat</source>
 			</trans-unit>
-			<trans-unit id="tas.summary">
+			<trans-unit id="tas.summary.1">
+				<source>Stühle für unsere Ninjas!</source>
+			</trans-unit>
+			<trans-unit id="tas.summary.2">
 				<source>Crowdfunding-Ralley vom 1. bis 30. November 2016</source>
 			</trans-unit>
 		</body>

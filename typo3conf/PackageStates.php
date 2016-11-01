@@ -330,6 +330,12 @@ return [
             'packagePath' => 'typo3conf/ext/tw_antibot/',
             'suggestions' => [],
         ],
+        'tw_payment' => [
+            'composerName' => 'tw_payment',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/tw_payment/',
+            'suggestions' => [],
+        ],
         'tw_upsync' => [
             'composerName' => 'tw_upsync',
             'state' => 'active',

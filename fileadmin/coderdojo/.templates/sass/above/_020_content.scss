@@ -81,3 +81,20 @@ dl.contact {
 		@extend .blue;
 	}
 }
+
+.ce-carousel {
+  //display: flex;
+
+  &.owl-carousel {
+    display: block;
+
+    img {
+      width: auto;
+    }
+  }
+}
+
+.ce-layout-5 {
+  background-color: transparent;
+  margin: 2em 0;
+}

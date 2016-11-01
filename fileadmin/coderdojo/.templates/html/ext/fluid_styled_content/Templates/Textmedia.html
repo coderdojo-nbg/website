@@ -4,7 +4,14 @@
 <div id="c{data.uid}" class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')} ce-layout-{data.layout}">
 	<f:if condition="{data.layout} > 1">
 		<f:then>
-			<f:render section="flex" arguments="{_all}"/>
+      <f:if condition="{data.layout} < 4">
+        <f:then>
+          <f:render section="flex" arguments="{_all}"/>
+        </f:then>
+        <f:else>
+          <f:render section="carousel" arguments="{_all}"/>
+        </f:else>
+      </f:if>
 		</f:then>
 		<f:else>
 			<f:if condition="{gallery.position.vertical} != 'below'">
@@ -56,6 +63,29 @@
 			</f:for>
 		</f:if>
 	</f:for>
+</f:section>
+
+<f:section name="carousel">
+  <div class="ce-carousel">
+    <f:for each="{gallery.rows}" as="row" iteration="rowIter">
+      <f:if condition="{rowIter.index} == 0">
+        <f:for each="{row.columns}" as="column" iteration="columnIter">
+          <f:if condition="{column.media}">
+            <f:if condition="{column.media.type} == 2">
+              <div class="ce-carousel-item">
+                <f:media
+                  file="{column.media}"
+                  alt="{column.media.alternative}"
+                  title="{column.media.title}"
+                />
+              </div>
+            </f:if>
+          </f:if>
+        </f:for>
+      </f:if>
+    </f:for>
+    </div>
+  </div>
 </f:section>
 
 </html>

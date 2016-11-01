@@ -25,31 +25,16 @@
         <!-- Main content -->
         <main role="main">
             <div class="wrap">
-                <header class="ce-body tas-header">
-                  <h1 class="p-name tas-title" itemprop="name"><f:translate key="tas.title"/></h1>
-                  <p class="p-summary tas-tagline" itemprop="summary"><f:translate key="tas.summary"/></p>
-                </header>
-                <v:content.render column="0"/>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer role="contentinfo">
-            <div class="wrap">
-                <div class="row">
-                    <div class="cell left">
-                        <f:cObject typoscriptObjectPath="lib.footerNavigation"/>
-                    </div>
-                    <div class="cell right">
-                        <f:link.external uri="https://twitter.com/CoderDojoNBG" title="{f:translate(key: 'follow.twitter.title')}" class="icon icon-twitter icon-twitter-dims" target="_blank"><f:translate key="follow.twitter"/></f:link.external>
-                        <f:link.external uri="https://facebook.com/coderdojo.nbg" title="{f:translate(key: 'follow.facebook.title')}" class="icon icon-facebook icon-facebook-dims" target="_blank"><f:translate key="follow.facebook"/></f:link.external>
-                    </div>
-                </div>
-                <p class="disclaimer">
-                    <f:translate key="footer"/>
+              <header class="ce-body tas-header">
+                <p class="p-summary tas-tagline" itemprop="summary">
+                  <f:translate key="tas.summary.1"/>
+                  <span class="visually-hidden">—</span>
+                  <span class="tas-tagline-sub"><f:translate key="tas.summary.2"/></span>
                 </p>
+              </header>
             </div>
-        </footer>
+            <v:content.render column="0"/>
+        </main>
 
         <!-- Sponsoren -->
         <footer class="sponsors">

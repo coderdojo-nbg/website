@@ -1,11 +1,11 @@
 @mixin ligatures($common: 1, $discretionary: 1, $contextual: 1) {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual; 
-    -moz-font-feature-settings: "liga=$common, dlig=$discretionary, clig=$contextual"; 
-    -ms-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual; 
-    -o-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual; 
-    -webkit-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual; 
+    -moz-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual;
+    -moz-font-feature-settings: "liga=$common, dlig=$discretionary, clig=$contextual";
+    -ms-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual;
+    -o-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual;
+    -webkit-font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual;
     font-feature-settings: "liga" $common, "dlig" $discretionary, "clig" $contextual;
 }
 
@@ -86,56 +86,56 @@
   -ms-animation-name: $name;
   animation-name: $name;
 }
- 
+
 @mixin animation-duration($name) {
   -webkit-animation-duration: $name;
   -moz-animation-duration: $name;
   -ms-animation-duration: $name;
   animation-duration: $name;
 }
- 
+
 @mixin animation-timing-function($name) {
   -webkit-animation-timing-function: $name;
   -moz-animation-timing-function: $name;
   -ms-animation-timing-function: $name;
   animation-timing-function: $name;
 }
- 
+
 @mixin animation-iteration-count($name) {
   -webkit-animation-iteration-count: $name;
   -moz-animation-iteration-count: $name;
   -ms-animation-iteration-count: $name;
   animation-iteration-count: $name;
 }
- 
+
 @mixin animation-direction($name) {
   -webkit-animation-direction: $name;
   -moz-animation-direction: $name;
   -ms-animation-direction: $name;
   animation-direction: $name;
 }
- 
+
 @mixin animation-delay($name) {
   -webkit-animation-delay: $name;
   -moz-animation-delay: $name;
   -ms-animation-delay: $name;
   animation-delay: $name;
 }
- 
+
 @mixin animation-play-state($name) {
   -webkit-animation-play-state: $name;
   -moz-animation-play-state: $name;
   -ms-animation-play-state: $name;
   animation-play-state: $name;
 }
- 
+
 @mixin animation-fill-mode($name) {
   -webkit-animation-fill-mode: $name;
   -moz-animation-fill-mode: $name;
   -ms-animation-fill-mode: $name;
   animation-fill-mode: $name;
 }
- 
+
 @mixin keyframes($name) {
   @-webkit-keyframes $name { @content; }
   @-moz-keyframes $name { @content; }
@@ -144,12 +144,14 @@
 }
 
 @mixin hide-visible() {
-    position: absolute;
-    left: 100%;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 @mixin shift-off-screen() {

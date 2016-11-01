@@ -2,7 +2,9 @@
 
 namespace Typoheads\Formhandler\Validator\ErrorCheck {
 
-    /**
+  use Tollwerk\TwCoderdojo\Utility\Marker;
+
+  /**
      * Validates that an uploaded image has minimum dimensions
      *
      * @package    Tx_Formhandler
@@ -41,6 +43,20 @@ namespace Typoheads\Formhandler\Validator\ErrorCheck {
                 }
             }
             return $checkFailed;
+        }
+    }
+
+    /**
+     * Validates the amount of ordered colors
+     *
+     * @package    Tx_Formhandler
+     * @subpackage    ErrorChecks
+     */
+    class MinColors extends AbstractErrorCheck
+    {
+        public function check()
+        {
+          return Marker::amount() ? '' : $this->getCheckFailed();
         }
     }
 }

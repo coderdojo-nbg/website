@@ -1,0 +1,88 @@
+{namespace v = FluidTYPO3\Vhs\ViewHelpers}
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Anrede:       ###value_salutation###
+Vorname:      ###value_firstname###
+Nachname:     ###value_lastname###
+E-Mail:       ###value_email###
+Firma:        ###value_company###
+
+Rechnungsanschrift
+============================================================================
+###value_address###
+
+Stühle & Farben
+============================================================================
+Schwarz:      ###value_black###
+Basaltgrau:   ###value_basaltgrey###
+Signalgrau:   ###value_signalgrey###
+Weiß:         ###value_white###
+Grünblau:     ###value_greenblue###
+Avionblau:    ###value_avionblue###
+Oxidrot:      ###value_oxidered###
+Korallenrot:  ###value_coralred###
+Gelbgrau:     ###value_yellowgrey###
+Farngrün:     ###value_ferngreen###
+Pastellgrün:  ###value_pastelgreen###
+Schwefelgelb: ###value_sulfuryellow###
+
+Transaktion
+============================================================================
+Zahlung:      ###value_payment###
+Versteckt:    ###value_public###
+Bestätigt:    ###value_confirm###</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+<v:format.regularExpression pattern="/[\r\n]{3,}/" replacement="
+
+">Hallo ###value_firstname###,
+
+vielen herzlichen Dank für die Übernahme einer Stuhlpatenschaft! Du hast uns
+damit ein wichtiges Stück weitergebracht. :)
+
+Wir haben die untenstehenden Angaben von dir erhalten. Wir werden diese nun
+prüfen und dir per E-Mail eine Rechnung samt Hinweisen zu Zahlung senden.
+
+Danke für deine großartige Unterstützung!
+Dein CoderDojo Nürnberg
+
+--- 8< ---
+
+Persönliche Angaben
+============================================================================
+Anrede:       ###value_salutation###
+Vorname:      ###value_firstname###
+Nachname:     ###value_lastname###
+E-Mail:       ###value_email###
+Firma:        ###value_company###
+
+Rechnungsanschrift
+============================================================================
+###value_address###
+
+Stühle & Farben
+============================================================================
+Schwarz:      ###value_black###
+Basaltgrau:   ###value_basaltgrey###
+Signalgrau:   ###value_signalgrey###
+Weiß:         ###value_white###
+Grünblau:     ###value_greenblue###
+Avionblau:    ###value_avionblue###
+Oxidrot:      ###value_oxidered###
+Korallenrot:  ###value_coralred###
+Gelbgrau:     ###value_yellowgrey###
+Farngrün:     ###value_ferngreen###
+Pastellgrün:  ###value_pastelgreen###
+Schwefelgelb: ###value_sulfuryellow###
+
+Transaktion
+============================================================================
+Zahlung:      ###value_payment###
+Versteckt:    ###value_public###
+Bestätigt:    ###value_confirm###
+
+###LLL:signature###</v:format.regularExpression>
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->

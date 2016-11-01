@@ -236,7 +236,7 @@ module.exports = function(grunt) {
 			javascript          : {
 				expand          : true,
 				cwd             : 'fileadmin/coderdojo/js/',
-				src             : ['**/*.js', '!**/*.min.js'],
+				src             : ['*.js', '!*.min.js'],
 				dest            : 'fileadmin/coderdojo/js/',
 				ext				: '.min.js',
 				extDot			: 'last'

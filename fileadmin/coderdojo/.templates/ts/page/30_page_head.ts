@@ -74,15 +74,6 @@ page.includeJS {
 }
 
 page.includeJSFooter {
-    jquery = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
-    jquery {
-        external = 1
-        forceOnTop = 1
-        disableCompression = 1
-        excludeFromConcatenation = 1
-    }
-
-    jquery >
 }
 
 config.removeDefaultJS = external
@@ -130,5 +121,39 @@ config.removeDefaultJS = external
   page.bodyTag = <body class="white h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
   page.includeCSS {
     takeaseat = fileadmin/coderdojo/css/take-a-seat.min.css
+    owlcarousel = fileadmin/coderdojo/js/owl-carousel/owl.carousel.css
+    owltheme = fileadmin/coderdojo/js/owl-carousel/owl.theme.css
+  }
+  page.includeJS {
+    jquery = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+    jquery {
+      external = 1
+      forceOnTop = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+  }
+  page.includeJSFooter {
+    jqueryscroll = //cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js
+    jqueryscroll {
+      external = 1
+      forceOnTop = 0
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+    carousel = fileadmin/coderdojo/js/owl-carousel/owl.carousel.min.js
+    carousel {
+      external = 1
+      forceOnTop = 0
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+    takeaseat = fileadmin/coderdojo/js/take-a-seat.min.js
+    takeaseat {
+      external = 1
+      forceOnTop = 0
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
   }
 [global]

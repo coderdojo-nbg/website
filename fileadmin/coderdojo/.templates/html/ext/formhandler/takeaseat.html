@@ -1,0 +1,74 @@
+{namespace tw=Tollwerk\TwFacsimile\ViewHelpers}
+
+<!-- ###TEMPLATE_FORM1### begin -->
+<form method="post" id="###formID###" enctype="multipart/form-data" action="#formhandler-registration">
+    <fieldset>
+        <legend>###LLL:fieldset.personal###</legend>
+        <div class="label">###LLL:field.salutation###</div>
+        <ul>
+          <li><label><input type="radio" class="###is_error_salutation###" name="formhandler[salutation]" value="Herr" ###checked_salutation_Herr###/><span>###LLL:field.salutation.mr###</span></label></li>
+          <li><label><input type="radio" class="###is_error_salutation###" name="formhandler[salutation]" value="Frau" ###checked_salutation_Frau###/><span>###LLL:field.salutation.mrs###</span></label></li>
+        </ul>
+        ###error_salutation###
+        ###field_input_firstname###
+        ###field_input_lastname###
+        ###field_email_email###
+        ###field_input_company###
+        ###field_textarea_address###
+    </fieldset>
+    <fieldset class="colors">
+        <legend>###LLL:fieldset.chairs###</legend>
+        <div>
+          ###field_number_black###
+          ###field_number_basaltgrey###
+          ###field_number_signalgrey###
+          ###field_number_white###
+          ###field_number_greenblue###
+          ###field_number_avionblue###
+          ###field_number_oxidered###
+          ###field_number_coralred###
+          ###field_number_yellowgrey###
+          ###field_number_ferngreen###
+          ###field_number_pastelgreen###
+          ###field_number_sulfuryellow###
+          <input type="hidden" id="field_amount" name="formhandler[amount]" value="###value_amount###"/>
+        </div>
+    </fieldset>
+    <dl class="total">
+      <dt>###LLL:sum.net###</dt>
+      <dd>€ <span id="net">###net###</span></dd>
+      <dt>###LLL:sum.vat###</dt>
+      <dd>€ <span id="vat">###vat###</span></dd>
+      <dt class="gross">###LLL:sum.gross###</dt>
+      <dd class="gross">€ <span id="gross">###gross###</span></dd>
+    </dl>
+    ###error_amount###
+    <fieldset>
+        <legend>###LLL:fieldset.transaction###</legend>
+      <div class="label">###LLL:field.payment###</div>
+      <ul class="payment">
+        <li><label><input type="radio" class="###is_error_payment###" name="formhandler[payment]" value="PayPal"
+                          ###checked_payment_PayPal###/><span>###LLL:field.payment.paypal###</span></label></li>
+        <li><label><input type="radio" class="###is_error_payment###" name="formhandler[payment]" value="Kreditkarte"
+                          ###checked_payment_Kreditkarte###/><span>###LLL:field.payment.creditcard###</span></label>
+        </li>
+        <li><label><input type="radio" class="###is_error_payment###" name="formhandler[payment]" value="Lastschrift"
+                          ###checked_payment_Lastschrift###/><span>###LLL:field.payment.debit###</span></label></li>
+        <li><label><input type="radio" class="###is_error_payment###" name="formhandler[payment]" value="Rechnung"
+                          ###checked_payment_Rechnung###/><span>###LLL:field.payment.invoice###</span></label></li>
+        <li class="hint">###LLL:field.payment.hint###</li>
+      </ul>
+      ###error_payment###
+      ###field_checkbox_public###
+      ###field_checkbox_confirm###
+    </fieldset>
+    <div class="controls">
+        ###field_submit_buy###
+        ###antibotArmor###
+    </div>
+</form>
+<!-- ###TEMPLATE_FORM1### end -->
+
+<!-- ###TEMPLATE_ANTIBOT### begin -->
+<p>###LLL:antibot###</p>
+<!-- ###TEMPLATE_ANTIBOT### end -->
