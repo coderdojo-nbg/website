@@ -101,7 +101,7 @@ header[role=banner] {
 .tas-header {
   margin-top: -1em; }
 
-.tas-tagline, #c57 h2, #c63 h2 {
+.tas-tagline, #c57 h2, #c74 h2 {
   font-family: "league-gothic", Arial, Helvetica, sans-serif;
   font-size: calc(2.2em + 2vw);
   text-transform: uppercase;
@@ -190,15 +190,16 @@ header[role=banner] {
   padding: 0;
   list-style-type: none; }
 
-#c74 li {
-  padding: .3em 0 .3em 2.8em;
-  background-size: contain; }
-
 #c74 .person {
-  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left center no-repeat; }
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left top no-repeat;
+  background-size: auto 2.2em; }
 
 #c74 .company {
-  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left center no-repeat; }
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left top no-repeat;
+  background-size: auto 2.2em; }
+
+#c74 li {
+  padding: .3em 0 .3em 2.8em; }
 
 #c67, .ce-formhandler {
   background-color: #fafafa; }

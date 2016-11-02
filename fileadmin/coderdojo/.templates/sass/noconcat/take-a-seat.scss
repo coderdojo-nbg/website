@@ -164,7 +164,7 @@ header[role=banner] {
   }
 }
 
-#c57, #c63 {
+#c57, #c74 {
   h2 {
     @extend .tas-tagline;
   }
@@ -226,16 +226,18 @@ header[role=banner] {
     list-style-type: none;
   }
 
-  li {
-    padding: .3em 0 .3em 2.8em;
-    background-size: contain;
+  .person {
+    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left top no-repeat;
+    background-size: auto 2.2em;
   }
 
-  .person {
-    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left center no-repeat;
-  }
   .company {
-    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left center no-repeat;
+    background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left top no-repeat;
+    background-size: auto 2.2em;
+  }
+
+  li {
+    padding: .3em 0 .3em 2.8em;
   }
 }
 
