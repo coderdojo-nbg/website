@@ -27,8 +27,7 @@ header[role=banner] .tas-title {
   cursor: help; }
   .tooltip:hover::after, .tooltip:focus::after {
     font-weight: normal;
-    content: " (" attr(aria-label) ")";
-    color: #000; }
+    content: " (" attr(aria-label) ")"; }
 
 a.block {
   display: inline-block; }
@@ -188,19 +187,19 @@ header[role=banner] {
   border-radius: 50%;
   font-weight: bold; }
 
-#c63 ul {
+#c74 ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
 
-#c63 li {
+#c74 li {
   padding: .3em 0 .3em 2.8em;
   background-size: contain; }
 
-#c63 .person {
+#c74 .person {
   background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left center no-repeat; }
 
-#c63 .company {
+#c74 .company {
   background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left center no-repeat; }
 
 #c67, .ce-formhandler {

@@ -20,7 +20,6 @@
   &:focus::after {
     font-weight: normal;
     content: ' (' attr(aria-label) ')';
-    color: #000;
   }
 }
 
@@ -220,7 +219,7 @@ header[role=banner] {
   }
 }
 
-#c63 {
+#c74 {
   ul {
     margin: 0;
     padding: 0;
