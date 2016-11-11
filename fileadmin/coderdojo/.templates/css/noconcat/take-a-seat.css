@@ -191,12 +191,12 @@ header[role=banner] {
   list-style-type: none; }
 
 #c74 .person {
-  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") left top no-repeat;
-  background-size: auto 2.2em; }
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-person.svg") top left no-repeat;
+  background-size: 2.2em 2.2em; }
 
 #c74 .company {
-  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") left top no-repeat;
-  background-size: auto 2.2em; }
+  background: transparent url("/fileadmin/user_upload/take-a-seat/tas-company.svg") top left no-repeat;
+  background-size: 2.2em 2.2em; }
 
 #c74 li {
   padding: .3em 0 .3em 2.8em; }
