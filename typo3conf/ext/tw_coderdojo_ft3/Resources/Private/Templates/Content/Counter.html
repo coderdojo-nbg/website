@@ -6,18 +6,16 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="wrap" options="{group: 'FCE'}">
+		<flux:form id="counter" options="{group: 'FCE'}">
+      <flux:field.input name="count"/>
 		</flux:form>
-    <flux:grid>
-      <flux:grid.row>
-        <flux:grid.column colPos="0" name="content"/>
-      </flux:grid.row>
-    </flux:grid>
 	</f:section>
 
 	<f:section name="Main">
-		<div id="c{record.uid}" class="wrap{f:if(condition: '{record.layout} > 0', then: '-full')}">
-      <flux:content.render area="content" />
+		<div id="c{record.uid}" class="counter">
+      <svg class="animation-wrapper background"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#emblem"></use></svg>
+      <svg class="animation-wrapper foreground"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#emblem"></use></svg>
+      <span><span><f:translate key="tas.counter" arguments="{0: count, 1: '{v:math.subtract(a: \'30\', b: \'{f:format.date(format: \\\'j\\\', date: \\\'now\\\')}\')}'}"/></span></span>
     </div>
 	</f:section>
 </div>

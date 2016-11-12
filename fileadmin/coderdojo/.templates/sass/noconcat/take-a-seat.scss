@@ -470,8 +470,8 @@ input[type=checkbox] {
     right: -113px;
   }
 
-  #c63 h2 {
-    text-align: right;
+  #c74 h2 {
+    text-align: center;
   }
 
   fieldset.colors {
@@ -536,4 +536,79 @@ input[type=checkbox] {
 .white [role=contentinfo] {
   background-color: $bgcolorBody;
   color: $colorBody;
+}
+
+.counter {
+  position: relative;
+  float: right;
+  width: 10em;
+  height: 10em;
+  margin: 0 1em 1em 1em;
+  text-align: center;
+  color: $colorBlue !important;
+  transform: rotate(6deg);
+
+  .animation-wrapper, > span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .animation-wrapper {
+    z-index: 1;
+    animation: attendees 12s infinite;
+    fill: currentColor;
+
+    &.foreground {
+      top: 0;
+      right: 0;
+      color: $bgcolorBlue;
+    }
+
+    &.background {
+      top: .25em;
+      right: -.3em;
+      color: transparentize($bgcolorBlue, .8);
+    }
+  }
+
+  > span {
+    display: table;
+    z-index: 2;
+
+    > span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .chairs {
+    position: relative;
+    font-family: $fontFamilyTagline;
+    font-size: 4.6em;
+    height: 1em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    small {
+      text-align: left;
+      font-size: 35%;
+      position: absolute;
+      left: 42%;
+      bottom: 10%;
+    }
+
+    #counter {
+      text-align: right;
+      position: absolute;
+      right: 60%;
+      top: 0;
+    }
+
+    & + div {
+      font-size: 80%;
+      width: 60%;
+      margin: 0 auto;
+      line-height: 1.2;
+    }
+  }
 }

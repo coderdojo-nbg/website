@@ -39,6 +39,15 @@
 			<trans-unit id="flux.columns.columns.right">
 				<source>Rechts</source>
 			</trans-unit>
+			<trans-unit id="flux.counter">
+        <source>Zähler</source>
+      </trans-unit>
+      <trans-unit id="flux.counter.description">
+        <source>Animierter Zähler zur Anzeige der vergebenen Stühle und verbleibenden Tage</source>
+      </trans-unit>
+      <trans-unit id="flux.counter.fields.count">
+        <source>Zähler</source>
+      </trans-unit>
 
 			<trans-unit id="home">
 				<source>Startseite</source>
@@ -111,6 +120,9 @@
 			</trans-unit>
 			<trans-unit id="tas.summary.2">
 				<source>Crowdfunding-Ralley &lt;span class="visually-hidden"&gt;des &lt;span class="p-location" itemprop="location"&gt;CoderDojo Nürnberg&lt;/span&gt;&lt;/span&gt; vom &lt;time class="dt-start" itemprop="startDate" datetime="2016-11-01T00:00:00+01:00"&gt;1.&lt;/time&gt; bis &lt;time class="dt-end" itemprop="endDate" datetime="2016-11-30T23:59:59+01:00"&gt;30.&lt;/time&gt; November 2016</source>
+			</trans-unit>
+			<trans-unit id="tas.counter">
+				<source>&lt;div class="chairs"&gt;&lt;span id="counter"&gt;%s&lt;/span&gt; &lt;small&gt;Stühle vergeben&lt;/small&gt;&lt;/div&gt;&lt;div&gt;Nur noch %s Tage!&lt;/div&gt;</source>
 			</trans-unit>
 		</body>
 	</file>

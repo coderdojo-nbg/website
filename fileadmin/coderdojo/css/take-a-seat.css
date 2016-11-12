@@ -366,8 +366,8 @@ input[type=checkbox] {
   #c57 h2::after {
     top: -172px;
     right: -113px; }
-  #c63 h2 {
-    text-align: right; }
+  #c74 h2 {
+    text-align: center; }
   fieldset.colors legend {
     float: left; }
   fieldset.colors div {
@@ -408,4 +408,60 @@ input[type=checkbox] {
 .white [role=contentinfo] {
   background-color: #222;
   color: #fff; }
+
+.counter {
+  position: relative;
+  float: right;
+  width: 10em;
+  height: 10em;
+  margin: 0 1em 1em 1em;
+  text-align: center;
+  color: #fff !important;
+  -ms-transform: rotate(6deg);
+      transform: rotate(6deg); }
+  .counter .animation-wrapper, .counter > span {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .counter .animation-wrapper {
+    z-index: 1;
+    animation: attendees 12s infinite;
+    fill: currentColor; }
+    .counter .animation-wrapper.foreground {
+      top: 0;
+      right: 0;
+      color: #2e7ac7; }
+    .counter .animation-wrapper.background {
+      top: .25em;
+      right: -.3em;
+      color: rgba(46, 122, 199, 0.2); }
+  .counter > span {
+    display: table;
+    z-index: 2; }
+    .counter > span > span {
+      display: table-cell;
+      vertical-align: middle; }
+  .counter .chairs {
+    position: relative;
+    font-family: "league-gothic", Arial, Helvetica, sans-serif;
+    font-size: 4.6em;
+    height: 1em;
+    text-transform: uppercase;
+    line-height: 1; }
+    .counter .chairs small {
+      text-align: left;
+      font-size: 35%;
+      position: absolute;
+      left: 42%;
+      bottom: 10%; }
+    .counter .chairs #counter {
+      text-align: right;
+      position: absolute;
+      right: 60%;
+      top: 0; }
+    .counter .chairs + div {
+      font-size: 80%;
+      width: 60%;
+      margin: 0 auto;
+      line-height: 1.2; }
 /*# sourceMappingURL=take-a-seat.css.map */

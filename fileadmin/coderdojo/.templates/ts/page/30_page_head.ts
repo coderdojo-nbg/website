@@ -118,12 +118,17 @@ config.removeDefaultJS = external
 [global]
 
 [PIDinRootline = 21]
-  page.bodyTag = <body class="white h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+  page.bodyTag >
+  page.bodyTagCObject = FILE
+  page.bodyTagCObject.file = fileadmin/user_upload/take-a-seat/emblem.svg
+  page.bodyTagCObject.wrap = <body class="white h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">|
+
   page.includeCSS {
     takeaseat = fileadmin/coderdojo/css/take-a-seat.min.css
     owlcarousel = fileadmin/coderdojo/js/owl-carousel/owl.carousel.css
     owltheme = fileadmin/coderdojo/js/owl-carousel/owl.theme.css
   }
+
   page.includeJS {
     jquery = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
     jquery {
@@ -133,6 +138,7 @@ config.removeDefaultJS = external
       excludeFromConcatenation = 1
     }
   }
+
   page.includeJSFooter {
     jqueryscroll = //cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js
     jqueryscroll {
