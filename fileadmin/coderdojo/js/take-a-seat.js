@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('.ce-carousel').owlCarousel({
     items: 4,
     itemsScaleUp: false,
-    itemsDesktop: [1800,3],
-    itemsDesktopSmall: [1200,2],
-    itemsTablet: [600,1],
+    itemsDesktop: [1800, 3],
+    itemsDesktopSmall: [1200, 2],
+    itemsTablet: [600, 1],
     itemsMobile: false
   });
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   function calculateSums() {
     var amount = 0;
-    colors.each(function() {
+    colors.each(function () {
       amount += parseInt($(this).val());
     });
     var gross = amount * 100;
@@ -38,7 +38,7 @@ $(document).ready(function() {
   colors.change(calculateSums);
 
   // Initialize tooltips
-  $('.tooltip').each(function() {
+  $('.tooltip').each(function () {
     $this = $(this);
     $this.attr('aria-label', this.title);
     this.removeAttribute('title');
@@ -48,15 +48,34 @@ $(document).ready(function() {
   });
 });
 
-$(window).load(function() {
+$(window).load(function () {
   // Jump to the first error (if any)
-  $('div.error').each(function() {
+  $('div.error').each(function () {
     var label = $(this).prevAll('label,.label');
     if (label.length) {
       $(window).scrollTo(label);
       return false;
     }
   });
+
+  // Animated document title
+  var $counter = $('.counter div');
+  if ($counter.length) {
+    var pos = 0;
+    var title = [];
+    $counter.each(function (index, counter) {
+      title.push(counter.textContent || counter.innerText);
+    });
+    title.push(document.title);
+    title.push('');
+    title = title.join(' ☯ ');
+    window.setInterval(function () {
+      document.title = title.substring(pos, title.length) + ' ' + title.substring(0, pos++);
+      if (pos > title.length) {
+        pos = 0;
+      }
+    }, 100);
+  }
 });
 
 
