@@ -16,7 +16,7 @@ fieldset > label {
   }
 }
 
-input[type=text], input[type=email], input[type=submit], input[type=date], input[type=file], textarea {
+input[type=text], input[type=email], input[type=submit], input[type=button], input[type=date], input[type=file], textarea, button {
   width: 100%;
   padding: .5em;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ input[type=text], input[type=email], input[type=submit], input[type=date], input
   }
 }
 
-input[type=submit] {
+input[type=submit], input[type=button], button {
   cursor: pointer;
 }
 

@@ -110,7 +110,7 @@
 				<source>Stühle für unsere Ninjas!</source>
 			</trans-unit>
 			<trans-unit id="tas.summary.2">
-				<source>Crowdfunding-Ralley vom 1. bis 30. November 2016</source>
+				<source>Crowdfunding-Ralley &lt;span class="visually-hidden"&gt;des &lt;span class="p-location" itemprop="location"&gt;CoderDojo Nürnberg&lt;/span&gt;&lt;/span&gt; vom &lt;time class="dt-start" itemprop="startDate" datetime="2016-11-01T00:00:00+01:00"&gt;1.&lt;/time&gt; bis &lt;time class="dt-end" itemprop="endDate" datetime="2016-11-30T23:59:59+01:00"&gt;30.&lt;/time&gt; November 2016</source>
 			</trans-unit>
 		</body>
 	</file>

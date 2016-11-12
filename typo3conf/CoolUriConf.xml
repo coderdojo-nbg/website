@@ -99,6 +99,16 @@
             </lookindb>
         </part>
         <part>
+            <parameter>tx_twpayment_payment[action]</parameter>
+        </part>
+        <part>
+            <parameter>tx_twpayment_payment[transaction]</parameter>
+            <lookindb>
+                <to>SELECT MD5(CONCAT(`sender`, "-", `uid`)) FROM `tx_twpayment_domain_model_transaction` WHERE uid=$1</to>
+                <t3conv>1</t3conv>
+            </lookindb>
+        </part>
+        <part>
             <parameter>cHash</parameter>
         </part>
     </uriparts>
@@ -116,6 +126,9 @@
         </part>
         <part>
             <parameter>tx_twcoderdojo_mentor[controller]</parameter>
+        </part>
+        <part>
+            <parameter>tx_twpayment_payment[controller]</parameter>
         </part>
         <!-- this will prefix a value with "prefix-". Cannot be localized.
         -->

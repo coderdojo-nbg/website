@@ -12,7 +12,7 @@ html, body {
   background-color: #222;
   color: #fff; }
 
-body, a, input, textarea {
+body, a, input, textarea, button {
   line-height: 1.6;
   font-family: "open-sans", Arial, Helvetica, sans-serif;
   font-size: medium; }
@@ -472,16 +472,16 @@ fieldset > label {
   fieldset > label span {
     display: block; }
 
-input[type=text], input[type=email], input[type=submit], input[type=date], input[type=file], textarea {
+input[type=text], input[type=email], input[type=submit], input[type=button], input[type=date], input[type=file], textarea, button {
   width: 100%;
   padding: .5em;
   box-sizing: border-box;
   border: 1px solid #bbb;
   vertical-align: middle; }
-  input[type=text].error, input[type=email].error, input[type=submit].error, input[type=date].error, input[type=file].error, textarea.error {
+  input[type=text].error, input[type=email].error, input[type=submit].error, input[type=button].error, input[type=date].error, input[type=file].error, textarea.error, button.error {
     border-bottom-width: 0; }
 
-input[type=submit] {
+input[type=submit], input[type=button], button {
   cursor: pointer; }
 
 textarea {

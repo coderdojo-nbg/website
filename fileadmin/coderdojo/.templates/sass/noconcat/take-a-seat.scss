@@ -35,6 +35,10 @@ a.block {
   background-color: transparent;
 }
 
+.tx-tw-payment {
+  padding: 1em;
+}
+
 html {
   background: #fff;
 }
@@ -116,13 +120,20 @@ header[role=banner] {
   margin-top: -1em;
 }
 
-.tas-tagline {
+.tas-tagline,
+.tas-tagline a {
   font-family: $fontFamilyTagline;
-  //font-size: 240%;
+  line-height: 1;
+}
+
+.tas-tagline {
   font-size: calc(2.2em + 2vw);
   text-transform: uppercase;
-  line-height: 1;
   margin: .5em 0;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .tas-tagline-sub {
@@ -420,6 +431,10 @@ input[type=checkbox] {
     font-size: 1rem;
     padding: 0 1em;
   }
+
+  .tx-tw-payment {
+    padding: 1em 2em;
+  }
 }
 
 @media all and (min-width: $breakpoint002) {
@@ -490,4 +505,35 @@ input[type=checkbox] {
   .ce-gallery {
     padding: 1em 2em;
   }
+}
+
+/* CREDIT CARD PAYMENT */
+
+.ce-twpayment_payment {
+  margin-bottom: 2em;
+
+  a {
+    color: $colorInverseContent;
+  }
+}
+
+.payment-properties {
+  margin: 1em 0;
+  border: 1px solid #bbb;
+  padding: .5em;
+
+  dt {
+    font-weight: bold;
+    float: left;
+    clear: left;
+    width: 15em;
+  }
+  dd {
+    margin-left: 15em;
+  }
+}
+
+.white [role=contentinfo] {
+  background-color: $bgcolorBody;
+  color: $colorBody;
 }

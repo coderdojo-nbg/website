@@ -72,34 +72,30 @@
           <a href="#c54" class="block"><h1 class="p-name tas-title" itemprop="name"><f:translate key="tas.title"/></h1></a>
         </div>
       </div>
-        <!--
-        <img src="/fileadmin/coderdojo/icons/coderdojo-dark-vertical.svg" itemprop="photo" alt="Logo des CoderDojo Nürnberg"/>
-        <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home">
-          <h1 class="p-name" itemprop="name">CoderDojo Nürnberg</h1>
-          <p class="p-summary icon icon-coderdojo-dark-{f:if(condition: '{header}', then: 'vertical', else: 'horizontal')}" itemprop="summary"><span><f:translate key="summary"/></span></p>
-        </f:link.page>
-        <f:if condition="{header}"><div></f:if>
-        <f:link.action action="show" extensionName="TwCoderdojo" pluginName="Date" controller="Date" pageUid="{settings.pages.datePid}" arguments="{date: date}" class="schedule u-url" additionalAttributes="{itemprop: 'url'}" absolute="1">
-                      <span class="schedule-label">
-                          <f:if condition="{nextLabel}">
-                              <f:then>
-                                  <f:translate key="nextdate"/>
-                              </f:then>
-                              <f:else>
-                                  <f:translate key="nextdate.at"/>
-                              </f:else>
-                          </f:if>
-                      </span>
-          <span class="schedule-datetime">
-                          <time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <span class="expanded"><f:translate key="format.from.expanded"/></span><span class="collapsed"><f:translate key="format.from.collapsed"/></span> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
-                          <span class="expanded">
-                              <f:translate key="format.to"/>
-                              <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
-                          </span>
-                          <f:translate key="format.oclock"/>
-                      </span>
-        </f:link.action>
-        <f:if condition="{header}"></div></f:if>-->
-      </header>
+      <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "Event",
+            "description": "Stühle, Ninjas ... was? Ganz einfach: Ninjas sind all die Kinder und Jugendlichen, die sich regelmäßig bei uns im CoderDojo Nürnberg treffen, um gemeinsam Programmieren zu lernen und sich im Umgang mit Computern zu üben. Nach unserem gelungenen Start im April 2016 und inzwischen 4 erfolgreichen Dojos möchten wir unseren Schützlingen weiter Neues bieten — und würden am liebsten mit einem beginnen: Stühle.",
+            "startDate": "2016-11-01T00:00:00+01:00",
+            "endDate": "2016-11-30T23:59:59+01:00",
+            "location": {
+              "@type": "Place",
+              "name": "tollwerkstatt",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Klingenhofstraße 5",
+                "postalCode": "90411",
+                "addressLocality": "Nürnberg",
+                "addressCountry": "DE"
+              },
+              "url": "https://coderdojo-nbg.org"
+            },
+            "name": "Take A Seat ☯ Crowdfunding-Ralley des CoderDojo Nürnberg vom 1. bis 30. November 2016",
+            "image": "https://coderdojo-nbg.org/fileadmin/coderdojo/icons/coderdojo-dark-horizontal.svg",
+            "url": "https://coderdojo-nbg.org/take-a-seat.html"
+          }
+      </script>
+    </header>
   </f:section>
 </div>

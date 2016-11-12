@@ -38,6 +38,9 @@ a.block {
 .ce-textpic {
   background-color: transparent; }
 
+.tx-tw-payment {
+  padding: 1em; }
+
 html {
   background: #fff; }
 
@@ -101,12 +104,17 @@ header[role=banner] {
 .tas-header {
   margin-top: -1em; }
 
-.tas-tagline, #c57 h2, #c74 h2 {
+.tas-tagline, #c57 h2, #c74 h2,
+.tas-tagline a, #c57 h2 a, #c74 h2 a {
   font-family: "league-gothic", Arial, Helvetica, sans-serif;
+  line-height: 1; }
+
+.tas-tagline, #c57 h2, #c74 h2 {
   font-size: calc(2.2em + 2vw);
   text-transform: uppercase;
-  line-height: 1;
   margin: .5em 0; }
+  .tas-tagline a, #c57 h2 a, #c74 h2 a {
+    text-decoration: none; }
 
 .tas-tagline-sub {
   color: #61c93f;
@@ -331,7 +339,9 @@ input[type=checkbox] {
 @media all and (min-width: 32em) {
   nav a {
     font-size: 1rem;
-    padding: 0 1em; } }
+    padding: 0 1em; }
+  .tx-tw-payment {
+    padding: 1em 2em; } }
 
 @media all and (min-width: 48em) {
   .columns {
@@ -374,5 +384,27 @@ input[type=checkbox] {
 @media all and (min-width: 960px) {
   .ce-gallery {
     padding: 1em 2em; } }
+
+/* CREDIT CARD PAYMENT */
+.ce-twpayment_payment {
+  margin-bottom: 2em; }
+  .ce-twpayment_payment a {
+    color: #000; }
+
+.payment-properties {
+  margin: 1em 0;
+  border: 1px solid #bbb;
+  padding: .5em; }
+  .payment-properties dt {
+    font-weight: bold;
+    float: left;
+    clear: left;
+    width: 15em; }
+  .payment-properties dd {
+    margin-left: 15em; }
+
+.white [role=contentinfo] {
+  background-color: #222;
+  color: #fff; }
 
 /*# sourceMappingURL=take-a-seat.css.map */
