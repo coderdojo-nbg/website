@@ -158,7 +158,7 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
       $tmpCsvResource = fopen($tmpCsvFile, 'w');
       fputcsv($tmpCsvResource, array_keys(current($recipients)));
       foreach ($recipients as $recipient) {
-        $data = array_map(function($field) {
+        $data = array_map(function ($field) {
           if (is_array($field)) {
             $result = implode(', ', array_slice($field, 0, count($field) - 1));
             $result .= ' & '.array_pop($field);
@@ -222,11 +222,12 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
       // If the email is valid
       if (strlen($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $normalizedEmail = strtolower($email);
         $genderLabel = $label[$person->getGender()];
 
         // If this is the first recipient with this email address
-        if (!array_key_exists($email, $recipients)) {
-          $recipients[$email] = [
+        if (!array_key_exists($normalizedEmail, $recipients)) {
+          $recipients[$normalizedEmail] = [
             'email' => $email,
             'name' => $person->getFirstName(),
             'gender' => $person->getGender(),
@@ -237,10 +238,11 @@ class CoderDojoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
           continue;
         }
 
-        $recipients[$email]['name'] = array_merge((array)$recipients[$email]['name'], [$person->getFirstName()]);
-        $recipients[$email]['gender'] = 0;
-        $recipients[$email]['label'] = self::ATTENDEES;
-        $recipients[$email]['salutation'] = self::MULTIPLE;
+        $recipients[$normalizedEmail]['name'] = array_merge((array)$recipients[$normalizedEmail]['name'],
+          [$person->getFirstName()]);
+        $recipients[$normalizedEmail]['gender'] = 0;
+        $recipients[$normalizedEmail]['label'] = self::ATTENDEES;
+        $recipients[$normalizedEmail]['salutation'] = self::MULTIPLE;
       }
     }
   }
