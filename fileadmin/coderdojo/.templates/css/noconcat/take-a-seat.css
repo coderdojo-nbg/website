@@ -462,4 +462,13 @@ input[type=checkbox] {
       margin: 0 auto;
       line-height: 1.2; }
 
+#c86.counter .chairs + div {
+  display: none; }
+
+#c87, #c87 a {
+  color: #61c93f; }
+
+#c88 {
+  color: #ed462f; }
+
 /*# sourceMappingURL=take-a-seat.css.map */

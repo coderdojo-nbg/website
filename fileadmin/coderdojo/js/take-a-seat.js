@@ -59,6 +59,8 @@ $(window).load(function () {
   });
 
   // Animated document title
+  /**
+   * Disable as of 1.12.2016
   var $counter = $('.counter div');
   if ($counter.length) {
     var pos = 0;
@@ -76,6 +78,7 @@ $(window).load(function () {
       }
     }, 100);
   }
+   */
 });
 
 

@@ -12,10 +12,12 @@
 	</f:section>
 
 	<f:section name="Main">
+    <f:alias map="{days: '{v:math.subtract(a: \'30\', b: \'{f:format.date(format: \\\'j\\\', date: \\\'now\\\')}\')}'}">
 		<div id="c{record.uid}" class="counter">
       <svg class="animation-wrapper background"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#emblem"></use></svg>
       <svg class="animation-wrapper foreground"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#emblem"></use></svg>
-      <span><span><f:translate key="tas.counter" arguments="{0: count, 1: '{v:math.subtract(a: \'30\', b: \'{f:format.date(format: \\\'j\\\', date: \\\'now\\\')}\')}'}"/></span></span>
+      <span><span><f:translate key="tas.counter" arguments="{0: count, 1: days}"/></span></span>
     </div>
+    </f:alias>
 	</f:section>
 </div>
