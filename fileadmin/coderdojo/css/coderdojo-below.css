@@ -63,10 +63,19 @@ footer.sponsors {
   width: 100%; }
 
 .bamboo li {
-  width: 50%; }
+  width: 45%; }
+  .bamboo li:nth-child(2n+1) {
+    padding-right: 5%; }
+  .bamboo li:nth-child(2n+2) {
+    padding-left: 5%; }
 
 .plum li {
-  width: 33.3333333333%; }
+  width: 30%;
+  padding: 0 2.5%; }
+  .plum li:nth-child(3n+1) {
+    padding-left: 0; }
+  .plum li:nth-child(3n+3) {
+    padding-right: 0; }
 
 aside.sponsors {
   padding: 1em;
@@ -80,21 +89,36 @@ aside.sponsors {
     padding: 1em 2em; } }
 
 @media all and (min-width: 48em) {
+  .sponsors-list li {
+    box-sizing: border-box; }
   .pine li {
-    width: 45%;
-    margin-right: 5%; }
+    width: 50%;
+    padding: 0 2.5%; }
+    .pine li:nth-child(odd) {
+      padding-left: 0; }
     .pine li:nth-child(even) {
-      margin: 0 0 0 5%; }
+      padding-right: 0; }
   .bamboo li {
-    width: 28%;
-    margin-right: 8%; }
+    width: 33.3333333333%;
+    padding: 0 2.5%; }
+    .bamboo li:nth-child(2n+1) {
+      padding-right: 2.5%; }
+    .bamboo li:nth-child(2n+2) {
+      padding-left: 2.5%; }
+    .bamboo li:nth-child(3n+1) {
+      padding-left: 0; }
     .bamboo li:nth-child(3n+3) {
-      margin-right: 0; }
+      padding-right: 0; }
   .plum li {
-    width: 10%;
-    margin-right: 8%; }
+    width: 20%; }
+    .plum li:nth-child(3n+1) {
+      padding-left: 2.5%; }
+    .plum li:nth-child(3n+3) {
+      padding-right: 2.5%; }
+    .plum li:nth-child(5n+1) {
+      padding-left: 0; }
     .plum li:nth-child(5n+5) {
-      margin-right: 0; } }
+      padding-right: 0; } }
 
 /* */
 /*# sourceMappingURL=coderdojo-below.css.map */

@@ -1,24 +1,56 @@
+.sponsors-list li {
+  box-sizing: border-box;
+}
+
 .pine li {
-    width: 45%;
-    margin-right: 5%;
+  width: 50%;
+  padding: 0 2.5%;
 
-    &:nth-child(even) {
-        margin: 0 0 0 5%;
-    }
+  &:nth-child(odd) {
+    padding-left: 0;
+  }
+  &:nth-child(even) {
+    padding-right: 0;
+  }
 }
+
 .bamboo li {
-    width: 28%;
-    margin-right: 8%;
+  width: percentage(1/3);
+  padding: 0 2.5%;
 
-    &:nth-child(3n+3) {
-        margin-right: 0;
-    }
+  &:nth-child(2n+1) {
+    padding-right: 2.5%;
+  }
+
+  &:nth-child(2n+2) {
+    padding-left: 2.5%;
+  }
+
+  &:nth-child(3n+1) {
+    padding-left: 0;
+  }
+
+  &:nth-child(3n+3) {
+    padding-right: 0;
+  }
 }
-.plum li {
-    width: 10%;
-    margin-right: 8%;
 
-    &:nth-child(5n+5) {
-        margin-right: 0;
-    }
+.plum li {
+  width: 20%;
+
+  &:nth-child(3n+1) {
+    padding-left: 2.5%;
+  }
+
+  &:nth-child(3n+3) {
+    padding-right: 2.5%;
+  }
+
+  &:nth-child(5n+1) {
+    padding-left: 0;
+  }
+
+  &:nth-child(5n+5) {
+    padding-right: 0;
+  }
 }

@@ -66,6 +66,36 @@
 	height: 18.069px;
 }
 
+.icon-insfx-dims {
+	width: 100px;
+	height: 41.28px;
+}
+
+.icon-insfx-grey-dims {
+	width: 100px;
+	height: 41.28px;
+}
+
+.icon-kgh-dims {
+	width: 100px;
+	height: 39.551px;
+}
+
+.icon-kgh-grey-dims {
+	width: 100px;
+	height: 39.551px;
+}
+
+.icon-lni-dims {
+	width: 100px;
+	height: 63.891px;
+}
+
+.icon-lni-grey-dims {
+	width: 100px;
+	height: 63.891px;
+}
+
 .icon-location-dims {
 	width: 54px;
 	height: 96px;
@@ -85,6 +115,16 @@
 .icon-netatmo-grey-dims {
 	width: 100px;
 	height: 24.842px;
+}
+
+.icon-nueww-dims {
+	width: 100px;
+	height: 59.549px;
+}
+
+.icon-nueww-grey-dims {
+	width: 100px;
+	height: 59.549px;
 }
 
 .icon-silbury-dims {
@@ -116,5 +156,15 @@
 .icon-twitter\:hover-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-ucs-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.icon-ucs-grey-dims {
+	width: 100px;
+	height: 100px;
 }
 

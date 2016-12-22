@@ -143,6 +143,66 @@
 .icon-immowelt-dims-ph {
   padding-top: 18.06015052624214%; }
 
+.icon-insfx {
+  background-image: url(../icons/insfx.svg); }
+
+.icon-insfx-dims {
+  width: 100px;
+  height: 41.28px; }
+
+.icon-insfx-dims-ph {
+  padding-top: 41.28%; }
+
+.icon-insfx-grey {
+  background-image: url(../icons/insfx-grey.svg); }
+
+.icon-insfx-grey-dims {
+  width: 100px;
+  height: 41.28px; }
+
+.icon-insfx-grey-dims-ph {
+  padding-top: 41.28%; }
+
+.icon-kgh {
+  background-image: url(../icons/kgh.svg); }
+
+.icon-kgh-dims {
+  width: 100px;
+  height: 39.551px; }
+
+.icon-kgh-dims-ph {
+  padding-top: 39.551%; }
+
+.icon-kgh-grey {
+  background-image: url(../icons/kgh-grey.svg); }
+
+.icon-kgh-grey-dims {
+  width: 100px;
+  height: 39.551px; }
+
+.icon-kgh-grey-dims-ph {
+  padding-top: 39.551%; }
+
+.icon-lni {
+  background-image: url(../icons/lni.svg); }
+
+.icon-lni-dims {
+  width: 100px;
+  height: 63.891px; }
+
+.icon-lni-dims-ph {
+  padding-top: 63.89099999999999%; }
+
+.icon-lni-grey {
+  background-image: url(../icons/lni-grey.svg); }
+
+.icon-lni-grey-dims {
+  width: 100px;
+  height: 63.891px; }
+
+.icon-lni-grey-dims-ph {
+  padding-top: 63.89099999999999%; }
+
 .icon-location,
 .icon-location\:regular {
   background-image: url(../icons/location.svg); }
@@ -186,6 +246,26 @@
 
 .icon-netatmo-grey-dims-ph {
   padding-top: 24.842%; }
+
+.icon-nueww {
+  background-image: url(../icons/nueww.svg); }
+
+.icon-nueww-dims {
+  width: 100px;
+  height: 59.549px; }
+
+.icon-nueww-dims-ph {
+  padding-top: 59.549%; }
+
+.icon-nueww-grey {
+  background-image: url(../icons/nueww-grey.svg); }
+
+.icon-nueww-grey-dims {
+  width: 100px;
+  height: 59.549px; }
+
+.icon-nueww-grey-dims-ph {
+  padding-top: 59.549%; }
 
 .icon-silbury {
   background-image: url(../icons/silbury.svg); }
@@ -249,6 +329,26 @@
 
 .icon-twitter-dims:hover-ph,
 .icon-twitter\:hover-dims-ph {
+  padding-top: 100%; }
+
+.icon-ucs {
+  background-image: url(../icons/ucs.svg); }
+
+.icon-ucs-dims {
+  width: 100px;
+  height: 100px; }
+
+.icon-ucs-dims-ph {
+  padding-top: 100%; }
+
+.icon-ucs-grey {
+  background-image: url(../icons/ucs-grey.svg); }
+
+.icon-ucs-grey-dims {
+  width: 100px;
+  height: 100px; }
+
+.icon-ucs-grey-dims-ph {
   padding-top: 100%; }
 
 /*# sourceMappingURL=icon.svg-image.css.map */
