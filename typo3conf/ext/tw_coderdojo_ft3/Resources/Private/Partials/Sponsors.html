@@ -21,5 +21,5 @@
         </f:if>
     </f:section>
 
-    <f:section name="Sponsor"><v:iterator.explode content="{sponsor}" glue="#" as="s"><li><a href="{s.3}" target="_blank" class="icon icon-{s.1} icon-{s.1}-dims-ph" title="{s.2}">{s.2}</a></li></v:iterator.explode></f:section>
+    <f:section name="Sponsor"><v:iterator.explode content="{sponsor -> v:format.trim()}" glue="#" as="s"><li><a href="{s.3}" target="_blank" class="icon icon-{s.1} icon-{s.1}-dims-ph" title="{s.2}">{s.2}</a></li></v:iterator.explode></f:section>
 </div>
