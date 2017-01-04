@@ -23,9 +23,29 @@
 	height: 133.228px;
 }
 
+.icon-curt-grey-dims {
+	width: 133.229px;
+	height: 133.229px;
+}
+
 .icon-curtkids-dims {
 	width: 501.965px;
 	height: 501.891px;
+}
+
+.icon-curtkids-grey-dims {
+	width: 501.965px;
+	height: 501.891px;
+}
+
+.icon-digitalwerkstatt-dims {
+	width: 100px;
+	height: 79.126px;
+}
+
+.icon-digitalwerkstatt-grey-dims {
+	width: 100px;
+	height: 79.126px;
 }
 
 .icon-facebook-dims {
@@ -37,6 +57,16 @@
 .icon-facebook\:hover-dims {
 	width: 32px;
 	height: 32px;
+}
+
+.icon-foodtrucks-dims {
+	width: 100px;
+	height: 35.599px;
+}
+
+.icon-foodtrucks-grey-dims {
+	width: 100px;
+	height: 35.599px;
 }
 
 .icon-github-dims {
@@ -62,6 +92,11 @@
 }
 
 .icon-immowelt-dims {
+	width: 100.049px;
+	height: 18.069px;
+}
+
+.icon-immowelt-grey-dims {
 	width: 100.049px;
 	height: 18.069px;
 }

@@ -51,6 +51,16 @@
 .icon-curt-dims-ph {
   padding-top: 99.9992494126654%; }
 
+.icon-curt-grey {
+  background-image: url(../icons/curt-grey.png); }
+
+.icon-curt-grey-dims {
+  width: 133.229px;
+  height: 133.229px; }
+
+.icon-curt-grey-dims-ph {
+  padding-top: 100%; }
+
 .icon-curtkids {
   background-image: url(../icons/curtkids.png); }
 
@@ -60,6 +70,36 @@
 
 .icon-curtkids-dims-ph {
   padding-top: 99.9852579363103%; }
+
+.icon-curtkids-grey {
+  background-image: url(../icons/curtkids-grey.png); }
+
+.icon-curtkids-grey-dims {
+  width: 501.965px;
+  height: 501.891px; }
+
+.icon-curtkids-grey-dims-ph {
+  padding-top: 99.9852579363103%; }
+
+.icon-digitalwerkstatt {
+  background-image: url(../icons/digitalwerkstatt.png); }
+
+.icon-digitalwerkstatt-dims {
+  width: 100px;
+  height: 79.126px; }
+
+.icon-digitalwerkstatt-dims-ph {
+  padding-top: 79.126%; }
+
+.icon-digitalwerkstatt-grey {
+  background-image: url(../icons/digitalwerkstatt-grey.png); }
+
+.icon-digitalwerkstatt-grey-dims {
+  width: 100px;
+  height: 79.126px; }
+
+.icon-digitalwerkstatt-grey-dims-ph {
+  padding-top: 79.126%; }
 
 .icon-facebook,
 .icon-facebook\:regular {
@@ -84,6 +124,26 @@
 .icon-facebook-dims:hover-ph,
 .icon-facebook\:hover-dims-ph {
   padding-top: 100%; }
+
+.icon-foodtrucks {
+  background-image: url(../icons/foodtrucks.png); }
+
+.icon-foodtrucks-dims {
+  width: 100px;
+  height: 35.599px; }
+
+.icon-foodtrucks-dims-ph {
+  padding-top: 35.599%; }
+
+.icon-foodtrucks-grey {
+  background-image: url(../icons/foodtrucks-grey.png); }
+
+.icon-foodtrucks-grey-dims {
+  width: 100px;
+  height: 35.599px; }
+
+.icon-foodtrucks-grey-dims-ph {
+  padding-top: 35.599%; }
 
 .icon-github,
 .icon-github\:regular {
@@ -141,6 +201,16 @@
   height: 18.069px; }
 
 .icon-immowelt-dims-ph {
+  padding-top: 18.06015052624214%; }
+
+.icon-immowelt-grey {
+  background-image: url(../icons/immowelt-grey.png); }
+
+.icon-immowelt-grey-dims {
+  width: 100.049px;
+  height: 18.069px; }
+
+.icon-immowelt-grey-dims-ph {
   padding-top: 18.06015052624214%; }
 
 .icon-insfx {
