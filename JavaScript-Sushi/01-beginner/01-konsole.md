@@ -16,7 +16,7 @@ Probiere es aus!
 > Gib folgende Zeile in der Konsole ein und drücke __ENTER__.
 
 ```javascript
-3+4
+3+4;
 ```
 
 >JavaScript sollte dann das Ergebnis 7 ausgeben.
@@ -31,11 +31,13 @@ Ok, das war leicht. Aber JavaScript ist mehr als ein Taschenrechner. Wie wäre e
 =^.^=
 ```
 
-Kein Problem, dafür schreibst du ein kleines Programm. Mach dir nichts draus, wenn du noch nicht genau verstehst, was da passiert. **Wichtig:** Wenn du Programme mit mehreren Zeilen eingeben willst, musst du __SHIFT__ und __ENTER__ gleichzeitig drücken. Wenn du nur __ENTER__ drückst, denkt der Browser du willst das Programm ausführen und meldet dir einen Fehler. Wie gesagt, Computer sind ziemlich dumm....
+Kein Problem, dafür schreibst du ein kleines Programm. Mach dir nichts draus, wenn du noch nicht genau verstehst, was da passiert.
+
+**Wichtig:** Wenn du Programme mit mehreren Zeilen eingeben willst, musst du __SHIFT__ und __ENTER__ gleichzeitig drücken. Wenn du nur __ENTER__ drückst, denkt der Browser du willst das Programm ausführen und meldet dir einen Fehler. Wie gesagt, Computer sind ziemlich dumm....
 
 > **Übung**
 >
-> Gib folgenden Text in die Konsole ein. (denke an die Zeilenumbrüche!).
+> Gib folgenden Text in die Konsole ein (beachte hier die Zeilenumbrüche!).
 
 ```javascript
 // Zeichne soviele Katzen wie du willst
@@ -48,7 +50,7 @@ var zeichneKatzen = function(wieviele){
 > Zeichne die Katzen. Für den Anfang reichen 5.
 
 ```javascript
-zeichneKatzen(5)
+zeichneKatzen(5);
 ```
 
 Wenn alles geklappt hat und im Programm keine Tippfehler sind, müsstest du das hier sehen:
@@ -64,7 +66,7 @@ Du kannst auch mehr oder weniger Katzen zeichen, wenn du in der letzten Codezeil
 
 ## Syntax
 
-In unserem kleinen Katzenprogramm sind viele seltsame Zeichen, wie z.B. das Semikolon (Strichpunkt) **;** oder geschweifte Klammmern **{}**. Und es gibt Worte, wie z.B. **var**, **console.log** und **for**. Das nennt man die **Syntax** von JavaScript, also all die Regeln und Vokablen, die man braucht, um ein Programm zu schreiben. Jede Programmiersprache hat ihre eigene Syntax. 
+In unserem kleinen Katzenprogramm sind viele seltsame Zeichen, wie z.B. das Semikolon (Strichpunkt) **;** oder geschweifte Klammmern **{}**. Und es gibt Worte, wie z.B. **var**, **console.log** und **for**. Das nennt man die **Syntax** von JavaScript, also all die Regeln und Vokablen, die man braucht, um ein Programm zu schreiben. Jede Programmiersprache hat ihre eigene Syntax.
 
 ## Kommentare
 
@@ -76,8 +78,8 @@ Der Computer führt Kommentare nie aus, selbst wenn dort Code steht.
 > Gib folgendes Beispiel in der Konsole. Was denkst du was der Computer ausgeben wird?
 
 ```javascript
-// 3+4
-5+8
+// 3+4;
+5+8;
 ```
 
 Als Ausgabe solltest du folgendes sehen, denn die erste Zeile war ja ein Kommentar und wurde nicht ausgeführt:
