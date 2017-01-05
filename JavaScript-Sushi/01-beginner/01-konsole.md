@@ -2,7 +2,7 @@
 
 Um JavaScript auszuprobieren, brauchst du einen Browser. Am besten geht das mit dem Chrome Browser.
 
-Vielleicht ist auf deinem Computer Chrome schon vorhanden, dann kannst du gleich loslegen. Ansonsten du musst ihn noch installieren. Dafür musst du das Programm von dieser Webseite runterladen und installieren: https://www.google.com/chrome
+Vielleicht ist auf deinem Computer Chrome schon vorhanden, dann kannst du gleich loslegen. Ansonsten musst du das Programm von dieser Webseite runterladen und installieren: https://www.google.com/chrome
 
 Starte den Browser und gib in der Adresszeile **about:blank** ein, so dass du eine leere Seite siehst. Dann drücke gleichzeitig die Tasten __SHIFT__, __Strg__ und __J__ (für Linux oder Windows) bzw. __COMMAND__, __OPTION__ und __J__ (für Mac). So öffnest du die **Konsole**. Programmierer benutzen diese um Programme zu testen und Fehler zu finden. In der Konsole siehst du neben einem kleinen Dreieck den Cursor blinken: **> |**.
 
@@ -62,15 +62,15 @@ Wenn alles geklappt hat und im Programm keine Tippfehler sind, müsstest du das 
 4 =^.^=
 ```
 
-Du kannst auch mehr oder weniger Katzen zeichen, wenn du in der letzten Codezeile eine andere Zahl als 5 eingibst. Probiere es aus.
+Du kannst auch mehr oder weniger Katzen zeichnen, wenn du in der letzten Codezeile eine andere Zahl als 5 in der Klammer eingibst. Probiere es aus.
 
 ## Syntax
 
-In unserem kleinen Katzenprogramm sind viele seltsame Zeichen, wie z.B. das Semikolon (Strichpunkt) **;** oder geschweifte Klammmern **{}**. Und es gibt Worte, wie z.B. **var**, **console.log** und **for**. Das nennt man die **Syntax** von JavaScript, also all die Regeln und Vokablen, die man braucht, um ein Programm zu schreiben. Jede Programmiersprache hat ihre eigene Syntax.
+In unserem kleinen Katzenprogramm sind viele seltsame Zeichen, wie z.B. das Semikolon (Strichpunkt) **;** oder geschweifte Klammmern **{}**. Und es gibt komische Worte, wie z.B. **var**, **console.log** und **for**. Das nennt man die **Syntax** von JavaScript, also all die Regeln und Vokablen, die man braucht, um ein Programm zu schreiben. Jede Programmiersprache hat ihre eigene Syntax.
 
 ## Kommentare
 
-Vielleicht ist dir in der Übung aufgefallen, dass vor der 1. Zeile zwei Schrägstriche (in englisch "Slash") stehen. Damit werden **Kommentare** gekennzeichnet. Der Computer weiß dann, dass alles was auf dieser Zeile steht, nicht zum Programm gehört sondern für den Programmierer oder die Programmierin bestimmt ist. Kommentare sind super, um zu beschreiben was in deinem Code passiert. Grade am Anfang ist das hilfreich.
+Vielleicht ist dir in der Übung aufgefallen, dass vor der ersten Zeile zwei Schrägstriche (in englisch "Slash") stehen. Damit werden **Kommentare** gekennzeichnet. Der Computer weiß dann, dass alles was auf dieser Zeile steht, nicht zum Programm gehört sondern für den Programmierer oder die Programmierin bestimmt ist. Kommentare sind super, um zu beschreiben was in deinem Code passiert. Grade am Anfang ist das hilfreich.
 Der Computer führt Kommentare nie aus, selbst wenn dort Code steht.
 
 > **Übung**

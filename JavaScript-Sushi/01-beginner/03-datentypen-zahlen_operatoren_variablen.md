@@ -1,6 +1,6 @@
 # Zahlen und Operatoren
 
-Zahlen und Operatoren kennst du aus dem Matheunterricht. Du kannst zahlen addieren, subtrahieren, multiplizieren und dividieren. Für diese Berechnungen gelten in JavaScript die Symbole **+**, **-**, ***** und **/**, diese nennt man Operatoren. Du hast schon gesehen, dass die Konsole wie ein Taschenrechner funktioniert. Hier sind noch ein paar Beispiele:
+Zahlen und Operatoren kennst du aus dem Matheunterricht. Du kannst zahlen addieren, subtrahieren, multiplizieren und dividieren. Für diese Berechnungen gelten in JavaScript die Symbole **+**, **-**, ***** und **/**. Diese nennt man Operatoren. Du hast schon gesehen, dass die Konsole wie ein Taschenrechner funktioniert. Hier sind noch ein paar Beispiele:
 
 ```javascript
 12345+56789;
@@ -12,7 +12,9 @@ Zahlen und Operatoren kennst du aus dem Matheunterricht. Du kannst zahlen addier
 12345/250;
 ```
 
-Für Zahlen mit Komma schreibt die Konsole übrigens einen Punkt statt des Kommas, also **49.38** und nicht **49,38**. Alle Rechenregeln, die du aus der Schule kennst, gelten auch hier, z.B. Punkt vor Strich und was in Klammern steht kommt zuerst.
+Für Zahlen mit Komma schreibt die Konsole übrigens einen Punkt statt des Kommas, also **49.38** und nicht **49,38**.
+
+Alle Rechenregeln, die du aus der Schule kennst, gelten auch hier, z.B. Punkt vor Strich und was in Klammern steht kommt zuerst.
 
 ```javascript
 // das ergibt 16 (Punkt vor Strich)
@@ -21,6 +23,15 @@ Für Zahlen mit Komma schreibt die Konsole übrigens einen Punkt statt des Komma
 // aber das ergibt 6 (Klammern zuerst)
 (20-8)/2;
 ```
+
+> **Übung**
+>
+> Welches Ergebnis hat diese Aufgabe? Rechne zuerst im Kopf oder schriftlich und prüfe dann in der Konsole.
+
+```javascript
+((40-10)/5-6*2)/3
+```
+
 
 # Variablen
 
@@ -38,13 +49,13 @@ Die Konsole gibt darunter **undefined** aus, aber das ist kein Fehler sondern wa
 var alter = 9;
 ```
 
-Die Konsole kennt jetzt die Variable __alter__ und du kannst jederzeit wieder ausgeben, welchen Wert sie hat, indem du einfach den Namen der Variable eintippst. Das Schlüsselwort **var** brauchen wir hier nicht, da die Variable __alter__ ja schon existiert.
+Die Konsole kennt jetzt die Variable __alter__ und sie hat den Wert 9. Du kannst jederzeit wieder ausgeben, welchen Wert sie hat, indem du einfach den Namen der Variable eintippst. Das Schlüsselwort **var** brauchst du hier nicht, da die Variable __alter__ ja schon existiert.
 
 ```javascript
 alter;
 ```
 
-Man kann mit Variablen auch rechnen (vielleicht hast du das auch schon im Matheunterricht in der Schule gemacht). Welches Ergebnis erwartest du von dieser Rechnung.
+Man kann mit Variablen auch rechnen (vielleicht hast du das auch schon im Matheunterricht in der Schule gemacht). Welches Ergebnis erwartest du von dieser Rechnung?
 
 ```javascript
 var kinder = 1+3;
@@ -54,13 +65,13 @@ var ballons = 8;
 ballons / kinder;
 ```
 
-In der Variable __kinder__ haben wir den Wert 1+3 gespeichert, JavaScript rechnet aus, dass das 4 ergibt. Die Variable __ballons__ hat den Wert 2. In der letzten Zeile haben wir gerechnet __ballons__ geteilt durch __kinder__, also 8 durch 4. Das ergibt 2. Das gibt uns die Konsole aus.
+In der Variable __kinder__ haben wir den Wert 1+3 gespeichert, JavaScript rechnet aus, dass das 4 ergibt. Die Variable __ballons__ hat den Wert 2. In der letzten Zeile haben wir gerechnet __ballons__ geteilt durch __kinder__, also 8 durch 4. Das ergibt 2. Das gibt die Konsole aus.
 
 ### Variabblen benennen
 
-Bei der Benennung von Variablen muss man aufpassen, denn JavaScript unterscheidet zwischen Groß- und Kleinschreibung. __Kinder__ ist also nicht das gleiche wie __kinder__. Üblicherweise werden Variablennamen klein geschrieben.
+Bei der Benennung von Variablen musst du aufpassen, denn JavaScript unterscheidet zwischen Groß- und Kleinschreibung. __Kinder__ ist also nicht das gleiche wie __kinder__. Üblicherweise werden Variablennamen klein geschrieben.
 
-Außerdem dürfen Variablen keine Leerzeichen enthalten, was oft sehr blöd ist, wenn man lange Variablennamen hat. Angenommen du willst das Ergebnis des letzten Beispiels in eine Variable speichern die "Anzahl Ballons pro Kind". Wenn du die Variable __anzahlballonsprokind__ nennst, kann man das nur schwer lesen. Daher macht man das so: __anzahlBallonsProKind__. Man schreibt also den ersten Buchstaben von jedem Wort groß, außer beim ersten Wort. Das nennen Programmierer "camel case", weil es an die Höcker von einem Kamel erinnert.
+Außerdem dürfen Variablen keine Leerzeichen enthalten, was oft sehr blöd ist, wenn du lange Variablennamen hast. Angenommen du willst das Ergebnis des letzten Beispiels in einer Variable speichern, die "Anzahl Ballons pro Kind" heißen soll. Wenn du die Variable __anzahlballonsprokind__ nennst, kann man das nur schwer lesen. Daher macht man das so: __anzahlBallonsProKind__. Man schreibt also den ersten Buchstaben von jedem Wort groß, außer beim ersten Wort. Das nennen Programmierer "camel case", weil es an die Höcker von einem Kamel erinnert.
 
 ```javascript
 // ohne camel case
@@ -88,24 +99,19 @@ var stundenInTag = 60;
 var sekundenInTag = sekundenInMinute * minutenInStunde * stundenInTag;
 ```
 
-Das Ergebnis erhälst du, wenn du den Wert der Variable __sekundenInTag__ ausgibst:
+Die letzte Zeile gibt auch das Ergebnis aus:
 
-```javascript
-sekundenInTag;
-```
-
-Ergebnis:
 ```
 86400
 ```
 
 ## Hoch- und Runterzählen
 
-Beim Programmieren haben wir oft den Fall, dass wir eine Zahl hoch- oder runterzählen muss. Wir nennen das auch "inkrementieren" (um eins hochzählen) und "dekrementieren" (um eins runterzählen).
+Beim Programmieren haben wir oft den Fall, dass wir eine Zahl hoch- oder runterzählen müssen. Wir nennen das auch "inkrementieren" (um eins hochzählen) und "dekrementieren" (um eins runterzählen).
 
 ## Operatoren ++ und --
 
-Wenn du zählen willst, wieviele Mäuse deine Katze dir gebracht hat, benutzt du ++:
+Wenn du zählen willst, wieviele Mäuse deine Katze dir gebracht hat, benutzt du **++**:
 
 ```javascript
 var mäuse = 0;
@@ -117,14 +123,13 @@ var mäuse = 0;
 ++mäuse;
 ```
 
-Wenn deine Katze nun eine Maus auffrisst, ziehst du von deinen Mäusen wieder eine ab mit --:
+Wenn deine Katze nun eine Maus auffrisst, ziehst du von deinen Mäusen wieder eine ab mit **--**:
 
 ```javascript
 --mäuse;
 ```
 
-Du kannst ++ und -- auch hinter die Variable schreiben. Das macht das gleiche, allerdings gibt die Konsole
-den Wert der Variablen aus und berechnet dann denn neuen Wert. Probiere es aus!
+Du kannst ++ und -- auch hinter die Variable schreiben. Das macht das gleiche, allerdings gibt die Konsole hier zuerst den Wert der Variablen aus und berechnet dann denn neuen Wert. Probiere es aus!
 
 ```javascript
 mäuse=0;
@@ -135,7 +140,7 @@ mäuse--;
 
 ## Operatoren += und -=
 
-Angenommen du hast mehrere Katzen und sie bringen die gleichzeitig Mäuse. Dann willst du nicht jede Maus einzeln zählen, sondern z.B. gleich 3 addieren. Das kannst du so machen:
+Angenommen du hast mehrere Katzen und sie bringen dir gleichzeitig Mäuse. Dann willst du nicht jede Maus einzeln zählen, sondern z.B. gleich 3 Mäuse addieren. Das kannst du so machen:
 
 ```javascript
 mäuse = 0;
