@@ -171,9 +171,13 @@ Wenn du denkst "langer String" liegst du richtig. Wenn nicht, schau dir folgende
 "Mein langer String ist lang".slice(5);
 ```
 
+# Ein knifflige Mission
+
+Jetzt bist du dran!
+
 > **Mission**
 >
-> Jetzt wird es knifflig: Kannst du den String "iCh MAG kEkSe!" in "Ich mag Kekse!" umwandeln? Benutze die Methoden **.toUpperCase()**, **.toLowerCase()** und **.slice()**.
+> Kannst du den String "iCh MAG kEkSe!" in "Ich mag Kekse!" umwandeln? Benutze die Methoden **.toUpperCase()**, **.toLowerCase()** und **.slice()**.
 
 ```javascript
 var string = "iCh MAG kEkSe!";
@@ -208,3 +212,7 @@ string[0].toUpperCase() + string.slice(1, 8).toLowerCase() + string[8].toUpperCa
 ```
 
 Solange du noch nicht so viel Erfahrung hast, ist es meist einfacher, wenn du Zwischenschritte in Variablen abspeicherst. Das ist so ähnlich wie in der Matheschulaufgabe. Da brauchst du bestimmt auch manchmal eine Nebenrechnung.
+
+# Was du gelernt hast
+
+Du weißt was Strings sind und kannst ihre Eigenschaft Länge ausgeben. Du weißt wie du einzelne Zeichen oder Bereiche aus dem String ausschneiden kannst. Du weißt was eine Methode ist und hast drei Methoden für Strings kennengelernt und benutzt.
