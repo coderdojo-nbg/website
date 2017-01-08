@@ -127,7 +127,7 @@ Wir haben schon die Länge eine Strings kennengelernt. Das nennt man eine **Eige
 
 Für Strings gibt es viele Methoden, wir schauen uns ein paar an.
 
-## Groß- und Kleinschreibung ändern
+### Groß- und Kleinschreibung ändern
 
 Du kannst einen String in Großbuchstaben umwandeln, indem du **.toUpperCase()** anhängst. Mit **.toLowerCase()** wird der String in kleine Buchstaben umgewandelt. Probiere es aus!
 
@@ -138,7 +138,7 @@ Du kannst einen String in Großbuchstaben umwandeln, indem du **.toUpperCase()**
 
 Du kannst übrigens an den Klammern in **.toUpperCase()** und **.toLowerCase()** erkennen, dass es sich um eine Methode handelt. Bei **.length** gab es keine Klammern, das war ja eine Eigenschaft.
 
-## Strings zerschneiden
+### Strings zerschneiden
 
 Wenn du nur einen Teil eines Strings haben willst, kannst du **.slice()** benutzen. Hier musst der Methode noch **Parameter** mitgeben. Das sieht dann so aus:
 
@@ -171,7 +171,7 @@ Wenn du denkst "langer String" liegst du richtig. Wenn nicht, schau dir folgende
 "Mein langer String ist lang".slice(5);
 ```
 
-# Ein knifflige Mission
+## Eine knifflige Mission
 
 Jetzt bist du dran!
 

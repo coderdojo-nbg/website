@@ -80,7 +80,7 @@ array[5][1];
 
 ![](01_05-arrays-index.png)
 
-## Elemente verändern oder hinzufügenauso
+## Elemente verändern oder hinzufügen
 
 Mit dem Index kannst du auch die Elemente in einem Array verändern. Stell dir vor bei unserem Einkaufszettel stellen wir fest, dass doch noch Milch im Kühlschrank ist. Aber es fehlt Kakao, es soll ja ein Schokoladenkuchen werden. Auf deinem Einkaufszettel streichst du "Milch" durch und scrheibst "Kakao" daneben. In unserem Array __zutatenliste__ ersetzen wir auch Milch durch Kakao. Wir wissen Milch steht an zweiter Stelle, also bei Index 1. Den neuen Wert weisen wir genauso zu wie bei einer Variable.
 
