@@ -129,3 +129,7 @@ superhelden[letzterIndex];
 // es geht auch kürzer, aber nicht so übersichtlich
 superhelden[superhelden - 1];
 ```
+
+# Was du gelernt hast
+
+Du weißt was ein Array ist und wie man auf einzelne ELemente zugreifen kann. Du kannst das Array verändern und seine Länge bestimmen.
