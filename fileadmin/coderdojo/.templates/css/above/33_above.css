@@ -650,7 +650,7 @@ form dl + .error {
     width: 50%; }
     .ce-twcoderdojo_date .date:nth-child(even) {
       background-color: transparent; }
-    .ce-twcoderdojo_date .date:nth-child(3n+2), .ce-twcoderdojo_date .date:nth-child(3n+3) {
+    .ce-twcoderdojo_date .date:nth-child(4n+2), .ce-twcoderdojo_date .date:nth-child(4n+3) {
       background-color: #eff5fb; }
     .ce-twcoderdojo_date .date:hover {
       background-color: #2e7ac7; }
