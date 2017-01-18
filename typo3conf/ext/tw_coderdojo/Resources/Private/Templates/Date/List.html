@@ -22,10 +22,20 @@
                     <h3 class="p-name" itemprop="name">
                         <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
                     </h3>
-                    <div class="schedule">
-                        <f:translate key="dojo.at"/>
-                        <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
-                    </div>
+                  <div class="schedule">
+                    <f:translate key="dojo.at"/>
+                    <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                  </div>
+                    <p{f:if(condition: '{date.full}', then: ' class="full"')}>
+                      <f:if condition="{date.full}">
+                        <f:then>
+                          <f:translate key="dojo.full"/>
+                        </f:then>
+                        <f:else>
+                          <f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/>
+                        </f:else>
+                      </f:if>
+                    </p>
                     <f:render partial="Date" section="Location" arguments="{date: date, icon: 1}"/>
                 </f:link.action>
             </li></f:for>

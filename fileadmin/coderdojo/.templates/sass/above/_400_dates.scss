@@ -34,6 +34,11 @@
 			margin: 1em 0;
 		}
 
+    .full {
+      color: $bgcolorRed;
+      font-weight: bold;
+    }
+
 		&:nth-child(even) {
 			background-color: lighten($bgcolorBlue, 48%);
 		}

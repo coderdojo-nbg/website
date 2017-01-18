@@ -359,6 +359,10 @@ nav {
 .ce-twcoderdojo_date .date .schedule {
   margin: 1em 0; }
 
+.ce-twcoderdojo_date .date .full {
+  color: #ed462f;
+  font-weight: bold; }
+
 .ce-twcoderdojo_date .date:nth-child(even) {
   background-color: #eff5fb; }
 
