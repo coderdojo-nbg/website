@@ -42,7 +42,7 @@
     <wp:page.meta name="twitter:image" value="{f:uri.image(image: mentor.portrait, width: '500c', height: '500c', absolute: 1)}" type="name"/>
 
     <article class="mentor">
-        <div class="mentor-profile h-card" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+        <div class="mentor-profile h-card" itemscope="itemscope" itemtype="http://schema.org/Person">
             <section id="mentor-header" class="mentor-header">
                 <figure>
                     <div>
@@ -167,7 +167,8 @@
                             <f:link.action action="show" controller="Date" pageUid="{settings.pages.datePid}"
                                            arguments="{date: date}">
                                 <span class="schedule">
-                                    <f:render partial="Date" section="Schedule" arguments="{date: date}"/>
+                                    <f:translate key="dojo.name" arguments="{0: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'}"/>
+                                    ({date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')})
                                 </span>
                             </f:link.action>
                         </li>

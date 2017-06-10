@@ -1,146 +1,152 @@
 .ce-twcoderdojo_date {
-	header {
-		padding: 1em;
-	}
-
-	address {
-		background-size: contain;
-		padding-left: 3.5em;
-	}
-
-	.dates-list {
-		padding: 0;
-		margin: 0;
-		background-color: $bgcolorHeader;
-		list-style-type: none;
-
-		&, a {
-			color: $colorHeader;
-		}
-	}
-
-	.date {
-		h3 {
-			margin: 0 0 .5em 0;
-		}
-
-		a {
-			padding: 2em 1em;
-			text-decoration: none;
-			display: block;
-		}
-
-		.schedule {
-			margin: 1em 0;
-		}
-
-    .full {
-      color: $bgcolorRed;
-      font-weight: bold;
+    header {
+        padding: 1em;
     }
 
-		&:nth-child(even) {
-			background-color: lighten($bgcolorBlue, 48%);
-		}
+    address {
+        background-size: contain;
+        padding-left: 3.5em;
+    }
 
-		&:hover {
-			background-color: $bgcolorBlue;
+    .dates-list {
+        padding: 0;
+        margin: 0;
+        background-color: $bgcolorHeader;
+        list-style-type: none;
 
-			&, a {
-				color: $colorBlue;
-			}
-		}
-	}
+        &, a {
+            color: $colorHeader;
+        }
+    }
 
-	.date-details {
+    .date {
+        h3 {
+            margin: 0 0 .5em 0;
+        }
 
-		> div {
-			background-color: $bgcolorHeader;
+        a {
+            padding: 2em 1em;
+            text-decoration: none;
+            display: block;
+        }
 
-			&, & a {
-				color: $colorHeader;
-			}
-		}
+        .schedule {
+            margin: 1em 0;
+        }
 
-		.map {
-			display: block;
-			width: 100%;
-			height: 320px;
-			background-repeat: no-repeat;
-			background-position: center;
-			@include shift-off-screen;
-		}
+        .full {
+            color: $bgcolorRed;
+            font-weight: bold;
+        }
 
-		.date-intro, .mentor-intro {
-			padding: 1em;
-		}
+        .open {
+            color: $bgcolorGreen;
+            font-weight: bold;
+        }
 
-		.date-intro {
-			position: relative;
-			padding-bottom: 2em;
-		}
+        &:nth-child(even) {
+            background-color: lighten($bgcolorBlue, 48%);
+        }
 
-		.mentors {
-			background-color: $bgcolorHeader;
+        &:hover {
+            background-color: $bgcolorBlue;
 
-			&, a {
-				color: $colorHeader;
-			}
-		}
-	}
+            &, a {
+                color: $colorBlue;
+            }
+        }
+    }
 
-	.date-attendees {
-		width: 10em;
-		height: 10em;
-		position: absolute;
-		bottom: -5em;
-		right: 5%;
-		margin: 0;
-		text-align: center;
-		color: $colorBlue !important;
+    .date-details {
 
-		.animation-wrapper, > span {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-		}
-		.animation-wrapper {
-			z-index: 1;
-			animation: attendees 12s infinite;
-			fill: currentColor;
+        > div {
+            background-color: $bgcolorHeader;
 
-			&.foreground {
-				top: 0;
-				right: 0;
-				color: $bgcolorGreen;
-			}
+            &, & a {
+                color: $colorHeader;
+            }
+        }
 
-			&.background {
-				top: .25em;
-				right: -.3em;
-				//color: #000000;
-				color: transparentize($bgcolorGreen, .8);
-			}
-		}
+        .map {
+            display: block;
+            width: 100%;
+            height: 320px;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include shift-off-screen;
+        }
 
-		&.full .animation-wrapper {
-			&.foreground {
-				color: $bgcolorRed;
-			}
+        .date-intro, .mentor-intro {
+            padding: 1em;
+        }
 
-			&.background {
-				color: transparentize($bgcolorRed, .8);
-			}
-		 }
+        .date-intro {
+            position: relative;
+            padding-bottom: 2em;
+        }
 
-		> span {
-			display: table;
-			z-index: 2;
+        .mentors {
+            background-color: $bgcolorHeader;
 
-			span {
-				display: table-cell;
-				vertical-align: middle;
-			}
-		}
-	}
+            &, a {
+                color: $colorHeader;
+            }
+        }
+    }
+
+    .date-attendees {
+        width: 10em;
+        height: 10em;
+        position: absolute;
+        bottom: -5em;
+        right: 5%;
+        margin: 0;
+        text-align: center;
+        color: $colorBlue !important;
+
+        .animation-wrapper, > span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .animation-wrapper {
+            z-index: 1;
+            animation: attendees 12s infinite;
+            fill: currentColor;
+
+            &.foreground {
+                top: 0;
+                right: 0;
+                color: $bgcolorGreen;
+            }
+
+            &.background {
+                top: .25em;
+                right: -.3em;
+                //color: #000000;
+                color: transparentize($bgcolorGreen, .8);
+            }
+        }
+
+        &.full .animation-wrapper {
+            &.foreground {
+                color: $bgcolorRed;
+            }
+
+            &.background {
+                color: transparentize($bgcolorRed, .8);
+            }
+        }
+
+        > span {
+            display: table;
+            z-index: 2;
+
+            span {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 1em;
+            }
+        }
+    }
 }

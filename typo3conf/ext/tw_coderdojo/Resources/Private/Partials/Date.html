@@ -1,20 +1,51 @@
-<f:section name="Schedule">
+<f:comment><!--<f:section name="Schedule">
     <time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <f:translate key="format.from"/> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
     <f:translate key="format.to"/>
     <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
     <f:translate key="format.oclock"/>
+</f:section>--></f:comment>
+
+<f:section name="Schedule">
+    <f:if condition="{hours}">
+        <f:then><f:if condition="{end}">
+            <f:then><f:if condition="{f:format.date(date: start, format: 'd.m.Y')} != {f:format.date(date: end, format: 'd.m.Y')}">
+                <f:then><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{start}</f:format.date> <f:translate key="format.from"/> <f:format.date format="{f:translate(key: 'format.start.time')}">{start}</f:format.date> <f:translate key="format.oclock"/></time>
+                    <f:translate key="format.to"/>
+                    <time class="dt-end" itemprop="endDate" datetime="{f:format.date(date: end, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{end}</f:format.date> <f:translate key="format.until"/> <f:format.date format="{f:translate(key: 'format.start.time')}">{end}</f:format.date> <f:translate key="format.oclock"/></time>
+                </f:then>
+                <f:else><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{start}</f:format.date> <f:translate key="format.from"/> <f:format.date format="{f:translate(key: 'format.start.time')}">{start}</f:format.date></time> <f:translate key="format.to"/> <time class="dt-end" itemprop="endDate" datetime="{f:format.date(date: end, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.time')}">{end}</f:format.date> <f:translate key="format.oclock"/></time>
+                </f:else>
+            </f:if>
+            </f:then>
+            <f:else><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{start}</f:format.date> <f:translate key="format.from"/> <f:format.date format="{f:translate(key: 'format.start.time')}">{start}</f:format.date> <f:translate key="format.oclock"/></time>
+            </f:else>
+        </f:if>
+        </f:then>
+        <f:else><f:if condition="{end}">
+            <f:then><f:if condition="{f:format.date(date: start, format: 'd.m.Y')} != {f:format.date(date: end, format: 'd.m.Y')}">
+                <f:then><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.daymonth')}">{start}</f:format.date></time> <f:translate key="format.to"/> <time class="dt-end" itemprop="endDate" datetime="{f:format.date(date: end, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{end}</f:format.date></time>
+                </f:then>
+                <f:else><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{start}</f:format.date></time>
+                </f:else>
+            </f:if>
+            </f:then>
+            <f:else><time class="dt-start" itemprop="startDate" datetime="{f:format.date(date: start, format: 'c')}"><f:format.date format="{f:translate(key: 'format.start.date')}">{start}</f:format.date></time>
+            </f:else>
+        </f:if>
+        </f:else>
+    </f:if>
 </f:section>
 
 <f:section name="Location">
-    <address class="p-location h-card{f:if(condition: '{icon}', then: ' icon icon-location:regular')}" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization">
+    <address class="p-location h-card{f:if(condition: '{icon}', then: ' icon icon-location:regular')}" itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Organization">
         <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
-        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/Address">
             <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
             <div>
                 <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
                 <span class="p-locality" itemprop="locality">{date.location.locality}</span>
                 <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
-                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/GeoCoordinates">
+                            <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://schema.org/GeoCoordinates">
                                 <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
                                 <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
                             </span>

@@ -84,6 +84,8 @@ CREATE TABLE tx_twcoderdojo_domain_model_date (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	dojo_number int(11) unsigned DEFAULT '0',
+	type tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	name varchar(255) DEFAULT '' NOT NULL,
 	start datetime DEFAULT '0000-00-00 00:00:00',
 	end datetime DEFAULT '0000-00-00 00:00:00',
 	intro text NOT NULL,

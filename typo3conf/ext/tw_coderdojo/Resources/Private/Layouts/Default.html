@@ -8,7 +8,7 @@
                 <div class="left">
                     <f:be.menus.actionMenu>
                       <f:for each="{dates}" as="date">
-                        <tw:be.menus.actionMenuItem label="{f:translate(key: 'mod.menu.label', arguments: '{0: date.dojoNumber, 1: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.start.date\\\\\\\')}\\\')}\'}')}" controller="CoderDojo" action="index" arguments="{selectedDate: date}" currentDate="{selectedDate}"/>
+                        <tw:be.menus.actionMenuItem label="{f:translate(key: 'mod.menu.label', arguments: '{0: \'{f:if(condition: date.type, then: date.name, else: \\\'#{date.dojoNumber}\\\')}\', 1: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.start.date\\\\\\\')}\\\')}\'}')}" controller="CoderDojo" action="index" arguments="{selectedDate: date}" currentDate="{selectedDate}"/>
                       </f:for>
                     </f:be.menus.actionMenu>
                 </div>
@@ -31,6 +31,7 @@
               <a href="javascript:printCoderDojo()"><f:translate key="mod.print"/></a>
               |
               <f:link.action action="download" arguments="{date: selectedDate}" target="_blank"><f:translate key="mod.download"/></f:link.action>
+              (<f:link.action action="downloadAll" target="_blank"><f:translate key="mod.download.all"/></f:link.action>)
             </div>
         </div>
 

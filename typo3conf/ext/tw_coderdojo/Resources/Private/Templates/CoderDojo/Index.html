@@ -1,4 +1,5 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace tw=Tollwerk\TwCoderdojo\ViewHelpers}
 
 <f:layout name="Default" />
 <f:section name="Main">
@@ -38,7 +39,7 @@
     $(function () {
       $('#chart').highcharts({
         title: {
-          text: ']]><f:translate key="mod.header.chart" arguments="{0: selectedDate.dojoNumber, 1: '{selectedDate.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}', 2: '{v:math.sum(a: ninjas, b: \'{v:math.sum(a: helpers, b: mentors)}\')}', 3: '{now -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}'}"/><![CDATA['
+          text: ']]><f:translate key="mod.header.chart" arguments="{0: '{f:if(condition: selectedDate.type, then: \'{selectedDate.name -> tw:format.escape()}\', else: \'#{selectedDate.dojoNumber}\')}', 1: '{selectedDate.start -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}', 2: '{v:math.sum(a: ninjas, b: \'{v:math.sum(a: helpers, b: mentors)}\')}', 3: '{now -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}'}"/><![CDATA['
     },
       xAxis: {
         title: {

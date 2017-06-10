@@ -13,11 +13,11 @@
 <wp:page.meta name="twitter:image"
               value="{v:site.url()}{tw:dateMap(latitude: date.location.latitude, longitude: date.location.longitude, client: 'twitter')}" type="name"/>
 
-<div class="date-details h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+<div class="date-details h-event" itemscope="itemscope" itemtype="http://schema.org/Event">
     <div>
         <section class="date-intro">
             <h2 class="p-name" itemprop="name">
-                <f:translate key="dojo.name" arguments="{0: date.dojoNumber}"/>
+                <f:translate key="dojo.name" arguments="{0: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'}"/>
             </h2>
             <f:if condition="{date.intro}">
                 <p class="p-description" itemprop="description">
@@ -45,7 +45,10 @@
                         <f:translate key="dojo.full"/>
                     </f:then>
                     <f:else>
-                        <f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/>
+                        <f:if condition="{date.type} == 1">
+                                <f:then><f:translate key="dojo.count.camp"/></f:then>
+                                <f:else><f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/></f:else>
+                            </f:if>
                     </f:else>
                 </f:if></span></span>
             </a>
@@ -88,7 +91,15 @@
         <f:cObject typoscriptObjectPath="lib.waitinglist"/>
     </f:then>
     <f:else>
-        <f:cObject typoscriptObjectPath="lib.registration"/>
+        <f:if condition="{date.type}">
+            <f:then>
+                <f:cObject typoscriptObjectPath="lib.camp"/>
+            </f:then>
+            <f:else>
+                <f:cObject typoscriptObjectPath="lib.registration"/>
+            </f:else>
+        </f:if>
+
     </f:else>
 </f:if>
 

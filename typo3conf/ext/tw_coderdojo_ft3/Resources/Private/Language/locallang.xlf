@@ -65,34 +65,37 @@
 				<source>Das CoderDojo Nürnberg ist ein Club für Kinder und Jugendliche im Alter von 5 bis 17 Jahren, die Programmieren lernen und Spaß haben wollen. Erfahrene Mentoren stehen bereit, um gemeinsam an Ideen zu arbeiten oder selbst vorgeschlagene Projekte Wirklichkeit werden zu lassen.</source>
 			</trans-unit>
 
-			<!-- Date formatting -->
-			<trans-unit id="format.datetime">
-				<source>j.n.Y G:i</source>
-			</trans-unit>
-			<trans-unit id="format.start.datetime">
-				<source>j.n.Y G:i</source>
-			</trans-unit>
-			<trans-unit id="format.start.date">
-				<source>j.n.Y</source>
-			</trans-unit>
-			<trans-unit id="format.start.time">
-				<source>G:i</source>
-			</trans-unit>
-			<trans-unit id="format.end.time">
-				<source>G:i</source>
-			</trans-unit>
-			<trans-unit id="format.from.expanded">
-				<source>von</source>
-			</trans-unit>
-			<trans-unit id="format.from.collapsed">
-				<source>ab</source>
-			</trans-unit>
-			<trans-unit id="format.to">
-				<source>bis</source>
-			</trans-unit>
-			<trans-unit id="format.oclock">
-				<source>Uhr</source>
-			</trans-unit>
+            <!-- Date formatting -->
+            <trans-unit id="format.datetime">
+                <source>j.n.Y G:i</source>
+            </trans-unit>
+            <trans-unit id="format.start.datetime">
+                <source>j.n.Y G:i</source>
+            </trans-unit>
+            <trans-unit id="format.start.date">
+                <source>j.n.Y</source>
+            </trans-unit>
+            <trans-unit id="format.start.time">
+                <source>G:i</source>
+            </trans-unit>
+            <trans-unit id="format.end.time">
+                <source>G:i</source>
+            </trans-unit>
+            <trans-unit id="format.from.expanded">
+                <source>von</source>
+            </trans-unit>
+            <trans-unit id="format.from.collapsed">
+                <source>ab</source>
+            </trans-unit>
+            <trans-unit id="format.to">
+                <source>bis</source>
+            </trans-unit>
+            <trans-unit id="format.until">
+                <source>um</source>
+            </trans-unit>
+            <trans-unit id="format.oclock">
+                <source>Uhr</source>
+            </trans-unit>
 
 			<!-- Social Media -->
 			<trans-unit id="follow.twitter">

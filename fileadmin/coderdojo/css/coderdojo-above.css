@@ -364,6 +364,10 @@ nav {
   color: #ed462f;
   font-weight: bold; }
 
+.ce-twcoderdojo_date .date .open {
+  color: #61c93f;
+  font-weight: bold; }
+
 .ce-twcoderdojo_date .date:nth-child(even) {
   background-color: #eff5fb; }
 
@@ -433,7 +437,8 @@ nav {
     z-index: 2; }
     .ce-twcoderdojo_date .date-attendees > span span {
       display: table-cell;
-      vertical-align: middle; }
+      vertical-align: middle;
+      padding: 1em; }
 
 #c81, #c85 {
   position: relative; }

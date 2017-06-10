@@ -1,5 +1,5 @@
-plugin.Tx_Formhandler.settings.predef.registration {
-	name							= Anmeldeformular
+plugin.Tx_Formhandler.settings.predef.camp {
+	name							= Anmeldeformular (Camp)
 	formID							= formhandler-registration
 	templateFile 					= FLUIDTEMPLATE
 	templateFile{
@@ -47,7 +47,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 						2						= date
 						2.pattern				= Y-m-d
 						3						= isOlderThan
-						3						{
+						3 {
 							dateFormat			= Y-m-d
 							years				= 5
 						}
@@ -90,7 +90,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 						tables						= tx_twcoderdojo_domain_model_date
 						conf.tx_twcoderdojo_domain_model_date = TEXT
 						conf.tx_twcoderdojo_domain_model_date {
-							dataWrap				= Anmeldung zum CoderDojo #{field:dojo_number} (am {field:start})
+							dataWrap				= Anmeldung zum CoderDojo {field:name} (am {field:start})
 						}
 					}
 					sender_email					= email
@@ -99,7 +99,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 					replyto_name					= fullname
 					templateFile					= FLUIDTEMPLATE
 					templateFile{
-						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/registration_email.html
+						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/camp_email.html
 						variables{
 							dojo					= RECORDS
 							dojo {
@@ -107,7 +107,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 								tables				= tx_twcoderdojo_domain_model_date
 								conf.tx_twcoderdojo_domain_model_date = TEXT
 								conf.tx_twcoderdojo_domain_model_date {
-									dataWrap		= #{field:dojo_number} am {field:start}
+									dataWrap		= {field:name} am {field:start}
 								}
 							}
 						}
@@ -122,7 +122,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 						tables						= tx_twcoderdojo_domain_model_date
 						conf.tx_twcoderdojo_domain_model_date = TEXT
 						conf.tx_twcoderdojo_domain_model_date {
-							dataWrap				= Anmeldung zum CoderDojo #{field:dojo_number} (am {field:start})
+							dataWrap				= Anmeldung zum CoderDojo {field:name} (am {field:start})
 						}
 					}
 					sender_email					= ping@coderdojo-nbg.org
@@ -131,7 +131,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 					replyto_name					= CoderDojo Nürnberg
 					templateFile					= FLUIDTEMPLATE
 					templateFile{
-						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/registration_email.html
+						file						= fileadmin/coderdojo/.templates/html/ext/formhandler/mail/camp_email.html
 						variables{
 							dojo					= RECORDS
 							dojo {
@@ -139,7 +139,7 @@ plugin.Tx_Formhandler.settings.predef.registration {
 								tables = tx_twcoderdojo_domain_model_date
 								conf.tx_twcoderdojo_domain_model_date = TEXT
 								conf.tx_twcoderdojo_domain_model_date {
-									dataWrap = #{field:dojo_number} am {field:start}
+									dataWrap = {field:name} am {field:start}
 								}
 							}
 							contactform				 = TEXT

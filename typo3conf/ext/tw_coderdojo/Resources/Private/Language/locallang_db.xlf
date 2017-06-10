@@ -125,6 +125,18 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_date.dojo_number">
 				<source>Dojo number</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.name">
+				<source>Dojo name</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.type">
+				<source>Dojo type</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.type.regular">
+				<source>Regular dojo</source>
+			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.type.camp">
+				<source>Dojo camp</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.capacity">
 				<source>Capacity</source>
 			</trans-unit>

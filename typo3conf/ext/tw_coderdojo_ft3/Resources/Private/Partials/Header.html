@@ -6,7 +6,7 @@
     <!-- Header with next event date -->
     <f:section name="WithDate">
         <header role="banner" class="{f:if(condition: '{header}', then: 'expanded', else: 'collapsed')}">
-            <div class="banner h-event" itemscope="itemscope" itemtype="http://data-vocabulary.org/Event">
+            <div class="banner h-event" itemscope="itemscope" itemtype="http://schema.org/Event">
                 <img src="/fileadmin/coderdojo/icons/coderdojo-dark-horizontal.svg" itemprop="photo" alt="{f:translate(key: 'date.alt', arguments: '{0: \'{date.start -> f:format.date(format: \\\'{f:translate(key: \\\\\\\'format.datetime\\\\\\\')}\\\')}\'}')}"/>
                 <f:link.page pageUid="1" absolute="1" title="{f:translate(key: 'home')}" class="home">
                     <h1 class="p-name" itemprop="name">CoderDojo Nürnberg</h1>
@@ -25,24 +25,26 @@
                         </f:if>
                     </span>
                     <span class="schedule-datetime">
-                        <time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <span class="expanded"><f:translate key="format.from.expanded"/></span><span class="collapsed"><f:translate key="format.from.collapsed"/></span> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
+                        <f:render partial="Date" arguments="{hours: 1, start: date.start, end: date.end}"/>
+                        <f:comment><time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <span class="expanded"><f:translate key="format.from.expanded"/></span><span class="collapsed"><f:translate key="format.from.collapsed"/></span> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
                         <span class="expanded">
                             <f:translate key="format.to"/>
                             <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
                         </span>
                         <f:translate key="format.oclock"/>
+                            </f:comment>
                     </span>
                 </f:link.action>
-                <a class="address p-location h-card" itemprop="location" itemscope="itemscope" itemtype="http://data-vocabulary.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
+                <a class="address p-location h-card" itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">
                     <div class="icon icon-location">
                         <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
-                        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+                        <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/Address">
                             <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
                             <div>
                                 <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
                                 <span class="p-locality" itemprop="locality">{date.location.locality}</span>
                                 <span class="hide">, <span class="p-country" itemprop="country-name">{date.location.country.shortNameDe}</span></span>
-                                    <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo">
+                                    <span class="hide" itemprop="geo" itemscope="itemscope" itemtype="http://schema.org/Geo">
                                         <span class="p-latitude" itemprop="latitude">{date.location.latitude}</span>
                                         <span class="p-longitude" itemprop="longitude">{date.location.longitude}</span>
                                     </span>

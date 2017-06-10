@@ -1,5 +1,5 @@
 <ul class="mentors">
-    <f:for each="{mentors}" as="mentor"><li class="mentor h-card" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+    <f:for each="{mentors}" as="mentor"><li class="mentor h-card" itemscope="itemscope" itemtype="http://schema.org/Person">
         <f:link.action action="show" pluginName="Mentor" controller="Mentor" pageUid="{settings.pages.mentorPid}" arguments="{mentor: mentor}" title="{f:translate(key: 'mentor.profile', arguments: '{0: mentor.firstName}')}" class=" u-url" additionalAttributes="{itemprop: 'url'}">
             <f:render partial="Mentor" section="Short" arguments="{mentor: mentor}"/>
         </f:link.action>

@@ -122,7 +122,7 @@
         </source>
       </trans-unit>
       <trans-unit id="dojo.name">
-        <source>CoderDojo #%s</source>
+        <source>CoderDojo %s</source>
       </trans-unit>
       <trans-unit id="dojo.at">
         <source>Am</source>
@@ -144,6 +144,9 @@
       </trans-unit>
       <trans-unit id="dojo.count">
         <source>Schon %s Anmeldungen!</source>
+      </trans-unit>
+      <trans-unit id="dojo.count.camp">
+        <source>Anmeldung möglich (gesonderte Bedingungen)</source>
       </trans-unit>
       <trans-unit id="dojo.full">
         <source>Belegt!</source>
@@ -234,6 +237,9 @@
       <trans-unit id="format.to">
         <source>bis</source>
       </trans-unit>
+      <trans-unit id="format.until">
+        <source>um</source>
+      </trans-unit>
       <trans-unit id="format.oclock">
         <source>Uhr</source>
       </trans-unit>
@@ -248,10 +254,10 @@
 
       <!-- Backend module -->
       <trans-unit id="mod.menu.label">
-        <source>CoderDojo #%s (%s)</source>
+        <source>CoderDojo %s (%s)</source>
       </trans-unit>
       <trans-unit id="mod.header">
-        <source>CoderDojo #%s am %s</source>
+        <source>CoderDojo %s am %s</source>
       </trans-unit>
       <trans-unit id="mod.header.ninjas">
         <source>Ninjas</source>
@@ -314,13 +320,16 @@
         <source>Übersicht: %s Teilnehmer (Stand %s)</source>
       </trans-unit>
       <trans-unit id="mod.header.chart">
-        <source>CoderDojo #%s (%s): %s Teilnehmer (Stand %s)</source>
+        <source>CoderDojo %s (%s): %s Teilnehmer (Stand %s)</source>
       </trans-unit>
       <trans-unit id="mod.print">
         <source>Übersicht drucken</source>
       </trans-unit>
       <trans-unit id="mod.download">
         <source>CSV-Datei herunterladen</source>
+      </trans-unit>
+      <trans-unit id="mod.download.all">
+        <source>alle Dojos</source>
       </trans-unit>
     </body>
   </file>

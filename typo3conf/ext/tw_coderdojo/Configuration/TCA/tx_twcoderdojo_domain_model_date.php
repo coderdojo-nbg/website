@@ -6,6 +6,7 @@ return array(
 		'label_alt' => 'start,location',
 		'label_alt_force' => true,
 		'tstamp' => 'tstamp',
+		'type' => 'type',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => true,
@@ -22,10 +23,12 @@ return array(
 		'showRecordFieldList' => 'hidden, start, end, location, mentors, attendees',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--palette--;;event, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
+		'0' => array('showitem' => '--palette--;;regular, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
+		'1' => array('showitem' => '--palette--;;camp, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
 	),
 	'palettes' => array(
-		'event' => array('showitem' => 'dojo_number, capacity, start, end, hidden', 'canNotCollapse' => true),
+		'regular' => array('showitem' => 'type, dojo_number, capacity, start, end, hidden', 'canNotCollapse' => true),
+		'camp' => array('showitem' => 'type, name, capacity, start, end, hidden', 'canNotCollapse' => true),
 	),
 	'columns' => array(
 
@@ -162,5 +165,30 @@ return array(
 				'multiple' => 0,
 			),
 		),
+		'type' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.type',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'minitems' => 1,
+				'maxitems' => 1,
+				'multiple' => 0,
+                'items' => [
+                    ['LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.type.regular', 0],
+                    ['LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.type.camp', 1],
+                ]
+			),
+		),
+        'name' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.name',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ),
+        ),
 	),
 );
