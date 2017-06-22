@@ -465,7 +465,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getFull()
     {
-        return $this->getAttendeesCount() >= $this->capacity;
+        return ($this->type ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity;
     }
 
     /**

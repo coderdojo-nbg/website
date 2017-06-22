@@ -146,7 +146,7 @@
         <source>Schon %s Anmeldungen!</source>
       </trans-unit>
       <trans-unit id="dojo.count.camp">
-        <source>Anmeldung möglich (gesonderte Bedingungen)</source>
+        <source>Schon %s Anmeldungen (gesonderte Bedingungen)</source>
       </trans-unit>
       <trans-unit id="dojo.full">
         <source>Belegt!</source>
