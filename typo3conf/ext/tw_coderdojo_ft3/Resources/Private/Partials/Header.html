@@ -26,13 +26,6 @@
                     </span>
                     <span class="schedule-datetime">
                         <f:render partial="Date" arguments="{hours: 1, start: date.start, end: date.end}"/>
-                        <f:comment><time class="dt-start" itemprop="startDate" datetime="{date.start -> f:format.date(format: 'c')}">{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} <span class="expanded"><f:translate key="format.from.expanded"/></span><span class="collapsed"><f:translate key="format.from.collapsed"/></span> {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')}</time>
-                        <span class="expanded">
-                            <f:translate key="format.to"/>
-                            <time class="dt-end" itemprop="endDate" datetime="{date.end -> f:format.date(format: 'c')}">{date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')}</time>
-                        </span>
-                        <f:translate key="format.oclock"/>
-                            </f:comment>
                     </span>
                 </f:link.action>
                 <a class="address p-location h-card" itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Organization" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank">

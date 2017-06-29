@@ -15,4 +15,5 @@ lib.footerNavigation {
     }
     20 = TEXT
     20.value = <a href="/fileadmin/user_upload/download/CoderDojo_Nuernberg_Sponsoreninformationen.pdf" target="_blank">Sponsoring</a>
+    20 >
 }
