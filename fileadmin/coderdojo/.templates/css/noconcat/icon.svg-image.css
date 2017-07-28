@@ -481,4 +481,24 @@
 .icon-ucs-grey-dims-ph {
   padding-top: 100%; }
 
+.icon-wbg {
+  background-image: url(../icons/wbg.svg); }
+
+.icon-wbg-dims {
+  width: 110.443px;
+  height: 71.942px; }
+
+.icon-wbg-dims-ph {
+  padding-top: 65.13948371558179%; }
+
+.icon-wbg-grey {
+  background-image: url(../icons/wbg-grey.svg); }
+
+.icon-wbg-grey-dims {
+  width: 110.443px;
+  height: 71.942px; }
+
+.icon-wbg-grey-dims-ph {
+  padding-top: 65.13948371558179%; }
+
 /*# sourceMappingURL=icon.svg-image.css.map */
