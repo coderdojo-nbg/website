@@ -23,12 +23,13 @@ return array(
 		'showRecordFieldList' => 'hidden, start, end, location, mentors, attendees',
 	),
 	'types' => array(
-		'0' => array('showitem' => '--palette--;;regular, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
-		'1' => array('showitem' => '--palette--;;camp, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
+		'0' => array('showitem' => '--palette--;;regular, --palette--;;capacity, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
+		'1' => array('showitem' => '--palette--;;camp, --palette--;;capacity, location, intro;;;richtext:rte_transform[mode=ts_links], mentors, ninjas, helpers'),
 	),
 	'palettes' => array(
-		'regular' => array('showitem' => 'type, dojo_number, capacity, start, end, hidden', 'canNotCollapse' => true),
-		'camp' => array('showitem' => 'type, name, capacity, start, end, hidden', 'canNotCollapse' => true),
+		'regular' => array('showitem' => 'type, dojo_number, start, end, hidden', 'canNotCollapse' => true),
+		'camp' => array('showitem' => 'type, name, start, end, hidden', 'canNotCollapse' => true),
+		'capacity' => array('showitem' => 'capacity, capacity_ninjas_only', 'canNotCollapse' => true),
 	),
 	'columns' => array(
 
@@ -58,6 +59,14 @@ return array(
                 'default' => 50,
 			),
 		),
+        'capacity_ninjas_only' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.capacityNinjasOnly',
+            'config' => array(
+                'type' => 'check',
+                'default' => 0
+            ),
+        ),
 		'start' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.start',

@@ -64,6 +64,13 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $capacity = 0;
 
     /**
+     * Nur Ninjas zählen
+     *
+     * @var boolean
+     */
+    protected $capacityNinjasOnly = false;
+
+    /**
      * Startzeitpunkt
      *
      * @var \DateTime
@@ -465,7 +472,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getFull()
     {
-        return ($this->type ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity;
+        return ($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity;
     }
 
     /**
@@ -536,5 +543,25 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Get whether only ninjas count for capacity check
+     *
+     * @return bool Only ninjas count
+     */
+    public function isCapacityNinjasOnly()
+    {
+        return $this->capacityNinjasOnly;
+    }
+
+    /**
+     * Set whether only ninjas count for capacity check
+     *
+     * @param bool $capacityNinjasOnly Only ninjas count
+     */
+    public function setCapacityNinjasOnly($capacityNinjasOnly)
+    {
+        $this->capacityNinjasOnly = $capacityNinjasOnly;
     }
 }

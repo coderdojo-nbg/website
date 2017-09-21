@@ -94,6 +94,7 @@ CREATE TABLE tx_twcoderdojo_domain_model_date (
 	ninjas int(11) unsigned DEFAULT '0' NOT NULL,
 	helpers int(11) unsigned DEFAULT '0' NOT NULL,
 	capacity int(11) unsigned DEFAULT '0' NOT NULL,
+	capacity_ninjas_only tinyint(4) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

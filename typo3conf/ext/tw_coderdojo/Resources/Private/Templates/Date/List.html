@@ -32,7 +32,7 @@
                           <f:translate key="dojo.full"/>
                         </f:then>
                         <f:else>
-                            <f:if condition="{date.type} == 1">
+                            <f:if condition="{date.type} == 2">
                                 <f:then><f:translate key="dojo.count.camp" arguments="{0: '{f:count(subject: date.ninjas)}'}"/></f:then>
                                 <f:else><f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/></f:else>
                             </f:if>

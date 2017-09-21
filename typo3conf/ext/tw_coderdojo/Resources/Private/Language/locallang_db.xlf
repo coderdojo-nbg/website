@@ -140,6 +140,9 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_date.capacity">
 				<source>Capacity</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.capacityNinjasOnly">
+				<source>Count Ninjas only</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.start">
 				<source>Start</source>
 			</trans-unit>

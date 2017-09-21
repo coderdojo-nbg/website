@@ -377,6 +377,26 @@
 .icon-paessler-grey-dims-ph {
   padding-top: 19.946333944320116%; }
 
+.icon-psd {
+  background-image: url(../icons/psd.svg); }
+
+.icon-psd-dims {
+  width: 606.293px;
+  height: 643.132px; }
+
+.icon-psd-dims-ph {
+  padding-top: 106.07610511749269%; }
+
+.icon-psd-grey {
+  background-image: url(../icons/psd-grey.svg); }
+
+.icon-psd-grey-dims {
+  width: 606.293px;
+  height: 643.132px; }
+
+.icon-psd-grey-dims-ph {
+  padding-top: 106.07610511749269%; }
+
 .icon-shiftschool {
   background-image: url(../icons/shiftschool.svg); }
 
@@ -480,6 +500,26 @@
 
 .icon-ucs-grey-dims-ph {
   padding-top: 100%; }
+
+.icon-vrbank {
+  background-image: url(../icons/vrbank.svg); }
+
+.icon-vrbank-dims {
+  width: 134.786px;
+  height: 54.919px; }
+
+.icon-vrbank-dims-ph {
+  padding-top: 40.745329633641475%; }
+
+.icon-vrbank-grey {
+  background-image: url(../icons/vrbank-grey.svg); }
+
+.icon-vrbank-grey-dims {
+  width: 134.786px;
+  height: 54.919px; }
+
+.icon-vrbank-grey-dims-ph {
+  padding-top: 40.745329633641475%; }
 
 .icon-wbg {
   background-image: url(../icons/wbg.svg); }
