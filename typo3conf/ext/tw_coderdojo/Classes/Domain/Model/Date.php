@@ -74,6 +74,13 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $capacityNinjasOnly = false;
 
     /**
+     * Anmeldung geschlossen
+     *
+     * @var boolean
+     */
+    protected $fullOverride = false;
+
+    /**
      * Startzeitpunkt
      *
      * @var \DateTime
@@ -482,7 +489,8 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getFull()
     {
-        return ($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity;
+        return $this->isFullOverride()
+            || (($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity);
     }
 
     /**
@@ -573,6 +581,26 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCapacityNinjasOnly($capacityNinjasOnly)
     {
         $this->capacityNinjasOnly = $capacityNinjasOnly;
+    }
+
+    /**
+     * Get whether the registration is closes
+     *
+     * @return bool Registration is closed
+     */
+    public function isFullOverride()
+    {
+        return $this->fullOverride;
+    }
+
+    /**
+     * Set whether the registration is closed
+     *
+     * @param bool $fullOverride Registration is closed
+     */
+    public function setFullOverride($fullOverride)
+    {
+        $this->fullOverride = $fullOverride;
     }
 
     /**

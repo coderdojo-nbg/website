@@ -146,6 +146,9 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_date.capacityNinjasOnly">
 				<source>Count Ninjas only</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_date.fullOverride">
+				<source>Registration closed</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_date.start">
 				<source>Start</source>
 			</trans-unit>

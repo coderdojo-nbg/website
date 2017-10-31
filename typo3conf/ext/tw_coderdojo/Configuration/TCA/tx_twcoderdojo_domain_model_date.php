@@ -29,7 +29,7 @@ return array(
 	'palettes' => array(
 		'regular' => array('showitem' => 'type, dojo_number, start, end, hidden', 'canNotCollapse' => true),
 		'camp' => array('showitem' => 'type, name, start, end, hidden', 'canNotCollapse' => true),
-		'capacity' => array('showitem' => 'capacity, capacity_ninjas_only', 'canNotCollapse' => true),
+		'capacity' => array('showitem' => 'capacity, full_override, capacity_ninjas_only', 'canNotCollapse' => true),
 	),
 	'columns' => array(
 
@@ -62,6 +62,14 @@ return array(
         'capacity_ninjas_only' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.capacityNinjasOnly',
+            'config' => array(
+                'type' => 'check',
+                'default' => 0
+            ),
+        ),
+        'full_override' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_date.fullOverride',
             'config' => array(
                 'type' => 'check',
                 'default' => 0
