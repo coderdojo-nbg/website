@@ -25,8 +25,8 @@ namespace Tollwerk\TwCoderdojo\Domain\Repository;
  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  ***********************************************************************************/
 
+use Tollwerk\TwCoderdojo\Domain\Model\Date;
 use Tollwerk\TwCoderdojo\Domain\Model\Person;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 
 /**
@@ -36,60 +36,78 @@ use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
  */
 class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-  /**
-   * Default orderings
-   *
-   * @var array
-   */
-  protected $defaultOrderings = array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING);
+    /**
+     * Default orderings
+     *
+     * @var array
+     */
+    protected $defaultOrderings = array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING);
 
-  /**
-   * Default configuration
-   */
-  public function initializeObject()
-  {
-    $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-    $querySettings->setRespectStoragePage(false);
-    $this->setDefaultQuerySettings($querySettings);
-  }
+    /**
+     * Default configuration
+     */
+    public function initializeObject()
+    {
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setRespectStoragePage(false);
+        $this->setDefaultQuerySettings($querySettings);
+    }
 
-  /**
-   * Return the next dates
-   *
-   * @return QueryResultInterface Next CoderDojo dates
-   */
-  public function findNext()
-  {
-    $today = new \DateTime('@'.(mktime(0, 0, 0)));
-    $query = $this->createQuery();
-    $query->matching($query->greaterThanOrEqual('start', $today->format('Y-m-d H:i:s')));
-    return $query->execute();
-  }
+    /**
+     * Return the next dates
+     *
+     * @return QueryResultInterface Next CoderDojo dates
+     */
+    public function findNext()
+    {
+        $today = new \DateTime('@'.(mktime(0, 0, 0)));
+        $query = $this->createQuery();
+        $query->matching($query->greaterThanOrEqual('start', $today->format('Y-m-d H:i:s')));
+        return $query->execute();
+    }
 
-  /**
-   * Return the past dates (in descending order)
-   *
-   * @return QueryResultInterface Past CoderDojo dates
-   */
-  public function findPast()
-  {
-    $today = new \DateTime('@'.(mktime(0, 0, 0)));
-    $query = $this->createQuery();
-    $query->matching($query->lessThan('end', $today->format('Y-m-d H:i:s')));
-    $query->setOrderings(array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
-    return $query->execute();
-  }
+    /**
+     * Return the past dates (in descending order)
+     *
+     * @return QueryResultInterface Past CoderDojo dates
+     */
+    public function findPast()
+    {
+        $today = new \DateTime('@'.(mktime(0, 0, 0)));
+        $query = $this->createQuery();
+        $query->matching($query->lessThan('end', $today->format('Y-m-d H:i:s')));
+        $query->setOrderings(array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
+        return $query->execute();
+    }
 
-  /**
-   * Find all dates a particular mentor attended or will attend
-   *
-   * @param Person $mentor Mentor
-   * @return array|QueryResultInterface
-   */
-  public function findByMentor(Person $mentor)
-  {
-    $query = $this->createQuery();
-    $query->matching($query->contains('mentors', $mentor));
-    return $query->execute();
-  }
+    /**
+     * Find a registration trigger date
+     *
+     * @param \DateTimeInterface $dateTime Reference date
+     * @param int $limit Max. number of dates in the past
+     * @return Date Registration trigger date
+     */
+    public function findRegistrationTriggerDate(\DateTimeInterface $dateTime, $limit = Date::ACTIVE_REGISTRATIONS)
+    {
+        $query = $this->createQuery();
+        $query->matching($query->lessThan('end', $dateTime->format('Y-m-d H:i:s')));
+        $query->setOrderings(array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
+        $query->setLimit($limit);
+        foreach ($query->execute() as $date) {
+        }
+        return $date;
+    }
+
+    /**
+     * Find all dates a particular mentor attended or will attend
+     *
+     * @param Person $mentor Mentor
+     * @return array|QueryResultInterface
+     */
+    public function findByMentor(Person $mentor)
+    {
+        $query = $this->createQuery();
+        $query->matching($query->contains('mentors', $mentor));
+        return $query->execute();
+    }
 }

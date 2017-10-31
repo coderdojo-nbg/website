@@ -151,6 +151,9 @@
       <trans-unit id="dojo.full">
         <source>Belegt!</source>
       </trans-unit>
+      <trans-unit id="dojo.pending">
+        <source>Anmeldung ab %s</source>
+      </trans-unit>
 
       <!-- Date -->
       <trans-unit id="header.date.whenwhere">

@@ -44,6 +44,11 @@
             font-weight: bold;
         }
 
+        .pending {
+            color: $bgcolorYellow;
+            font-weight: bold;
+        }
+
         &:nth-child(even) {
             background-color: lighten($bgcolorBlue, 48%);
         }
@@ -135,6 +140,20 @@
 
             &.background {
                 color: transparentize($bgcolorRed, .8);
+            }
+        }
+
+        &.pending {
+            color: $colorInverseContent !important;
+
+            .animation-wrapper {
+                &.foreground {
+                    color: $bgcolorYellow;
+                }
+
+                &.background {
+                    color: transparentize($bgcolorYellow, .8);
+                }
             }
         }
 

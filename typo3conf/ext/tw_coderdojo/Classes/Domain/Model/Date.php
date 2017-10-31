@@ -27,6 +27,9 @@ namespace Tollwerk\TwCoderdojo\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+use Tollwerk\TwCoderdojo\Domain\Repository\DateRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
@@ -144,6 +147,13 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var array
      */
     protected $_sortedHelpers = null;
+
+    /**
+     * Number of active registrations
+     *
+     * @var int
+     */
+    const ACTIVE_REGISTRATIONS = 3;
 
     /**
      * __construct
@@ -563,5 +573,47 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCapacityNinjasOnly($capacityNinjasOnly)
     {
         $this->capacityNinjasOnly = $capacityNinjasOnly;
+    }
+
+    /**
+     * Test if the registration is active
+     *
+     * @return bool
+     */
+    public function isRegistrationActive()
+    {
+        $today = new \DateTimeImmutable('today');
+        $today->setTimezone(new \DateTimeZone('UTC'));
+
+        // If this date lies in the past
+        if ($this->getStart() < $today) {
+            return false;
+        }
+
+        $activationDate = $this->getRegistrationActiveDate();
+        return ($activationDate instanceof \DateTimeInterface) ? ($today >= $activationDate) : false;
+    }
+
+    /**
+     * Return the date when registration for this dojo will be activated
+     *
+     * @return \DateTimeInterface|null Registration activation date
+     */
+    public function getRegistrationActiveDate()
+    {
+        // Find the registration trigger date
+        /** @var ObjectManager $objectManager */
+        $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        /** @var DateRepository $dateRepository */
+        $dateRepository = $objectManager->get(DateRepository::class);
+        $triggerDate = $dateRepository->findRegistrationTriggerDate($this->getStart(), self::ACTIVE_REGISTRATIONS);
+        if ($triggerDate instanceof Date) {
+            $triggerDateStart = clone $triggerDate->getStart();
+            $triggerDateStart = $triggerDateStart->setTime(0, 0, 0);
+            $triggerDateStart = $triggerDateStart->modify('+1 day');
+            return $triggerDateStart;
+        }
+
+        return null;
     }
 }

@@ -367,6 +367,10 @@ nav {
   color: #61c93f;
   font-weight: bold; }
 
+.ce-twcoderdojo_date .date .pending {
+  color: #fbcc33;
+  font-weight: bold; }
+
 .ce-twcoderdojo_date .date:nth-child(even) {
   background-color: #eff5fb; }
 
@@ -431,6 +435,12 @@ nav {
     color: #ed462f; }
   .ce-twcoderdojo_date .date-attendees.full .animation-wrapper.background {
     color: rgba(237, 70, 47, 0.2); }
+  .ce-twcoderdojo_date .date-attendees.pending {
+    color: #000 !important; }
+    .ce-twcoderdojo_date .date-attendees.pending .animation-wrapper.foreground {
+      color: #fbcc33; }
+    .ce-twcoderdojo_date .date-attendees.pending .animation-wrapper.background {
+      color: rgba(251, 204, 51, 0.2); }
   .ce-twcoderdojo_date .date-attendees > span {
     display: table;
     z-index: 2; }

@@ -25,22 +25,25 @@
                 </p>
             </f:if>
             <p>
-                <f:translate key="dojo.capacity" arguments="{0: date.capacity}"/> —
-                <a href="#c19" class="date-register">
-                    <f:if condition="{date.full}">
-                        <f:then>
-                            <f:translate key="dojo.waitinglist"/>
-                        </f:then>
-                        <f:else>
-                            <f:translate key="dojo.register"/>
-                        </f:else>
-                    </f:if>
-                </a>
+                <f:translate key="dojo.capacity" arguments="{0: date.capacity}"/>
+                <f:if condition="{date.registrationActive}">
+                    —
+                    <a href="#c19" class="date-register">
+                        <f:if condition="{date.full}">
+                            <f:then>
+                                <f:translate key="dojo.waitinglist"/>
+                            </f:then>
+                            <f:else>
+                                <f:translate key="dojo.register"/>
+                            </f:else>
+                        </f:if>
+                    </a>
+                </f:if>
             </p>
-            <a href="#c19" class="date-attendees{f:if(condition: '{date.full}', then: ' full')}">
+            <a href="#c19" class="date-attendees{f:if(condition: '{date.registrationActive}', then: '{f:if(condition: \'{date.full}\', then: \' full\')}', else: ' pending')}">
                 <svg class="animation-wrapper background"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
                 <svg class="animation-wrapper foreground"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use></svg>
-                <span><span><f:if condition="{date.full}">
+                <span><span><f:if condition="{date.registrationActive}"><f:then><f:if condition="{date.full}">
                     <f:then>
                         <f:translate key="dojo.full"/>
                     </f:then>
@@ -50,7 +53,7 @@
                                 <f:else><f:translate key="dojo.count" arguments="{0: date.attendeesCount}"/></f:else>
                             </f:if>
                     </f:else>
-                </f:if></span></span>
+                </f:if></f:then><f:else><f:translate key="dojo.pending" arguments="{0: '{date.registrationActiveDate -> f:format.date(format: \'{f:translate(key: \\\'format.start.date\\\')}\')}'}"/></f:else></f:if></span></span>
             </a>
         </section>
         <f:render partial="Date" section="Map" arguments="{date: date}"/>
@@ -86,20 +89,21 @@
     </aside>
 </div>
 
-<f:if condition="{date.full}">
-    <f:then>
-        <f:cObject typoscriptObjectPath="lib.waitinglist"/>
-    </f:then>
-    <f:else>
-        <f:if condition="{date.type}">
-            <f:then>
-                <f:cObject typoscriptObjectPath="lib.camp"/>
-            </f:then>
-            <f:else>
-                <f:cObject typoscriptObjectPath="lib.registration"/>
-            </f:else>
-        </f:if>
+<f:if condition="{date.registrationActive}">
+    <f:if condition="{date.full}">
+        <f:then>
+            <f:cObject typoscriptObjectPath="lib.waitinglist"/>
+        </f:then>
+        <f:else>
+            <f:if condition="{date.type}">
+                <f:then>
+                    <f:cObject typoscriptObjectPath="lib.camp"/>
+                </f:then>
+                <f:else>
+                    <f:cObject typoscriptObjectPath="lib.registration"/>
+                </f:else>
+            </f:if>
 
-    </f:else>
+        </f:else>
+    </f:if>
 </f:if>
-
