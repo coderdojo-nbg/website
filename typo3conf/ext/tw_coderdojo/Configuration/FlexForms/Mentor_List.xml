@@ -1,0 +1,27 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <main>
+            <ROOT>
+                <type>array</type>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:flex.tab.general
+                    </sheetTitle>
+                </TCEforms>
+                <el>
+                    <settings.retired>
+                        <label>LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:flex.mentor.retired</label>
+                        <config>
+                            <type>check</type>
+                            <default>0</default>
+                        </config>
+                    </settings.retired>
+                </el>
+            </ROOT>
+        </main>
+    </sheets>
+</T3DataStructure>
+
+

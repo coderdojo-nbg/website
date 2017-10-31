@@ -1,4 +1,5 @@
 <?php
+
 namespace Tollwerk\TwCoderdojo\Controller;
 
 
@@ -30,34 +31,37 @@ namespace Tollwerk\TwCoderdojo\Controller;
 /**
  * MentorController
  */
-class MentorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class MentorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
 
-	/**
-	 * Person repository
-	 *
-	 * @var \Tollwerk\TwCoderdojo\Domain\Repository\PersonRepository
-	 * @inject
-	 */
-	protected $personRepository;
+    /**
+     * Person repository
+     *
+     * @var \Tollwerk\TwCoderdojo\Domain\Repository\PersonRepository
+     * @inject
+     */
+    protected $personRepository;
 
-	/**
-	 * action list
-	 *
-	 * @return void
-	 */
-	public function listAction() {
-		$this->view->assign('mentors', $this->personRepository->findByType(0));
-	}
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function listAction()
+    {
+        $this->view->assign('mentors', $this->personRepository->findMentors((boolean)$this->settings['retired']));
+    }
 
-	/**
-	 * action show
-	 *
-	 * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentor
-	 * @param int $back Back PID
-	 * @return void
-	 */
-	public function showAction(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentor, $back = null) {
-		$this->view->assign('mentor', $mentor);
-		$this->view->assign('back', $back ?: $this->settings['pages']['mentorListPid']);
-	}
+    /**
+     * action show
+     *
+     * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentor
+     * @param int $back Back PID
+     * @return void
+     */
+    public function showAction(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentor, $back = null)
+    {
+        $this->view->assign('mentor', $mentor);
+        $this->view->assign('back', $back ?: $this->settings['pages']['mentorListPid']);
+    }
 }

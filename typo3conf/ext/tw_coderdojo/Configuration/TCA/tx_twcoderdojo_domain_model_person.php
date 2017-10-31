@@ -30,11 +30,12 @@ return array(
     'showRecordFieldList' => 'hidden, type, gender, first_name, last_name, birthday, portrait, biography, statement, anonymous, contacts, skills',
   ),
   'types' => array(
-    '0' => array('showitem' => '--palette--;;type,--pallette--;;name, portrait, biography;;;richtext:rte_transform[mode=ts_links], statement, contacts, skills, '),
+    '0' => array('showitem' => '--palette--;;typementor,--pallette--;;name, portrait, biography;;;richtext:rte_transform[mode=ts_links], statement, contacts, skills, '),
     '1' => array('showitem' => '--palette--;;type,--pallette--;;name, guardian, contacts, skills, '),
     '2' => array('showitem' => '--palette--;;type,--pallette--;;name, contacts, skills, '),
   ),
   'palettes' => array(
+    'typementor' => array('showitem' => 'type, anonymous, retired, hidden', 'canNotCollapse' => true),
     'type' => array('showitem' => 'type, anonymous, hidden', 'canNotCollapse' => true),
     'name' => array('showitem' => 'gender, first_name, last_name, birthday', 'canNotCollapse' => true),
   ),
@@ -214,6 +215,14 @@ return array(
     'anonymous' => array(
       'exclude' => 0,
       'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.anonymous',
+      'config' => array(
+        'type' => 'check',
+        'default' => 0
+      )
+    ),
+    'retired' => array(
+      'exclude' => 0,
+      'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_person.retired',
       'config' => array(
         'type' => 'check',
         'default' => 0

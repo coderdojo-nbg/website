@@ -25,9 +25,6 @@ namespace Tollwerk\TwCoderdojo\Domain\Repository;
  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  ***********************************************************************************/
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
-
 /**
  * Date repository
  *
@@ -35,23 +32,39 @@ use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
  */
 class PersonRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-	/**
-	 * Default orderings
-	 *
-	 * @var array
-	 */
-	protected $defaultOrderings = array(
-		'last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		'first_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
-	);
+    /**
+     * Default orderings
+     *
+     * @var array
+     */
+    protected $defaultOrderings = array(
+        'last_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        'first_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+    );
 
-	/**
-	 * Default configuration
-	 */
-	public function initializeObject()
-	{
-		$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-		$querySettings->setRespectStoragePage(false);
-		$this->setDefaultQuerySettings($querySettings);
-	}
+    /**
+     * Default configuration
+     */
+    public function initializeObject()
+    {
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings->setRespectStoragePage(false);
+        $this->setDefaultQuerySettings($querySettings);
+    }
+
+    /**
+     * Find and return all mentors
+     *
+     * @param bool $retired Select retired mentors
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
+    public function findMentors($retired = false)
+    {
+        $query = $this->createQuery();
+        $constraints = [
+            $query->equals('type', 0),
+            $query->equals('retired', (boolean)$retired),
+        ];
+        return $query->matching($query->logicalAnd($constraints))->execute();
+    }
 }

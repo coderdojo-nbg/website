@@ -77,6 +77,9 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_person.anonymous">
 				<source>Anonymous</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_person.retired">
+				<source>Retired</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_person.contacts">
 				<source>Contacts</source>
 			</trans-unit>
@@ -198,6 +201,12 @@
 			</trans-unit>
 			<trans-unit id="tt_content.list_type.mentor">
 				<source>Mentor display</source>
+			</trans-unit>
+			<trans-unit id="flex.tab.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flex.mentor.retired">
+				<source>Show retired mentors</source>
 			</trans-unit>
 		</body>
 	</file>

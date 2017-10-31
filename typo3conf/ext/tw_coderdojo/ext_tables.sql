@@ -15,6 +15,7 @@ CREATE TABLE tx_twcoderdojo_domain_model_person (
 	biography text NOT NULL,
 	statement text NOT NULL,
 	anonymous tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	retired tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	contacts int(11) unsigned DEFAULT '0' NOT NULL,
 	skills int(11) unsigned DEFAULT '0' NOT NULL,
 	guardian int(11) unsigned DEFAULT '0' NOT NULL,

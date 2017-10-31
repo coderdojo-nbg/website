@@ -105,6 +105,13 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
   protected $anonymous = false;
 
   /**
+   * Retired
+   *
+   * @var bool
+   */
+  protected $retired = false;
+
+  /**
    * Kontaktmöglichkeit
    *
    * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Contact>
@@ -348,6 +355,37 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
   public function isAnonymous()
   {
     return $this->anonymous;
+  }
+
+  /**
+   * Returns the retired
+   *
+   * @return bool $retired
+   */
+  public function getRetired()
+  {
+    return $this->retired;
+  }
+
+  /**
+   * Sets the retired
+   *
+   * @param bool $retired
+   * @return void
+   */
+  public function setRetired($retired)
+  {
+    $this->retired = $retired;
+  }
+
+  /**
+   * Returns the boolean state of retired
+   *
+   * @return bool
+   */
+  public function isRetired()
+  {
+    return $this->retired;
   }
 
   /**

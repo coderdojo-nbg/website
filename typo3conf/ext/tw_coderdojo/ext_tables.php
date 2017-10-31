@@ -46,6 +46,11 @@ if (!defined('TYPO3_MODE')) {
     'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xml:tt_content.list_type.mentor'
 );
 
+$pluginSignature = str_replace('_', '', $_EXTKEY) . '_mentor';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature,
+    'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/Mentor_List.xml');
+
 if (TYPO3_MODE === 'BE') {
     /**
      * Registers a Backend Module
