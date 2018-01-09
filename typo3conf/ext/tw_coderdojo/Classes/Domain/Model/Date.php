@@ -38,26 +38,29 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
+     * Number of active registrations
+     *
+     * @var int
+     */
+    const ACTIVE_REGISTRATIONS = 3;
+    /**
      * Dojo-Typ
      *
      * @var int
      */
     protected $type = 0;
-
     /**
      * Dojo-Nummer
      *
      * @var int
      */
     protected $dojoNumber = 0;
-
     /**
      * Dojo-Name
      *
      * @var string
      */
     protected $name = '';
-
     /**
      * Kapazität
      *
@@ -65,21 +68,18 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $capacity = 0;
-
     /**
      * Nur Ninjas zählen
      *
      * @var boolean
      */
     protected $capacityNinjasOnly = false;
-
     /**
      * Anmeldung geschlossen
      *
      * @var boolean
      */
     protected $fullOverride = false;
-
     /**
      * Startzeitpunkt
      *
@@ -87,7 +87,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $start = null;
-
     /**
      * Endzeitpunkt
      *
@@ -95,21 +94,18 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $end = null;
-
     /**
      * Veranstaltungsort
      *
      * @var \Tollwerk\TwCoderdojo\Domain\Model\Location
      */
     protected $location = null;
-
     /**
      * Intro description
      *
      * @var string
      */
     protected $intro = '';
-
     /**
      * Mentoren
      *
@@ -117,7 +113,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @lazy
      */
     protected $mentors = null;
-
     /**
      * Ninjas
      *
@@ -125,7 +120,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @lazy
      */
     protected $ninjas = null;
-
     /**
      * Helpers
      *
@@ -133,34 +127,24 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @lazy
      */
     protected $helpers = null;
-
     /**
      * Sortierte Mentoren
      *
      * @var array
      */
     protected $_sortedMentors = null;
-
     /**
      * Sortierte Ninjas
      *
      * @var array
      */
     protected $_sortedNinjas = null;
-
     /**
      * Sortierte Helfer
      *
      * @var array
      */
     protected $_sortedHelpers = null;
-
-    /**
-     * Number of active registrations
-     *
-     * @var int
-     */
-    const ACTIVE_REGISTRATIONS = 3;
 
     /**
      * __construct
@@ -224,28 +208,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCapacity($capacity)
     {
         $this->capacity = $capacity;
-    }
-
-    /**
-     * Returns the start
-     *
-     * @return \DateTime $start
-     */
-    public function getStart()
-    {
-        $this->start->setTimezone(new \DateTimeZone('UTC'));
-        return $this->start;
-    }
-
-    /**
-     * Sets the start
-     *
-     * @param \DateTime $start
-     * @return void
-     */
-    public function setStart(\DateTime $start)
-    {
-        $this->start = $start;
     }
 
     /**
@@ -359,6 +321,40 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Sort a list of persons by first and last name
+     *
+     * @param ObjectStorage $persons Persons
+     * @return array Sorted list of persons
+     */
+    protected function sortPersons(ObjectStorage $persons)
+    {
+        $sortedPersons = [];
+        foreach ($persons as $person) {
+            $sortedPersons[] = $person;
+        }
+
+        usort(
+            $sortedPersons, function ($person1, $person2) {
+            /**
+             * @var Person $person1
+             * @var Person $person2
+             */
+            return strnatcasecmp(
+                $person1->getLastName().','.$person1->getFirstName(),
+                $person2->getLastName().','.$person2->getFirstName()
+            );
+        }
+        );
+
+        $sortedPersonsObjStorage = new ObjectStorage();
+        foreach ($sortedPersons as $sortedPerson) {
+            $sortedPersonsObjStorage->attach($sortedPerson);
+        }
+
+        return $sortedPersonsObjStorage;
+    }
+
+    /**
      * Adds a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
@@ -381,16 +377,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the ninjas
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
-     */
-    public function getNinjas()
-    {
-        return $this->ninjas;
-    }
-
-    /**
      * Returns the ninjas sorted by name
      *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
@@ -402,17 +388,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         }
 
         return $this->_sortedNinjas;
-    }
-
-    /**
-     * Sets the ninjas
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
-     * @return void
-     */
-    public function setNinjas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ninjas)
-    {
-        $this->ninjas = $ninjas;
     }
 
     /**
@@ -448,6 +423,17 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Sets the helpers
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+     * @return void
+     */
+    public function setHelpers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $helpers)
+    {
+        $this->helpers = $helpers;
+    }
+
+    /**
      * Returns the helpers sorted by name
      *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
@@ -462,14 +448,56 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Sets the helpers
+     * Return if the date is fully booked
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+     * @return bool Fully booked
+     */
+    public function getFull()
+    {
+        return $this->isFullOverride()
+            || (($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount(
+                )) >= $this->capacity);
+    }
+
+    /**
+     * Get whether the registration is closes
+     *
+     * @return bool Registration is closed
+     */
+    public function isFullOverride()
+    {
+        return $this->fullOverride;
+    }
+
+    /**
+     * Set whether the registration is closed
+     *
+     * @param bool $fullOverride Registration is closed
+     */
+    public function setFullOverride($fullOverride)
+    {
+        $this->fullOverride = $fullOverride;
+    }
+
+    /**
+     * Returns the ninjas
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
+     */
+    public function getNinjas()
+    {
+        return $this->ninjas;
+    }
+
+    /**
+     * Sets the ninjas
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
      * @return void
      */
-    public function setHelpers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $helpers)
+    public function setNinjas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ninjas)
     {
-        $this->helpers = $helpers;
+        $this->ninjas = $ninjas;
     }
 
     /**
@@ -480,47 +508,6 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getAttendeesCount()
     {
         return count($this->mentors) + count($this->ninjas) + count($this->helpers);
-    }
-
-    /**
-     * Return if the date is fully booked
-     *
-     * @return bool Fully booked
-     */
-    public function getFull()
-    {
-        return $this->isFullOverride()
-            || (($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount()) >= $this->capacity);
-    }
-
-    /**
-     * Sort a list of persons by first and last name
-     *
-     * @param ObjectStorage $persons Persons
-     * @return array Sorted list of persons
-     */
-    protected function sortPersons(ObjectStorage $persons)
-    {
-        $sortedPersons = [];
-        foreach ($persons as $person) {
-            $sortedPersons[] = $person;
-        }
-
-        usort($sortedPersons, function ($person1, $person2) {
-            /**
-             * @var Person $person1
-             * @var Person $person2
-             */
-            return strnatcasecmp($person1->getLastName().','.$person1->getFirstName(),
-                $person2->getLastName().','.$person2->getFirstName());
-        });
-
-        $sortedPersonsObjStorage = new ObjectStorage();
-        foreach ($sortedPersons as $sortedPerson) {
-            $sortedPersonsObjStorage->attach($sortedPerson);
-        }
-
-        return $sortedPersonsObjStorage;
     }
 
     /**
@@ -584,34 +571,14 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Get whether the registration is closes
-     *
-     * @return bool Registration is closed
-     */
-    public function isFullOverride()
-    {
-        return $this->fullOverride;
-    }
-
-    /**
-     * Set whether the registration is closed
-     *
-     * @param bool $fullOverride Registration is closed
-     */
-    public function setFullOverride($fullOverride)
-    {
-        $this->fullOverride = $fullOverride;
-    }
-
-    /**
      * Test if the registration is active
      *
      * @return bool
      */
     public function isRegistrationActive()
     {
-        $today = new \DateTimeImmutable('today');
-        $today->setTimezone(new \DateTimeZone('UTC'));
+        $today = (new \DateTimeImmutable('@'.gmmktime(0, 0, 0)))
+            ->setTimezone(new \DateTimeZone('UTC'));
 
         // If this date lies in the past
         if ($this->getStart() < $today) {
@@ -620,6 +587,28 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
         $activationDate = $this->getRegistrationActiveDate();
         return ($activationDate instanceof \DateTimeInterface) ? ($today >= $activationDate) : false;
+    }
+
+    /**
+     * Returns the start
+     *
+     * @return \DateTime $start
+     */
+    public function getStart()
+    {
+        $this->start->setTimezone(new \DateTimeZone('UTC'));
+        return $this->start;
+    }
+
+    /**
+     * Sets the start
+     *
+     * @param \DateTime $start
+     * @return void
+     */
+    public function setStart(\DateTime $start)
+    {
+        $this->start = $start;
     }
 
     /**

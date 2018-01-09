@@ -28,6 +28,16 @@
 	height: 119.259px;
 }
 
+.icon-craftplaces-dims {
+	width: 181.62px;
+	height: 196.649px;
+}
+
+.icon-craftplaces-grey-dims {
+	width: 181.62px;
+	height: 196.649px;
+}
+
 .icon-curt-dims {
 	width: 133.229px;
 	height: 133.228px;
@@ -67,16 +77,6 @@
 .icon-facebook\:hover-dims {
 	width: 32px;
 	height: 32px;
-}
-
-.icon-foodtrucks-dims {
-	width: 100px;
-	height: 35.599px;
-}
-
-.icon-foodtrucks-grey-dims {
-	width: 100px;
-	height: 35.599px;
 }
 
 .icon-github-dims {
