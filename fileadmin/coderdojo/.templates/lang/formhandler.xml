@@ -14,27 +14,31 @@
 			<label index="fieldset.chairs">Stühle</label>
 			<label index="fieldset.transaction">Transaktion</label>
 
-			<label index="field.gender">Geschlecht</label>
+			<label index="field.gender">Geschlecht<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
 			<label index="field.gender.male">Männlich</label>
 			<label index="field.gender.female">Weiblich</label>
+			<label index="field.gender.none">Keine Angabe</label>
 			<label index="field.salutation">Anrede</label>
 			<label index="field.salutation.mr">Herr</label>
 			<label index="field.salutation.mrs">Frau</label>
-			<label index="field.firstname">Vorname</label>
-			<label index="field.lastname">Nachname</label>
+			<label index="field.firstname">Vorname<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
+			<label index="field.lastname">Nachname<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
 			<label index="field.company">Firma</label>
 			<label index="field.address">Rechnungsanschrift</label>
-			<label index="field.email">E-Mail</label>
-			<label index="field.birthday">Geburtstag</label>
-			<label index="field.type">Teilnahme als</label>
+			<label index="field.email">E-Mail<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
+			<label index="field.birthday">Geburtstag<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
+			<label index="field.birthday.hint">Bitte beachte: Solltest du noch keine 13 Jahre alt sein, musst du dich das Dojo über von einem Erwachsenen begleiten lassen. Deine Begleitung möge sich bitte ebenfalls über dieses Formular gesondert als "Helfer" zum Dojo anmelden und im "Projekt"-Feld einen Hinweis auf dich hinterlassen.</label>
+			<label index="field.type">Teilnahme als<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
 			<label index="field.type.ninja">Code Ninja</label>
 			<label index="field.type.mentor">Mentor</label>
 			<label index="field.type.helper">Helfer</label>
 			<label index="field.message">Nachricht</label>
-			<label index="field.portrait">Portraitbild &lt;sup&gt;1&lt;/sup&gt;</label>
-			<label index="field.biography">Kurzbiografie &lt;sup&gt;2,3&lt;/sup&gt;</label>
-			<label index="field.statement">Leitmotiv &lt;sup&gt;2,4&lt;/sup&gt;</label>
+			<label index="field.portrait">Portraitbild<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]> &lt;sup&gt;1&lt;/sup&gt;</label>
+			<label index="field.biography">Kurzbiografie<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]> &lt;sup&gt;2,3&lt;/sup&gt;</label>
+			<label index="field.statement">Leitmotiv<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]> &lt;sup&gt;2,4&lt;/sup&gt;</label>
 			<label index="field.project">Projekt</label>
+			<label index="field.privacy">Datenschutz<![CDATA[<abbr title="Pflichtangabe">*</abbr>]]></label>
+			<label index="field.privacy.text"><![CDATA[Ich habe die <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme dieser zu]]></label>
 			<label index="field.contact">Nachricht absenden</label>
 			<label index="field.register">Anmelden</label>
 			<label index="field.waitinglist">Auf die Warteliste</label>
@@ -108,12 +112,13 @@
 			<label index="error_payment">Bitte wähle eine Zahlungsmethode</label>
 			<label index="error_confirm">Bitte bestätige, dass Du die Widerrufsbelehrung zur Kenntnis genommen hast</label>
 			<label index="error_amount">Bitte wähle wenigstens eine Farbe</label>
+			<label index="error_privacy">Bitte stimme unserer Datenschutzerklärung zu</label>
 
 			<label index="sum.net">Nettosumme</label>
 			<label index="sum.vat">Mehrwertsteuer 19%</label>
 			<label index="sum.gross">Bruttosumme</label>
 
-			<label index="antibot"><![CDATA[Unser Kontaktformular ist für Dich aus Spamschutzgründen leider gesperrt. Wenn Du der Ansicht bist, es handelt sich dabei um einen Irrtum, dann <a href="mailto:ping@coderdojo-nbg.org">sende uns bitte eine E-Mail</a>. Wir bitten um Entschuldigung für die Unannehmlichkeiten!]]></label>
+			<label index="antibot"><![CDATA[<a name="formhandler-registration"/><a name="formhandler-waitinglist"/>Unser Kontaktformular ist für Dich aus Spamschutzgründen leider gesperrt. Wenn Du der Ansicht bist, es handelt sich dabei um einen Irrtum, dann <a href="mailto:ping@coderdojo-nbg.org">sende uns bitte eine E-Mail</a>. Wir bitten um Entschuldigung für die Unannehmlichkeiten!]]></label>
 			<label index="signature"><![CDATA[
 --- 8< ---
 

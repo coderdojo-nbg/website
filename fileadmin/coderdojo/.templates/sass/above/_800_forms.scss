@@ -1,114 +1,126 @@
 fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
 legend {
-  @include hide-visible;
+	@include hide-visible;
 }
 
 fieldset > label {
-  margin: 1em 0 0 0;
+	margin: 1em 0 0 0;
 
-  span {
-    display: block;
-  }
+	span {
+		display: block;
+	}
 }
 
 input[type=text], input[type=email], input[type=submit], input[type=button], input[type=date], input[type=file], textarea, button {
-  width: 100%;
-  padding: .5em;
-  box-sizing: border-box;
-  border: 1px solid $bgcolorBodyLightest;
-  vertical-align: middle;
+	width: 100%;
+	padding: .5em;
+	box-sizing: border-box;
+	border: 1px solid $bgcolorBodyLightest;
+	vertical-align: middle;
 
-  &.error {
-    border-bottom-width: 0;
-  }
+	&.error {
+		border-bottom-width: 0;
+	}
 }
 
 input[type=submit], input[type=button], button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 textarea {
-  min-height: 10em;
+	min-height: 10em;
 }
 
 form {
-  .controls, .label {
-    margin: 1em 0 0 0;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    border: 1px solid $bgcolorBodyLightest;
-  }
+	.controls, .label {
+		margin: 1em 0 0 0;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		border: 1px solid $bgcolorBodyLightest;
+	}
 
-  li {
-    display: table-cell;
+	.box {
+		padding: .5em;
+		border: 1px solid $bgcolorBodyLightest;
+	}
 
-    label {
-      padding: .5em;
+	li {
+		display: table-cell;
 
-      span {
-        margin-left: .5em;
-      }
-    }
-  }
+		label {
+			padding: .5em;
 
-  .mentor-skill {
-    padding: 0;
+			span {
+				margin-left: .5em;
+			}
+		}
+	}
 
-    label {
-      padding: .2em .5em;
-    }
-  }
+	.mentor-skill {
+		padding: 0;
+
+		label {
+			padding: .2em .5em;
+		}
+	}
 }
 
 label,
 fieldset ul,
-form dl {
-  & + .error {
-    padding: .5em;
-    margin: 0 0 2em 0;
-    background-color: $bgcolorRed;
-    color: $colorRed;
-    text-align: center;
-    position: relative;
+form dl,
+form .box {
+	& + .error {
+		padding: .5em;
+		margin: 0 0 2em 0;
+		background-color: $bgcolorRed;
+		color: $colorRed;
+		text-align: center;
+		position: relative;
 
-    &:after {
-      border: .4em solid transparent;
-      border-bottom-color: $bgcolorRed;
-      box-sizing: border-box;
-      margin-left: -.4em;
-      content: '';
-      display: block;
-      width: .8em;
-      height: .8em;
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-    }
-  }
+		&:after {
+			border: .4em solid transparent;
+			border-bottom-color: $bgcolorRed;
+			box-sizing: border-box;
+			margin-left: -.4em;
+			content: '';
+			display: block;
+			width: .8em;
+			height: .8em;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+		}
+	}
 }
 
 #Tx_Formhandler_UploadedFiles_portrait {
-  display: list-item;
-  list-style-type: disc;
-  margin: 0 0 0 2em;
+	display: list-item;
+	list-style-type: disc;
+	margin: 0 0 0 2em;
 
-  a {
-    display: inline-block;
-    padding: .5em;
-  }
+	a {
+		display: inline-block;
+		padding: .5em;
+	}
 
-  &:empty {
-    display: none;
-  }
+	&:empty {
+		display: none;
+	}
+}
+
+.hint {
+	margin-top: .5em;
+	font-size: smaller;
+	font-style: italic;
 }

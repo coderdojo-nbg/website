@@ -75,6 +75,9 @@ h3 {
   line-height: 1.2;
   margin: 1em 0; }
 
+abbr {
+  text-decoration: none; }
+
 .ce-textpic, .ce-html, .ce-twcoderdojo_date, .ce-formhandler {
   background-color: #444; }
 
@@ -518,6 +521,10 @@ form ul {
   width: 100%;
   border: 1px solid #bbb; }
 
+form .box {
+  padding: .5em;
+  border: 1px solid #bbb; }
+
 form li {
   display: table-cell; }
   form li label {
@@ -532,7 +539,8 @@ form .mentor-skill {
 
 label + .error,
 fieldset ul + .error,
-form dl + .error {
+form dl + .error,
+form .box + .error {
   padding: .5em;
   margin: 0 0 2em 0;
   background-color: #ed462f;
@@ -541,7 +549,8 @@ form dl + .error {
   position: relative; }
   label + .error:after,
   fieldset ul + .error:after,
-  form dl + .error:after {
+  form dl + .error:after,
+  form .box + .error:after {
     border: .4em solid transparent;
     border-bottom-color: #ed462f;
     box-sizing: border-box;
@@ -563,6 +572,11 @@ form dl + .error {
     padding: .5em; }
   #Tx_Formhandler_UploadedFiles_portrait:empty {
     display: none; }
+
+.hint {
+  margin-top: .5em;
+  font-size: smaller;
+  font-style: italic; }
 
 @keyframes attendees {
   0% {
@@ -697,7 +711,7 @@ form dl + .error {
     margin-top: 1em; }
     .label + ul + .error, .label + ol + .error {
       margin-left: 25%; }
-  form .controls {
+  form .hint, form .box, form .controls {
     margin-left: 25%; } }
 
 @media all and (min-width: 64em) {

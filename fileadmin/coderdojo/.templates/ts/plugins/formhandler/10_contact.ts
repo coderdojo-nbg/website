@@ -30,6 +30,7 @@ plugin.Tx_Formhandler.settings.predef.contact {
             2 = email
             3 = emailExists
           }
+          privacy.errorCheck.1 = required
         }
       }
     }

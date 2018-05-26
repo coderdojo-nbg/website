@@ -18,6 +18,16 @@
 ###error_###fieldname######
 <!-- ###field_checkbox### -->
 
+<!-- ###field_privacy### -->
+<label class="checkbox">
+  <span>###LLL:field.###fieldname######</span>
+  <div class="box">
+  <input type="checkbox" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="Ja" ###checked_###fieldname###_Ja###/> ###LLL:field.###fieldname###.text###
+  </div>
+</label>
+###error_###fieldname######
+<!-- ###field_privacy### -->
+
 <!-- ###field_email### -->
 <label>
   <span>###LLL:field.###fieldname######</span><input type="email" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="###LLL:field.placeholder.###fieldname######" />
@@ -30,7 +40,15 @@
   <span>###LLL:field.###fieldname######</span><input type="date" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="YYYY-MM-DD" min="1920-01-01"/>
 </label>
   ###error_###fieldname######
+<div class="hint">###LLL:field.###fieldname###.hint###</div>
 <!-- ###field_date### -->
+
+<!-- ###field_dateadult### -->
+<label>
+  <span>###LLL:field.###fieldname######</span><input type="date" id="field_###fieldname###" class="###is_error_###fieldname######" name="formhandler[###fieldname###]" value="###value_###fieldname######" placeholder="YYYY-MM-DD" min="1920-01-01"/>
+</label>
+  ###error_###fieldname######
+<!-- ###field_dateadult### -->
 
 <!-- ###field_file### -->
 <label>

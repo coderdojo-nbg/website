@@ -30,6 +30,8 @@ fieldset .mentor-skills {
 	}
 }
 
-form .controls {
-	margin-left: 25%;
+form {
+	.hint, .box, .controls {
+		margin-left: 25%;
+	}
 }

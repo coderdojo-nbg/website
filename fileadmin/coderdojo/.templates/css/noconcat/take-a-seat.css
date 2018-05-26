@@ -105,7 +105,9 @@ header[role=banner] {
   margin-top: -1em; }
 
 .tas-tagline, #c57 h2, #c74 h2,
-.tas-tagline a, #c57 h2 a, #c74 h2 a {
+.tas-tagline a,
+#c57 h2 a,
+#c74 h2 a {
   font-family: "league-gothic", Arial, Helvetica, sans-serif;
   line-height: 1; }
 
@@ -113,7 +115,10 @@ header[role=banner] {
   font-size: calc(2.2em + 2vw);
   text-transform: uppercase;
   margin: .5em 0; }
-  .tas-tagline a, #c57 h2 a, #c74 h2 a {
+  
+  .tas-tagline a,
+  #c57 h2 a,
+  #c74 h2 a {
     text-decoration: none; }
 
 .tas-tagline-sub {

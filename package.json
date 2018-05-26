@@ -16,13 +16,13 @@
     "grunt-autoprefixer": "^3.0.4",
     "grunt-iconizr": "jkphl/grunt-iconizr#dev",
     "grunt-imagemin-backup": "^0.1.0",
-    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
     "grunt-sass": "^2.0.0",
     "grunt-favicons": "^0.8.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-w3c-html-validation": "^0.1.8",
     "grunt-notify": "^0.4.5",
-    "matchdep": "^1.0.1"
+    "matchdep": "^2.0.0"
   }
 }
