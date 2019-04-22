@@ -317,6 +317,26 @@
 .icon-location\:hover-dims-ph {
   padding-top: 177.77777777777777%; }
 
+.icon-ndf {
+  background-image: url(../icons/ndf.png); }
+
+.icon-ndf-dims {
+  width: 100px;
+  height: 45.386px; }
+
+.icon-ndf-dims-ph {
+  padding-top: 45.386%; }
+
+.icon-ndf-grey {
+  background-image: url(../icons/ndf-grey.png); }
+
+.icon-ndf-grey-dims {
+  width: 100px;
+  height: 45.386px; }
+
+.icon-ndf-grey-dims-ph {
+  padding-top: 45.386%; }
+
 .icon-netatmo {
   background-image: url(../icons/netatmo.png); }
 
@@ -336,6 +356,26 @@
 
 .icon-netatmo-grey-dims-ph {
   padding-top: 24.842%; }
+
+.icon-netlogix {
+  background-image: url(../icons/netlogix.png); }
+
+.icon-netlogix-dims {
+  width: 100px;
+  height: 26.667px; }
+
+.icon-netlogix-dims-ph {
+  padding-top: 26.667%; }
+
+.icon-netlogix-grey {
+  background-image: url(../icons/netlogix-grey.png); }
+
+.icon-netlogix-grey-dims {
+  width: 100px;
+  height: 26.667px; }
+
+.icon-netlogix-grey-dims-ph {
+  padding-top: 26.667%; }
 
 .icon-nueww {
   background-image: url(../icons/nueww.png); }

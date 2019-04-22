@@ -95,13 +95,16 @@
                             </f:for>
                         </ul>
                         <dl>
-                            <dt>
-                                <f:translate key="mentor.age.label"/>
-                            </dt>
-                            <dd>
-                                <f:translate key="mentor.age" arguments="{0: mentor.age}"/>
-                            </dd>
-
+                            <f:if condition="{mentor.anonymous}">
+                                <f:else>
+                                    <dt>
+                                        <f:translate key="mentor.age.label"/>
+                                    </dt>
+                                    <dd>
+                                        <f:translate key="mentor.age" arguments="{0: mentor.age}"/>
+                                    </dd>
+                                </f:else>
+                            </f:if>
                             <f:for each="{mentor.contacts}" as="contact">
                                 <f:if condition="{contact.type} == 0">
                                     <f:then>

@@ -152,6 +152,16 @@
 	height: 96px;
 }
 
+.icon-ndf-dims {
+	width: 100px;
+	height: 45.386px;
+}
+
+.icon-ndf-grey-dims {
+	width: 100px;
+	height: 45.386px;
+}
+
 .icon-netatmo-dims {
 	width: 100px;
 	height: 24.842px;
@@ -160,6 +170,16 @@
 .icon-netatmo-grey-dims {
 	width: 100px;
 	height: 24.842px;
+}
+
+.icon-netlogix-dims {
+	width: 100px;
+	height: 26.667px;
+}
+
+.icon-netlogix-grey-dims {
+	width: 100px;
+	height: 26.667px;
 }
 
 .icon-nueww-dims {
