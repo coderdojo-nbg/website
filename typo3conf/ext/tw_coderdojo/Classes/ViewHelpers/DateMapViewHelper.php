@@ -77,12 +77,15 @@ class DateMapViewHelper extends AbstractViewHelper
     /**
      * Renders an image including a Google Map for a date
      *
-     * @param float $latitude Latitude
+     * @param float $latitude  Latitude
      * @param float $longitude Longitude
-     * @param string $client Client ("facebook", "twitter")
+     * @param string $mapsApiKey Maps API Key
+     * @param string $client   Client ("facebook", "twitter")
+     *
      * @return string Image URL
+     * @throws \TYPO3\CMS\Fluid\Core\ViewHelper\Exception
      */
-    public function render($latitude, $longitude, $client = 'facebook')
+    public function render($latitude, $longitude, $mapsApiKey, $client = 'facebook')
     {
         switch (strtolower($client)) {
             case 'facebook':
@@ -97,7 +100,7 @@ class DateMapViewHelper extends AbstractViewHelper
         }
 
         $data = 'typo3temp'.DIRECTORY_SEPARATOR.'coderdojo-map-'.md5($latitude.$longitude.$size).'.jpg';
-        $googleMap = "https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&size=$size&zoom=14&markers=color:red|$latitude,$longitude";
+        $googleMap = "https://maps.googleapis.com/maps/api/staticmap?center=$latitude,$longitude&size=$size&zoom=14&markers=color:red|$latitude,$longitude&key=$mapsApiKey";
         if (!@file_exists(PATH_site.$data)) {
             copy($googleMap, PATH_site.$data);
         }
