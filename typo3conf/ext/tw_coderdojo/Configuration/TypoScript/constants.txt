@@ -28,5 +28,7 @@ plugin.tx_twcoderdojo {
 		mentorPid =
 		# cat=plugin.tx_twcoderdojo//e; type=int+; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.pid.mentorListPid
 		mentorListPid =
+		# cat=plugin.tx_twcoderdojo//f; type=string; label=LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:constants.mapsApiKey
+		mapsApiKey =
 	}
 }

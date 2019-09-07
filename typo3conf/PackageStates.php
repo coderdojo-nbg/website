@@ -325,7 +325,7 @@ return [
             'suggestions' => [],
         ],
         'tw_antibot' => [
-            'composerName' => 'tw_antibot',
+            'composerName' => 'tollwerk/tw-antibot',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/tw_antibot/',
             'suggestions' => [],

@@ -66,7 +66,7 @@
 </f:section>
 
 <f:section name="Map">
-    <a class="map" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank" style="background-image:url(https://maps.googleapis.com/maps/api/staticmap?center={date.location.latitude},{date.location.longitude}&amp;size=640x320&amp;zoom=14&amp;markers=color:red|{date.location.latitude},{date.location.longitude})" title="{date.location.name}, {date.location.streetAddress}, {date.location.postalCode} {date.location.locality}, {date.location.country.shortNameDe}">
+    <a class="map" href="{f:if(condition: '{date.location.googlemaps}', then: '{date.location.googlemaps}', else: 'http://maps.google.com/maps?q={date.location.latitude},{date.location.longitude}')}" target="_blank" style="background-image:url(https://maps.googleapis.com/maps/api/staticmap?center={date.location.latitude},{date.location.longitude}&amp;size=640x320&amp;zoom=14&amp;markers=color:red|{date.location.latitude},{date.location.longitude}&amp;key={settings.mapsApiKey})" title="{date.location.name}, {date.location.streetAddress}, {date.location.postalCode} {date.location.locality}, {date.location.country.shortNameDe}">
         <f:translate key="dojo.map" arguments="{0: date.dojoNumber}"/>
     </a>
 </f:section>

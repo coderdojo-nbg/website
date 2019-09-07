@@ -1,70 +1,78 @@
 # Facsimile extension setup
 plugin.tx_twcoderdojo {
-	view {
-		templateRootPaths {
-			10	= EXT:tw_coderdojo/Resources/Private/Templates/
-			20	= {$plugin.tx_twcoderdojo.view.templateRootPath}
-		}
-		partialRootPaths {
-			10	= EXT:tw_coderdojo/Resources/Private/Partials/
-			20	= {$plugin.tx_twcoderdojo.view.partialRootPath}
-		}
-		layoutRootPaths {
-			10	= EXT:tw_coderdojo/Resources/Private/Layouts/
-			20	= {$plugin.tx_twcoderdojo.view.layoutRootPath}
-		}
-	}
-	persistence {
-		storagePid	= {$plugin.tx_twcoderdojo.persistence.storagePid}
-	}
-	features {
-		# uncomment the following line to enable the new Property Mapper.
-		# rewrittenPropertyMapper	= 1
-	}
-	settings {
-		pages {
-			storagePid	= {$plugin.tx_twcoderdojo.persistence.storagePid}
-			datePid	= {$plugin.tx_twcoderdojo.settings.datePid}
-			dateListPid	= {$plugin.tx_twcoderdojo.settings.dateListPid}
-			mentorPid	= {$plugin.tx_twcoderdojo.settings.mentorPid}
-			mentorListPid	= {$plugin.tx_twcoderdojo.settings.mentorListPid}
-		}
-	}
+    view {
+        templateRootPaths {
+            10 = EXT:tw_coderdojo/Resources/Private/Templates/
+            20 = {$plugin.tx_twcoderdojo.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            10 = EXT:tw_coderdojo/Resources/Private/Partials/
+            20 = {$plugin.tx_twcoderdojo.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            10 = EXT:tw_coderdojo/Resources/Private/Layouts/
+            20 = {$plugin.tx_twcoderdojo.view.layoutRootPath}
+        }
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_twcoderdojo.persistence.storagePid}
+    }
+
+    features {
+        # uncomment the following line to enable the new Property Mapper.
+        # rewrittenPropertyMapper    = 1
+    }
+
+    settings {
+        pages {
+            storagePid = {$plugin.tx_twcoderdojo.persistence.storagePid}
+            datePid = {$plugin.tx_twcoderdojo.settings.datePid}
+            dateListPid = {$plugin.tx_twcoderdojo.settings.dateListPid}
+            mentorPid = {$plugin.tx_twcoderdojo.settings.mentorPid}
+            mentorListPid = {$plugin.tx_twcoderdojo.settings.mentorListPid}
+        }
+
+        mapsApiKey = {$plugin.tx_twcoderdojo.settings.mapsApiKey}
+    }
 }
 
 module.tx_twcoderdojo < plugin.tx_twcoderdojo
 
 lib.coderdojo {
-	facebook = IMG_RESOURCE
-	facebook {
-		file = GIFBUILDER
-		file {
-			XY = 940,492
-			format = jpg
-			quality = 100
+    facebook = IMG_RESOURCE
+    facebook {
+        file = GIFBUILDER
+        file {
+            XY = 940,492
+            format = jpg
+            quality = 100
 
-			10 = IMAGE
-			10.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_facebook.png
+            10 = IMAGE
+            10.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_facebook.png
 
-			20 = IMAGE
-			20.offset = 470,0
-			20.file.import.current = 1
-		}
-	}
-	twitter = IMG_RESOURCE
-	twitter {
-		file = GIFBUILDER
-		file {
-			XY = 500,500
-			format = jpg
-			quality = 100
+            20 = IMAGE
+            20.offset = 470,0
+            20.file.import.current = 1
+        }
+    }
 
-			10 = IMAGE
-			10.file.import.current = 1
+    twitter = IMG_RESOURCE
+    twitter {
+        file = GIFBUILDER
+        file {
+            XY = 500,500
+            format = jpg
+            quality = 100
 
-			20 = IMAGE
-			20.offset = 0,340
-			20.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_twitter.png
-		}
-	}
+            10 = IMAGE
+            10.file.import.current = 1
+
+            20 = IMAGE
+            20.offset = 0,340
+            20.file = EXT:tw_coderdojo/Resources/Public/Images/cdn_twitter.png
+        }
+    }
 }

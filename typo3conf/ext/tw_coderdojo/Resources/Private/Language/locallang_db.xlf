@@ -28,6 +28,9 @@
 			<trans-unit id="constants.pid.mentorListPid" xml:space="preserve">
 				<source>Mentor list view page (ID)</source>
 			</trans-unit>
+			<trans-unit id="constants.mapsApiKey" xml:space="preserve">
+				<source>Google Static Maps API Key</source>
+			</trans-unit>
 
 			<trans-unit id="tx_twcoderdojo_domain_model_person">
 				<source>Person</source>
