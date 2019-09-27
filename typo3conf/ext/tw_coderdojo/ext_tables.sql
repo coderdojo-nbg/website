@@ -118,6 +118,7 @@ CREATE TABLE tx_twcoderdojo_domain_model_location (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	suffix varchar(255) DEFAULT '' NOT NULL,
 	street_address varchar(255) DEFAULT '' NOT NULL,
 	postal_code varchar(255) DEFAULT '' NOT NULL,
 	locality varchar(255) DEFAULT '' NOT NULL,

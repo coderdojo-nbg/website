@@ -27,6 +27,7 @@ namespace Tollwerk\TwCoderdojo\Domain\Repository;
 
 use Tollwerk\TwCoderdojo\Domain\Model\Date;
 use Tollwerk\TwCoderdojo\Domain\Model\Person;
+use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 
 /**
@@ -63,6 +64,7 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $today = new \DateTime('@'.(mktime(0, 0, 0)));
         $query = $this->createQuery();
         $query->matching($query->greaterThanOrEqual('start', $today->format('Y-m-d H:i:s')));
+
         return $query->execute();
     }
 
@@ -77,6 +79,7 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query = $this->createQuery();
         $query->matching($query->lessThan('end', $today->format('Y-m-d H:i:s')));
         $query->setOrderings(array('start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
+
         return $query->execute();
     }
 
@@ -84,7 +87,8 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * Find a registration trigger date
      *
      * @param \DateTimeInterface $dateTime Reference date
-     * @param int $limit Max. number of dates in the past
+     * @param int $limit                   Max. number of dates in the past
+     *
      * @return Date Registration trigger date
      */
     public function findRegistrationTriggerDate(\DateTimeInterface $dateTime, $limit = Date::ACTIVE_REGISTRATIONS)
@@ -95,6 +99,7 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query->setLimit($limit);
         foreach ($query->execute() as $date) {
         }
+
         return $date;
     }
 
@@ -102,12 +107,18 @@ class DateRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * Find all dates a particular mentor attended or will attend
      *
      * @param Person $mentor Mentor
+     *
      * @return array|QueryResultInterface
+     * @throws InvalidQueryException
      */
     public function findByMentor(Person $mentor)
     {
         $query = $this->createQuery();
-        $query->matching($query->contains('mentors', $mentor));
+        $query->matching($query->logicalOr([
+            $query->contains('mentors', $mentor),
+            $query->contains('ninjas', $mentor),
+        ]));
+
         return $query->execute();
     }
 }

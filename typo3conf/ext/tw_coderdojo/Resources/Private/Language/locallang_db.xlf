@@ -179,6 +179,9 @@
 			<trans-unit id="tx_twcoderdojo_domain_model_location.name">
 				<source>Name</source>
 			</trans-unit>
+			<trans-unit id="tx_twcoderdojo_domain_model_location.suffix">
+				<source>Dojo suffix</source>
+			</trans-unit>
 			<trans-unit id="tx_twcoderdojo_domain_model_location.street_address">
 				<source>Street address</source>
 			</trans-unit>

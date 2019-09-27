@@ -122,7 +122,7 @@
         </source>
       </trans-unit>
       <trans-unit id="dojo.name">
-        <source>CoderDojo %s</source>
+        <source>CoderDojo %s %s</source>
       </trans-unit>
       <trans-unit id="dojo.at">
         <source>Am</source>

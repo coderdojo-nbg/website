@@ -40,7 +40,7 @@
     <address class="p-location h-card{f:if(condition: '{icon}', then: ' icon icon-location:regular')}" itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Organization">
         <div class="p-name p-label p-org" itemprop="name">{date.location.name}</div>
         <div class="p-adr h-adr" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/Address">
-            <div class="p-street-address" itemprop="street-address">{date.location.streetAddress}</div>
+            <div class="p-street-address" itemprop="street-address">{date.location.streetAddress -> f:format.nl2br()}</div>
             <div>
                 <span class="p-postal-code" itemprop="postal-code">{date.location.postalCode}</span>
                 <span class="p-locality" itemprop="locality">{date.location.locality}</span>

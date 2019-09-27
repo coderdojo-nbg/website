@@ -20,7 +20,10 @@
             <f:for each="{nextDates}" as="date"><li class="date h-event" itemscope="itemscope" itemtype="http://schema.org/Event">
                 <f:link.action action="show" arguments="{date: date}" pageUid="{settings.pages.datePid}" class="u-url" additionalAttributes="{itemprop: 'url'}" title="{f:translate(key: 'dojo.details', arguments: '{0: date.dojoNumber}')}">
                     <h3 class="p-name" itemprop="name">
-                        <f:translate key="dojo.name" arguments="{0: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'}"/>
+                        <f:translate key="dojo.name" arguments="{
+                            0: date.location.suffix,
+                            1: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'
+                        }"/>
                     </h3>
                       <div class="schedule">
                         <f:translate key="dojo.at"/>

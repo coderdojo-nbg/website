@@ -22,9 +22,10 @@ return array(
 		'showRecordFieldList' => 'hidden, name, street_address, postal_code, locality, latitude, longitude, googlemaps, country',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'hidden;;1, name, --palette--;;address, --palette--;;geo'),
+		'1' => array('showitem' => 'hidden;;1, --palette--;;name, --palette--;;address, --palette--;;geo'),
 	),
 	'palettes' => array(
+		'name' => array('showitem' => 'name, suffix', 'canNotCollapse' => true),
 		'address' => array('showitem' => 'street_address, postal_code, locality, country', 'canNotCollapse' => true),
 		'geo' => array('showitem' => 'latitude, longitude, googlemaps', 'canNotCollapse' => true),
 	),
@@ -47,12 +48,21 @@ return array(
 				'eval' => 'trim'
 			),
 		),
+		'suffix' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_location.suffix',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
 		'street_address' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:tw_coderdojo/Resources/Private/Language/locallang_db.xlf:tx_twcoderdojo_domain_model_location.street_address',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
+				'type' => 'text',
+				'rows' => 2,
 				'eval' => 'trim'
 			),
 		),
@@ -113,6 +123,6 @@ return array(
 				'suppress_icons' => 1,
 			),
 		),
-		
+
 	),
 );

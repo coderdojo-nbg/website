@@ -41,6 +41,13 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $name = '';
 
 	/**
+	 * Dojo name suffix
+	 *
+	 * @var string
+	 */
+	protected $suffix = '';
+
+	/**
 	 * Adresse
 	 *
 	 * @var string
@@ -108,6 +115,27 @@ class Location extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setName($name)
 	{
 		$this->name = $name;
+	}
+
+	/**
+	 * Returns the suffix
+	 *
+	 * @return string $suffix
+	 */
+	public function getSuffix()
+	{
+		return $this->suffix;
+	}
+
+	/**
+	 * Sets the suffix
+	 *
+	 * @param string $suffix
+	 * @return void
+	 */
+	public function setSuffix($suffix)
+	{
+		$this->suffix = $suffix;
 	}
 
 	/**

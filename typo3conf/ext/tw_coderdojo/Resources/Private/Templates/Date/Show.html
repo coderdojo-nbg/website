@@ -3,7 +3,7 @@
 {namespace wp=Tollwerk\TwWebperf\ViewHelpers}
 
 <!-- Meta elements -->
-<wp:page.meta name="og:title" value="CoderDojo Nürnberg {f:if(condition: date.type, then: date.name, else: '#{date.dojoNumber}')}" type="property"/>
+<wp:page.meta name="og:title" value="{f:translate(key: 'dojo.name', arguments: '{0: date.location.suffix, 1: \'{f:if(condition: date.type, then: date.name, else: \\\'#{date.dojoNumber}\\\')}\'}')}" type="property"/>
 <wp:page.meta name="og:description" value="{date.start -> f:format.date(format: '{f:translate(key: \'format.start.date\')}')} {f:translate(key: 'format.from')} {date.start -> f:format.date(format: '{f:translate(key: \'format.start.time\')}')} {f:translate(key: 'format.to')} {date.end -> f:format.date(format: '{f:translate(key: \'format.end.time\')}')} ☯ {date.location.name}, {date.location.streetAddress}, {date.location.postalCode} {date.location.locality} ☯ Kostenloser Programmierclub für Kinder und Jugendliche von 5-17 Jahren" type="property"/>
 <wp:page.meta name="og:image"
               value="{v:site.url()}{tw:dateMap(latitude: date.location.latitude, longitude: date.location.longitude, client: 'facebook', mapsApiKey: settings.mapsApiKey)}"
@@ -17,7 +17,7 @@
     <div>
         <section class="date-intro">
             <h2 class="p-name" itemprop="name">
-                <f:translate key="dojo.name" arguments="{0: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'}"/>
+                <f:translate key="dojo.name" arguments="{0: date.location.suffix, 1: '{f:if(condition: date.type, then: date.name, else: \'#{date.dojoNumber}\')}'}"/>
             </h2>
             <f:if condition="{date.intro}">
                 <p class="p-description" itemprop="description">

@@ -110,6 +110,17 @@ plugin.Tx_Formhandler.settings.predef.registration {
                                 tables = tx_twcoderdojo_domain_model_date
                                 conf.tx_twcoderdojo_domain_model_date = TEXT
                                 conf.tx_twcoderdojo_domain_model_date {
+                                    prepend = RECORDS
+                                    prepend {
+                                        source.field = location
+                                        tables = tx_twcoderdojo_domain_model_location
+                                        conf.tx_twcoderdojo_domain_model_location = TEXT
+                                        conf.tx_twcoderdojo_domain_model_location {
+                                            field = suffix
+                                            noTrimWrap = || |
+                                        }
+                                    }
+                                    
                                     dataWrap = #{field:dojo_number} am {field:start}
                                 }
                             }
@@ -144,6 +155,17 @@ plugin.Tx_Formhandler.settings.predef.registration {
                                 tables = tx_twcoderdojo_domain_model_date
                                 conf.tx_twcoderdojo_domain_model_date = TEXT
                                 conf.tx_twcoderdojo_domain_model_date {
+                                    prepend = RECORDS
+                                    prepend {
+                                        source.field = location
+                                        tables = tx_twcoderdojo_domain_model_location
+                                        conf.tx_twcoderdojo_domain_model_location = TEXT
+                                        conf.tx_twcoderdojo_domain_model_location {
+                                            field = suffix
+                                            noTrimWrap = || |
+                                        }
+                                    }
+
                                     dataWrap = #{field:dojo_number} am {field:start}
                                 }
                             }

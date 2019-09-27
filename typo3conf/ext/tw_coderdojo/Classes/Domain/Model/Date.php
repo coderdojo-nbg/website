@@ -27,6 +27,8 @@ namespace Tollwerk\TwCoderdojo\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+
+use Exception;
 use Tollwerk\TwCoderdojo\Domain\Repository\DateRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -166,7 +168,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->mentors = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->ninjas = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->ninjas  = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->helpers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
@@ -218,6 +220,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getEnd()
     {
         $this->end->setTimezone(new \DateTimeZone('UTC'));
+
         return $this->end;
     }
 
@@ -225,6 +228,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the end
      *
      * @param \DateTime $end
+     *
      * @return void
      */
     public function setEnd(\DateTime $end)
@@ -266,6 +270,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the location
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Location $location
+     *
      * @return void
      */
     public function setLocation(\Tollwerk\TwCoderdojo\Domain\Model\Location $location)
@@ -277,6 +282,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Adds a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentor
+     *
      * @return void
      */
     public function addMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentor)
@@ -288,6 +294,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Removes a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $mentorToRemove The Person to be removed
+     *
      * @return void
      */
     public function removeMentor(\Tollwerk\TwCoderdojo\Domain\Model\Person $mentorToRemove)
@@ -313,6 +320,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the mentors
      *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $mentors
+     *
      * @return void
      */
     public function setMentors(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $mentors)
@@ -324,6 +332,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sort a list of persons by first and last name
      *
      * @param ObjectStorage $persons Persons
+     *
      * @return array Sorted list of persons
      */
     protected function sortPersons(ObjectStorage $persons)
@@ -334,7 +343,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         }
 
         usort(
-            $sortedPersons, function ($person1, $person2) {
+            $sortedPersons, function($person1, $person2) {
             /**
              * @var Person $person1
              * @var Person $person2
@@ -358,6 +367,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Adds a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
+     *
      * @return void
      */
     public function addNinja(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
@@ -369,6 +379,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Removes a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove The Person to be removed
+     *
      * @return void
      */
     public function removeNinja(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
@@ -394,6 +405,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Adds a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendee
+     *
      * @return void
      */
     public function addHelper(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendee)
@@ -405,6 +417,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Removes a Person
      *
      * @param \Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove The Person to be removed
+     *
      * @return void
      */
     public function removeHelper(\Tollwerk\TwCoderdojo\Domain\Model\Person $attendeeToRemove)
@@ -426,6 +439,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the helpers
      *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $helpers
+     *
      * @return void
      */
     public function setHelpers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $helpers)
@@ -454,9 +468,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getFull()
     {
-        return $this->isFullOverride()
-            || (($this->capacityNinjasOnly ? count($this->getNinjas()) : $this->getAttendeesCount(
-                )) >= $this->capacity);
+        return $this->isFullOverride() || ($this->getAttendeesCount() >= $this->capacity);
     }
 
     /**
@@ -493,6 +505,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the ninjas
      *
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Tollwerk\TwCoderdojo\Domain\Model\Person> $ninjas
+     *
      * @return void
      */
     public function setNinjas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ninjas)
@@ -507,7 +520,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getAttendeesCount()
     {
-        return count($this->mentors) + count($this->ninjas) + count($this->helpers);
+        return count($this->ninjas) + ($this->isCapacityNinjasOnly() ? 0 : (count($this->mentors) + count($this->helpers)));
     }
 
     /**
@@ -574,19 +587,32 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Test if the registration is active
      *
      * @return bool
+     * @throws Exception
      */
     public function isRegistrationActive()
+    {
+        $today = null;
+        if ($this->isPast($today)) {
+            return false;
+        }
+        $activationDate = $this->getRegistrationActiveDate();
+
+        return ($activationDate instanceof \DateTimeInterface) ? ($today >= $activationDate) : false;
+    }
+
+    /**
+     * Return whether the dojo has already taken place
+     *
+     * @return \DateTimeInterface $today Today
+     * @return bool Dojo has already taken place
+     * @throws Exception
+     */
+    public function isPast(\DateTimeInterface &$today = null)
     {
         $today = (new \DateTimeImmutable('@'.gmmktime(0, 0, 0)))
             ->setTimezone(new \DateTimeZone('UTC'));
 
-        // If this date lies in the past
-        if ($this->getStart() < $today) {
-            return false;
-        }
-
-        $activationDate = $this->getRegistrationActiveDate();
-        return ($activationDate instanceof \DateTimeInterface) ? ($today >= $activationDate) : false;
+        return $this->getStart() < $today;
     }
 
     /**
@@ -597,6 +623,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function getStart()
     {
         $this->start->setTimezone(new \DateTimeZone('UTC'));
+
         return $this->start;
     }
 
@@ -604,6 +631,7 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Sets the start
      *
      * @param \DateTime $start
+     *
      * @return void
      */
     public function setStart(\DateTime $start)
@@ -623,11 +651,12 @@ class Date extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         /** @var DateRepository $dateRepository */
         $dateRepository = $objectManager->get(DateRepository::class);
-        $triggerDate = $dateRepository->findRegistrationTriggerDate($this->getStart(), self::ACTIVE_REGISTRATIONS);
+        $triggerDate    = $dateRepository->findRegistrationTriggerDate($this->getStart(), self::ACTIVE_REGISTRATIONS);
         if ($triggerDate instanceof Date) {
             $triggerDateStart = clone $triggerDate->getStart();
             $triggerDateStart = $triggerDateStart->setTime(0, 0, 0);
             $triggerDateStart = $triggerDateStart->modify('+1 day');
+
             return $triggerDateStart;
         }
 
